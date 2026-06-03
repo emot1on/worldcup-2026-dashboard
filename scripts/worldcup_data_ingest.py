@@ -297,6 +297,26 @@ def build_confederation_history(df: pd.DataFrame) -> pd.DataFrame:
     return history
 
 
+def build_player_distribution_pool(df: pd.DataFrame) -> list[dict[str, Any]]:
+    selected_years = [2006, 2010, 2014, 2018, 2022, 2026]
+    subset = df[df["tournament_year"].isin(selected_years)].copy()
+    rows: list[dict[str, Any]] = []
+    for row in subset.to_dict("records"):
+        age_value = round_or_none(row.get("age_at_tournament_years"))
+        height_value = round_or_none(row.get("height_cm"))
+        rows.append(
+            {
+                "tournament_year": int(row["tournament_year"]),
+                "country": row["country"],
+                "position": row["position"],
+                "age_at_tournament_years": age_value,
+                "height_cm": height_value,
+                "name": row["name"],
+            }
+        )
+    return rows
+
+
 def build_story_manifest(
     tournament_trends: pd.DataFrame,
     country_snapshot: pd.DataFrame,
@@ -393,6 +413,7 @@ def build_normalized_bundle(
     position_share_trends: pd.DataFrame,
     confederation_history: pd.DataFrame,
     story_manifest: list[dict[str, Any]],
+    player_distribution_pool: list[dict[str, Any]],
 ) -> dict[str, Any]:
     trend_start = tournament_trends[tournament_trends["tournament_year"] >= 1990].copy()
     latest = tournament_trends.iloc[-1]
@@ -465,7 +486,8 @@ def build_normalized_bundle(
                 "not completed tournament history."
             ),
             "trend_window_start_year": 1990,
-            "comparison_window_note": "Country history baselines prefer 1986 to 1996, then fall back to the latest earlier tournament.",
+            "comparison_window_note": "Country history baselines prefer 1994, then 1986, then fall back to the latest earlier tournament.",
+            "distribution_window_years": [2006, 2010, 2014, 2018, 2022, 2026],
         },
         "highlights": {
             "height_gain_cm_since_1930": round(float(latest["average_height_cm"] - first["average_height_cm"]), 2),
@@ -526,7 +548,7 @@ def build_normalized_bundle(
                 "average_height_cm": round(float(row["average_height_cm"]), 2),
                 "average_age": round(float(row["average_age"]), 2),
             }
-            for row in confederation_history[confederation_history["tournament_year"] >= 1990].to_dict("records")
+            for row in confederation_history.to_dict("records")
         ],
         "country_history_2026": [
             {
@@ -563,6 +585,7 @@ def build_normalized_bundle(
             for row in position_share_trends[position_share_trends["tournament_year"] >= 1990].to_dict("records")
         ],
         "story_manifest": story_manifest,
+        "player_distribution_pool": player_distribution_pool,
     }
 
 
@@ -614,6 +637,7 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
     position_trends, position_share_trends = build_position_trends(df)
     confederation_history = build_confederation_history(df)
     story_manifest = build_story_manifest(tournament_trends, country_snapshot, group_snapshot)
+    player_distribution_pool = build_player_distribution_pool(df)
     normalized_bundle = build_normalized_bundle(
         tournament_trends,
         country_snapshot,
@@ -623,6 +647,7 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
         position_share_trends,
         confederation_history,
         story_manifest,
+        player_distribution_pool,
     )
 
     written = [

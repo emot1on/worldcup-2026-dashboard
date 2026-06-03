@@ -347,6 +347,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     group_members = json.dumps(bundle["group_members_2026"])
     story_json = json.dumps(bundle["story_manifest"])
     confed_history_json = json.dumps(bundle["confederation_history"])
+    distribution_json = json.dumps(bundle["player_distribution_pool"])
+    distribution_years_json = json.dumps(bundle["metadata"]["distribution_window_years"])
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -635,6 +637,98 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       gap: 18px;
       margin-top: 18px;
     }}
+    .toggle-row {{
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }}
+    .toggle-row button {{
+      border: 1px solid rgba(0,0,0,0.12);
+      background: #fffdfa;
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+    }}
+    .toggle-row button.active {{
+      background: var(--card);
+      border-color: rgba(0,0,0,0.18);
+    }}
+    .check-row {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }}
+    .heatmap-card {{
+      margin-top: 18px;
+    }}
+    .heatmap-scroll {{
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-top: 14px;
+    }}
+    .heatmap-stage {{
+      min-width: max-content;
+    }}
+    .heatmap-row {{
+      display: grid;
+      align-items: center;
+      gap: 2px;
+      margin-top: 2px;
+    }}
+    .heatmap-header {{
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(255,253,248,0.98), rgba(255,253,248,0.9));
+      padding-bottom: 6px;
+      margin-bottom: 4px;
+    }}
+    .heatmap-team {{
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background: rgba(255,253,248,0.96);
+      padding-right: 12px;
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }}
+    .heatmap-bin {{
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+      width: 18px;
+    }}
+    .heatmap-cell {{
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+    }}
+    .heatmap-legend {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }}
+    .legend-ramp {{
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }}
+    .legend-chip {{
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }}
     .live-list {{
       display: grid;
       gap: 10px;
@@ -890,6 +984,33 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     <section>
       <div class="section-head">
         <div>
+          <h2>Squad distribution heatmap</h2>
+          <p class="section-copy">A GitHub-style tile view works here because it shows distribution, not just averages. Read each row as one team, each column as an age or height bucket, and each tile as how many players land there.</p>
+        </div>
+      </div>
+      <div class="list-card heatmap-card">
+        <div class="toolbar">
+          <select id="distribution-year"></select>
+          <div class="toggle-row">
+            <button id="distribution-age" class="active" type="button">Age</button>
+            <button id="distribution-height" type="button">Height</button>
+          </div>
+          <label class="check-row">
+            <input id="distribution-exclude-gk" type="checkbox">
+            Exclude goalkeepers
+          </label>
+        </div>
+        <p class="section-copy" id="distribution-copy" style="margin-top: 10px;"></p>
+        <div class="heatmap-legend" id="distribution-legend"></div>
+        <div class="heatmap-scroll">
+          <div class="heatmap-stage" id="distribution-stage"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
           <h2>Tactical shape</h2>
           <p class="section-copy">Position shares are not a perfect tactical model, but they are a very good shorthand. The old forward-heavy World Cup is gone.</p>
         </div>
@@ -939,6 +1060,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     const liveSnapshot = {live_json};
     const stories = {story_json};
     const confederationHistory = {confed_history_json};
+    const playerDistributionPool = {distribution_json};
+    const distributionYears = {distribution_years_json};
 
     (() => {{
       const storyList = document.getElementById("story-list");
@@ -1216,6 +1339,142 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     }})();
 
     (() => {{
+      const yearSelect = document.getElementById("distribution-year");
+      const ageButton = document.getElementById("distribution-age");
+      const heightButton = document.getElementById("distribution-height");
+      const excludeGk = document.getElementById("distribution-exclude-gk");
+      const copy = document.getElementById("distribution-copy");
+      const legend = document.getElementById("distribution-legend");
+      const stage = document.getElementById("distribution-stage");
+      let metric = "age";
+
+      yearSelect.innerHTML = distributionYears
+        .slice()
+        .sort((a, b) => b - a)
+        .map((year) => `<option value="${{year}}">${{year}}</option>`)
+        .join("");
+      yearSelect.value = "2026";
+
+      function colorForRatio(ratio) {{
+        if (ratio <= 0) return "#f7f3c4";
+        if (ratio < 0.2) return "#d6efc2";
+        if (ratio < 0.4) return "#99d8c9";
+        if (ratio < 0.6) return "#55b7d7";
+        if (ratio < 0.8) return "#2f7ec7";
+        return "#21409a";
+      }}
+
+      function buildBins(rows) {{
+        if (metric === "age") {{
+          const values = rows
+            .map((row) => row.age_at_tournament_years)
+            .filter((value) => value != null)
+            .map((value) => Math.round(value));
+          const min = Math.min(...values);
+          const max = Math.max(...values);
+          return Array.from({{ length: max - min + 1 }}, (_, index) => min + index).map((value) => ({{
+            key: String(value),
+            label: String(value),
+            test: (row) => row.age_at_tournament_years != null && Math.round(row.age_at_tournament_years) === value,
+          }}));
+        }}
+        const values = rows
+          .map((row) => row.height_cm)
+          .filter((value) => value != null);
+        const min = Math.floor(Math.min(...values) / 2) * 2;
+        const max = Math.ceil(Math.max(...values) / 2) * 2;
+        return Array.from({{ length: Math.floor((max - min) / 2) + 1 }}, (_, index) => min + index * 2).map((value) => ({{
+          key: String(value),
+          label: `${{value}}`,
+          test: (row) => row.height_cm != null && Math.floor(row.height_cm / 2) * 2 === value,
+        }}));
+      }}
+
+      function metricValue(row) {{
+        return metric === "age" ? row.age_at_tournament_years : row.height_cm;
+      }}
+
+      function renderLegend(maxCount) {{
+        const chips = [0, 0.25, 0.5, 0.75, 1].map((ratio) => `
+          <span class="legend-chip" style="background:${{colorForRatio(ratio)}}"></span>
+        `).join("");
+        legend.innerHTML = `
+          <span>Less</span>
+          <span class="legend-ramp">${{chips}}</span>
+          <span>More</span>
+          <span>Cells show player counts per team and ${{metric === "age" ? "rounded age" : "2 cm height bin"}}. Max in this view: ${{maxCount}}.</span>
+        `;
+      }}
+
+      function render() {{
+        const selectedYear = Number(yearSelect.value);
+        const filtered = playerDistributionPool
+          .filter((row) => row.tournament_year === selectedYear)
+          .filter((row) => !excludeGk.checked || row.position !== "Goalkeeper")
+          .filter((row) => metricValue(row) != null);
+        if (!filtered.length) {{
+          stage.innerHTML = `<div class="mini">No player rows match this filter state.</div>`;
+          copy.textContent = "No player rows match this filter state.";
+          legend.innerHTML = "";
+          return;
+        }}
+
+        const bins = buildBins(filtered);
+        const teams = [...new Set(filtered.map((row) => row.country))].map((country) => {{
+          const rows = filtered.filter((row) => row.country === country);
+          const average = rows.reduce((sum, row) => sum + metricValue(row), 0) / rows.length;
+          const counts = bins.map((bin) => rows.filter((row) => bin.test(row)).length);
+          return {{ country, rows, average, counts }};
+        }}).sort((a, b) => b.average - a.average || a.country.localeCompare(b.country));
+
+        const maxCount = Math.max(...teams.flatMap((team) => team.counts), 1);
+        const columns = `180px repeat(${{bins.length}}, 18px)`;
+        const metricLabel = metric === "age" ? "age" : "height";
+        const filterLabel = excludeGk.checked ? "excluding goalkeepers" : "including goalkeepers";
+        const topTeam = teams[0];
+        const lowTeam = teams[teams.length - 1];
+        copy.textContent = `${{selectedYear}} distribution view, ${{filterLabel}}. Teams are sorted by average ${{metricLabel}} from high to low. ${{topTeam.country}} sits at the high end, while ${{lowTeam.country}} sits at the low end in this view.`;
+        renderLegend(maxCount);
+
+        const header = `
+          <div class="heatmap-row heatmap-header" style="grid-template-columns:${{columns}};">
+            <div class="heatmap-team mini">${{metric === "age" ? "Team / age" : "Team / height"}}</div>
+            ${{bins.map((bin) => `<div class="heatmap-bin">${{bin.label}}</div>`).join("")}}
+          </div>
+        `;
+        const rowsHtml = teams.map((team) => `
+          <div class="heatmap-row" style="grid-template-columns:${{columns}};">
+            <div class="heatmap-team">${{team.country}}</div>
+            ${{team.counts.map((count, index) => {{
+              const ratio = count / maxCount;
+              const bg = colorForRatio(ratio);
+              const label = bins[index].label;
+              const unit = metric === "age" ? "years" : "cm bucket";
+              return `<div class="heatmap-cell" style="background:${{bg}}" title="${{team.country}} • ${{label}} ${{unit}} • ${{count}} player${{count === 1 ? "" : "s"}}"></div>`;
+            }}).join("")}}
+          </div>
+        `).join("");
+        stage.innerHTML = header + rowsHtml;
+      }}
+
+      yearSelect.addEventListener("change", render);
+      ageButton.addEventListener("click", () => {{
+        metric = "age";
+        ageButton.classList.add("active");
+        heightButton.classList.remove("active");
+        render();
+      }});
+      heightButton.addEventListener("click", () => {{
+        metric = "height";
+        heightButton.classList.add("active");
+        ageButton.classList.remove("active");
+        render();
+      }});
+      excludeGk.addEventListener("change", render);
+      render();
+    }})();
+
+    (() => {{
       const liveSummary = document.getElementById("live-summary");
       const fixtureList = document.getElementById("fixture-list");
       const standingsList = document.getElementById("standings-list");
@@ -1425,9 +1684,13 @@ def main() -> None:
     ]
 
     html = build_html(bundle, charts, live_snapshot)
-    output_path = OUTPUT_DIR / "worldcup-dashboard.html"
-    output_path.write_text(html, encoding="utf-8")
-    print(f"Saved dashboard to {output_path}")
+    output_paths = [
+        OUTPUT_DIR / "worldcup-dashboard.html",
+        OUTPUT_DIR / "worldcup-dashboard-v2.html",
+    ]
+    for output_path in output_paths:
+        output_path.write_text(html, encoding="utf-8")
+        print(f"Saved dashboard to {output_path}")
 
 
 if __name__ == "__main__":
