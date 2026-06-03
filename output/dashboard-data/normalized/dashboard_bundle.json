@@ -1,9 +1,10 @@
 {
-  "fetched_at_utc": "2026-06-03T14:16:45.335277+00:00",
+  "fetched_at_utc": "2026-06-03T18:52:02.814516+00:00",
   "data": {
     "metadata": {
-      "generated_at_utc": "2026-06-03T14:16:45.313537+00:00",
+      "generated_at_utc": "2026-06-03T18:52:02.779430+00:00",
       "dataset_note": "The source file includes a 2026 cohort before kickoff. Treat 2026 as a dataset row, not completed tournament history.",
+      "transfermarkt_note": "Transfermarkt squad pages fetched for this build total 1246 player rows rather than the full 1,248. The short pages are: Austria, Canada.",
       "trend_window_start_year": 1990,
       "comparison_window_note": "Country history baselines prefer 1994, then 1986, then fall back to the latest earlier tournament.",
       "distribution_window_years": [
@@ -15,6 +16,38 @@
         2026
       ]
     },
+    "sources": [
+      {
+        "key": "luis_batalha_worldcup_players",
+        "label": "Luis Batalha World Cup players dataset",
+        "scope": "historical player rows, age, height, positions, and tournament-year comparisons",
+        "url": "/Volumes/X10 Pro/__ArchiveMacApril2026/Users-emot/opencode-misc/dataviz-reports-Matplotlib/worldcup-lbatalha/WorldCup_players_all_data.csv"
+      },
+      {
+        "key": "football_data_org_worldcup",
+        "label": "football-data.org World Cup competition feed",
+        "scope": "fixtures, standings, and live-center tournament service",
+        "url": "https://docs.football-data.org/general/v4/index.html"
+      },
+      {
+        "key": "transfermarkt_squads_2026",
+        "label": "Transfermarkt World Cup 2026 detailed squad pages",
+        "scope": "current clubs, player ages, player market values, squad value rankings, club representation",
+        "url": "https://www.transfermarkt.com/weltmeisterschaft/teilnehmer/pokalwettbewerb/FIWC"
+      },
+      {
+        "key": "transfermarkt_managers_2026",
+        "label": "Transfermarkt World Cup 2026 manager overview and achievements pages",
+        "scope": "coach ages, nationalities, tenure, contract years, and trophy counts",
+        "url": "https://www.transfermarkt.com/weltmeisterschaft/trainer/pokalwettbewerb/FIWC"
+      },
+      {
+        "key": "transfermarkt_player_performance_2026",
+        "label": "Transfermarkt player performance endpoint",
+        "scope": "current club-season appearances, goals, assists, and goal contributions for squad players",
+        "url": "https://www.transfermarkt.com/ceapi/performance-game/{player_id}"
+      }
+    ],
     "highlights": {
       "height_gain_cm_since_1930": 8.86,
       "height_gain_pct_since_1930": 5.1,
@@ -27,6 +60,5998 @@
       "tallest_group_2026": "Group B",
       "oldest_group_2026": "Group K"
     },
+    "market_value_players_2026": [
+      {
+        "player": "Lamine Yamal",
+        "country": "Spain",
+        "position": "Right Winger",
+        "age": 18.0,
+        "club": "FC Barcelona",
+        "market_value_eur": 200000000,
+        "market_value_text": "€200.00m"
+      },
+      {
+        "player": "Erling Haaland",
+        "country": "Norway",
+        "position": "Centre-Forward",
+        "age": 25.0,
+        "club": "Manchester City",
+        "market_value_eur": 200000000,
+        "market_value_text": "€200.00m"
+      },
+      {
+        "player": "Kylian Mbappé",
+        "country": "France",
+        "position": "Centre-Forward",
+        "age": 27.0,
+        "club": "Real Madrid",
+        "market_value_eur": 200000000,
+        "market_value_text": "€200.00m"
+      },
+      {
+        "player": "Pedri",
+        "country": "Spain",
+        "position": "Central Midfield",
+        "age": 23.0,
+        "club": "FC Barcelona",
+        "market_value_eur": 150000000,
+        "market_value_text": "€150.00m"
+      },
+      {
+        "player": "Michael Olise",
+        "country": "France",
+        "position": "Right Winger",
+        "age": 24.0,
+        "club": "Bayern Munich",
+        "market_value_eur": 150000000,
+        "market_value_text": "€150.00m"
+      },
+      {
+        "player": "Vinicius Junior",
+        "country": "Brazil",
+        "position": "Left Winger",
+        "age": 25.0,
+        "club": "Real Madrid",
+        "market_value_eur": 150000000,
+        "market_value_text": "€150.00m"
+      },
+      {
+        "player": "João Neves",
+        "country": "Portugal",
+        "position": "Central Midfield",
+        "age": 21.0,
+        "club": "Paris Saint-Germain",
+        "market_value_eur": 140000000,
+        "market_value_text": "€140.00m"
+      },
+      {
+        "player": "Jude Bellingham",
+        "country": "England",
+        "position": "Attacking Midfield",
+        "age": 22.0,
+        "club": "Real Madrid",
+        "market_value_eur": 140000000,
+        "market_value_text": "€140.00m"
+      },
+      {
+        "player": "Vitinha",
+        "country": "Portugal",
+        "position": "Defensive Midfield",
+        "age": 26.0,
+        "club": "Paris Saint-Germain",
+        "market_value_eur": 140000000,
+        "market_value_text": "€140.00m"
+      },
+      {
+        "player": "Désiré Doué",
+        "country": "France",
+        "position": "Right Winger",
+        "age": 21.0,
+        "club": "Paris Saint-Germain",
+        "market_value_eur": 120000000,
+        "market_value_text": "€120.00m"
+      },
+      {
+        "player": "Declan Rice",
+        "country": "England",
+        "position": "Central Midfield",
+        "age": 27.0,
+        "club": "Arsenal FC",
+        "market_value_eur": 120000000,
+        "market_value_text": "€120.00m"
+      },
+      {
+        "player": "Federico Valverde",
+        "country": "Uruguay",
+        "position": "Central Midfield",
+        "age": 27.0,
+        "club": "Real Madrid",
+        "market_value_eur": 120000000,
+        "market_value_text": "€120.00m"
+      },
+      {
+        "player": "Bukayo Saka",
+        "country": "England",
+        "position": "Right Winger",
+        "age": 24.0,
+        "club": "Arsenal FC",
+        "market_value_eur": 110000000,
+        "market_value_text": "€110.00m"
+      },
+      {
+        "player": "Florian Wirtz",
+        "country": "Germany",
+        "position": "Attacking Midfield",
+        "age": 23.0,
+        "club": "Liverpool FC",
+        "market_value_eur": 100000000,
+        "market_value_text": "€100.00m"
+      },
+      {
+        "player": "Jamal Musiala",
+        "country": "Germany",
+        "position": "Attacking Midfield",
+        "age": 23.0,
+        "club": "Bayern Munich",
+        "market_value_eur": 100000000,
+        "market_value_text": "€100.00m"
+      },
+      {
+        "player": "Moisés Caicedo",
+        "country": "Ecuador",
+        "position": "Defensive Midfield",
+        "age": 24.0,
+        "club": "Chelsea FC",
+        "market_value_eur": 100000000,
+        "market_value_text": "€100.00m"
+      },
+      {
+        "player": "William Saliba",
+        "country": "France",
+        "position": "Centre-Back",
+        "age": 25.0,
+        "club": "Arsenal FC",
+        "market_value_eur": 100000000,
+        "market_value_text": "€100.00m"
+      },
+      {
+        "player": "Ousmane Dembélé",
+        "country": "France",
+        "position": "Centre-Forward",
+        "age": 29.0,
+        "club": "Paris Saint-Germain",
+        "market_value_eur": 100000000,
+        "market_value_text": "€100.00m"
+      },
+      {
+        "player": "Yan Diomande",
+        "country": "Ivory Coast",
+        "position": "Left Winger",
+        "age": 19.0,
+        "club": "RB Leipzig",
+        "market_value_eur": 90000000,
+        "market_value_text": "€90.00m"
+      },
+      {
+        "player": "Arda Güler",
+        "country": "Turkey",
+        "position": "Attacking Midfield",
+        "age": 21.0,
+        "club": "Real Madrid",
+        "market_value_eur": 90000000,
+        "market_value_text": "€90.00m"
+      }
+    ],
+    "least_valuable_players_2026": [
+      {
+        "player": "Tyrick Bodak",
+        "country": "Curaçao",
+        "position": "Goalkeeper",
+        "age": 24.0,
+        "club": "SC Telstar",
+        "market_value_eur": 25000,
+        "market_value_text": "€25k"
+      },
+      {
+        "player": "Craig Gordon",
+        "country": "Scotland",
+        "position": "Goalkeeper",
+        "age": 43.0,
+        "club": "Heart of Midlothian FC",
+        "market_value_eur": 25000,
+        "market_value_text": "€25k"
+      },
+      {
+        "player": "Josué Duverger",
+        "country": "Haiti",
+        "position": "Goalkeeper",
+        "age": 26.0,
+        "club": "FC Cosmos Koblenz",
+        "market_value_eur": 50000,
+        "market_value_text": "€50k"
+      },
+      {
+        "player": "Trevor Doornbusch",
+        "country": "Curaçao",
+        "position": "Goalkeeper",
+        "age": 26.0,
+        "club": "VVV-Venlo",
+        "market_value_eur": 50000,
+        "market_value_text": "€50k"
+      },
+      {
+        "player": "Éric Davis",
+        "country": "Panama",
+        "position": "Left-Back",
+        "age": 35.0,
+        "club": "CD Plaza Amador",
+        "market_value_eur": 50000,
+        "market_value_text": "€50k"
+      },
+      {
+        "player": "Tommy Smith",
+        "country": "New Zealand",
+        "position": "Centre-Back",
+        "age": 36.0,
+        "club": "Braintree Town",
+        "market_value_eur": 50000,
+        "market_value_text": "€50k"
+      },
+      {
+        "player": "Stopira",
+        "country": "Cape Verde",
+        "position": "Centre-Back",
+        "age": 38.0,
+        "club": "SC União Torreense",
+        "market_value_eur": 50000,
+        "market_value_text": "€50k"
+      },
+      {
+        "player": "Vozinha",
+        "country": "Cape Verde",
+        "position": "Goalkeeper",
+        "age": 40.0,
+        "club": "GD Chaves",
+        "market_value_eur": 50000,
+        "market_value_text": "€50k"
+      },
+      {
+        "player": "Alberto Quintero",
+        "country": "Panama",
+        "position": "Right Winger",
+        "age": 38.0,
+        "club": "CD Plaza Amador",
+        "market_value_eur": 75000,
+        "market_value_text": "€75k"
+      },
+      {
+        "player": "Keeto Thermoncy",
+        "country": "Haiti",
+        "position": "Centre-Back",
+        "age": 20.0,
+        "club": "BSC Young Boys U21",
+        "market_value_eur": 100000,
+        "market_value_text": "€100k"
+      },
+      {
+        "player": "Woodensky Pierre",
+        "country": "Haiti",
+        "position": "Defensive Midfield",
+        "age": 21.0,
+        "club": "Violette Athletic Club",
+        "market_value_eur": 100000,
+        "market_value_text": "€100k"
+      },
+      {
+        "player": "Benjamin Asare",
+        "country": "Ghana",
+        "position": "Goalkeeper",
+        "age": 33.0,
+        "club": "Hearts of Oak",
+        "market_value_eur": 100000,
+        "market_value_text": "€100k"
+      }
+    ],
+    "player_season_stats_2026": [
+      {
+        "player": "Harry Kane",
+        "country": "England",
+        "club": "Bayern Munich",
+        "position": "Centre-Forward",
+        "age": 32.0,
+        "current_season_id": 2025,
+        "appearances": 53,
+        "minutes": 0,
+        "goals": 61,
+        "assists": 7,
+        "goal_contributions": 68
+      },
+      {
+        "player": "Ivan Toney",
+        "country": "England",
+        "club": "Al-Ahli SFC",
+        "position": "Centre-Forward",
+        "age": 30.0,
+        "current_season_id": 2025,
+        "appearances": 53,
+        "minutes": 0,
+        "goals": 41,
+        "assists": 11,
+        "goal_contributions": 52
+      },
+      {
+        "player": "Kylian Mbappé",
+        "country": "France",
+        "club": "Real Madrid",
+        "position": "Centre-Forward",
+        "age": 27.0,
+        "current_season_id": 2025,
+        "appearances": 47,
+        "minutes": 0,
+        "goals": 42,
+        "assists": 6,
+        "goal_contributions": 48
+      },
+      {
+        "player": "Michael Olise",
+        "country": "France",
+        "club": "Bayern Munich",
+        "position": "Right Winger",
+        "age": 24.0,
+        "current_season_id": 2025,
+        "appearances": 55,
+        "minutes": 0,
+        "goals": 22,
+        "assists": 26,
+        "goal_contributions": 48
+      },
+      {
+        "player": "Erling Haaland",
+        "country": "Norway",
+        "club": "Manchester City",
+        "position": "Centre-Forward",
+        "age": 25.0,
+        "current_season_id": 2025,
+        "appearances": 59,
+        "minutes": 0,
+        "goals": 38,
+        "assists": 9,
+        "goal_contributions": 47
+      },
+      {
+        "player": "Luis Díaz",
+        "country": "Colombia",
+        "club": "Bayern Munich",
+        "position": "Left Winger",
+        "age": 29.0,
+        "current_season_id": 2025,
+        "appearances": 55,
+        "minutes": 0,
+        "goals": 26,
+        "assists": 19,
+        "goal_contributions": 45
+      },
+      {
+        "player": "Luis Suárez",
+        "country": "Colombia",
+        "club": "Sporting CP",
+        "position": "Centre-Forward",
+        "age": 28.0,
+        "current_season_id": 2025,
+        "appearances": 56,
+        "minutes": 0,
+        "goals": 36,
+        "assists": 8,
+        "goal_contributions": 44
+      },
+      {
+        "player": "João Félix",
+        "country": "Portugal",
+        "club": "Al-Nassr FC",
+        "position": "Second Striker",
+        "age": 26.0,
+        "current_season_id": 2025,
+        "appearances": 49,
+        "minutes": 0,
+        "goals": 25,
+        "assists": 18,
+        "goal_contributions": 43
+      },
+      {
+        "player": "Julián Quiñones",
+        "country": "Mexico",
+        "club": "Al-Qadsiah FC",
+        "position": "Centre-Forward",
+        "age": 29.0,
+        "current_season_id": 2025,
+        "appearances": 35,
+        "minutes": 0,
+        "goals": 37,
+        "assists": 4,
+        "goal_contributions": 41
+      },
+      {
+        "player": "Lamine Yamal",
+        "country": "Spain",
+        "club": "FC Barcelona",
+        "position": "Right Winger",
+        "age": 18.0,
+        "current_season_id": 2025,
+        "appearances": 46,
+        "minutes": 0,
+        "goals": 24,
+        "assists": 17,
+        "goal_contributions": 41
+      },
+      {
+        "player": "Deniz Undav",
+        "country": "Germany",
+        "club": "VfB Stuttgart",
+        "position": "Centre-Forward",
+        "age": 29.0,
+        "current_season_id": 2025,
+        "appearances": 47,
+        "minutes": 0,
+        "goals": 25,
+        "assists": 15,
+        "goal_contributions": 40
+      },
+      {
+        "player": "Akram Afif",
+        "country": "Qatar",
+        "club": "Al-Sadd SC",
+        "position": "Left Winger",
+        "age": 29.0,
+        "current_season_id": 2025,
+        "appearances": 46,
+        "minutes": 0,
+        "goals": 16,
+        "assists": 18,
+        "goal_contributions": 34
+      },
+      {
+        "player": "Cristiano Ronaldo",
+        "country": "Portugal",
+        "club": "Al-Nassr FC",
+        "position": "Centre-Forward",
+        "age": 41.0,
+        "current_season_id": 2025,
+        "appearances": 47,
+        "minutes": 0,
+        "goals": 30,
+        "assists": 3,
+        "goal_contributions": 33
+      },
+      {
+        "player": "Vinicius Junior",
+        "country": "Brazil",
+        "club": "Real Madrid",
+        "position": "Left Winger",
+        "age": 25.0,
+        "current_season_id": 2025,
+        "appearances": 56,
+        "minutes": 0,
+        "goals": 22,
+        "assists": 10,
+        "goal_contributions": 32
+      },
+      {
+        "player": "Ousmane Dembélé",
+        "country": "France",
+        "club": "Paris Saint-Germain",
+        "position": "Centre-Forward",
+        "age": 29.0,
+        "current_season_id": 2025,
+        "appearances": 42,
+        "minutes": 0,
+        "goals": 20,
+        "assists": 11,
+        "goal_contributions": 31
+      },
+      {
+        "player": "Bruno Fernandes",
+        "country": "Portugal",
+        "club": "Manchester United",
+        "position": "Attacking Midfield",
+        "age": 31.0,
+        "current_season_id": 2025,
+        "appearances": 37,
+        "minutes": 0,
+        "goals": 9,
+        "assists": 22,
+        "goal_contributions": 31
+      },
+      {
+        "player": "Benjamin Nygren",
+        "country": "Sweden",
+        "club": "Celtic FC",
+        "position": "Attacking Midfield",
+        "age": 24.0,
+        "current_season_id": 2025,
+        "appearances": 59,
+        "minutes": 0,
+        "goals": 21,
+        "assists": 9,
+        "goal_contributions": 30
+      },
+      {
+        "player": "Julián Álvarez",
+        "country": "Argentina",
+        "club": "Atlético de Madrid",
+        "position": "Centre-Forward",
+        "age": 26.0,
+        "current_season_id": 2025,
+        "appearances": 60,
+        "minutes": 0,
+        "goals": 20,
+        "assists": 9,
+        "goal_contributions": 29
+      },
+      {
+        "player": "Eldor Shomurodov",
+        "country": "Uzbekistan",
+        "club": "Basaksehir FK",
+        "position": "Centre-Forward",
+        "age": 30.0,
+        "current_season_id": 2025,
+        "appearances": 44,
+        "minutes": 0,
+        "goals": 22,
+        "assists": 6,
+        "goal_contributions": 28
+      },
+      {
+        "player": "Lautaro Martínez",
+        "country": "Argentina",
+        "club": "Inter Milan",
+        "position": "Centre-Forward",
+        "age": 28.0,
+        "current_season_id": 2025,
+        "appearances": 46,
+        "minutes": 0,
+        "goals": 22,
+        "assists": 6,
+        "goal_contributions": 28
+      },
+      {
+        "player": "Raphinha",
+        "country": "Brazil",
+        "club": "FC Barcelona",
+        "position": "Left Winger",
+        "age": 29.0,
+        "current_season_id": 2025,
+        "appearances": 38,
+        "minutes": 0,
+        "goals": 21,
+        "assists": 7,
+        "goal_contributions": 28
+      },
+      {
+        "player": "Ayase Ueda",
+        "country": "Japan",
+        "club": "Feyenoord Rotterdam",
+        "position": "Centre-Forward",
+        "age": 27.0,
+        "current_season_id": 2025,
+        "appearances": 40,
+        "minutes": 0,
+        "goals": 26,
+        "assists": 1,
+        "goal_contributions": 27
+      },
+      {
+        "player": "Antoine Semenyo",
+        "country": "Ghana",
+        "club": "Manchester City",
+        "position": "Right Winger",
+        "age": 26.0,
+        "current_season_id": 2025,
+        "appearances": 51,
+        "minutes": 0,
+        "goals": 21,
+        "assists": 6,
+        "goal_contributions": 27
+      },
+      {
+        "player": "Rodrigo Zalazar",
+        "country": "Uruguay",
+        "club": "SC Braga",
+        "position": "Attacking Midfield",
+        "age": 26.0,
+        "current_season_id": 2025,
+        "appearances": 58,
+        "minutes": 0,
+        "goals": 21,
+        "assists": 6,
+        "goal_contributions": 27
+      },
+      {
+        "player": "Igor Thiago",
+        "country": "Brazil",
+        "club": "Brentford FC",
+        "position": "Centre-Forward",
+        "age": 24.0,
+        "current_season_id": 2025,
+        "appearances": 45,
+        "minutes": 0,
+        "goals": 25,
+        "assists": 1,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Armando González",
+        "country": "Mexico",
+        "club": "Deportivo Guadalajara",
+        "position": "Centre-Forward",
+        "age": 23.0,
+        "current_season_id": 2025,
+        "appearances": 40,
+        "minutes": 0,
+        "goals": 24,
+        "assists": 2,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Donyell Malen",
+        "country": "Netherlands",
+        "club": "AS Roma",
+        "position": "Centre-Forward",
+        "age": 27.0,
+        "current_season_id": 2025,
+        "appearances": 51,
+        "minutes": 0,
+        "goals": 22,
+        "assists": 4,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Patrik Schick",
+        "country": "Czech Republic",
+        "club": "Bayer 04 Leverkusen",
+        "position": "Centre-Forward",
+        "age": 30.0,
+        "current_season_id": 2025,
+        "appearances": 43,
+        "minutes": 0,
+        "goals": 22,
+        "assists": 4,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Ollie Watkins",
+        "country": "England",
+        "club": "Aston Villa",
+        "position": "Centre-Forward",
+        "age": 30.0,
+        "current_season_id": 2025,
+        "appearances": 55,
+        "minutes": 0,
+        "goals": 21,
+        "assists": 5,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Christian Fassnacht",
+        "country": "Switzerland",
+        "club": "BSC Young Boys",
+        "position": "Attacking Midfield",
+        "age": 32.0,
+        "current_season_id": 2025,
+        "appearances": 46,
+        "minutes": 0,
+        "goals": 19,
+        "assists": 7,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Ismael Saibari",
+        "country": "Morocco",
+        "club": "PSV Eindhoven",
+        "position": "Attacking Midfield",
+        "age": 25.0,
+        "current_season_id": 2025,
+        "appearances": 44,
+        "minutes": 0,
+        "goals": 18,
+        "assists": 8,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Marcus Thuram",
+        "country": "France",
+        "club": "Inter Milan",
+        "position": "Centre-Forward",
+        "age": 28.0,
+        "current_season_id": 2025,
+        "appearances": 47,
+        "minutes": 0,
+        "goals": 18,
+        "assists": 8,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Francisco Trincão",
+        "country": "Portugal",
+        "club": "Sporting CP",
+        "position": "Attacking Midfield",
+        "age": 26.0,
+        "current_season_id": 2025,
+        "appearances": 56,
+        "minutes": 0,
+        "goals": 11,
+        "assists": 15,
+        "goal_contributions": 26
+      },
+      {
+        "player": "Abde Ezzalzouli",
+        "country": "Morocco",
+        "club": "Real Betis Balompié",
+        "position": "Left Winger",
+        "age": 24.0,
+        "current_season_id": 2025,
+        "appearances": 51,
+        "minutes": 0,
+        "goals": 15,
+        "assists": 10,
+        "goal_contributions": 25
+      },
+      {
+        "player": "Alejandro Grimaldo",
+        "country": "Spain",
+        "club": "Bayer 04 Leverkusen",
+        "position": "Left-Back",
+        "age": 30.0,
+        "current_season_id": 2025,
+        "appearances": 48,
+        "minutes": 0,
+        "goals": 14,
+        "assists": 11,
+        "goal_contributions": 25
+      },
+      {
+        "player": "Marcus Rashford",
+        "country": "England",
+        "club": "FC Barcelona",
+        "position": "Left Winger",
+        "age": 28.0,
+        "current_season_id": 2025,
+        "appearances": 54,
+        "minutes": 0,
+        "goals": 14,
+        "assists": 11,
+        "goal_contributions": 25
+      },
+      {
+        "player": "Morgan Rogers",
+        "country": "England",
+        "club": "Aston Villa",
+        "position": "Attacking Midfield",
+        "age": 23.0,
+        "current_season_id": 2025,
+        "appearances": 56,
+        "minutes": 0,
+        "goals": 14,
+        "assists": 11,
+        "goal_contributions": 25
+      },
+      {
+        "player": "Rayan Cherki",
+        "country": "France",
+        "club": "Manchester City",
+        "position": "Attacking Midfield",
+        "age": 22.0,
+        "current_season_id": 2025,
+        "appearances": 53,
+        "minutes": 0,
+        "goals": 10,
+        "assists": 15,
+        "goal_contributions": 25
+      },
+      {
+        "player": "Ferran Torres",
+        "country": "Spain",
+        "club": "FC Barcelona",
+        "position": "Centre-Forward",
+        "age": 26.0,
+        "current_season_id": 2025,
+        "appearances": 53,
+        "minutes": 0,
+        "goals": 21,
+        "assists": 3,
+        "goal_contributions": 24
+      },
+      {
+        "player": "Viktor Gyökeres",
+        "country": "Sweden",
+        "club": "Arsenal FC",
+        "position": "Centre-Forward",
+        "age": 27.0,
+        "current_season_id": 2025,
+        "appearances": 59,
+        "minutes": 0,
+        "goals": 21,
+        "assists": 3,
+        "goal_contributions": 24
+      },
+      {
+        "player": "Lawrence Shankland",
+        "country": "Scotland",
+        "club": "Heart of Midlothian FC",
+        "position": "Centre-Forward",
+        "age": 30.0,
+        "current_season_id": 2025,
+        "appearances": 36,
+        "minutes": 0,
+        "goals": 20,
+        "assists": 4,
+        "goal_contributions": 24
+      },
+      {
+        "player": "Guus Til",
+        "country": "Netherlands",
+        "club": "PSV Eindhoven",
+        "position": "Attacking Midfield",
+        "age": 28.0,
+        "current_season_id": 2025,
+        "appearances": 42,
+        "minutes": 0,
+        "goals": 17,
+        "assists": 7,
+        "goal_contributions": 24
+      },
+      {
+        "player": "Kerem Aktürkoğlu",
+        "country": "Turkey",
+        "club": "Fenerbahce",
+        "position": "Left Winger",
+        "age": 27.0,
+        "current_season_id": 2025,
+        "appearances": 55,
+        "minutes": 0,
+        "goals": 16,
+        "assists": 8,
+        "goal_contributions": 24
+      },
+      {
+        "player": "Daizen Maeda",
+        "country": "Japan",
+        "club": "Celtic FC",
+        "position": "Left Winger",
+        "age": 28.0,
+        "current_season_id": 2025,
+        "appearances": 59,
+        "minutes": 0,
+        "goals": 15,
+        "assists": 9,
+        "goal_contributions": 24
+      },
+      {
+        "player": "José Manuel López",
+        "country": "Argentina",
+        "club": "Sociedade Esportiva Palmeiras",
+        "position": "Centre-Forward",
+        "age": 25.0,
+        "current_season_id": 2025,
+        "appearances": 38,
+        "minutes": 0,
+        "goals": 14,
+        "assists": 10,
+        "goal_contributions": 24
+      },
+      {
+        "player": "Pavel Sulc",
+        "country": "Czech Republic",
+        "club": "Olympique Lyon",
+        "position": "Attacking Midfield",
+        "age": 25.0,
+        "current_season_id": 2025,
+        "appearances": 45,
+        "minutes": 0,
+        "goals": 14,
+        "assists": 10,
+        "goal_contributions": 24
+      },
+      {
+        "player": "Ayoub El Kaabi",
+        "country": "Morocco",
+        "club": "Olympiacos Piraeus",
+        "position": "Centre-Forward",
+        "age": 32.0,
+        "current_season_id": 2025,
+        "appearances": 46,
+        "minutes": 0,
+        "goals": 20,
+        "assists": 3,
+        "goal_contributions": 23
+      },
+      {
+        "player": "Folarin Balogun",
+        "country": "United States",
+        "club": "AS Monaco",
+        "position": "Centre-Forward",
+        "age": 24.0,
+        "current_season_id": 2025,
+        "appearances": 45,
+        "minutes": 0,
+        "goals": 19,
+        "assists": 4,
+        "goal_contributions": 23
+      },
+      {
+        "player": "Jhon Córdoba",
+        "country": "Colombia",
+        "club": "FC Krasnodar",
+        "position": "Centre-Forward",
+        "age": 33.0,
+        "current_season_id": 2025,
+        "appearances": 44,
+        "minutes": 0,
+        "goals": 17,
+        "assists": 6,
+        "goal_contributions": 23
+      },
+      {
+        "player": "Andrej Kramaric",
+        "country": "Croatia",
+        "club": "TSG 1899 Hoffenheim",
+        "position": "Attacking Midfield",
+        "age": 34.0,
+        "current_season_id": 2025,
+        "appearances": 36,
+        "minutes": 0,
+        "goals": 15,
+        "assists": 8,
+        "goal_contributions": 23
+      }
+    ],
+    "squad_market_values_2026": [
+      {
+        "country": "France",
+        "player_rows": 26,
+        "squad_market_value_eur": 1561000000,
+        "squad_market_value_text": "€1561.00m",
+        "average_player_market_value_eur": 60038462,
+        "average_player_market_value_text": "€60.04m",
+        "market_value_rank": 1
+      },
+      {
+        "country": "England",
+        "player_rows": 26,
+        "squad_market_value_eur": 1373200000,
+        "squad_market_value_text": "€1373.20m",
+        "average_player_market_value_eur": 52815385,
+        "average_player_market_value_text": "€52.82m",
+        "market_value_rank": 2
+      },
+      {
+        "country": "Spain",
+        "player_rows": 26,
+        "squad_market_value_eur": 1217000000,
+        "squad_market_value_text": "€1217.00m",
+        "average_player_market_value_eur": 46807692,
+        "average_player_market_value_text": "€46.81m",
+        "market_value_rank": 3
+      },
+      {
+        "country": "Portugal",
+        "player_rows": 26,
+        "squad_market_value_eur": 1005500000,
+        "squad_market_value_text": "€1005.50m",
+        "average_player_market_value_eur": 38673077,
+        "average_player_market_value_text": "€38.67m",
+        "market_value_rank": 4
+      },
+      {
+        "country": "Germany",
+        "player_rows": 26,
+        "squad_market_value_eur": 982000000,
+        "squad_market_value_text": "€982.00m",
+        "average_player_market_value_eur": 37769231,
+        "average_player_market_value_text": "€37.77m",
+        "market_value_rank": 5
+      },
+      {
+        "country": "Brazil",
+        "player_rows": 26,
+        "squad_market_value_eur": 943200000,
+        "squad_market_value_text": "€943.20m",
+        "average_player_market_value_eur": 36276923,
+        "average_player_market_value_text": "€36.28m",
+        "market_value_rank": 6
+      },
+      {
+        "country": "Netherlands",
+        "player_rows": 26,
+        "squad_market_value_eur": 814200000,
+        "squad_market_value_text": "€814.20m",
+        "average_player_market_value_eur": 31315385,
+        "average_player_market_value_text": "€31.32m",
+        "market_value_rank": 7
+      },
+      {
+        "country": "Argentina",
+        "player_rows": 26,
+        "squad_market_value_eur": 799500000,
+        "squad_market_value_text": "€799.50m",
+        "average_player_market_value_eur": 30750000,
+        "average_player_market_value_text": "€30.75m",
+        "market_value_rank": 8
+      },
+      {
+        "country": "Norway",
+        "player_rows": 26,
+        "squad_market_value_eur": 592000000,
+        "squad_market_value_text": "€592.00m",
+        "average_player_market_value_eur": 22769231,
+        "average_player_market_value_text": "€22.77m",
+        "market_value_rank": 9
+      },
+      {
+        "country": "Belgium",
+        "player_rows": 26,
+        "squad_market_value_eur": 548900000,
+        "squad_market_value_text": "€548.90m",
+        "average_player_market_value_eur": 21111538,
+        "average_player_market_value_text": "€21.11m",
+        "market_value_rank": 10
+      },
+      {
+        "country": "Ivory Coast",
+        "player_rows": 26,
+        "squad_market_value_eur": 520900000,
+        "squad_market_value_text": "€520.90m",
+        "average_player_market_value_eur": 20034615,
+        "average_player_market_value_text": "€20.03m",
+        "market_value_rank": 11
+      },
+      {
+        "country": "Morocco",
+        "player_rows": 26,
+        "squad_market_value_eur": 487200000,
+        "squad_market_value_text": "€487.20m",
+        "average_player_market_value_eur": 18738462,
+        "average_player_market_value_text": "€18.74m",
+        "market_value_rank": 12
+      },
+      {
+        "country": "Senegal",
+        "player_rows": 26,
+        "squad_market_value_eur": 480400000,
+        "squad_market_value_text": "€480.40m",
+        "average_player_market_value_eur": 18476923,
+        "average_player_market_value_text": "€18.48m",
+        "market_value_rank": 13
+      },
+      {
+        "country": "Turkey",
+        "player_rows": 26,
+        "squad_market_value_eur": 475700000,
+        "squad_market_value_text": "€475.70m",
+        "average_player_market_value_eur": 18296154,
+        "average_player_market_value_text": "€18.30m",
+        "market_value_rank": 14
+      },
+      {
+        "country": "Sweden",
+        "player_rows": 26,
+        "squad_market_value_eur": 402975000,
+        "squad_market_value_text": "€402.98m",
+        "average_player_market_value_eur": 15499038,
+        "average_player_market_value_text": "€15.50m",
+        "market_value_rank": 15
+      },
+      {
+        "country": "Uruguay",
+        "player_rows": 26,
+        "squad_market_value_eur": 398300000,
+        "squad_market_value_text": "€398.30m",
+        "average_player_market_value_eur": 15319231,
+        "average_player_market_value_text": "€15.32m",
+        "market_value_rank": 16
+      },
+      {
+        "country": "Croatia",
+        "player_rows": 26,
+        "squad_market_value_eur": 387700000,
+        "squad_market_value_text": "€387.70m",
+        "average_player_market_value_eur": 14911538,
+        "average_player_market_value_text": "€14.91m",
+        "market_value_rank": 17
+      },
+      {
+        "country": "United States",
+        "player_rows": 26,
+        "squad_market_value_eur": 385650000,
+        "squad_market_value_text": "€385.65m",
+        "average_player_market_value_eur": 14832692,
+        "average_player_market_value_text": "€14.83m",
+        "market_value_rank": 18
+      },
+      {
+        "country": "Ecuador",
+        "player_rows": 26,
+        "squad_market_value_eur": 366400000,
+        "squad_market_value_text": "€366.40m",
+        "average_player_market_value_eur": 14092308,
+        "average_player_market_value_text": "€14.09m",
+        "market_value_rank": 19
+      },
+      {
+        "country": "Switzerland",
+        "player_rows": 26,
+        "squad_market_value_eur": 332600000,
+        "squad_market_value_text": "€332.60m",
+        "average_player_market_value_eur": 12792308,
+        "average_player_market_value_text": "€12.79m",
+        "market_value_rank": 20
+      },
+      {
+        "country": "Colombia",
+        "player_rows": 26,
+        "squad_market_value_eur": 297750000,
+        "squad_market_value_text": "€297.75m",
+        "average_player_market_value_eur": 11451923,
+        "average_player_market_value_text": "€11.45m",
+        "market_value_rank": 21
+      },
+      {
+        "country": "Japan",
+        "player_rows": 26,
+        "squad_market_value_eur": 279400000,
+        "squad_market_value_text": "€279.40m",
+        "average_player_market_value_eur": 10746154,
+        "average_player_market_value_text": "€10.75m",
+        "market_value_rank": 22
+      },
+      {
+        "country": "Algeria",
+        "player_rows": 26,
+        "squad_market_value_eur": 256600000,
+        "squad_market_value_text": "€256.60m",
+        "average_player_market_value_eur": 9869231,
+        "average_player_market_value_text": "€9.87m",
+        "market_value_rank": 23
+      },
+      {
+        "country": "Ghana",
+        "player_rows": 26,
+        "squad_market_value_eur": 235875000,
+        "squad_market_value_text": "€235.88m",
+        "average_player_market_value_eur": 9072115,
+        "average_player_market_value_text": "€9.07m",
+        "market_value_rank": 24
+      },
+      {
+        "country": "Austria",
+        "player_rows": 25,
+        "squad_market_value_eur": 231700000,
+        "squad_market_value_text": "€231.70m",
+        "average_player_market_value_eur": 9268000,
+        "average_player_market_value_text": "€9.27m",
+        "market_value_rank": 25
+      },
+      {
+        "country": "Canada",
+        "player_rows": 25,
+        "squad_market_value_eur": 196150000,
+        "squad_market_value_text": "€196.15m",
+        "average_player_market_value_eur": 7846000,
+        "average_player_market_value_text": "€7.85m",
+        "market_value_rank": 26
+      },
+      {
+        "country": "Mexico",
+        "player_rows": 26,
+        "squad_market_value_eur": 193550000,
+        "squad_market_value_text": "€193.55m",
+        "average_player_market_value_eur": 7444231,
+        "average_player_market_value_text": "€7.44m",
+        "market_value_rank": 27
+      },
+      {
+        "country": "Czech Republic",
+        "player_rows": 26,
+        "squad_market_value_eur": 188175000,
+        "squad_market_value_text": "€188.18m",
+        "average_player_market_value_eur": 7237500,
+        "average_player_market_value_text": "€7.24m",
+        "market_value_rank": 28
+      },
+      {
+        "country": "Scotland",
+        "player_rows": 26,
+        "squad_market_value_eur": 170225000,
+        "squad_market_value_text": "€170.22m",
+        "average_player_market_value_eur": 6547115,
+        "average_player_market_value_text": "€6.55m",
+        "market_value_rank": 29
+      },
+      {
+        "country": "Paraguay",
+        "player_rows": 26,
+        "squad_market_value_eur": 153650000,
+        "squad_market_value_text": "€153.65m",
+        "average_player_market_value_eur": 5909615,
+        "average_player_market_value_text": "€5.91m",
+        "market_value_rank": 30
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "player_rows": 26,
+        "squad_market_value_eur": 150700000,
+        "squad_market_value_text": "€150.70m",
+        "average_player_market_value_eur": 5796154,
+        "average_player_market_value_text": "€5.80m",
+        "market_value_rank": 31
+      },
+      {
+        "country": "DR Congo",
+        "player_rows": 26,
+        "squad_market_value_eur": 141750000,
+        "squad_market_value_text": "€141.75m",
+        "average_player_market_value_eur": 5451923,
+        "average_player_market_value_text": "€5.45m",
+        "market_value_rank": 32
+      },
+      {
+        "country": "South Korea",
+        "player_rows": 26,
+        "squad_market_value_eur": 137550000,
+        "squad_market_value_text": "€137.55m",
+        "average_player_market_value_eur": 5290385,
+        "average_player_market_value_text": "€5.29m",
+        "market_value_rank": 33
+      },
+      {
+        "country": "Egypt",
+        "player_rows": 26,
+        "squad_market_value_eur": 116675000,
+        "squad_market_value_text": "€116.67m",
+        "average_player_market_value_eur": 4487500,
+        "average_player_market_value_text": "€4.49m",
+        "market_value_rank": 34
+      },
+      {
+        "country": "Uzbekistan",
+        "player_rows": 26,
+        "squad_market_value_eur": 85325000,
+        "squad_market_value_text": "€85.33m",
+        "average_player_market_value_eur": 3281731,
+        "average_player_market_value_text": "€3.28m",
+        "market_value_rank": 35
+      },
+      {
+        "country": "Australia",
+        "player_rows": 26,
+        "squad_market_value_eur": 77600000,
+        "squad_market_value_text": "€77.60m",
+        "average_player_market_value_eur": 2984615,
+        "average_player_market_value_text": "€2.98m",
+        "market_value_rank": 36
+      },
+      {
+        "country": "Tunisia",
+        "player_rows": 26,
+        "squad_market_value_eur": 69650000,
+        "squad_market_value_text": "€69.65m",
+        "average_player_market_value_eur": 2678846,
+        "average_player_market_value_text": "€2.68m",
+        "market_value_rank": 37
+      },
+      {
+        "country": "Cape Verde",
+        "player_rows": 26,
+        "squad_market_value_eur": 55950000,
+        "squad_market_value_text": "€55.95m",
+        "average_player_market_value_eur": 2151923,
+        "average_player_market_value_text": "€2.15m",
+        "market_value_rank": 38
+      },
+      {
+        "country": "Haiti",
+        "player_rows": 26,
+        "squad_market_value_eur": 55600000,
+        "squad_market_value_text": "€55.60m",
+        "average_player_market_value_eur": 2138462,
+        "average_player_market_value_text": "€2.14m",
+        "market_value_rank": 39
+      },
+      {
+        "country": "South Africa",
+        "player_rows": 26,
+        "squad_market_value_eur": 44800000,
+        "squad_market_value_text": "€44.80m",
+        "average_player_market_value_eur": 1723077,
+        "average_player_market_value_text": "€1.72m",
+        "market_value_rank": 40
+      },
+      {
+        "country": "Saudi Arabia",
+        "player_rows": 26,
+        "squad_market_value_eur": 37000000,
+        "squad_market_value_text": "€37.00m",
+        "average_player_market_value_eur": 1423077,
+        "average_player_market_value_text": "€1.42m",
+        "market_value_rank": 41
+      },
+      {
+        "country": "New Zealand",
+        "player_rows": 26,
+        "squad_market_value_eur": 34600000,
+        "squad_market_value_text": "€34.60m",
+        "average_player_market_value_eur": 1330769,
+        "average_player_market_value_text": "€1.33m",
+        "market_value_rank": 42
+      },
+      {
+        "country": "Panama",
+        "player_rows": 26,
+        "squad_market_value_eur": 34525000,
+        "squad_market_value_text": "€34.52m",
+        "average_player_market_value_eur": 1327885,
+        "average_player_market_value_text": "€1.33m",
+        "market_value_rank": 43
+      },
+      {
+        "country": "Iran",
+        "player_rows": 26,
+        "squad_market_value_eur": 32650000,
+        "squad_market_value_text": "€32.65m",
+        "average_player_market_value_eur": 1255769,
+        "average_player_market_value_text": "€1.26m",
+        "market_value_rank": 44
+      },
+      {
+        "country": "Curaçao",
+        "player_rows": 26,
+        "squad_market_value_eur": 25825000,
+        "squad_market_value_text": "€25.82m",
+        "average_player_market_value_eur": 993269,
+        "average_player_market_value_text": "€993k",
+        "market_value_rank": 45
+      },
+      {
+        "country": "Iraq",
+        "player_rows": 26,
+        "squad_market_value_eur": 21100000,
+        "squad_market_value_text": "€21.10m",
+        "average_player_market_value_eur": 811538,
+        "average_player_market_value_text": "€812k",
+        "market_value_rank": 46
+      },
+      {
+        "country": "Qatar",
+        "player_rows": 26,
+        "squad_market_value_eur": 19925000,
+        "squad_market_value_text": "€19.93m",
+        "average_player_market_value_eur": 766346,
+        "average_player_market_value_text": "€766k",
+        "market_value_rank": 47
+      },
+      {
+        "country": "Jordan",
+        "player_rows": 26,
+        "squad_market_value_eur": 19875000,
+        "squad_market_value_text": "€19.88m",
+        "average_player_market_value_eur": 764423,
+        "average_player_market_value_text": "€764k",
+        "market_value_rank": 48
+      }
+    ],
+    "global_club_representation_2026": [
+      {
+        "club": "Manchester City",
+        "player_count": 19,
+        "represented_countries": 12,
+        "total_market_value_eur": 1081000000,
+        "total_market_value_text": "€1081.00m",
+        "player_count_rank": 1
+      },
+      {
+        "club": "Bayern Munich",
+        "player_count": 18,
+        "represented_countries": 10,
+        "total_market_value_eur": 873000000,
+        "total_market_value_text": "€873.00m",
+        "player_count_rank": 2
+      },
+      {
+        "club": "Arsenal FC",
+        "player_count": 16,
+        "represented_countries": 10,
+        "total_market_value_eur": 1018000000,
+        "total_market_value_text": "€1018.00m",
+        "player_count_rank": 3
+      },
+      {
+        "club": "Paris Saint-Germain",
+        "player_count": 15,
+        "represented_countries": 8,
+        "total_market_value_eur": 1054000000,
+        "total_market_value_text": "€1054.00m",
+        "player_count_rank": 4
+      },
+      {
+        "club": "FC Barcelona",
+        "player_count": 14,
+        "represented_countries": 7,
+        "total_market_value_eur": 904000000,
+        "total_market_value_text": "€904.00m",
+        "player_count_rank": 5
+      },
+      {
+        "club": "Atlético de Madrid",
+        "player_count": 12,
+        "represented_countries": 5,
+        "total_market_value_eur": 327000000,
+        "total_market_value_text": "€327.00m",
+        "player_count_rank": 6
+      },
+      {
+        "club": "Crystal Palace",
+        "player_count": 12,
+        "represented_countries": 10,
+        "total_market_value_eur": 324000000,
+        "total_market_value_text": "€324.00m",
+        "player_count_rank": 6
+      },
+      {
+        "club": "Al-Hilal SFC",
+        "player_count": 12,
+        "represented_countries": 6,
+        "total_market_value_eur": 93700000,
+        "total_market_value_text": "€93.70m",
+        "player_count_rank": 6
+      },
+      {
+        "club": "Liverpool FC",
+        "player_count": 11,
+        "represented_countries": 9,
+        "total_market_value_eur": 503000000,
+        "total_market_value_text": "€503.00m",
+        "player_count_rank": 9
+      },
+      {
+        "club": "Manchester United",
+        "player_count": 11,
+        "represented_countries": 9,
+        "total_market_value_eur": 384000000,
+        "total_market_value_text": "€384.00m",
+        "player_count_rank": 9
+      },
+      {
+        "club": "Borussia Dortmund",
+        "player_count": 11,
+        "represented_countries": 7,
+        "total_market_value_eur": 286500000,
+        "total_market_value_text": "€286.50m",
+        "player_count_rank": 9
+      },
+      {
+        "club": "Galatasaray",
+        "player_count": 11,
+        "represented_countries": 6,
+        "total_market_value_eur": 165000000,
+        "total_market_value_text": "€165.00m",
+        "player_count_rank": 9
+      },
+      {
+        "club": "Real Madrid",
+        "player_count": 10,
+        "represented_countries": 9,
+        "total_market_value_eur": 840500000,
+        "total_market_value_text": "€840.50m",
+        "player_count_rank": 13
+      },
+      {
+        "club": "AC Milan",
+        "player_count": 10,
+        "represented_countries": 8,
+        "total_market_value_eur": 229500000,
+        "total_market_value_text": "€229.50m",
+        "player_count_rank": 13
+      },
+      {
+        "club": "PSV Eindhoven",
+        "player_count": 10,
+        "represented_countries": 8,
+        "total_market_value_eur": 158200000,
+        "total_market_value_text": "€158.20m",
+        "player_count_rank": 13
+      },
+      {
+        "club": "Fenerbahce",
+        "player_count": 10,
+        "represented_countries": 5,
+        "total_market_value_eur": 88000000,
+        "total_market_value_text": "€88.00m",
+        "player_count_rank": 13
+      },
+      {
+        "club": "SK Slavia Prague",
+        "player_count": 10,
+        "represented_countries": 1,
+        "total_market_value_eur": 51200000,
+        "total_market_value_text": "€51.20m",
+        "player_count_rank": 13
+      },
+      {
+        "club": "Aston Villa",
+        "player_count": 9,
+        "represented_countries": 6,
+        "total_market_value_eur": 266000000,
+        "total_market_value_text": "€266.00m",
+        "player_count_rank": 18
+      },
+      {
+        "club": "Sunderland AFC",
+        "player_count": 9,
+        "represented_countries": 8,
+        "total_market_value_eur": 209000000,
+        "total_market_value_text": "€209.00m",
+        "player_count_rank": 18
+      },
+      {
+        "club": "CR Flamengo",
+        "player_count": 9,
+        "represented_countries": 4,
+        "total_market_value_eur": 92000000,
+        "total_market_value_text": "€92.00m",
+        "player_count_rank": 18
+      },
+      {
+        "club": "Al-Ahli SFC",
+        "player_count": 9,
+        "represented_countries": 7,
+        "total_market_value_eur": 80500000,
+        "total_market_value_text": "€80.50m",
+        "player_count_rank": 18
+      },
+      {
+        "club": "Al-Nassr FC",
+        "player_count": 9,
+        "represented_countries": 3,
+        "total_market_value_eur": 49625000,
+        "total_market_value_text": "€49.62m",
+        "player_count_rank": 18
+      },
+      {
+        "club": "Al Ahly FC",
+        "player_count": 9,
+        "represented_countries": 2,
+        "total_market_value_eur": 20675000,
+        "total_market_value_text": "€20.68m",
+        "player_count_rank": 18
+      },
+      {
+        "club": "Chelsea FC",
+        "player_count": 8,
+        "represented_countries": 8,
+        "total_market_value_eur": 457000000,
+        "total_market_value_text": "€457.00m",
+        "player_count_rank": 24
+      },
+      {
+        "club": "Newcastle United",
+        "player_count": 8,
+        "represented_countries": 5,
+        "total_market_value_eur": 341000000,
+        "total_market_value_text": "€341.00m",
+        "player_count_rank": 24
+      }
+    ],
+    "country_club_representation_2026": [
+      {
+        "country": "Algeria",
+        "club": "LOSC Lille",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Algeria",
+        "club": "USM Alger",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Algeria",
+        "club": "Al-Ahli SFC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Al-Duhail SC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Al-Ittihad Club",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "BSC Young Boys",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Bayer 04 Leverkusen",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Borussia Dortmund",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "ETO FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Eintracht Frankfurt",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Esperance Tunis",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "FC Stade Nyonnais",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "FC Twente Enschede",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Feyenoord Rotterdam",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Frosinone Calcio",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Granada CF",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Hellas Verona",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "JS Kabylie",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Manchester City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "OGC Nice",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Olympique Marseille",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Paris FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "Royal Charleroi SC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Algeria",
+        "club": "VfL Wolfsburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Argentina",
+        "club": "Atlético de Madrid",
+        "player_count": 6,
+        "country_rank": 1
+      },
+      {
+        "country": "Argentina",
+        "club": "Olympique Marseille",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Argentina",
+        "club": "Inter Miami CF",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Australia",
+        "club": "Melbourne City FC",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Australia",
+        "club": "FC St. Pauli",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Australia",
+        "club": "New York City FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Austria",
+        "club": "1.FSV Mainz 05",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Austria",
+        "club": "Borussia Dortmund",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Austria",
+        "club": "RB Leipzig",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Austria",
+        "club": "SV Werder Bremen",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Belgium",
+        "club": "Club Brugge KV",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Belgium",
+        "club": "LOSC Lille",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Belgium",
+        "club": "AC Milan",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Belgium",
+        "club": "Aston Villa",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Belgium",
+        "club": "RC Strasbourg Alsace",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Belgium",
+        "club": "SSC Napoli",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "FC Schalke 04",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "HNK Rijeka",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Atalanta BC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "BSC Young Boys",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Borussia Mönchengladbach",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Bröndby IF",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "FC Astana",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "FC Slovan Liberec",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "FC St. Pauli",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "FC Universitatea Cluj",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "FC Viktoria Plzen",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "FK Borac Banja Luka",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Gaziantep FK",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Hull City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Jagiellonia Bialystok",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Karlsruher SC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "PSV Eindhoven",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Pafos FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "RC Lens",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "Red Bull Salzburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "SL Benfica",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "UC Sampdoria",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "US Sassuolo",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "club": "VfB Stuttgart",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Brazil",
+        "club": "CR Flamengo",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "Brazil",
+        "club": "Arsenal FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Brazil",
+        "club": "Manchester United",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Brazil",
+        "club": "Zenit St. Petersburg",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Canada",
+        "club": "Los Angeles FC",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Canada",
+        "club": "Toronto FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Canada",
+        "club": "Villarreal CF",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Akron Tolyatti",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Al-Bataeh CSC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Apollon Limassol",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Basaksehir FK",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "CF Estrela Amadora",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Casa Pia AC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Columbus Crew",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "FC Krasnodar",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "FCSB",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "GD Chaves",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Igdir FK",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Ludogorets Razgrad",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Maccabi Tel Aviv",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Montana",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Omonia Nicosia",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "PEC Zwolle",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Puskás Akadémia FC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "SC Farense",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "SC União Torreense",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "SJK Seinäjoki",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "SL Benfica",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "San Diego FC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Shamrock Rovers",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Trabzonspor",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Villarreal CF",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Cape Verde",
+        "club": "Vitória Guimarães SC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Colombia",
+        "club": "CA River Plate",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Colombia",
+        "club": "Crystal Palace",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Colombia",
+        "club": "Atlas Guadalajara",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Atlético Nacional",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Bayern Munich",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Bologna FC 1909",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "CA Independiente",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "CA Rosario Central",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "CA Vélez Sarsfield",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "CD Cruz Azul",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "CR Flamengo",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Cagliari Calcio",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Club Athletico Paranaense",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Clube de Regatas Vasco da Gama",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "FC Krasnodar",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "FC Nantes",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Galatasaray",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Minnesota United FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "RCD Mallorca",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Racing Santander",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Real Betis Balompié",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "SL Benfica",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Sociedade Esportiva Palmeiras",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Colombia",
+        "club": "Sporting CP",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Manchester City",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Croatia",
+        "club": "Real Sociedad",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Croatia",
+        "club": "AC Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "ACF Fiorentina",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Ajax Amsterdam",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Atalanta BC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Bayern Munich",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Bologna FC 1909",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "CA Osasuna",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Como 1907",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "FC Augsburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "FC Copenhagen",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "FC Dallas",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "FC Midtjylland",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "GNK Dinamo Zagreb",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "HNK Rijeka",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Hamburger SV",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Hull City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Inter Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Orlando City SC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "PSV Eindhoven",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "SC Freiburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "TSG 1899 Hoffenheim",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Croatia",
+        "club": "Torino FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Curaçao",
+        "club": "FC Volendam",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Curaçao",
+        "club": "Miami FC",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Curaçao",
+        "club": "RKC Waalwijk",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Curaçao",
+        "club": "SC Telstar",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Czech Republic",
+        "club": "SK Slavia Prague",
+        "player_count": 10,
+        "country_rank": 1
+      },
+      {
+        "country": "Czech Republic",
+        "club": "AC Sparta Prague",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Czech Republic",
+        "club": "FC Viktoria Plzen",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Czech Republic",
+        "club": "TSG 1899 Hoffenheim",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "DR Congo",
+        "club": "AE Larisa",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "DR Congo",
+        "club": "LOSC Lille",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "DR Congo",
+        "club": "Al-Jazira Club",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Alanyaspor",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Aris Limassol",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Atromitos Athens",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Burnley FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "CD Castellón",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "FC Noah Yerevan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "KRC Genk",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Kilmarnock FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Le Havre AC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Montpellier HSC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Newcastle United",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Pyramids FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "RC Lens",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "RCD Espanyol Barcelona",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Real Betis Balompié",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Spartak Moscow",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Standard Liège",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Sunderland AFC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Watford FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "West Ham United",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "DR Congo",
+        "club": "Widzew Lodz",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Clube Atlético Mineiro",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Ecuador",
+        "club": "CA Huracán",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Ecuador",
+        "club": "AC Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "AE Kifisia",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Arsenal FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "CA River Plate",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "CF Pachuca",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "CR Flamengo",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Chelsea FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Club Brugge KV",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Club Tijuana",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "FC Midtjylland",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Independiente del Valle",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "KRC Genk",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "LDU Quito",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Paris Saint-Germain",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Royal Antwerp FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Sport Club Internacional",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Sunderland AFC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "UNAM Pumas",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Union Saint-Gilloise",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "Venezia FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ecuador",
+        "club": "VfB Stuttgart",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Egypt",
+        "club": "Al Ahly FC",
+        "player_count": 8,
+        "country_rank": 1
+      },
+      {
+        "country": "Egypt",
+        "club": "Pyramids FC",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Egypt",
+        "club": "Zamalek SC",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "England",
+        "club": "Arsenal FC",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "England",
+        "club": "Manchester City",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "England",
+        "club": "Aston Villa",
+        "player_count": 3,
+        "country_rank": 3
+      },
+      {
+        "country": "England",
+        "club": "Newcastle United",
+        "player_count": 3,
+        "country_rank": 3
+      },
+      {
+        "country": "France",
+        "club": "Paris Saint-Germain",
+        "player_count": 5,
+        "country_rank": 1
+      },
+      {
+        "country": "France",
+        "club": "AC Milan",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "France",
+        "club": "Bayern Munich",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "France",
+        "club": "Crystal Palace",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "France",
+        "club": "Real Madrid",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Germany",
+        "club": "Bayern Munich",
+        "player_count": 7,
+        "country_rank": 1
+      },
+      {
+        "country": "Germany",
+        "club": "Borussia Dortmund",
+        "player_count": 4,
+        "country_rank": 2
+      },
+      {
+        "country": "Germany",
+        "club": "VfB Stuttgart",
+        "player_count": 4,
+        "country_rank": 2
+      },
+      {
+        "country": "Ghana",
+        "club": "AJ Auxerre",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Ghana",
+        "club": "Leicester City",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Ghana",
+        "club": "AS Saint-Étienne",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Al-Qadsiah FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Atalanta BC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Athletic Bilbao",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Basaksehir FK",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Coventry City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "FC Nordsjaelland",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "FC St. Gallen 1879",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "FC Viktoria Plzen",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Hearts of Oak",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Manchester City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "OGC Nice",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Olympique Lyon",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "PAOK Thessaloniki",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Pafos FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Rayo Vallecano",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Real Oviedo",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "St. Patrick's Athletic",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Stade Rennais FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "VfL Wolfsburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Ghana",
+        "club": "Villarreal CF",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Haiti",
+        "club": "FC Vizela",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Haiti",
+        "club": "AJ Auxerre",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "AS Nancy-Lorraine",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Almere City FC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Angers SCO",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "BSC Young Boys U21",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Caykur Rizespor",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Colorado Springs Switchbacks FC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "El Paso Locomotive FC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Esteghlal FC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "FC Cosmos Koblenz",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "FC Dallas",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "FC Lugano",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "FC Sochaux-Montbéliard",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "FC Tatran Presov",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Ferencvárosi TC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "KAA Gent",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "LDU Quito",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Philadelphia Union",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "SC Bastia",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Sunderland AFC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Toronto FC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Violette Athletic Club",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Wolverhampton Wanderers",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Haiti",
+        "club": "Zulte Waregem",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Iran",
+        "club": "Persepolis FC",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "Iran",
+        "club": "Tractor FC",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "Iran",
+        "club": "Esteghlal FC",
+        "player_count": 3,
+        "country_rank": 3
+      },
+      {
+        "country": "Iran",
+        "club": "Sepahan FC",
+        "player_count": 3,
+        "country_rank": 3
+      },
+      {
+        "country": "Iraq",
+        "club": "Al-Shorta SC",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "Iraq",
+        "club": "Al-Talaba SC",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Iraq",
+        "club": "Al-Zawraa SC",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Royal Charleroi SC",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "AS Monaco",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "AS Roma",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Al-Ahli SFC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Atalanta BC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Basaksehir FK",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Besiktas JK",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Caykur Rizespor",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Cercle Brugge ",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Crystal Palace",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "FC Porto",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Galatasaray",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Gil Vicente FC",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Inter Milan",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Manchester United",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "NK Maribor",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Nottingham Forest",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "OGC Nice",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Panathinaikos",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "RB Leipzig",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "RC Strasbourg Alsace",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Sporting CP",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "TSG 1899 Hoffenheim",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Trabzonspor",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Ivory Coast",
+        "club": "Villarreal CF",
+        "player_count": 1,
+        "country_rank": 2
+      },
+      {
+        "country": "Japan",
+        "club": "Ajax Amsterdam",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Japan",
+        "club": "Feyenoord Rotterdam",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Japan",
+        "club": "Sint-Truidense VV",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Jordan",
+        "club": "Al-Hussein SC (Irbid)",
+        "player_count": 6,
+        "country_rank": 1
+      },
+      {
+        "country": "Jordan",
+        "club": "Al-Faisaly SC",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Jordan",
+        "club": "Al-Karma",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Jordan",
+        "club": "Al-Wehdat SC",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Jordan",
+        "club": "Al-Zawraa SC",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Jordan",
+        "club": "Selangor FC",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Deportivo Guadalajara",
+        "player_count": 5,
+        "country_rank": 1
+      },
+      {
+        "country": "Mexico",
+        "club": "Deportivo Toluca",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Mexico",
+        "club": "AC Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "AEK Athens",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "AEL Limassol",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "AZ Alkmaar",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Al-Qadsiah FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Atlético de Madrid",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "CD Cruz Azul",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "CF América",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Club Tijuana",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Dynamo Moscow",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Fenerbahce",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Fulham FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Genoa CFC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Lokomotiv Moscow",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "PAOK Thessaloniki",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "RSC Anderlecht",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Real Betis Balompié",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "Santos Laguna",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Mexico",
+        "club": "UNAM Pumas",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Morocco",
+        "club": "PSV Eindhoven",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Morocco",
+        "club": "RC Strasbourg Alsace",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Morocco",
+        "club": "Real Betis Balompié",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Netherlands",
+        "club": "Brighton & Hove Albion",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Netherlands",
+        "club": "Liverpool FC",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Netherlands",
+        "club": "Manchester City",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Netherlands",
+        "club": "Sunderland AFC",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Auckland FC",
+        "player_count": 5,
+        "country_rank": 1
+      },
+      {
+        "country": "New Zealand",
+        "club": "Wellington Phoenix",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "New Zealand",
+        "club": "AS Saint-Étienne",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Braintree Town",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Lechia Gdansk",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Millwall FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Minnesota United FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Motherwell FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Newcastle United Jets",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Nottingham Forest",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "PEC Zwolle",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Peterborough United",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Port Vale FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Portland Timbers",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Sheffield United",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Silkeborg IF",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Swansea City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Viking FK",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Western Sydney Wanderers",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "New Zealand",
+        "club": "Wrexham AFC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Norway",
+        "club": "FK Bodø/Glimt",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Norway",
+        "club": "Fulham FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Norway",
+        "club": "SL Benfica",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Panama",
+        "club": "CD Plaza Amador",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Panama",
+        "club": "CD Universidad Católica",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Panama",
+        "club": "Deportivo Saprissa",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Paraguay",
+        "club": "Sociedade Esportiva Palmeiras",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Paraguay",
+        "club": "Atlanta United FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Paraguay",
+        "club": "Club Cerro Porteño",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Portugal",
+        "club": "Paris Saint-Germain",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "Portugal",
+        "club": "Manchester City",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Portugal",
+        "club": "Sporting CP",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Qatar",
+        "club": "Al-Duhail SC",
+        "player_count": 6,
+        "country_rank": 1
+      },
+      {
+        "country": "Qatar",
+        "club": "Al-Sadd SC",
+        "player_count": 5,
+        "country_rank": 2
+      },
+      {
+        "country": "Qatar",
+        "club": "Al-Rayyan SC",
+        "player_count": 4,
+        "country_rank": 3
+      },
+      {
+        "country": "Saudi Arabia",
+        "club": "Al-Hilal SFC",
+        "player_count": 7,
+        "country_rank": 1
+      },
+      {
+        "country": "Saudi Arabia",
+        "club": "Al-Nassr FC",
+        "player_count": 6,
+        "country_rank": 2
+      },
+      {
+        "country": "Saudi Arabia",
+        "club": "Al-Qadsiah FC",
+        "player_count": 4,
+        "country_rank": 3
+      },
+      {
+        "country": "Scotland",
+        "club": "Rangers FC",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Scotland",
+        "club": "AFC Bournemouth",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Scotland",
+        "club": "Celtic FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Scotland",
+        "club": "Heart of Midlothian FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Senegal",
+        "club": "AS Monaco",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Senegal",
+        "club": "Bayern Munich",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Senegal",
+        "club": "Everton FC",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Senegal",
+        "club": "OGC Nice",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "South Africa",
+        "club": "Mamelodi Sundowns FC",
+        "player_count": 8,
+        "country_rank": 1
+      },
+      {
+        "country": "South Africa",
+        "club": "Orlando Pirates",
+        "player_count": 8,
+        "country_rank": 1
+      },
+      {
+        "country": "South Africa",
+        "club": "AEL Limassol",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Burnley FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "CD Tondela",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Chicago Fire FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Hannover 96",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Kaizer Chiefs",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Molde FK",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Philadelphia Union",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Polokwane City FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Africa",
+        "club": "Siwelele Football Club ",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "South Korea",
+        "club": "Jeonbuk Hyundai Motors",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "South Korea",
+        "club": "FC Midtjylland",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "South Korea",
+        "club": "Ulsan HD FC",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Spain",
+        "club": "FC Barcelona",
+        "player_count": 8,
+        "country_rank": 1
+      },
+      {
+        "country": "Spain",
+        "club": "Arsenal FC",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Spain",
+        "club": "Athletic Bilbao",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Spain",
+        "club": "Atlético de Madrid",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Sweden",
+        "club": "AIK",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Arsenal FC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Aston Villa",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Atalanta BC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Borussia Dortmund",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Brighton & Hove Albion",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Burnley FC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Celta de Vigo",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Celtic FC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Club Brugge KV",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Derby County",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "FC Dallas",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "FC St. Pauli",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Holstein Kiel",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Leeds United",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Liverpool FC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Malmö FF",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Mjällby AIF",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Newcastle United",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Pafos FC",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "SC Braga",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Stoke City",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Tottenham Hotspur",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Udinese Calcio",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "Union Saint-Gilloise",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Sweden",
+        "club": "VfL Wolfsburg",
+        "player_count": 1,
+        "country_rank": 1
+      },
+      {
+        "country": "Switzerland",
+        "club": "BSC Young Boys",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Switzerland",
+        "club": "Sevilla FC",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Switzerland",
+        "club": "1.FSV Mainz 05",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "AC Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "AS Monaco",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Bologna FC 1909",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Borussia Dortmund",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Borussia Mönchengladbach",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Burnley FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Eintracht Frankfurt",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "FC Augsburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "FC Lorient",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Fortuna Düsseldorf",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Hamburger SV",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Inter Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Leeds United",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Nottingham Forest",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Pisa Sporting Club",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Real Betis Balompié",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "SC Freiburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Stade Rennais FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Sunderland AFC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "Valencia CF",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Switzerland",
+        "club": "VfB Stuttgart",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Club Africain",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Tunisia",
+        "club": "Kasimpasa",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "Tunisia",
+        "club": "1.FC Union Berlin",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "BSC Young Boys",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Burnley FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "CS Sfaxien",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Celtic FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Dinamo Makhachkala",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Eintracht Frankfurt",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Esperance Tunis",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Etoile Sportive du Sahel",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "FC Augsburg",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "FC Copenhagen",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "FC Lorient",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "FC Lugano",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Hannover 96",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "IFK Norrköping",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "NK Maribor",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Norwich City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "OGC Nice",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Paris Saint-Germain Espoirs",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Servette FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "US Monastir",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Tunisia",
+        "club": "Vancouver Whitecaps FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Fenerbahce",
+        "player_count": 6,
+        "country_rank": 1
+      },
+      {
+        "country": "Turkey",
+        "club": "Galatasaray",
+        "player_count": 6,
+        "country_rank": 1
+      },
+      {
+        "country": "Turkey",
+        "club": "AS Roma",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Al-Ahli SFC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Besiktas JK",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Borussia Dortmund",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Brighton & Hove Albion",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Caykur Rizespor",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Eintracht Frankfurt",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "FC Porto",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Inter Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Juventus FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Kasimpasa",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Manchester United",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "Real Madrid",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Turkey",
+        "club": "TSG 1899 Hoffenheim",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Borussia Mönchengladbach",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "United States",
+        "club": "PSV Eindhoven",
+        "player_count": 2,
+        "country_rank": 1
+      },
+      {
+        "country": "United States",
+        "club": "AC Milan",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "AFC Bournemouth",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "AS Monaco",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Bayer 04 Leverkusen",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "CF América",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Celtic FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Charlotte FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Chicago Fire FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Columbus Crew",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Coventry City",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Crystal Palace",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "FC Cincinnati",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "FC Toulouse",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Fulham FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Juventus FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Leeds United",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "New England Revolution",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "New York City FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Olympique Marseille",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Seattle Sounders FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Vancouver Whitecaps FC",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "United States",
+        "club": "Villarreal CF",
+        "player_count": 1,
+        "country_rank": 3
+      },
+      {
+        "country": "Uruguay",
+        "club": "CR Flamengo",
+        "player_count": 3,
+        "country_rank": 1
+      },
+      {
+        "country": "Uruguay",
+        "club": "CF América",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Uruguay",
+        "club": "Sociedade Esportiva Palmeiras",
+        "player_count": 2,
+        "country_rank": 2
+      },
+      {
+        "country": "Uzbekistan",
+        "club": "Pakhtakor Tashkent",
+        "player_count": 4,
+        "country_rank": 1
+      },
+      {
+        "country": "Uzbekistan",
+        "club": "Neftchi Fergana",
+        "player_count": 3,
+        "country_rank": 2
+      },
+      {
+        "country": "Uzbekistan",
+        "club": "Basaksehir FK",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Uzbekistan",
+        "club": "Dinamo Samarqand",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Uzbekistan",
+        "club": "Esteghlal FC",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Uzbekistan",
+        "club": "Nasaf Qarshi",
+        "player_count": 2,
+        "country_rank": 3
+      },
+      {
+        "country": "Uzbekistan",
+        "club": "Persepolis FC",
+        "player_count": 2,
+        "country_rank": 3
+      }
+    ],
+    "coaches_2026": [
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "age": 66.0,
+        "tenure_text": "01 year 08 days",
+        "contract_until": "2030",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 40,
+        "title_types": 22,
+        "honors_preview": "4x World's Best Club Coach, 2x Manager of the Year, 1x UEFA Manager of the Year, 5x UEFA Champions League winner",
+        "age_rank_oldest": 8,
+        "title_rank": 1
+      },
+      {
+        "manager": "Ralf Rangnick",
+        "country": "Austria",
+        "nationality": "Germany",
+        "age": 67.0,
+        "tenure_text": "04 years 02 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 32,
+        "title_types": 17,
+        "honors_preview": "1x Euro participant, 1x German cup winner, 1x German Super Cup winner, 2x German cup runner-up",
+        "age_rank_oldest": 6,
+        "title_rank": 2
+      },
+      {
+        "manager": "Thomas Tuchel",
+        "country": "England",
+        "nationality": "Germany",
+        "age": 52.0,
+        "tenure_text": "01 year 05 months 02 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 31,
+        "title_types": 23,
+        "honors_preview": "1x World's Best Club Coach, 1x Manager of the Year, 1x UEFA Manager of the Year, 1x UEFA Champions League winner",
+        "age_rank_oldest": 34,
+        "title_rank": 3
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "age": 78.0,
+        "tenure_text": "23 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 27,
+        "title_types": 15,
+        "honors_preview": "1x Uefa Cup winner, 2x World Cup participant, 2x Euro participant, 1x Russian champion",
+        "age_rank_oldest": 1,
+        "title_rank": 4
+      },
+      {
+        "manager": "Didier Deschamps",
+        "country": "France",
+        "nationality": "France",
+        "age": 57.0,
+        "tenure_text": "13 years 10 months 26 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 23,
+        "title_types": 13,
+        "honors_preview": "1x World Cup winner, 2x Manager of the Year, 2x World's Best national team Coach, 3x World Cup participant",
+        "age_rank_oldest": 22,
+        "title_rank": 5
+      },
+      {
+        "manager": "Javier Aguirre",
+        "country": "Mexico",
+        "nationality": "Mexico",
+        "age": 67.0,
+        "tenure_text": "01 year 10 months 11 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 21,
+        "title_types": 16,
+        "honors_preview": "2x Gold Cup winner, 1x CONCACAF Champions League winner, 2x World Cup participant, 1x Copa América participant",
+        "age_rank_oldest": 6,
+        "title_rank": 6
+      },
+      {
+        "manager": "Ståle Solbakken",
+        "country": "Norway",
+        "nationality": "Norway",
+        "age": 58.0,
+        "tenure_text": "05 years 05 months 27 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 19,
+        "title_types": 6,
+        "honors_preview": "2x Manager of the Year, 8x Danish champion, 1x Royal League winner, 4x Danish Cup Winner",
+        "age_rank_oldest": 21,
+        "title_rank": 7
+      },
+      {
+        "manager": "Hajime Moriyasu",
+        "country": "Japan",
+        "nationality": "Japan",
+        "age": 57.0,
+        "tenure_text": "07 years 10 months 02 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 19,
+        "title_types": 11,
+        "honors_preview": "3x Manager of the Year, 1x World Cup participant, 1x Olympics participant, 1x Copa América participant",
+        "age_rank_oldest": 22,
+        "title_rank": 7
+      },
+      {
+        "manager": "Hugo Broos",
+        "country": "South Africa",
+        "nationality": "Belgium",
+        "age": 74.0,
+        "tenure_text": "05 years 29 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 17,
+        "title_types": 9,
+        "honors_preview": "1x Africa Cup winner, 4x Manager of the Year, 2x Belgian cup winner, 1x Confederations Cup participant",
+        "age_rank_oldest": 2,
+        "title_rank": 9
+      },
+      {
+        "manager": "Ronald Koeman",
+        "country": "Netherlands",
+        "nationality": "Netherlands",
+        "age": 63.0,
+        "tenure_text": "03 years 05 months 02 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 17,
+        "title_types": 8,
+        "honors_preview": "1x Euro participant, 1x Dutch Super Cup winner, 1x Portuguese Super Cup winner, 1x Dutch Cup winner",
+        "age_rank_oldest": 10,
+        "title_rank": 9
+      },
+      {
+        "manager": "Carlos Queiroz",
+        "country": "Ghana",
+        "nationality": "Portugal",
+        "age": 73.0,
+        "tenure_text": "01 month 21 days",
+        "contract_until": "2026",
+        "former_player": false,
+        "foreign_to_team": true,
+        "total_titles_won": 16,
+        "title_types": 10,
+        "honors_preview": "3x World Cup participant, 1x Portuguese cup winner, 1x Portuguese Super Cup winner, 1x Gold Cup participant",
+        "age_rank_oldest": 4,
+        "title_rank": 11
+      },
+      {
+        "manager": "Georgios Donis",
+        "country": "Saudi Arabia",
+        "nationality": "Greece",
+        "age": 56.0,
+        "tenure_text": "01 month 11 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 16,
+        "title_types": 13,
+        "honors_preview": "1x Manager of the Year, 1x Saudi Crown Prince Cup Winner, 1x AFC Champions League participant, 1x Saudi Super Cup Winner",
+        "age_rank_oldest": 25,
+        "title_rank": 11
+      },
+      {
+        "manager": "Amir Ghalenoei",
+        "country": "Iran",
+        "nationality": "Iran",
+        "age": 62.0,
+        "tenure_text": "03 years 02 months 22 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 15,
+        "title_types": 5,
+        "honors_preview": "1x Asian Cup participant, 1x CAFA Nations Cup winner, 6x AFC Champions League participant, 2x Iranian cup winner",
+        "age_rank_oldest": 12,
+        "title_rank": 13
+      },
+      {
+        "manager": "Julian Nagelsmann",
+        "country": "Germany",
+        "nationality": "Germany",
+        "age": 38.0,
+        "tenure_text": "02 years 08 months 19 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 15,
+        "title_types": 11,
+        "honors_preview": "1x Manager of the Year, 1x Euro participant, 1x German Champion, 2x German Super Cup winner",
+        "age_rank_oldest": 48,
+        "title_rank": 13
+      },
+      {
+        "manager": "Jesse Marsch",
+        "country": "Canada",
+        "nationality": "United States",
+        "age": 52.0,
+        "tenure_text": "02 years 21 days",
+        "contract_until": "2030",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 14,
+        "title_types": 8,
+        "honors_preview": "3x Manager of the Year, 1x Gold Cup participant, 1x Supporters' Shield Winner, 2x Austrian champion",
+        "age_rank_oldest": 34,
+        "title_rank": 15
+      },
+      {
+        "manager": "Marcelo Bielsa",
+        "country": "Uruguay",
+        "nationality": "Argentina",
+        "age": 70.0,
+        "tenure_text": "03 years 19 days",
+        "contract_until": "2025",
+        "former_player": false,
+        "foreign_to_team": true,
+        "total_titles_won": 13,
+        "title_types": 8,
+        "honors_preview": "1x World's Best national team Coach, 2x World Cup participant, 2x Olympic medalist, 1x English 2nd tier champion",
+        "age_rank_oldest": 5,
+        "title_rank": 16
+      },
+      {
+        "manager": "Gustavo Alfaro",
+        "country": "Paraguay",
+        "nationality": "Argentina",
+        "age": 63.0,
+        "tenure_text": "01 year 09 months 18 days",
+        "contract_until": "2026",
+        "former_player": false,
+        "foreign_to_team": true,
+        "total_titles_won": 11,
+        "title_types": 8,
+        "honors_preview": "1x World Cup participant, 2x Copa América participant, 1x Promotion to 1st league, 1x Copa Sudamericana winner",
+        "age_rank_oldest": 10,
+        "title_rank": 17
+      },
+      {
+        "manager": "Julen Lopetegui",
+        "country": "Qatar",
+        "nationality": "Spain",
+        "age": 59.0,
+        "tenure_text": "01 year 01 month 03 days",
+        "contract_until": "2027",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 11,
+        "title_types": 8,
+        "honors_preview": "1x Europa League winner, 1x European Under-19 participant, 1x European Under-21 participant, 1x Under-20 World Cup participant",
+        "age_rank_oldest": 18,
+        "title_rank": 17
+      },
+      {
+        "manager": "Zlatko Dalic",
+        "country": "Croatia",
+        "nationality": "Croatia",
+        "age": 59.0,
+        "tenure_text": "08 years 07 months 27 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 11,
+        "title_types": 8,
+        "honors_preview": "2x World Cup participant, 2x Euro participant, 1x World Cup runner-up, 1x Saudi Crown Prince Cup Winner",
+        "age_rank_oldest": 18,
+        "title_rank": 17
+      },
+      {
+        "manager": "Darren Bazeley",
+        "country": "New Zealand",
+        "nationality": "England",
+        "age": 53.0,
+        "tenure_text": "02 years 11 months 03 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 11,
+        "title_types": 7,
+        "honors_preview": "1x Olympics participant, 3x OFC-U16/U17-Championship-Winner, 1x OFC Nations Cup winner, 2x Under-17 World Cup participant",
+        "age_rank_oldest": 31,
+        "title_rank": 17
+      },
+      {
+        "manager": "Roberto Martínez",
+        "country": "Portugal",
+        "nationality": "Spain",
+        "age": 52.0,
+        "tenure_text": "03 years 04 months 25 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 11,
+        "title_types": 9,
+        "honors_preview": "2x World Cup participant, 2x Euro participant, 1x English FA Cup winner, 1x Winner UEFA Nations League",
+        "age_rank_oldest": 34,
+        "title_rank": 17
+      },
+      {
+        "manager": "Rudi Garcia",
+        "country": "Belgium",
+        "nationality": "France",
+        "age": 62.0,
+        "tenure_text": "01 year 04 months 10 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 10,
+        "title_types": 5,
+        "honors_preview": "1x Manager of the Year, 1x French champion, 1x French cup winner, 4x Champions League participant",
+        "age_rank_oldest": 12,
+        "title_rank": 22
+      },
+      {
+        "manager": "Murat Yakin",
+        "country": "Switzerland",
+        "nationality": "Switzerland",
+        "age": 51.0,
+        "tenure_text": "04 years 09 months 25 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 10,
+        "title_types": 8,
+        "honors_preview": "2x Manager of the Year, 1x World Cup participant, 1x Euro participant, 1x Promotion to 1st league",
+        "age_rank_oldest": 39,
+        "title_rank": 22
+      },
+      {
+        "manager": "Luis de la Fuente",
+        "country": "Spain",
+        "nationality": "Spain",
+        "age": 64.0,
+        "tenure_text": "03 years 05 months 02 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 9,
+        "title_types": 9,
+        "honors_preview": "1x European champion, 1x Euro participant, 1x Olympics participant, 1x Winner UEFA Nations League",
+        "age_rank_oldest": 9,
+        "title_rank": 24
+      },
+      {
+        "manager": "Myung-bo Hong",
+        "country": "South Korea",
+        "nationality": "Korea, South",
+        "age": 57.0,
+        "tenure_text": "01 year 10 months 26 days",
+        "contract_until": "2027",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 8,
+        "title_types": 7,
+        "honors_preview": "1x Manager of the Year, 1x World Cup participant, 1x Olympics participant, 1x Under-20 World Cup participant",
+        "age_rank_oldest": 22,
+        "title_rank": 25
+      },
+      {
+        "manager": "Mauricio Pochettino",
+        "country": "United States",
+        "nationality": "Argentina",
+        "age": 54.0,
+        "tenure_text": "01 year 08 months 24 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 8,
+        "title_types": 7,
+        "honors_preview": "1x French champion, 1x French cup winner, 1x French Super Cup winner, 1x Champions League runner-up",
+        "age_rank_oldest": 28,
+        "title_rank": 25
+      },
+      {
+        "manager": "Graham Arnold",
+        "country": "Iraq",
+        "nationality": "Australia",
+        "age": 62.0,
+        "tenure_text": "01 year 25 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 7,
+        "title_types": 5,
+        "honors_preview": "1x Olympics participant, 1x Asian Cup participant, 2x AFC Champions League participant, 2x Australian champion",
+        "age_rank_oldest": 12,
+        "title_rank": 27
+      },
+      {
+        "manager": "Steve Clarke",
+        "country": "Scotland",
+        "nationality": "Scotland",
+        "age": 62.0,
+        "tenure_text": "07 years 14 days",
+        "contract_until": "2030",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 7,
+        "title_types": 4,
+        "honors_preview": "2x Manager of the Year, 2x Euro participant, 2x Champions League participant, 1x Europa League participant",
+        "age_rank_oldest": 12,
+        "title_rank": 27
+      },
+      {
+        "manager": "Vladimir Petkovic",
+        "country": "Algeria",
+        "nationality": "Switzerland",
+        "age": 62.0,
+        "tenure_text": "02 years 03 months 05 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 7,
+        "title_types": 5,
+        "honors_preview": "1x World Cup participant, 2x Euro participant, 1x Italian cup winner, 1x Africa Cup participant",
+        "age_rank_oldest": 12,
+        "title_rank": 27
+      },
+      {
+        "manager": "Thomas Christiansen",
+        "country": "Panama",
+        "nationality": "Spain",
+        "age": 53.0,
+        "tenure_text": "05 years 10 months 12 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 7,
+        "title_types": 6,
+        "honors_preview": "1x Copa América participant, 2x Gold Cup participant, 1x Gold Cup runner-up, 1x AFC Champions League participant",
+        "age_rank_oldest": 31,
+        "title_rank": 27
+      },
+      {
+        "manager": "Vincenzo Montella",
+        "country": "Turkey",
+        "nationality": "Italy",
+        "age": 51.0,
+        "tenure_text": "02 years 08 months 13 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 7,
+        "title_types": 5,
+        "honors_preview": "1x Euro participant, 1x Italian Super Cup winner, 1x Premio Enzo Bearzot, 2x Champions League participant",
+        "age_rank_oldest": 39,
+        "title_rank": 27
+      },
+      {
+        "manager": "Sebastián Beccacece",
+        "country": "Ecuador",
+        "nationality": "Argentina",
+        "age": 45.0,
+        "tenure_text": "01 year 10 months 02 days",
+        "contract_until": "2026",
+        "former_player": false,
+        "foreign_to_team": true,
+        "total_titles_won": 7,
+        "title_types": 6,
+        "honors_preview": "1x Copa América winner, 1x Relegated from 1st league, 1x Copa Sudamericana winner, 1x Recopa Sudamericana winner",
+        "age_rank_oldest": 45,
+        "title_rank": 27
+      },
+      {
+        "manager": "Sabri Lamouchi",
+        "country": "Tunisia",
+        "nationality": "France",
+        "age": 54.0,
+        "tenure_text": "04 months 20 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 6,
+        "title_types": 5,
+        "honors_preview": "1x World Cup participant, 1x Africa Cup participant, 2x AFC Champions League participant, 1x Europa League participant",
+        "age_rank_oldest": 28,
+        "title_rank": 33
+      },
+      {
+        "manager": "Tony Popovic",
+        "country": "Australia",
+        "nationality": "Australia",
+        "age": 52.0,
+        "tenure_text": "01 year 08 months 11 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 6,
+        "title_types": 5,
+        "honors_preview": "1x Manager of the Year, 1x AFC Champions League winner, 2x AFC Champions League participant, 1x Australian cup winner",
+        "age_rank_oldest": 34,
+        "title_rank": 33
+      },
+      {
+        "manager": "Lionel Scaloni",
+        "country": "Argentina",
+        "nationality": "Argentina",
+        "age": 48.0,
+        "tenure_text": "07 years 10 months 01 day",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 6,
+        "title_types": 4,
+        "honors_preview": "1x World Cup winner, 2x Copa América winner, 2x World's Best national team Coach, 1x CONMEBOL-UEFA Cup of Champions winner",
+        "age_rank_oldest": 44,
+        "title_rank": 33
+      },
+      {
+        "manager": "Sébastien Migné",
+        "country": "Haiti",
+        "nationality": "France",
+        "age": 53.0,
+        "tenure_text": "02 years 02 months 26 days",
+        "contract_until": "?",
+        "former_player": false,
+        "foreign_to_team": true,
+        "total_titles_won": 5,
+        "title_types": 1,
+        "honors_preview": "5x Africa Cup participant",
+        "age_rank_oldest": 31,
+        "title_rank": 36
+      },
+      {
+        "manager": "Fabio Cannavaro",
+        "country": "Uzbekistan",
+        "nationality": "Italy",
+        "age": 52.0,
+        "tenure_text": "07 months 28 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 5,
+        "title_types": 5,
+        "honors_preview": "1x Manager of the Year, 1x Promotion to 1st league, 1x Chinese champion, 1x China 2nd tier champion",
+        "age_rank_oldest": 34,
+        "title_rank": 36
+      },
+      {
+        "manager": "Miroslav Koubek",
+        "country": "Czech Republic",
+        "nationality": "Czech Republic",
+        "age": 74.0,
+        "tenure_text": "05 months 15 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 3,
+        "title_types": 3,
+        "honors_preview": "1x Czech champion, 1x Czech 2nd Division Champion, 1x Conference League participant",
+        "age_rank_oldest": 2,
+        "title_rank": 38
+      },
+      {
+        "manager": "Jamal Sellami",
+        "country": "Jordan",
+        "nationality": "Morocco",
+        "age": 55.0,
+        "tenure_text": "01 year 11 months 12 days",
+        "contract_until": "2027",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 3,
+        "title_types": 3,
+        "honors_preview": "1x Winner African Nations Championship, 1x Moroccan champion, 1x FIFA Club World Cup participant",
+        "age_rank_oldest": 27,
+        "title_rank": 38
+      },
+      {
+        "manager": "Graham Potter",
+        "country": "Sweden",
+        "nationality": "England",
+        "age": 51.0,
+        "tenure_text": "07 months 14 days",
+        "contract_until": "2030",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 3,
+        "title_types": 3,
+        "honors_preview": "1x Swedish cup winner, 1x Champions League participant, 1x Europa League participant",
+        "age_rank_oldest": 39,
+        "title_rank": 38
+      },
+      {
+        "manager": "Sébastien Desabre",
+        "country": "DR Congo",
+        "nationality": "France",
+        "age": 49.0,
+        "tenure_text": "03 years 09 months 27 days",
+        "contract_until": "2024",
+        "former_player": false,
+        "foreign_to_team": true,
+        "total_titles_won": 3,
+        "title_types": 2,
+        "honors_preview": "2x Africa Cup participant, 1x Tunisian Champion",
+        "age_rank_oldest": 42,
+        "title_rank": 38
+      },
+      {
+        "manager": "Emerse Faé",
+        "country": "Ivory Coast",
+        "nationality": "Cote d'Ivoire",
+        "age": 42.0,
+        "tenure_text": "02 years 03 months 14 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 3,
+        "title_types": 2,
+        "honors_preview": "1x Africa Cup winner, 2x Africa Cup participant",
+        "age_rank_oldest": 47,
+        "title_rank": 38
+      },
+      {
+        "manager": "Bubista",
+        "country": "Cape Verde",
+        "nationality": "Cape Verde",
+        "age": 56.0,
+        "tenure_text": "06 years 04 months 05 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 2,
+        "title_types": 1,
+        "honors_preview": "2x Africa Cup participant",
+        "age_rank_oldest": 25,
+        "title_rank": 43
+      },
+      {
+        "manager": "Sergej Barbarez",
+        "country": "Bosnia and Herzegovina",
+        "nationality": "Bosnia-Herzegovina",
+        "age": 54.0,
+        "tenure_text": "02 years 01 month 15 days",
+        "contract_until": "2028",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 2,
+        "title_types": 2,
+        "honors_preview": "1x World Cup participant, 1x Europa League participant",
+        "age_rank_oldest": 28,
+        "title_rank": 43
+      },
+      {
+        "manager": "Mohamed Ouahbi",
+        "country": "Morocco",
+        "nationality": "Belgium",
+        "age": 49.0,
+        "tenure_text": "02 months 29 days",
+        "contract_until": "?",
+        "former_player": false,
+        "foreign_to_team": true,
+        "total_titles_won": 2,
+        "title_types": 2,
+        "honors_preview": "1x Under-20 World Cup champion, 1x Europa League participant",
+        "age_rank_oldest": 42,
+        "title_rank": 43
+      },
+      {
+        "manager": "Néstor Lorenzo",
+        "country": "Colombia",
+        "nationality": "Argentina",
+        "age": 60.0,
+        "tenure_text": "03 years 10 months 25 days",
+        "contract_until": "2026",
+        "former_player": true,
+        "foreign_to_team": true,
+        "total_titles_won": 1,
+        "title_types": 1,
+        "honors_preview": "1x Under-20 World Cup participant",
+        "age_rank_oldest": 17,
+        "title_rank": 46
+      },
+      {
+        "manager": "Pape Thiaw",
+        "country": "Senegal",
+        "nationality": "Senegal",
+        "age": 45.0,
+        "tenure_text": "01 year 05 months 21 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 1,
+        "title_types": 1,
+        "honors_preview": "1x Winner African Nations Championship",
+        "age_rank_oldest": 45,
+        "title_rank": 46
+      },
+      {
+        "manager": "Hossam Hassan",
+        "country": "Egypt",
+        "nationality": "Egypt",
+        "age": 59.0,
+        "tenure_text": "02 years 03 months 28 days",
+        "contract_until": "?",
+        "former_player": true,
+        "foreign_to_team": false,
+        "total_titles_won": 0,
+        "title_types": 0,
+        "honors_preview": null,
+        "age_rank_oldest": 18,
+        "title_rank": 48
+      }
+    ],
+    "coach_titles_2026": [
+      {
+        "manager": "Ståle Solbakken",
+        "country": "Norway",
+        "nationality": "Norway",
+        "title": "Danish champion",
+        "count": 8
+      },
+      {
+        "manager": "Ronald Koeman",
+        "country": "Netherlands",
+        "nationality": "Netherlands",
+        "title": "Champions League participant",
+        "count": 7
+      },
+      {
+        "manager": "Amir Ghalenoei",
+        "country": "Iran",
+        "nationality": "Iran",
+        "title": "AFC Champions League participant",
+        "count": 6
+      },
+      {
+        "manager": "Amir Ghalenoei",
+        "country": "Iran",
+        "nationality": "Iran",
+        "title": "Iranian champion",
+        "count": 5
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "UEFA Champions League winner",
+        "count": 5
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "Uefa Supercup winner",
+        "count": 5
+      },
+      {
+        "manager": "Ralf Rangnick",
+        "country": "Austria",
+        "nationality": "Germany",
+        "title": "Champions League participant",
+        "count": 5
+      },
+      {
+        "manager": "Ralf Rangnick",
+        "country": "Austria",
+        "nationality": "Germany",
+        "title": "Europa League participant",
+        "count": 5
+      },
+      {
+        "manager": "Sébastien Migné",
+        "country": "Haiti",
+        "nationality": "France",
+        "title": "Africa Cup participant",
+        "count": 5
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "World's Best Club Coach",
+        "count": 4
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "title": "Dutch Super Cup winner",
+        "count": 4
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "title": "Europa League participant",
+        "count": 4
+      },
+      {
+        "manager": "Didier Deschamps",
+        "country": "France",
+        "nationality": "France",
+        "title": "French league cup winner",
+        "count": 4
+      },
+      {
+        "manager": "Hugo Broos",
+        "country": "South Africa",
+        "nationality": "Belgium",
+        "title": "Manager of the Year",
+        "count": 4
+      },
+      {
+        "manager": "Julen Lopetegui",
+        "country": "Qatar",
+        "nationality": "Spain",
+        "title": "Champions League participant",
+        "count": 4
+      },
+      {
+        "manager": "Marcelo Bielsa",
+        "country": "Uruguay",
+        "nationality": "Argentina",
+        "title": "Argentinian champion",
+        "count": 4
+      },
+      {
+        "manager": "Rudi Garcia",
+        "country": "Belgium",
+        "nationality": "France",
+        "title": "Champions League participant",
+        "count": 4
+      },
+      {
+        "manager": "Ståle Solbakken",
+        "country": "Norway",
+        "nationality": "Norway",
+        "title": "Danish Cup Winner",
+        "count": 4
+      },
+      {
+        "manager": "Thomas Tuchel",
+        "country": "England",
+        "nationality": "Germany",
+        "title": "Champions League participant",
+        "count": 4
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "FIFA Club World Cup winner",
+        "count": 3
+      },
+      {
+        "manager": "Carlos Queiroz",
+        "country": "Ghana",
+        "nationality": "Portugal",
+        "title": "World Cup participant",
+        "count": 3
+      },
+      {
+        "manager": "Carlos Queiroz",
+        "country": "Ghana",
+        "nationality": "Portugal",
+        "title": "Champions League participant",
+        "count": 3
+      },
+      {
+        "manager": "Darren Bazeley",
+        "country": "New Zealand",
+        "nationality": "England",
+        "title": "OFC-U16/U17-Championship-Winner",
+        "count": 3
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "title": "Champions League participant",
+        "count": 3
+      },
+      {
+        "manager": "Didier Deschamps",
+        "country": "France",
+        "nationality": "France",
+        "title": "World Cup participant",
+        "count": 3
+      },
+      {
+        "manager": "Didier Deschamps",
+        "country": "France",
+        "nationality": "France",
+        "title": "Euro participant",
+        "count": 3
+      },
+      {
+        "manager": "Hajime Moriyasu",
+        "country": "Japan",
+        "nationality": "Japan",
+        "title": "Manager of the Year",
+        "count": 3
+      },
+      {
+        "manager": "Hajime Moriyasu",
+        "country": "Japan",
+        "nationality": "Japan",
+        "title": "Japanese champion",
+        "count": 3
+      },
+      {
+        "manager": "Hajime Moriyasu",
+        "country": "Japan",
+        "nationality": "Japan",
+        "title": "Japanese Super Cup winner",
+        "count": 3
+      },
+      {
+        "manager": "Hugo Broos",
+        "country": "South Africa",
+        "nationality": "Belgium",
+        "title": "Belgian champion",
+        "count": 3
+      },
+      {
+        "manager": "Javier Aguirre",
+        "country": "Mexico",
+        "nationality": "Mexico",
+        "title": "Gold Cup participant",
+        "count": 3
+      },
+      {
+        "manager": "Jesse Marsch",
+        "country": "Canada",
+        "nationality": "United States",
+        "title": "Manager of the Year",
+        "count": 3
+      },
+      {
+        "manager": "Julian Nagelsmann",
+        "country": "Germany",
+        "nationality": "Germany",
+        "title": "Champions League participant",
+        "count": 3
+      },
+      {
+        "manager": "Ralf Rangnick",
+        "country": "Austria",
+        "nationality": "Germany",
+        "title": "Promotion to 2nd league",
+        "count": 3
+      },
+      {
+        "manager": "Ronald Koeman",
+        "country": "Netherlands",
+        "nationality": "Netherlands",
+        "title": "Dutch champion",
+        "count": 3
+      },
+      {
+        "manager": "Rudi Garcia",
+        "country": "Belgium",
+        "nationality": "France",
+        "title": "Europa League participant",
+        "count": 3
+      },
+      {
+        "manager": "Amir Ghalenoei",
+        "country": "Iran",
+        "nationality": "Iran",
+        "title": "Iranian cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Bubista",
+        "country": "Cape Verde",
+        "nationality": "Cape Verde",
+        "title": "Africa Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "Manager of the Year",
+        "count": 2
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "Spanish champion",
+        "count": 2
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "German Super Cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "Spanish cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Carlo Ancelotti",
+        "country": "Brazil",
+        "nationality": "Italy",
+        "title": "Spanish Super Cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Carlos Queiroz",
+        "country": "Ghana",
+        "nationality": "Portugal",
+        "title": "Africa Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Carlos Queiroz",
+        "country": "Ghana",
+        "nationality": "Portugal",
+        "title": "Under-20 World Cup champion",
+        "count": 2
+      },
+      {
+        "manager": "Darren Bazeley",
+        "country": "New Zealand",
+        "nationality": "England",
+        "title": "Under-17 World Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Darren Bazeley",
+        "country": "New Zealand",
+        "nationality": "England",
+        "title": "New Zealand champion",
+        "count": 2
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "title": "World Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "title": "Euro participant",
+        "count": 2
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "title": "Scottish champion",
+        "count": 2
+      },
+      {
+        "manager": "Dick Advocaat",
+        "country": "Curaçao",
+        "nationality": "Netherlands",
+        "title": "Scottish cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Didier Deschamps",
+        "country": "France",
+        "nationality": "France",
+        "title": "Manager of the Year",
+        "count": 2
+      },
+      {
+        "manager": "Didier Deschamps",
+        "country": "France",
+        "nationality": "France",
+        "title": "World's Best national team Coach",
+        "count": 2
+      },
+      {
+        "manager": "Didier Deschamps",
+        "country": "France",
+        "nationality": "France",
+        "title": "French Super Cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Emerse Faé",
+        "country": "Ivory Coast",
+        "nationality": "Cote d'Ivoire",
+        "title": "Africa Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Georgios Donis",
+        "country": "Saudi Arabia",
+        "nationality": "Greece",
+        "title": "Greek cup runner-up",
+        "count": 2
+      },
+      {
+        "manager": "Georgios Donis",
+        "country": "Saudi Arabia",
+        "nationality": "Greece",
+        "title": "Champions League participant",
+        "count": 2
+      },
+      {
+        "manager": "Georgios Donis",
+        "country": "Saudi Arabia",
+        "nationality": "Greece",
+        "title": "Europa League participant",
+        "count": 2
+      },
+      {
+        "manager": "Graham Arnold",
+        "country": "Iraq",
+        "nationality": "Australia",
+        "title": "AFC Champions League participant",
+        "count": 2
+      },
+      {
+        "manager": "Graham Arnold",
+        "country": "Iraq",
+        "nationality": "Australia",
+        "title": "Australian champion",
+        "count": 2
+      },
+      {
+        "manager": "Gustavo Alfaro",
+        "country": "Paraguay",
+        "nationality": "Argentina",
+        "title": "Copa América participant",
+        "count": 2
+      },
+      {
+        "manager": "Gustavo Alfaro",
+        "country": "Paraguay",
+        "nationality": "Argentina",
+        "title": "Argentinian champion",
+        "count": 2
+      },
+      {
+        "manager": "Gustavo Alfaro",
+        "country": "Paraguay",
+        "nationality": "Argentina",
+        "title": "Campeón Supercopa Argentina",
+        "count": 2
+      },
+      {
+        "manager": "Hajime Moriyasu",
+        "country": "Japan",
+        "nationality": "Japan",
+        "title": "Asian Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Hajime Moriyasu",
+        "country": "Japan",
+        "nationality": "Japan",
+        "title": "East Asian Championship winner",
+        "count": 2
+      },
+      {
+        "manager": "Hugo Broos",
+        "country": "South Africa",
+        "nationality": "Belgium",
+        "title": "Belgian cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Hugo Broos",
+        "country": "South Africa",
+        "nationality": "Belgium",
+        "title": "Africa Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Hugo Broos",
+        "country": "South Africa",
+        "nationality": "Belgium",
+        "title": "Champions League participant",
+        "count": 2
+      },
+      {
+        "manager": "Javier Aguirre",
+        "country": "Mexico",
+        "nationality": "Mexico",
+        "title": "Gold Cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Javier Aguirre",
+        "country": "Mexico",
+        "nationality": "Mexico",
+        "title": "World Cup participant",
+        "count": 2
+      },
+      {
+        "manager": "Javier Aguirre",
+        "country": "Mexico",
+        "nationality": "Mexico",
+        "title": "CONCACAF Champions League participant",
+        "count": 2
+      },
+      {
+        "manager": "Jesse Marsch",
+        "country": "Canada",
+        "nationality": "United States",
+        "title": "Austrian champion",
+        "count": 2
+      },
+      {
+        "manager": "Jesse Marsch",
+        "country": "Canada",
+        "nationality": "United States",
+        "title": "Austrian cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Jesse Marsch",
+        "country": "Canada",
+        "nationality": "United States",
+        "title": "Champions League participant",
+        "count": 2
+      },
+      {
+        "manager": "Jesse Marsch",
+        "country": "Canada",
+        "nationality": "United States",
+        "title": "Europa League participant",
+        "count": 2
+      },
+      {
+        "manager": "Julian Nagelsmann",
+        "country": "Germany",
+        "nationality": "Germany",
+        "title": "German Super Cup winner",
+        "count": 2
+      },
+      {
+        "manager": "Julian Nagelsmann",
+        "country": "Germany",
+        "nationality": "Germany",
+        "title": "German Under-19 Bundesliga South/South-west champion",
+        "count": 2
+      },
+      {
+        "manager": "Lionel Scaloni",
+        "country": "Argentina",
+        "nationality": "Argentina",
+        "title": "Copa América winner",
+        "count": 2
+      },
+      {
+        "manager": "Lionel Scaloni",
+        "country": "Argentina",
+        "nationality": "Argentina",
+        "title": "World's Best national team Coach",
+        "count": 2
+      },
+      {
+        "manager": "Marcelo Bielsa",
+        "country": "Uruguay",
+        "nationality": "Argentina",
+        "title": "World Cup participant",
+        "count": 2
+      }
+    ],
     "trends": [
       {
         "tournament_year": 1990,
@@ -3015,6 +9040,60 @@
         "headline": "Some 2026 teams changed physically far more than others",
         "metric": "height_delta_cm",
         "summary": "The country comparison module shows which squads are much taller or older than their nearest 1994 or 1986 benchmark, and which ones barely moved."
+      },
+      {
+        "slug": "most-valuable-player-2026",
+        "headline": "Erling Haaland is the most valuable player in this 2026 field",
+        "metric": "market_value_eur",
+        "summary": "Transfermarkt lists Erling Haaland at €200.00m for Norway."
+      },
+      {
+        "slug": "least-valuable-listed-player-2026",
+        "headline": "The value spread inside this field is enormous",
+        "metric": "market_value_eur",
+        "summary": "Listed values run from €25k for Craig Gordon of Scotland up to the elite end."
+      },
+      {
+        "slug": "most-valuable-squad-2026",
+        "headline": "France brings the most valuable squad in the field",
+        "metric": "squad_market_value_eur",
+        "summary": "Using Transfermarkt squad pages, France leads at €1561.00m in listed player value."
+      },
+      {
+        "slug": "top-scorer-current-season-2026",
+        "headline": "Harry Kane arrives as the top scorer in this squad pool",
+        "metric": "goals",
+        "summary": "Using Transfermarkt's player-performance endpoint, Harry Kane has 61 club goals in his current season."
+      },
+      {
+        "slug": "top-assister-current-season-2026",
+        "headline": "Michael Olise leads this field on current-season assists",
+        "metric": "assists",
+        "summary": "Michael Olise has 26 club assists in the current season."
+      },
+      {
+        "slug": "young-scorer-current-season-2026",
+        "headline": "Gilberto Mora is the youngest serious scorer in the 2026 field",
+        "metric": "goals",
+        "summary": "At 17.00, Gilberto Mora already brings 4 current-season club goals."
+      },
+      {
+        "slug": "old-assister-current-season-2026",
+        "headline": "Cristiano Ronaldo is the oldest productive creator in the field",
+        "metric": "assists",
+        "summary": "At 41.00, Cristiano Ronaldo still has 3 current-season club assists."
+      },
+      {
+        "slug": "club-most-represented-2026",
+        "headline": "Manchester City sends the most players to this World Cup",
+        "metric": "club_player_count",
+        "summary": "Manchester City contributes 19 players across 12 national teams."
+      },
+      {
+        "slug": "most-decorated-coach-2026",
+        "headline": "Carlo Ancelotti arrives with the deepest trophy cabinet",
+        "metric": "coach_total_titles_won",
+        "summary": "Transfermarkt achievement pages credit Carlo Ancelotti with 40 titled honours across 22 competition types."
       }
     ],
     "player_distribution_pool": [

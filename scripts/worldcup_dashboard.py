@@ -342,6 +342,8 @@ def load_live_snapshot() -> dict:
 def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     highlights = bundle["highlights"]
     countries = bundle["countries_2026"]
+    sources = bundle.get("sources", [])
+    transfermarkt_note = bundle.get("metadata", {}).get("transfermarkt_note")
     live_json = json.dumps(live_snapshot)
     country_json = json.dumps(countries)
     group_members = json.dumps(bundle["group_members_2026"])
@@ -349,6 +351,14 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     confed_history_json = json.dumps(bundle["confederation_history"])
     distribution_json = json.dumps(bundle["player_distribution_pool"])
     distribution_years_json = json.dumps(bundle["metadata"]["distribution_window_years"])
+    source_json = json.dumps(sources)
+    market_value_json = json.dumps(bundle.get("market_value_players_2026", []))
+    least_value_json = json.dumps(bundle.get("least_valuable_players_2026", []))
+    player_stats_json = json.dumps(bundle.get("player_season_stats_2026", []))
+    squad_value_json = json.dumps(bundle.get("squad_market_values_2026", []))
+    global_club_json = json.dumps(bundle.get("global_club_representation_2026", []))
+    country_club_json = json.dumps(bundle.get("country_club_representation_2026", []))
+    coaches_json = json.dumps(bundle.get("coaches_2026", []))
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -413,6 +423,22 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       border-radius: 18px;
       padding: 18px;
       color: var(--muted);
+    }}
+    .source-list {{
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }}
+    .source-item {{
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(0,0,0,0.05);
+    }}
+    .source-item strong {{
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
     }}
     .card-grid {{
       display: grid;
@@ -485,6 +511,12 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     .module-grid {{
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+      margin-top: 18px;
+    }}
+    .ranking-grid {{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
       margin-top: 18px;
     }}
@@ -808,6 +840,11 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       display: block;
       margin-bottom: 6px;
     }}
+    .stacked-block {{
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }}
     .standings-grid {{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -815,7 +852,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       margin-top: 10px;
     }}
     @media (max-width: 980px) {{
-      .hero, .grid-2, .module-grid, .live-shell {{
+      .hero, .grid-2, .module-grid, .live-shell, .ranking-grid {{
         grid-template-columns: 1fr;
       }}
       .compare-toolbar {{
@@ -830,12 +867,13 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       <div>
         <div class="eyebrow">World Cup 2026 Dashboard</div>
         <h1>Built for the weeks before kickoff, and ready for the tournament itself.</h1>
-        <p class="deck">A World Cup 2026 dashboard designed for fans and journalists: rankings, group comparisons, country comparisons, fast chart reads, and a live-updatable tournament shell. The current editorial focus is on height and age, because those are the clearest physical stories in the squad data.</p>
+        <p class="deck">A World Cup 2026 dashboard designed for fans and journalists: rankings, group comparisons, country comparisons, fast chart reads, and a live-updatable tournament shell. The current editorial focus is on height, age, market value, club representation, and coaches.</p>
       </div>
       <div class="hero-note">
         <strong>Data note</strong><br>
         {bundle["metadata"]["dataset_note"]}<br><br>
         The historical trend window here focuses on 1990 onward, while country-vs-history cards look back roughly 30 to 40 years when the data exists.
+        <div id="source-list" class="source-list"></div>
       </div>
     </div>
 
@@ -984,6 +1022,125 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     <section>
       <div class="section-head">
         <div>
+          <h2>Value, clubs and coaches</h2>
+          <p class="section-copy">This layer comes from current 2026 Transfermarkt pages rather than the historical Luis Batalha dataset. It is the right place for present-tense rankings: listed player values, club pipelines into the tournament, and the coach field.</p>
+          {f'<p class="section-copy">{transfermarkt_note}</p>' if transfermarkt_note else ''}
+        </div>
+      </div>
+      <div class="ranking-grid">
+        <div class="list-card">
+          <div class="mini">Most valuable players</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Country</th>
+                <th class="numeric">Value</th>
+              </tr>
+            </thead>
+            <tbody id="market-value-body"></tbody>
+          </table>
+          <div class="stacked-block">
+            <div class="mini">Most valuable squads</div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th class="numeric">Squad value</th>
+                </tr>
+              </thead>
+              <tbody id="squad-value-body"></tbody>
+            </table>
+          </div>
+          <div class="stacked-block">
+            <div class="mini">Lowest listed values</div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Player</th>
+                  <th>Country</th>
+                  <th class="numeric">Value</th>
+                </tr>
+              </thead>
+              <tbody id="least-value-body"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="list-card">
+          <div class="mini">Clubs sending the most players</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Club</th>
+                <th class="numeric">Players</th>
+                <th class="numeric">Teams</th>
+              </tr>
+            </thead>
+            <tbody id="global-club-body"></tbody>
+          </table>
+          <div class="stacked-block">
+            <div class="toolbar">
+              <div class="mini">Top clubs by squad</div>
+              <select id="club-country-select"></select>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Club</th>
+                  <th class="numeric">Players</th>
+                </tr>
+              </thead>
+              <tbody id="country-club-body"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="list-card">
+          <div class="mini">Current-season output</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th class="numeric">Goals</th>
+                <th class="numeric">Assists</th>
+              </tr>
+            </thead>
+            <tbody id="scorer-body"></tbody>
+          </table>
+          <div class="stacked-block">
+            <div class="mini">Top creators</div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Player</th>
+                  <th class="numeric">Assists</th>
+                  <th class="numeric">Goals</th>
+                </tr>
+              </thead>
+              <tbody id="assister-body"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="list-card">
+          <div class="mini">Coach desk</div>
+          <p class="section-copy" id="coach-copy" style="margin-top: 10px;"></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Coach</th>
+                <th>Team</th>
+                <th class="numeric">Age</th>
+                <th class="numeric">Titles</th>
+              </tr>
+            </thead>
+            <tbody id="coach-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
           <h2>Squad distribution heatmap</h2>
           <p class="section-copy">A GitHub-style tile view works here because it shows distribution, not just averages. Read each row as one team, each column as an age or height bucket, and each tile as how many players land there.</p>
         </div>
@@ -1062,6 +1219,24 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     const confederationHistory = {confed_history_json};
     const playerDistributionPool = {distribution_json};
     const distributionYears = {distribution_years_json};
+    const sourceCatalog = {source_json};
+    const marketValuePlayers = {market_value_json};
+    const leastValuePlayers = {least_value_json};
+    const playerSeasonStats = {player_stats_json};
+    const squadValues = {squad_value_json};
+    const globalClubCounts = {global_club_json};
+    const countryClubCounts = {country_club_json};
+    const coaches = {coaches_json};
+
+    (() => {{
+      const sourceList = document.getElementById("source-list");
+      sourceList.innerHTML = sourceCatalog.map((source) => `
+        <div class="source-item">
+          <strong>${{source.label}}</strong>
+          <div class="mini">${{source.scope}}</div>
+        </div>
+      `).join("");
+    }})();
 
     (() => {{
       const storyList = document.getElementById("story-list");
@@ -1336,6 +1511,111 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }});
 
       renderCards();
+    }})();
+
+    (() => {{
+      const marketBody = document.getElementById("market-value-body");
+      const squadValueBody = document.getElementById("squad-value-body");
+      const leastBody = document.getElementById("least-value-body");
+      const globalClubBody = document.getElementById("global-club-body");
+      const countrySelect = document.getElementById("club-country-select");
+      const countryClubBody = document.getElementById("country-club-body");
+      const scorerBody = document.getElementById("scorer-body");
+      const assisterBody = document.getElementById("assister-body");
+      const coachBody = document.getElementById("coach-body");
+      const coachCopy = document.getElementById("coach-copy");
+
+      marketBody.innerHTML = marketValuePlayers.slice(0, 10).map((row) => `
+        <tr>
+          <td>${{row.player}}<div class="mini">${{row.club || "Club n/a"}}</div></td>
+          <td>${{row.country}}</td>
+          <td class="numeric">${{row.market_value_text}}</td>
+        </tr>
+      `).join("");
+
+      squadValueBody.innerHTML = squadValues.slice(0, 8).map((row) => `
+        <tr>
+          <td>${{row.country}}</td>
+          <td class="numeric">${{row.squad_market_value_text}}</td>
+        </tr>
+      `).join("");
+
+      leastBody.innerHTML = leastValuePlayers.slice(0, 8).map((row) => `
+        <tr>
+          <td>${{row.player}}<div class="mini">${{row.club || "Club n/a"}}</div></td>
+          <td>${{row.country}}</td>
+          <td class="numeric">${{row.market_value_text}}</td>
+        </tr>
+      `).join("");
+
+      const scorers = [...playerSeasonStats]
+        .sort((a, b) => b.goals - a.goals || b.assists - a.assists || a.player.localeCompare(b.player))
+        .slice(0, 10);
+      const assisters = [...playerSeasonStats]
+        .sort((a, b) => b.assists - a.assists || b.goals - a.goals || a.player.localeCompare(b.player))
+        .slice(0, 10);
+
+      scorerBody.innerHTML = scorers.map((row) => `
+        <tr>
+          <td>${{row.player}}<div class="mini">${{row.country}} • ${{row.club || "Club n/a"}} • season ${{row.current_season_id}}</div></td>
+          <td class="numeric">${{row.goals}}</td>
+          <td class="numeric">${{row.assists}}</td>
+        </tr>
+      `).join("");
+
+      assisterBody.innerHTML = assisters.map((row) => `
+        <tr>
+          <td>${{row.player}}<div class="mini">${{row.country}} • ${{row.club || "Club n/a"}} • season ${{row.current_season_id}}</div></td>
+          <td class="numeric">${{row.assists}}</td>
+          <td class="numeric">${{row.goals}}</td>
+        </tr>
+      `).join("");
+
+      globalClubBody.innerHTML = globalClubCounts.slice(0, 12).map((row) => `
+        <tr>
+          <td>${{row.club}}</td>
+          <td class="numeric">${{row.player_count}}</td>
+          <td class="numeric">${{row.represented_countries}}</td>
+        </tr>
+      `).join("");
+
+      const clubCountries = [...new Set(countryClubCounts.map((row) => row.country))].sort((a, b) => a.localeCompare(b));
+      countrySelect.innerHTML = clubCountries.map((country) => `<option value="${{country}}">${{country}}</option>`).join("");
+
+      function renderCountryClubs() {{
+        const country = countrySelect.value;
+        const rows = countryClubCounts
+          .filter((row) => row.country === country)
+          .sort((a, b) => a.country_rank - b.country_rank || b.player_count - a.player_count || a.club.localeCompare(b.club));
+        countryClubBody.innerHTML = rows.map((row) => `
+          <tr>
+            <td>${{row.club}}</td>
+            <td class="numeric">${{row.player_count}}</td>
+          </tr>
+        `).join("");
+      }}
+      countrySelect.addEventListener("change", renderCountryClubs);
+      if (clubCountries.includes("Brazil")) {{
+        countrySelect.value = "Brazil";
+      }}
+      renderCountryClubs();
+
+      if (!coaches.length) {{
+        coachCopy.textContent = "Coach enrichment was not loaded for this build.";
+      }} else {{
+        const oldest = [...coaches].sort((a, b) => b.age - a.age || a.manager.localeCompare(b.manager))[0];
+        const youngest = [...coaches].sort((a, b) => a.age - b.age || a.manager.localeCompare(b.manager))[0];
+        const decorated = [...coaches].sort((a, b) => b.total_titles_won - a.total_titles_won || a.manager.localeCompare(b.manager))[0];
+        coachCopy.textContent = `Oldest: ${{oldest.manager}} (${{oldest.age.toFixed(0)}}). Youngest: ${{youngest.manager}} (${{youngest.age.toFixed(0)}}). Most decorated: ${{decorated.manager}} with ${{decorated.total_titles_won}} titled honours counted on Transfermarkt.`;
+      }}
+      coachBody.innerHTML = coaches.slice(0, 10).map((row) => `
+        <tr>
+          <td>${{row.manager}}<div class="mini">${{row.nationality || "Nationality n/a"}}${{row.foreign_to_team === true ? " • foreign to team" : ""}}</div></td>
+          <td>${{row.country}}</td>
+          <td class="numeric">${{row.age != null ? row.age.toFixed(0) : "n/a"}}</td>
+          <td class="numeric">${{row.total_titles_won}}</td>
+        </tr>
+      `).join("");
     }})();
 
     (() => {{

@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-06-03T14:16:45.334834+00:00",
+  "fetched_at_utc": "2026-06-03T18:52:02.813934+00:00",
   "data": [
     {
       "slug": "world-cup-players-have-grown-taller",
@@ -48,6 +48,60 @@
       "headline": "Some 2026 teams changed physically far more than others",
       "metric": "height_delta_cm",
       "summary": "The country comparison module shows which squads are much taller or older than their nearest 1994 or 1986 benchmark, and which ones barely moved."
+    },
+    {
+      "slug": "most-valuable-player-2026",
+      "headline": "Erling Haaland is the most valuable player in this 2026 field",
+      "metric": "market_value_eur",
+      "summary": "Transfermarkt lists Erling Haaland at €200.00m for Norway."
+    },
+    {
+      "slug": "least-valuable-listed-player-2026",
+      "headline": "The value spread inside this field is enormous",
+      "metric": "market_value_eur",
+      "summary": "Listed values run from €25k for Craig Gordon of Scotland up to the elite end."
+    },
+    {
+      "slug": "most-valuable-squad-2026",
+      "headline": "France brings the most valuable squad in the field",
+      "metric": "squad_market_value_eur",
+      "summary": "Using Transfermarkt squad pages, France leads at €1561.00m in listed player value."
+    },
+    {
+      "slug": "top-scorer-current-season-2026",
+      "headline": "Harry Kane arrives as the top scorer in this squad pool",
+      "metric": "goals",
+      "summary": "Using Transfermarkt's player-performance endpoint, Harry Kane has 61 club goals in his current season."
+    },
+    {
+      "slug": "top-assister-current-season-2026",
+      "headline": "Michael Olise leads this field on current-season assists",
+      "metric": "assists",
+      "summary": "Michael Olise has 26 club assists in the current season."
+    },
+    {
+      "slug": "young-scorer-current-season-2026",
+      "headline": "Gilberto Mora is the youngest serious scorer in the 2026 field",
+      "metric": "goals",
+      "summary": "At 17.00, Gilberto Mora already brings 4 current-season club goals."
+    },
+    {
+      "slug": "old-assister-current-season-2026",
+      "headline": "Cristiano Ronaldo is the oldest productive creator in the field",
+      "metric": "assists",
+      "summary": "At 41.00, Cristiano Ronaldo still has 3 current-season club assists."
+    },
+    {
+      "slug": "club-most-represented-2026",
+      "headline": "Manchester City sends the most players to this World Cup",
+      "metric": "club_player_count",
+      "summary": "Manchester City contributes 19 players across 12 national teams."
+    },
+    {
+      "slug": "most-decorated-coach-2026",
+      "headline": "Carlo Ancelotti arrives with the deepest trophy cabinet",
+      "metric": "coach_total_titles_won",
+      "summary": "Transfermarkt achievement pages credit Carlo Ancelotti with 40 titled honours across 22 competition types."
     }
   ]
 }

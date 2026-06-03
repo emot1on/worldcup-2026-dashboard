@@ -10,6 +10,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 import pandas as pd
+from worldcup_transfermarkt import build_transfermarkt_enrichment, fetch_transfermarkt_raw, format_money_short
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -321,6 +322,7 @@ def build_story_manifest(
     tournament_trends: pd.DataFrame,
     country_snapshot: pd.DataFrame,
     group_snapshot: pd.DataFrame,
+    transfermarkt_enrichment: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     latest = tournament_trends.iloc[-1]
     first = tournament_trends.iloc[0]
@@ -332,7 +334,7 @@ def build_story_manifest(
     conmebol_height = float(
         country_snapshot[country_snapshot["confederation"] == "CONMEBOL"]["average_height_cm"].mean()
     )
-    return [
+    stories = [
         {
             "slug": "world-cup-players-have-grown-taller",
             "headline": "World Cup players have grown taller",
@@ -402,6 +404,131 @@ def build_story_manifest(
             ),
         },
     ]
+    if transfermarkt_enrichment:
+        players = transfermarkt_enrichment.get("players")
+        player_stats = transfermarkt_enrichment.get("player_season_stats")
+        squad_values = transfermarkt_enrichment.get("squad_values")
+        clubs = transfermarkt_enrichment.get("global_clubs")
+        coaches = transfermarkt_enrichment.get("coaches")
+        if isinstance(players, pd.DataFrame) and not players.empty:
+            most_valuable = players.sort_values(["market_value_eur", "player"], ascending=[False, True]).iloc[0]
+            stories.extend(
+                [
+                    {
+                        "slug": "most-valuable-player-2026",
+                        "headline": f"{most_valuable['player']} is the most valuable player in this 2026 field",
+                        "metric": "market_value_eur",
+                        "summary": (
+                            f"Transfermarkt lists {most_valuable['player']} at "
+                            f"{format_money_short(int(most_valuable['market_value_eur']))} for "
+                            f"{most_valuable['country']}."
+                        ),
+                    },
+                ]
+            )
+            low_players = players[
+                players["market_value_eur"].notna() & (players["market_value_eur"] > 0)
+            ].sort_values(["market_value_eur", "player"], ascending=[True, True])
+            if not low_players.empty:
+                least_valuable = low_players.iloc[0]
+                stories.append(
+                    {
+                        "slug": "least-valuable-listed-player-2026",
+                        "headline": "The value spread inside this field is enormous",
+                        "metric": "market_value_eur",
+                        "summary": (
+                            f"Listed values run from {format_money_short(int(least_valuable['market_value_eur']))} "
+                            f"for {least_valuable['player']} of {least_valuable['country']} up to the elite end."
+                        ),
+                    }
+                )
+        if isinstance(squad_values, pd.DataFrame) and not squad_values.empty:
+            richest = squad_values.sort_values("squad_market_value_eur", ascending=False).iloc[0]
+            stories.append(
+                {
+                    "slug": "most-valuable-squad-2026",
+                    "headline": f"{richest['country']} brings the most valuable squad in the field",
+                    "metric": "squad_market_value_eur",
+                    "summary": (
+                        f"Using Transfermarkt squad pages, {richest['country']} leads at "
+                        f"{format_money_short(int(richest['squad_market_value_eur']))} in listed player value."
+                    ),
+                }
+            )
+        if isinstance(player_stats, pd.DataFrame) and not player_stats.empty:
+            scorers = player_stats.sort_values(["goals", "assists", "player"], ascending=[False, False, True])
+            assisters = player_stats.sort_values(["assists", "goals", "player"], ascending=[False, False, True])
+            top_scorer = scorers.iloc[0]
+            top_assister = assisters.iloc[0]
+            young_scorer = scorers[scorers["goals"] > 0].sort_values(["age", "goals"], ascending=[True, False]).iloc[0]
+            old_assister = assisters[assisters["assists"] > 0].sort_values(["age", "assists"], ascending=[False, False]).iloc[0]
+            stories.extend(
+                [
+                    {
+                        "slug": "top-scorer-current-season-2026",
+                        "headline": f"{top_scorer['player']} arrives as the top scorer in this squad pool",
+                        "metric": "goals",
+                        "summary": (
+                            f"Using Transfermarkt's player-performance endpoint, {top_scorer['player']} has "
+                            f"{int(top_scorer['goals'])} club goals in his current season."
+                        ),
+                    },
+                    {
+                        "slug": "top-assister-current-season-2026",
+                        "headline": f"{top_assister['player']} leads this field on current-season assists",
+                        "metric": "assists",
+                        "summary": (
+                            f"{top_assister['player']} has {int(top_assister['assists'])} club assists in the current season."
+                        ),
+                    },
+                    {
+                        "slug": "young-scorer-current-season-2026",
+                        "headline": f"{young_scorer['player']} is the youngest serious scorer in the 2026 field",
+                        "metric": "goals",
+                        "summary": (
+                            f"At {float(young_scorer['age']):.2f}, {young_scorer['player']} already brings "
+                            f"{int(young_scorer['goals'])} current-season club goals."
+                        ),
+                    },
+                    {
+                        "slug": "old-assister-current-season-2026",
+                        "headline": f"{old_assister['player']} is the oldest productive creator in the field",
+                        "metric": "assists",
+                        "summary": (
+                            f"At {float(old_assister['age']):.2f}, {old_assister['player']} still has "
+                            f"{int(old_assister['assists'])} current-season club assists."
+                        ),
+                    },
+                ]
+            )
+        if isinstance(clubs, pd.DataFrame) and not clubs.empty:
+            top_club = clubs.sort_values(["player_count", "club"], ascending=[False, True]).iloc[0]
+            stories.append(
+                {
+                    "slug": "club-most-represented-2026",
+                    "headline": f"{top_club['club']} sends the most players to this World Cup",
+                    "metric": "club_player_count",
+                    "summary": (
+                        f"{top_club['club']} contributes {int(top_club['player_count'])} players across "
+                        f"{int(top_club['represented_countries'])} national teams."
+                    ),
+                }
+            )
+        if isinstance(coaches, pd.DataFrame) and not coaches.empty:
+            decorated = coaches.sort_values(["total_titles_won", "manager"], ascending=[False, True]).iloc[0]
+            stories.append(
+                {
+                    "slug": "most-decorated-coach-2026",
+                    "headline": f"{decorated['manager']} arrives with the deepest trophy cabinet",
+                    "metric": "coach_total_titles_won",
+                    "summary": (
+                        f"Transfermarkt achievement pages credit {decorated['manager']} with "
+                        f"{int(decorated['total_titles_won'])} titled honours across "
+                        f"{int(decorated['title_types'])} competition types."
+                    ),
+                }
+            )
+    return stories
 
 
 def build_normalized_bundle(
@@ -414,6 +541,7 @@ def build_normalized_bundle(
     confederation_history: pd.DataFrame,
     story_manifest: list[dict[str, Any]],
     player_distribution_pool: list[dict[str, Any]],
+    transfermarkt_enrichment: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     trend_start = tournament_trends[tournament_trends["tournament_year"] >= 1990].copy()
     latest = tournament_trends.iloc[-1]
@@ -478,6 +606,173 @@ def build_normalized_bundle(
         .sort_values("average_height_cm", ascending=False)
     )
 
+    source_catalog = [
+        {
+            "key": "luis_batalha_worldcup_players",
+            "label": "Luis Batalha World Cup players dataset",
+            "scope": "historical player rows, age, height, positions, and tournament-year comparisons",
+            "url": str(LOCAL_DATASET_PATH),
+        },
+        {
+            "key": "football_data_org_worldcup",
+            "label": "football-data.org World Cup competition feed",
+            "scope": "fixtures, standings, and live-center tournament service",
+            "url": "https://docs.football-data.org/general/v4/index.html",
+        },
+    ]
+    if transfermarkt_enrichment and transfermarkt_enrichment.get("source_rows"):
+        source_catalog.extend(transfermarkt_enrichment["source_rows"])
+
+    top_market_players = []
+    least_market_players = []
+    squad_market_values = []
+    global_club_counts = []
+    country_club_counts = []
+    coach_rows = []
+    coach_title_rows = []
+    player_season_rows = []
+    transfermarkt_note = None
+    if transfermarkt_enrichment:
+        players_df = transfermarkt_enrichment.get("players")
+        player_stats_df = transfermarkt_enrichment.get("player_season_stats")
+        squad_values_df = transfermarkt_enrichment.get("squad_values")
+        clubs_df = transfermarkt_enrichment.get("global_clubs")
+        country_clubs_df = transfermarkt_enrichment.get("country_clubs")
+        coaches_df = transfermarkt_enrichment.get("coaches")
+        coach_titles_df = transfermarkt_enrichment.get("coach_titles")
+
+        if isinstance(players_df, pd.DataFrame) and not players_df.empty:
+            player_count = int(players_df.shape[0])
+            country_counts = players_df.groupby("country").size()
+            short_teams = [country for country, total in country_counts.items() if int(total) != 26]
+            if short_teams:
+                transfermarkt_note = (
+                    f"Transfermarkt squad pages fetched for this build total {player_count} player rows rather than "
+                    f"the full 1,248. The short pages are: {', '.join(short_teams)}."
+                )
+            else:
+                transfermarkt_note = (
+                    f"Transfermarkt squad pages fetched for this build total {player_count} player rows across all 48 teams."
+                )
+            ranked_players = players_df[players_df["market_value_eur"].notna()].copy()
+            ranked_players = ranked_players.sort_values(
+                ["market_value_eur", "age", "player"], ascending=[False, True, True]
+            )
+            top_market_players = [
+                {
+                    "player": row["player"],
+                    "country": row["country"],
+                    "position": row["position"],
+                    "age": round_or_none(row["age"]),
+                    "club": row["club"],
+                    "market_value_eur": int(row["market_value_eur"]),
+                    "market_value_text": row["market_value_text"],
+                }
+                for row in ranked_players.head(20).to_dict("records")
+            ]
+            low_players = ranked_players[ranked_players["market_value_eur"] > 0].sort_values(
+                ["market_value_eur", "age", "player"], ascending=[True, True, True]
+            )
+            least_market_players = [
+                {
+                    "player": row["player"],
+                    "country": row["country"],
+                    "position": row["position"],
+                    "age": round_or_none(row["age"]),
+                    "club": row["club"],
+                    "market_value_eur": int(row["market_value_eur"]),
+                    "market_value_text": row["market_value_text"],
+                }
+                for row in low_players.head(12).to_dict("records")
+            ]
+        if isinstance(player_stats_df, pd.DataFrame) and not player_stats_df.empty:
+            player_season_rows = [
+                {
+                    "player": row["player"],
+                    "country": row["country"],
+                    "club": row["club"],
+                    "position": row["position"],
+                    "age": round_or_none(row["age"]),
+                    "current_season_id": int(row["current_season_id"]),
+                    "appearances": int(row["appearances"]),
+                    "minutes": int(row["minutes"]),
+                    "goals": int(row["goals"]),
+                    "assists": int(row["assists"]),
+                    "goal_contributions": int(row["goal_contributions"]),
+                }
+                for row in player_stats_df.sort_values(
+                    ["goal_contributions", "goals", "assists", "player"],
+                    ascending=[False, False, False, True],
+                ).head(50).to_dict("records")
+            ]
+        if isinstance(squad_values_df, pd.DataFrame) and not squad_values_df.empty:
+            squad_market_values = [
+                {
+                    "country": row["country"],
+                    "player_rows": int(row["player_rows"]),
+                    "squad_market_value_eur": int(row["squad_market_value_eur"]),
+                    "squad_market_value_text": format_money_short(int(row["squad_market_value_eur"])),
+                    "average_player_market_value_eur": int(round(float(row["average_player_market_value_eur"]))),
+                    "average_player_market_value_text": format_money_short(
+                        int(round(float(row["average_player_market_value_eur"])))
+                    ),
+                    "market_value_rank": int(row["market_value_rank"]),
+                }
+                for row in squad_values_df.to_dict("records")
+            ]
+        if isinstance(clubs_df, pd.DataFrame) and not clubs_df.empty:
+            global_club_counts = [
+                {
+                    "club": row["club"],
+                    "player_count": int(row["player_count"]),
+                    "represented_countries": int(row["represented_countries"]),
+                    "total_market_value_eur": int(row["total_market_value_eur"]),
+                    "total_market_value_text": format_money_short(int(row["total_market_value_eur"])),
+                    "player_count_rank": int(row["player_count_rank"]),
+                }
+                for row in clubs_df.head(25).to_dict("records")
+            ]
+        if isinstance(country_clubs_df, pd.DataFrame) and not country_clubs_df.empty:
+            country_club_counts = [
+                {
+                    "country": row["country"],
+                    "club": row["club"],
+                    "player_count": int(row["player_count"]),
+                    "country_rank": int(row["country_rank"]),
+                }
+                for row in country_clubs_df[country_clubs_df["country_rank"] <= 3].to_dict("records")
+            ]
+        if isinstance(coaches_df, pd.DataFrame) and not coaches_df.empty:
+            coach_rows = [
+                {
+                    "manager": row["manager"],
+                    "country": row["country"],
+                    "nationality": row["nationality"],
+                    "age": round_or_none(row["age"]),
+                    "tenure_text": row["tenure_text"],
+                    "contract_until": row["contract_until"],
+                    "former_player": bool(row["former_player"]),
+                    "foreign_to_team": bool(row["foreign_to_team"]) if pd.notna(row["foreign_to_team"]) else None,
+                    "total_titles_won": int(row["total_titles_won"]),
+                    "title_types": int(row["title_types"]),
+                    "honors_preview": row["honors_preview"],
+                    "age_rank_oldest": int(row["age_rank_oldest"]),
+                    "title_rank": int(row["title_rank"]),
+                }
+                for row in coaches_df.to_dict("records")
+            ]
+        if isinstance(coach_titles_df, pd.DataFrame) and not coach_titles_df.empty:
+            coach_title_rows = [
+                {
+                    "manager": row["manager"],
+                    "country": row["country"],
+                    "nationality": row["nationality"],
+                    "title": row["title"],
+                    "count": int(row["count"]),
+                }
+                for row in coach_titles_df.head(80).to_dict("records")
+            ]
+
     return {
         "metadata": {
             "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -485,10 +780,12 @@ def build_normalized_bundle(
                 "The source file includes a 2026 cohort before kickoff. Treat 2026 as a dataset row, "
                 "not completed tournament history."
             ),
+            "transfermarkt_note": transfermarkt_note,
             "trend_window_start_year": 1990,
             "comparison_window_note": "Country history baselines prefer 1994, then 1986, then fall back to the latest earlier tournament.",
             "distribution_window_years": [2006, 2010, 2014, 2018, 2022, 2026],
         },
+        "sources": source_catalog,
         "highlights": {
             "height_gain_cm_since_1930": round(float(latest["average_height_cm"] - first["average_height_cm"]), 2),
             "height_gain_pct_since_1930": round(
@@ -503,6 +800,14 @@ def build_normalized_bundle(
             "tallest_group_2026": tallest_group["group"],
             "oldest_group_2026": oldest_group["group"],
         },
+        "market_value_players_2026": top_market_players,
+        "least_valuable_players_2026": least_market_players,
+        "player_season_stats_2026": player_season_rows,
+        "squad_market_values_2026": squad_market_values,
+        "global_club_representation_2026": global_club_counts,
+        "country_club_representation_2026": country_club_counts,
+        "coaches_2026": coach_rows,
+        "coach_titles_2026": coach_title_rows,
         "trends": [
             {
                 "tournament_year": int(row["tournament_year"]),
@@ -636,7 +941,13 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
     group_snapshot = build_group_snapshot_2026(country_snapshot)
     position_trends, position_share_trends = build_position_trends(df)
     confederation_history = build_confederation_history(df)
-    story_manifest = build_story_manifest(tournament_trends, country_snapshot, group_snapshot)
+    transfermarkt_enrichment = build_transfermarkt_enrichment(RAW_DIR)
+    story_manifest = build_story_manifest(
+        tournament_trends,
+        country_snapshot,
+        group_snapshot,
+        transfermarkt_enrichment=transfermarkt_enrichment,
+    )
     player_distribution_pool = build_player_distribution_pool(df)
     normalized_bundle = build_normalized_bundle(
         tournament_trends,
@@ -648,6 +959,7 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
         confederation_history,
         story_manifest,
         player_distribution_pool,
+        transfermarkt_enrichment=transfermarkt_enrichment,
     )
 
     written = [
@@ -659,6 +971,27 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
         write_csv(position_share_trends, "position_share_trends.csv"),
         write_csv(confederation_history, "confederation_history.csv"),
     ]
+    players_df = transfermarkt_enrichment.get("players")
+    if isinstance(players_df, pd.DataFrame) and not players_df.empty:
+        written.append(write_csv(players_df, "transfermarkt_players_2026.csv"))
+    global_clubs_df = transfermarkt_enrichment.get("global_clubs")
+    if isinstance(global_clubs_df, pd.DataFrame) and not global_clubs_df.empty:
+        written.append(write_csv(global_clubs_df, "club_representation_global_2026.csv"))
+    country_clubs_df = transfermarkt_enrichment.get("country_clubs")
+    if isinstance(country_clubs_df, pd.DataFrame) and not country_clubs_df.empty:
+        written.append(write_csv(country_clubs_df, "club_representation_by_country_2026.csv"))
+    squad_values_df = transfermarkt_enrichment.get("squad_values")
+    if isinstance(squad_values_df, pd.DataFrame) and not squad_values_df.empty:
+        written.append(write_csv(squad_values_df, "squad_market_values_2026.csv"))
+    player_stats_df = transfermarkt_enrichment.get("player_season_stats")
+    if isinstance(player_stats_df, pd.DataFrame) and not player_stats_df.empty:
+        written.append(write_csv(player_stats_df, "player_season_stats_2026.csv"))
+    coaches_df = transfermarkt_enrichment.get("coaches")
+    if isinstance(coaches_df, pd.DataFrame) and not coaches_df.empty:
+        written.append(write_csv(coaches_df, "coaches_2026.csv"))
+    coach_titles_df = transfermarkt_enrichment.get("coach_titles")
+    if isinstance(coach_titles_df, pd.DataFrame) and not coach_titles_df.empty:
+        written.append(write_csv(coach_titles_df, "coach_titles_2026.csv"))
     manifest_path = CURATED_DIR / "story_manifest.json"
     write_json(story_manifest, manifest_path)
     written.append(manifest_path)
@@ -703,6 +1036,11 @@ def parse_args() -> argparse.Namespace:
         help="Fetch country metadata from REST Countries.",
     )
     parser.add_argument(
+        "--fetch-transfermarkt",
+        action="store_true",
+        help="Fetch current Transfermarkt World Cup 2026 participant, squad, manager, and coach achievement pages.",
+    )
+    parser.add_argument(
         "--all",
         action="store_true",
         help="Run local build plus any external fetches that have the necessary credentials.",
@@ -718,20 +1056,24 @@ def main() -> None:
     run_local = args.build_local or args.all
     run_football_data = args.fetch_football_data or args.all
     run_rest_countries = args.fetch_rest_countries or args.all
+    run_transfermarkt = args.fetch_transfermarkt or args.all
 
-    if not any((run_local, run_football_data, run_rest_countries)):
+    if not any((run_local, run_football_data, run_rest_countries, run_transfermarkt)):
         run_local = True
 
     written: list[Path] = []
-
-    if run_local:
-        written.extend(build_local_layer(args.dataset_path))
 
     if run_rest_countries:
         try:
             written.append(fetch_rest_countries())
         except (HTTPError, URLError) as exc:
             print(f"REST Countries fetch failed: {exc}")
+
+    if run_transfermarkt:
+        try:
+            written.extend(fetch_transfermarkt_raw(RAW_DIR))
+        except (HTTPError, URLError) as exc:
+            print(f"Transfermarkt fetch failed: {exc}")
 
     if run_football_data:
         token = os.environ.get("FOOTBALL_DATA_API_TOKEN", "").strip()
@@ -742,6 +1084,9 @@ def main() -> None:
                 written.extend(fetch_football_data(token))
             except (HTTPError, URLError) as exc:
                 print(f"football-data.org fetch failed: {exc}")
+
+    if run_local:
+        written.extend(build_local_layer(args.dataset_path))
 
     for path in written:
         print(path)

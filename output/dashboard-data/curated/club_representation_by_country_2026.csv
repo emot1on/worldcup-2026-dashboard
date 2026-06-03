@@ -1,0 +1,956 @@
+country,club,club_id,club_url,player_count,country_rank
+Algeria,LOSC Lille,1082,https://www.transfermarkt.com/losc-lille/startseite/verein/1082,2,1
+Algeria,USM Alger,6772,https://www.transfermarkt.com/usm-algier/startseite/verein/6772,2,1
+Algeria,Al-Ahli SFC,18487,https://www.transfermarkt.com/al-ahli-dschidda/startseite/verein/18487,1,3
+Algeria,Al-Duhail SC,26091,https://www.transfermarkt.com/al-duhail-sc/startseite/verein/26091,1,3
+Algeria,Al-Ittihad Club,8023,https://www.transfermarkt.com/al-ittihad-dschidda/startseite/verein/8023,1,3
+Algeria,BSC Young Boys,452,https://www.transfermarkt.com/bsc-young-boys/startseite/verein/452,1,3
+Algeria,Bayer 04 Leverkusen,15,https://www.transfermarkt.com/bayer-04-leverkusen/startseite/verein/15,1,3
+Algeria,Borussia Dortmund,16,https://www.transfermarkt.com/borussia-dortmund/startseite/verein/16,1,3
+Algeria,ETO FC,6055,https://www.transfermarkt.com/eto-fc-gyor/startseite/verein/6055,1,3
+Algeria,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,3
+Algeria,Esperance Tunis,3342,https://www.transfermarkt.com/esperance-tunis/startseite/verein/3342,1,3
+Algeria,FC Stade Nyonnais,5507,https://www.transfermarkt.com/fc-stade-nyonnais/startseite/verein/5507,1,3
+Algeria,FC Twente Enschede,317,https://www.transfermarkt.com/fc-twente-enschede/startseite/verein/317,1,3
+Algeria,Feyenoord Rotterdam,234,https://www.transfermarkt.com/feyenoord-rotterdam/startseite/verein/234,1,3
+Algeria,Frosinone Calcio,8970,https://www.transfermarkt.com/frosinone-calcio/startseite/verein/8970,1,3
+Algeria,Granada CF,16795,https://www.transfermarkt.com/fc-granada/startseite/verein/16795,1,3
+Algeria,Hellas Verona,276,https://www.transfermarkt.com/hellas-verona/startseite/verein/276,1,3
+Algeria,JS Kabylie,13366,https://www.transfermarkt.com/js-kabylie/startseite/verein/13366,1,3
+Algeria,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,3
+Algeria,OGC Nice,417,https://www.transfermarkt.com/ogc-nizza/startseite/verein/417,1,3
+Algeria,Olympique Marseille,244,https://www.transfermarkt.com/olympique-marseille/startseite/verein/244,1,3
+Algeria,Paris FC,10004,https://www.transfermarkt.com/paris-fc/startseite/verein/10004,1,3
+Algeria,Royal Charleroi SC,172,https://www.transfermarkt.com/rsc-charleroi/startseite/verein/172,1,3
+Algeria,VfL Wolfsburg,82,https://www.transfermarkt.com/vfl-wolfsburg/startseite/verein/82,1,3
+Argentina,Atlético de Madrid,13,https://www.transfermarkt.com/atletico-madrid/startseite/verein/13,6,1
+Argentina,Olympique Marseille,244,https://www.transfermarkt.com/olympique-marseille/startseite/verein/244,3,2
+Argentina,Inter Miami CF,69261,https://www.transfermarkt.com/inter-miami-cf/startseite/verein/69261,2,3
+Argentina,Aston Villa,405,https://www.transfermarkt.com/aston-villa/startseite/verein/405,1,4
+Argentina,Bayer 04 Leverkusen,15,https://www.transfermarkt.com/bayer-04-leverkusen/startseite/verein/15,1,4
+Argentina,CA Boca Juniors,189,https://www.transfermarkt.com/club-atletico-boca-juniors/startseite/verein/189,1,4
+Argentina,CA River Plate,209,https://www.transfermarkt.com/club-atletico-river-plate/startseite/verein/209,1,4
+Argentina,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,4
+Argentina,Como 1907,1047,https://www.transfermarkt.com/como-1907/startseite/verein/1047,1,4
+Argentina,Inter Milan,46,https://www.transfermarkt.com/inter-mailand/startseite/verein/46,1,4
+Argentina,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,4
+Argentina,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,1,4
+Argentina,Olympique Lyon,1041,https://www.transfermarkt.com/olympique-lyon/startseite/verein/1041,1,4
+Argentina,RC Strasbourg Alsace,667,https://www.transfermarkt.com/rc-strassburg-alsace/startseite/verein/667,1,4
+Argentina,Real Betis Balompié,150,https://www.transfermarkt.com/real-betis-sevilla/startseite/verein/150,1,4
+Argentina,SL Benfica,294,https://www.transfermarkt.com/benfica-lissabon/startseite/verein/294,1,4
+Argentina,Sociedade Esportiva Palmeiras,1023,https://www.transfermarkt.com/se-palmeiras-sao-paulo/startseite/verein/1023,1,4
+Argentina,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,4
+Australia,Melbourne City FC,25580,https://www.transfermarkt.com/melbourne-city-fc/startseite/verein/25580,3,1
+Australia,FC St. Pauli,35,https://www.transfermarkt.com/fc-st-pauli/startseite/verein/35,2,2
+Australia,New York City FC,40058,https://www.transfermarkt.com/new-york-city-fc/startseite/verein/40058,2,2
+Australia,APOEL Nicosia,2784,https://www.transfermarkt.com/apoel-nikosia/startseite/verein/2784,1,4
+Australia,Albirex Niigata,8344,https://www.transfermarkt.com/albirex-niigata/startseite/verein/8344,1,4
+Australia,CD Castellón,2502,https://www.transfermarkt.com/cd-castellon/startseite/verein/2502,1,4
+Australia,Colorado Rapids,1247,https://www.transfermarkt.com/colorado-rapids/startseite/verein/1247,1,4
+Australia,Feyenoord Rotterdam,234,https://www.transfermarkt.com/feyenoord-rotterdam/startseite/verein/234,1,4
+Australia,Grazer AK 1902,316,https://www.transfermarkt.com/grazer-ak-1902/startseite/verein/316,1,4
+Australia,Heart of Midlothian FC,43,https://www.transfermarkt.com/heart-of-midlothian-fc/startseite/verein/43,1,4
+Australia,Heracles Almelo,1304,https://www.transfermarkt.com/heracles-almelo/startseite/verein/1304,1,4
+Australia,Leicester City,1003,https://www.transfermarkt.com/leicester-city/startseite/verein/1003,1,4
+Australia,Levante UD,3368,https://www.transfermarkt.com/ud-levante/startseite/verein/3368,1,4
+Australia,Machida Zelvia,23568,https://www.transfermarkt.com/machida-zelvia/startseite/verein/23568,1,4
+Australia,Melbourne Victory,7006,https://www.transfermarkt.com/melbourne-victory/startseite/verein/7006,1,4
+Australia,Norwich City,1123,https://www.transfermarkt.com/norwich-city/startseite/verein/1123,1,4
+Australia,Parma Calcio 1913,130,https://www.transfermarkt.com/parma-calcio-1913/startseite/verein/130,1,4
+Australia,Randers FC,5724,https://www.transfermarkt.com/randers-fc/startseite/verein/5724,1,4
+Australia,Swansea City,2288,https://www.transfermarkt.com/swansea-city/startseite/verein/2288,1,4
+Australia,Sydney FC,8054,https://www.transfermarkt.com/sydney-fc/startseite/verein/8054,1,4
+Australia,US Sassuolo,6574,https://www.transfermarkt.com/us-sassuolo/startseite/verein/6574,1,4
+Australia,Watford FC,1010,https://www.transfermarkt.com/fc-watford/startseite/verein/1010,1,4
+Austria,1.FSV Mainz 05,39,https://www.transfermarkt.com/1-fsv-mainz-05/startseite/verein/39,2,1
+Austria,Borussia Dortmund,16,https://www.transfermarkt.com/borussia-dortmund/startseite/verein/16,2,1
+Austria,RB Leipzig,23826,https://www.transfermarkt.com/rasenballsport-leipzig/startseite/verein/23826,2,1
+Austria,SV Werder Bremen,86,https://www.transfermarkt.com/sv-werder-bremen/startseite/verein/86,2,1
+Austria,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,1,5
+Austria,Bröndby IF,206,https://www.transfermarkt.com/brondby-if/startseite/verein/206,1,5
+Austria,Elche CF,1531,https://www.transfermarkt.com/fc-elche/startseite/verein/1531,1,5
+Austria,FC Augsburg,167,https://www.transfermarkt.com/fc-augsburg/startseite/verein/167,1,5
+Austria,FC Viktoria Plzen,941,https://www.transfermarkt.com/fc-viktoria-pilsen/startseite/verein/941,1,5
+Austria,LASK,413,https://www.transfermarkt.com/lask/startseite/verein/413,1,5
+Austria,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,1,5
+Austria,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,5
+Austria,Red Bull Salzburg,409,https://www.transfermarkt.com/red-bull-salzburg/startseite/verein/409,1,5
+Austria,Red Star Belgrade,159,https://www.transfermarkt.com/roter-stern-belgrad/startseite/verein/159,1,5
+Austria,SC Braga,1075,https://www.transfermarkt.com/sc-braga/startseite/verein/1075,1,5
+Austria,SC Freiburg,60,https://www.transfermarkt.com/sc-freiburg/startseite/verein/60,1,5
+Austria,TSG 1899 Hoffenheim,533,https://www.transfermarkt.com/tsg-1899-hoffenheim/startseite/verein/533,1,5
+Austria,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,5
+Austria,Venezia FC,607,https://www.transfermarkt.com/venezia-fc/startseite/verein/607,1,5
+Austria,VfL Wolfsburg,82,https://www.transfermarkt.com/vfl-wolfsburg/startseite/verein/82,1,5
+Austria,Wolfsberger AC,4441,https://www.transfermarkt.com/wolfsberger-ac/startseite/verein/4441,1,5
+Belgium,Club Brugge KV,2282,https://www.transfermarkt.com/fc-brugge/startseite/verein/2282,3,1
+Belgium,LOSC Lille,1082,https://www.transfermarkt.com/losc-lille/startseite/verein/1082,3,1
+Belgium,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,2,3
+Belgium,Aston Villa,405,https://www.transfermarkt.com/aston-villa/startseite/verein/405,2,3
+Belgium,RC Strasbourg Alsace,667,https://www.transfermarkt.com/rc-strassburg-alsace/startseite/verein/667,2,3
+Belgium,SSC Napoli,6195,https://www.transfermarkt.com/ssc-neapel/startseite/verein/6195,2,3
+Belgium,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,1,7
+Belgium,Atalanta BC,800,https://www.transfermarkt.com/atalanta-bergamo/startseite/verein/800,1,7
+Belgium,Brighton & Hove Albion,1237,https://www.transfermarkt.com/brighton-amp-hove-albion/startseite/verein/1237,1,7
+Belgium,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,7
+Belgium,Fulham FC,931,https://www.transfermarkt.com/fc-fulham/startseite/verein/931,1,7
+Belgium,Girona FC,12321,https://www.transfermarkt.com/fc-girona/startseite/verein/12321,1,7
+Belgium,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,7
+Belgium,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,1,7
+Belgium,Rangers FC,124,https://www.transfermarkt.com/glasgow-rangers/startseite/verein/124,1,7
+Belgium,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,7
+Belgium,SL Benfica,294,https://www.transfermarkt.com/benfica-lissabon/startseite/verein/294,1,7
+Belgium,Sporting CP,336,https://www.transfermarkt.com/sporting-lissabon/startseite/verein/336,1,7
+Bosnia and Herzegovina,FC Schalke 04,33,https://www.transfermarkt.com/fc-schalke-04/startseite/verein/33,2,1
+Bosnia and Herzegovina,HNK Rijeka,144,https://www.transfermarkt.com/hnk-rijeka/startseite/verein/144,2,1
+Bosnia and Herzegovina,Atalanta BC,800,https://www.transfermarkt.com/atalanta-bergamo/startseite/verein/800,1,3
+Bosnia and Herzegovina,BSC Young Boys,452,https://www.transfermarkt.com/bsc-young-boys/startseite/verein/452,1,3
+Bosnia and Herzegovina,Borussia Mönchengladbach,18,https://www.transfermarkt.com/borussia-monchengladbach/startseite/verein/18,1,3
+Bosnia and Herzegovina,Bröndby IF,206,https://www.transfermarkt.com/brondby-if/startseite/verein/206,1,3
+Bosnia and Herzegovina,FC Astana,22220,https://www.transfermarkt.com/fc-astana/startseite/verein/22220,1,3
+Bosnia and Herzegovina,FC Slovan Liberec,697,https://www.transfermarkt.com/fc-slovan-liberec/startseite/verein/697,1,3
+Bosnia and Herzegovina,FC St. Pauli,35,https://www.transfermarkt.com/fc-st-pauli/startseite/verein/35,1,3
+Bosnia and Herzegovina,FC Universitatea Cluj,6429,https://www.transfermarkt.com/fc-universitatea-cluj/startseite/verein/6429,1,3
+Bosnia and Herzegovina,FC Viktoria Plzen,941,https://www.transfermarkt.com/fc-viktoria-pilsen/startseite/verein/941,1,3
+Bosnia and Herzegovina,FK Borac Banja Luka,3900,https://www.transfermarkt.com/fk-borac-banja-luka/startseite/verein/3900,1,3
+Bosnia and Herzegovina,Gaziantep FK,2832,https://www.transfermarkt.com/gaziantep-fk/startseite/verein/2832,1,3
+Bosnia and Herzegovina,Hull City,3008,https://www.transfermarkt.com/hull-city/startseite/verein/3008,1,3
+Bosnia and Herzegovina,Jagiellonia Bialystok,2300,https://www.transfermarkt.com/jagiellonia-bialystok/startseite/verein/2300,1,3
+Bosnia and Herzegovina,Karlsruher SC,48,https://www.transfermarkt.com/karlsruher-sc/startseite/verein/48,1,3
+Bosnia and Herzegovina,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,1,3
+Bosnia and Herzegovina,Pafos FC,45457,https://www.transfermarkt.com/pafos-fc/startseite/verein/45457,1,3
+Bosnia and Herzegovina,RC Lens,826,https://www.transfermarkt.com/rc-lens/startseite/verein/826,1,3
+Bosnia and Herzegovina,Red Bull Salzburg,409,https://www.transfermarkt.com/red-bull-salzburg/startseite/verein/409,1,3
+Bosnia and Herzegovina,SL Benfica,294,https://www.transfermarkt.com/benfica-lissabon/startseite/verein/294,1,3
+Bosnia and Herzegovina,UC Sampdoria,1038,https://www.transfermarkt.com/sampdoria-genua/startseite/verein/1038,1,3
+Bosnia and Herzegovina,US Sassuolo,6574,https://www.transfermarkt.com/us-sassuolo/startseite/verein/6574,1,3
+Bosnia and Herzegovina,VfB Stuttgart,79,https://www.transfermarkt.com/vfb-stuttgart/startseite/verein/79,1,3
+Brazil,CR Flamengo,614,https://www.transfermarkt.com/flamengo-rio-de-janeiro/startseite/verein/614,4,1
+Brazil,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,2,2
+Brazil,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,2,2
+Brazil,Zenit St. Petersburg,964,https://www.transfermarkt.com/zenit-st-petersburg/startseite/verein/964,2,2
+Brazil,AFC Bournemouth,989,https://www.transfermarkt.com/afc-bournemouth/startseite/verein/989,1,5
+Brazil,AS Roma,12,https://www.transfermarkt.com/as-rom/startseite/verein/12,1,5
+Brazil,Al-Ahli SFC,18487,https://www.transfermarkt.com/al-ahli-dschidda/startseite/verein/18487,1,5
+Brazil,Al-Ittihad Club,8023,https://www.transfermarkt.com/al-ittihad-dschidda/startseite/verein/8023,1,5
+Brazil,Botafogo de Futebol e Regatas,537,https://www.transfermarkt.com/botafogo-rio-de-janeiro/startseite/verein/537,1,5
+Brazil,Brentford FC,1148,https://www.transfermarkt.com/fc-brentford/startseite/verein/1148,1,5
+Brazil,FC Barcelona,131,https://www.transfermarkt.com/fc-barcelona/startseite/verein/131,1,5
+Brazil,Fenerbahce,36,https://www.transfermarkt.com/fenerbahce-istanbul/startseite/verein/36,1,5
+Brazil,Grêmio Foot-Ball Porto Alegrense,210,https://www.transfermarkt.com/gremio-porto-alegre/startseite/verein/210,1,5
+Brazil,Juventus FC,506,https://www.transfermarkt.com/juventus-turin/startseite/verein/506,1,5
+Brazil,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,5
+Brazil,Newcastle United,762,https://www.transfermarkt.com/newcastle-united/startseite/verein/762,1,5
+Brazil,Olympique Lyon,1041,https://www.transfermarkt.com/olympique-lyon/startseite/verein/1041,1,5
+Brazil,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,1,5
+Brazil,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,5
+Brazil,Santos FC,221,https://www.transfermarkt.com/fc-santos/startseite/verein/221,1,5
+Canada,Los Angeles FC,51828,https://www.transfermarkt.com/los-angeles-fc/startseite/verein/51828,3,1
+Canada,Toronto FC,11141,https://www.transfermarkt.com/toronto-fc/startseite/verein/11141,2,2
+Canada,Villarreal CF,1050,https://www.transfermarkt.com/fc-villarreal/startseite/verein/1050,2,2
+Canada,Barnsley FC,349,https://www.transfermarkt.com/fc-barnsley/startseite/verein/349,1,4
+Canada,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,1,4
+Canada,Celtic FC,371,https://www.transfermarkt.com/celtic-glasgow/startseite/verein/371,1,4
+Canada,Chicago Fire FC,432,https://www.transfermarkt.com/chicago-fire-fc/startseite/verein/432,1,4
+Canada,FCV Dender EH,9010,https://www.transfermarkt.com/fcv-dender-eh/startseite/verein/9010,1,4
+Canada,HNK Hajduk Split,447,https://www.transfermarkt.com/hnk-hajduk-split/startseite/verein/447,1,4
+Canada,Hull City,3008,https://www.transfermarkt.com/hull-city/startseite/verein/3008,1,4
+Canada,Inter Miami CF,69261,https://www.transfermarkt.com/inter-miami-cf/startseite/verein/69261,1,4
+Canada,Juventus FC,506,https://www.transfermarkt.com/juventus-turin/startseite/verein/506,1,4
+Canada,Middlesbrough FC,641,https://www.transfermarkt.com/fc-middlesbrough/startseite/verein/641,1,4
+Canada,Norwich City,1123,https://www.transfermarkt.com/norwich-city/startseite/verein/1123,1,4
+Canada,OGC Nice,417,https://www.transfermarkt.com/ogc-nizza/startseite/verein/417,1,4
+Canada,Olympique Marseille,244,https://www.transfermarkt.com/olympique-marseille/startseite/verein/244,1,4
+Canada,Orlando City SC,45604,https://www.transfermarkt.com/orlando-city-sc/startseite/verein/45604,1,4
+Canada,RSC Anderlecht,58,https://www.transfermarkt.com/rsc-anderlecht/startseite/verein/58,1,4
+Canada,Southampton FC,180,https://www.transfermarkt.com/fc-southampton/startseite/verein/180,1,4
+Canada,US Sassuolo,6574,https://www.transfermarkt.com/us-sassuolo/startseite/verein/6574,1,4
+Canada,Union Saint-Gilloise,3948,https://www.transfermarkt.com/royale-union-saint-gilloise/startseite/verein/3948,1,4
+Cape Verde,Akron Tolyatti,71985,https://www.transfermarkt.com/akron-togliatti/startseite/verein/71985,1,1
+Cape Verde,Al-Bataeh CSC,78312,https://www.transfermarkt.com/al-bataeh-club/startseite/verein/78312,1,1
+Cape Verde,Apollon Limassol,429,https://www.transfermarkt.com/apollon-limassol/startseite/verein/429,1,1
+Cape Verde,Basaksehir FK,6890,https://www.transfermarkt.com/istanbul-basaksehir-fk/startseite/verein/6890,1,1
+Cape Verde,CF Estrela Amadora,2431,https://www.transfermarkt.com/cf-estrela-amadora-sad/startseite/verein/2431,1,1
+Cape Verde,Casa Pia AC,3268,https://www.transfermarkt.com/casa-pia-ac/startseite/verein/3268,1,1
+Cape Verde,Columbus Crew,813,https://www.transfermarkt.com/columbus-crew-sc/startseite/verein/813,1,1
+Cape Verde,FC Krasnodar,16704,https://www.transfermarkt.com/fk-krasnodar/startseite/verein/16704,1,1
+Cape Verde,FCSB,301,https://www.transfermarkt.com/fcsb/startseite/verein/301,1,1
+Cape Verde,GD Chaves,3325,https://www.transfermarkt.com/gd-chaves/startseite/verein/3325,1,1
+Cape Verde,Igdir FK,74664,https://www.transfermarkt.com/76-igdir-belediye-spor/startseite/verein/74664,1,1
+Cape Verde,Ludogorets Razgrad,31614,https://www.transfermarkt.com/pfk-ludogorets-razgrad/startseite/verein/31614,1,1
+Cape Verde,Maccabi Tel Aviv,119,https://www.transfermarkt.com/maccabi-tel-aviv/startseite/verein/119,1,1
+Cape Verde,Montana,24078,https://www.transfermarkt.com/pfc-montana/startseite/verein/24078,1,1
+Cape Verde,Omonia Nicosia,829,https://www.transfermarkt.com/omonia-nikosia/startseite/verein/829,1,1
+Cape Verde,PEC Zwolle,1269,https://www.transfermarkt.com/pec-zwolle/startseite/verein/1269,1,1
+Cape Verde,Puskás Akadémia FC,37169,https://www.transfermarkt.com/puskas-akademia-fc/startseite/verein/37169,1,1
+Cape Verde,SC Farense,4294,https://www.transfermarkt.com/sc-farense/startseite/verein/4294,1,1
+Cape Verde,SC União Torreense,2432,https://www.transfermarkt.com/sc-uniao-torreense/startseite/verein/2432,1,1
+Cape Verde,SJK Seinäjoki,23777,https://www.transfermarkt.com/sjk-seinajoki/startseite/verein/23777,1,1
+Cape Verde,SL Benfica,294,https://www.transfermarkt.com/benfica-lissabon/startseite/verein/294,1,1
+Cape Verde,San Diego FC,114977,https://www.transfermarkt.com/san-diego-fc/startseite/verein/114977,1,1
+Cape Verde,Shamrock Rovers,3258,https://www.transfermarkt.com/shamrock-rovers/startseite/verein/3258,1,1
+Cape Verde,Trabzonspor,449,https://www.transfermarkt.com/trabzonspor/startseite/verein/449,1,1
+Cape Verde,Villarreal CF,1050,https://www.transfermarkt.com/fc-villarreal/startseite/verein/1050,1,1
+Cape Verde,Vitória Guimarães SC,2420,https://www.transfermarkt.com/vitoria-guimaraes-sc/startseite/verein/2420,1,1
+Colombia,CA River Plate,209,https://www.transfermarkt.com/club-atletico-river-plate/startseite/verein/209,2,1
+Colombia,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,2,1
+Colombia,Atlas Guadalajara,8590,https://www.transfermarkt.com/atlas-guadalajara/startseite/verein/8590,1,3
+Colombia,Atlético Nacional,8172,https://www.transfermarkt.com/atletico-nacional/startseite/verein/8172,1,3
+Colombia,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,1,3
+Colombia,Bologna FC 1909,1025,https://www.transfermarkt.com/fc-bologna/startseite/verein/1025,1,3
+Colombia,CA Independiente,1234,https://www.transfermarkt.com/club-atletico-independiente/startseite/verein/1234,1,3
+Colombia,CA Rosario Central,1418,https://www.transfermarkt.com/club-atletico-rosario-central/startseite/verein/1418,1,3
+Colombia,CA Vélez Sarsfield,1029,https://www.transfermarkt.com/club-atletico-velez-sarsfield/startseite/verein/1029,1,3
+Colombia,CD Cruz Azul,3711,https://www.transfermarkt.com/cd-cruz-azul/startseite/verein/3711,1,3
+Colombia,CR Flamengo,614,https://www.transfermarkt.com/flamengo-rio-de-janeiro/startseite/verein/614,1,3
+Colombia,Cagliari Calcio,1390,https://www.transfermarkt.com/cagliari-calcio/startseite/verein/1390,1,3
+Colombia,Club Athletico Paranaense,679,https://www.transfermarkt.com/club-athletico-paranaense/startseite/verein/679,1,3
+Colombia,Clube de Regatas Vasco da Gama,978,https://www.transfermarkt.com/vasco-da-gama-rio-de-janeiro/startseite/verein/978,1,3
+Colombia,FC Krasnodar,16704,https://www.transfermarkt.com/fk-krasnodar/startseite/verein/16704,1,3
+Colombia,FC Nantes,995,https://www.transfermarkt.com/fc-nantes/startseite/verein/995,1,3
+Colombia,Galatasaray,141,https://www.transfermarkt.com/galatasaray-istanbul/startseite/verein/141,1,3
+Colombia,Minnesota United FC,56089,https://www.transfermarkt.com/minnesota-united-fc/startseite/verein/56089,1,3
+Colombia,RCD Mallorca,237,https://www.transfermarkt.com/rcd-mallorca/startseite/verein/237,1,3
+Colombia,Racing Santander,630,https://www.transfermarkt.com/racing-santander/startseite/verein/630,1,3
+Colombia,Real Betis Balompié,150,https://www.transfermarkt.com/real-betis-sevilla/startseite/verein/150,1,3
+Colombia,SL Benfica,294,https://www.transfermarkt.com/benfica-lissabon/startseite/verein/294,1,3
+Colombia,Sociedade Esportiva Palmeiras,1023,https://www.transfermarkt.com/se-palmeiras-sao-paulo/startseite/verein/1023,1,3
+Colombia,Sporting CP,336,https://www.transfermarkt.com/sporting-lissabon/startseite/verein/336,1,3
+Croatia,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,2,1
+Croatia,Real Sociedad,681,https://www.transfermarkt.com/real-sociedad-san-sebastian/startseite/verein/681,2,1
+Croatia,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,1,3
+Croatia,ACF Fiorentina,430,https://www.transfermarkt.com/ac-florenz/startseite/verein/430,1,3
+Croatia,Ajax Amsterdam,610,https://www.transfermarkt.com/ajax-amsterdam/startseite/verein/610,1,3
+Croatia,Atalanta BC,800,https://www.transfermarkt.com/atalanta-bergamo/startseite/verein/800,1,3
+Croatia,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,1,3
+Croatia,Bologna FC 1909,1025,https://www.transfermarkt.com/fc-bologna/startseite/verein/1025,1,3
+Croatia,CA Osasuna,331,https://www.transfermarkt.com/ca-osasuna/startseite/verein/331,1,3
+Croatia,Como 1907,1047,https://www.transfermarkt.com/como-1907/startseite/verein/1047,1,3
+Croatia,FC Augsburg,167,https://www.transfermarkt.com/fc-augsburg/startseite/verein/167,1,3
+Croatia,FC Copenhagen,190,https://www.transfermarkt.com/fc-kopenhagen/startseite/verein/190,1,3
+Croatia,FC Dallas,8816,https://www.transfermarkt.com/fc-dallas/startseite/verein/8816,1,3
+Croatia,FC Midtjylland,865,https://www.transfermarkt.com/fc-midtjylland/startseite/verein/865,1,3
+Croatia,GNK Dinamo Zagreb,419,https://www.transfermarkt.com/gnk-dinamo-zagreb/startseite/verein/419,1,3
+Croatia,HNK Rijeka,144,https://www.transfermarkt.com/hnk-rijeka/startseite/verein/144,1,3
+Croatia,Hamburger SV,41,https://www.transfermarkt.com/hamburger-sv/startseite/verein/41,1,3
+Croatia,Hull City,3008,https://www.transfermarkt.com/hull-city/startseite/verein/3008,1,3
+Croatia,Inter Milan,46,https://www.transfermarkt.com/inter-mailand/startseite/verein/46,1,3
+Croatia,Orlando City SC,45604,https://www.transfermarkt.com/orlando-city-sc/startseite/verein/45604,1,3
+Croatia,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,1,3
+Croatia,SC Freiburg,60,https://www.transfermarkt.com/sc-freiburg/startseite/verein/60,1,3
+Croatia,TSG 1899 Hoffenheim,533,https://www.transfermarkt.com/tsg-1899-hoffenheim/startseite/verein/533,1,3
+Croatia,Torino FC,416,https://www.transfermarkt.com/fc-turin/startseite/verein/416,1,3
+Curaçao,FC Volendam,724,https://www.transfermarkt.com/fc-volendam/startseite/verein/724,2,1
+Curaçao,Miami FC,42814,https://www.transfermarkt.com/miami-fc/startseite/verein/42814,2,1
+Curaçao,RKC Waalwijk,235,https://www.transfermarkt.com/rkc-waalwijk/startseite/verein/235,2,1
+Curaçao,SC Telstar,1434,https://www.transfermarkt.com/sc-telstar/startseite/verein/1434,2,1
+Curaçao,AE Kifisia,30120,https://www.transfermarkt.com/ae-kifisias/startseite/verein/30120,1,5
+Curaçao,Abha Club,40039,https://www.transfermarkt.com/abha-club/startseite/verein/40039,1,5
+Curaçao,FC Den Bosch,404,https://www.transfermarkt.com/fc-den-bosch/startseite/verein/404,1,5
+Curaçao,FC Zürich,260,https://www.transfermarkt.com/fc-zurich/startseite/verein/260,1,5
+Curaçao,Igdir FK,74664,https://www.transfermarkt.com/76-igdir-belediye-spor/startseite/verein/74664,1,5
+Curaçao,Kayserispor,3205,https://www.transfermarkt.com/kayserispor/startseite/verein/3205,1,5
+Curaçao,Konyaspor,2293,https://www.transfermarkt.com/konyaspor/startseite/verein/2293,1,5
+Curaçao,Maccabi Haifa,1064,https://www.transfermarkt.com/maccabi-haifa/startseite/verein/1064,1,5
+Curaçao,Middlesbrough FC,641,https://www.transfermarkt.com/fc-middlesbrough/startseite/verein/641,1,5
+Curaçao,NEC Nijmegen,467,https://www.transfermarkt.com/nec-nijmegen/startseite/verein/467,1,5
+Curaçao,PEC Zwolle,1269,https://www.transfermarkt.com/pec-zwolle/startseite/verein/1269,1,5
+Curaçao,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,1,5
+Curaçao,Rotherham United,1194,https://www.transfermarkt.com/rotherham-united/startseite/verein/1194,1,5
+Curaçao,SK Beveren,28643,https://www.transfermarkt.com/waasland-beveren/startseite/verein/28643,1,5
+Curaçao,Sheffield United,350,https://www.transfermarkt.com/sheffield-united/startseite/verein/350,1,5
+Curaçao,Sparta Rotterdam,468,https://www.transfermarkt.com/sparta-rotterdam/startseite/verein/468,1,5
+Curaçao,Terengganu FC,15838,https://www.transfermarkt.com/terengganu-fc/startseite/verein/15838,1,5
+Curaçao,VVV-Venlo,1426,https://www.transfermarkt.com/vvv-venlo/startseite/verein/1426,1,5
+Czech Republic,SK Slavia Prague,62,https://www.transfermarkt.com/sk-slavia-prag/startseite/verein/62,10,1
+Czech Republic,AC Sparta Prague,197,https://www.transfermarkt.com/ac-sparta-prag/startseite/verein/197,3,2
+Czech Republic,FC Viktoria Plzen,941,https://www.transfermarkt.com/fc-viktoria-pilsen/startseite/verein/941,3,2
+Czech Republic,TSG 1899 Hoffenheim,533,https://www.transfermarkt.com/tsg-1899-hoffenheim/startseite/verein/533,3,2
+Czech Republic,Bayer 04 Leverkusen,15,https://www.transfermarkt.com/bayer-04-leverkusen/startseite/verein/15,1,5
+Czech Republic,FC Hradec Kralove,1897,https://www.transfermarkt.com/fc-hradec-kralove/startseite/verein/1897,1,5
+Czech Republic,Olympique Lyon,1041,https://www.transfermarkt.com/olympique-lyon/startseite/verein/1041,1,5
+Czech Republic,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,1,5
+Czech Republic,SC Braga,1075,https://www.transfermarkt.com/sc-braga/startseite/verein/1075,1,5
+Czech Republic,West Ham United,379,https://www.transfermarkt.com/west-ham-united/startseite/verein/379,1,5
+Czech Republic,Wolverhampton Wanderers,543,https://www.transfermarkt.com/wolverhampton-wanderers/startseite/verein/543,1,5
+DR Congo,AE Larisa,4603,https://www.transfermarkt.com/ae-larisa/startseite/verein/4603,2,1
+DR Congo,LOSC Lille,1082,https://www.transfermarkt.com/losc-lille/startseite/verein/1082,2,1
+DR Congo,Al-Jazira Club,2524,https://www.transfermarkt.com/al-jazira-abu-dhabi-/startseite/verein/2524,1,3
+DR Congo,Alanyaspor,11282,https://www.transfermarkt.com/alanyaspor/startseite/verein/11282,1,3
+DR Congo,Aris Limassol,10586,https://www.transfermarkt.com/aris-limassol/startseite/verein/10586,1,3
+DR Congo,Atromitos Athens,3060,https://www.transfermarkt.com/atromitos-athen/startseite/verein/3060,1,3
+DR Congo,Burnley FC,1132,https://www.transfermarkt.com/fc-burnley/startseite/verein/1132,1,3
+DR Congo,CD Castellón,2502,https://www.transfermarkt.com/cd-castellon/startseite/verein/2502,1,3
+DR Congo,FC Noah Yerevan,60368,https://www.transfermarkt.com/fc-noah-erewan/startseite/verein/60368,1,3
+DR Congo,KRC Genk,1184,https://www.transfermarkt.com/krc-genk/startseite/verein/1184,1,3
+DR Congo,Kilmarnock FC,2553,https://www.transfermarkt.com/kilmarnock-fc/startseite/verein/2553,1,3
+DR Congo,Le Havre AC,738,https://www.transfermarkt.com/ac-le-havre/startseite/verein/738,1,3
+DR Congo,Montpellier HSC,969,https://www.transfermarkt.com/montpellier-hsc/startseite/verein/969,1,3
+DR Congo,Newcastle United,762,https://www.transfermarkt.com/newcastle-united/startseite/verein/762,1,3
+DR Congo,Pyramids FC,44664,https://www.transfermarkt.com/pyramids-fc/startseite/verein/44664,1,3
+DR Congo,RC Lens,826,https://www.transfermarkt.com/rc-lens/startseite/verein/826,1,3
+DR Congo,RCD Espanyol Barcelona,714,https://www.transfermarkt.com/espanyol-barcelona/startseite/verein/714,1,3
+DR Congo,Real Betis Balompié,150,https://www.transfermarkt.com/real-betis-sevilla/startseite/verein/150,1,3
+DR Congo,Spartak Moscow,232,https://www.transfermarkt.com/spartak-moskau/startseite/verein/232,1,3
+DR Congo,Standard Liège,3057,https://www.transfermarkt.com/standard-luttich/startseite/verein/3057,1,3
+DR Congo,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,1,3
+DR Congo,Watford FC,1010,https://www.transfermarkt.com/fc-watford/startseite/verein/1010,1,3
+DR Congo,West Ham United,379,https://www.transfermarkt.com/west-ham-united/startseite/verein/379,1,3
+DR Congo,Widzew Lodz,88,https://www.transfermarkt.com/widzew-lodz/startseite/verein/88,1,3
+Ecuador,Clube Atlético Mineiro,330,https://www.transfermarkt.com/clube-atletico-mineiro/startseite/verein/330,3,1
+Ecuador,CA Huracán,2063,https://www.transfermarkt.com/club-atletico-huracan/startseite/verein/2063,2,2
+Ecuador,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,1,3
+Ecuador,AE Kifisia,30120,https://www.transfermarkt.com/ae-kifisias/startseite/verein/30120,1,3
+Ecuador,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,1,3
+Ecuador,CA River Plate,209,https://www.transfermarkt.com/club-atletico-river-plate/startseite/verein/209,1,3
+Ecuador,CF Pachuca,4035,https://www.transfermarkt.com/cf-pachuca/startseite/verein/4035,1,3
+Ecuador,CR Flamengo,614,https://www.transfermarkt.com/flamengo-rio-de-janeiro/startseite/verein/614,1,3
+Ecuador,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,3
+Ecuador,Club Brugge KV,2282,https://www.transfermarkt.com/fc-brugge/startseite/verein/2282,1,3
+Ecuador,Club Tijuana,13353,https://www.transfermarkt.com/club-tijuana/startseite/verein/13353,1,3
+Ecuador,FC Midtjylland,865,https://www.transfermarkt.com/fc-midtjylland/startseite/verein/865,1,3
+Ecuador,Independiente del Valle,19309,https://www.transfermarkt.com/independiente-del-valle/startseite/verein/19309,1,3
+Ecuador,KRC Genk,1184,https://www.transfermarkt.com/krc-genk/startseite/verein/1184,1,3
+Ecuador,LDU Quito,9855,https://www.transfermarkt.com/ldu-quito/startseite/verein/9855,1,3
+Ecuador,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,1,3
+Ecuador,Royal Antwerp FC,1096,https://www.transfermarkt.com/royal-antwerpen-fc/startseite/verein/1096,1,3
+Ecuador,Sport Club Internacional,6600,https://www.transfermarkt.com/sc-internacional-porto-alegre/startseite/verein/6600,1,3
+Ecuador,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,1,3
+Ecuador,UNAM Pumas,7633,https://www.transfermarkt.com/unam-pumas/startseite/verein/7633,1,3
+Ecuador,Union Saint-Gilloise,3948,https://www.transfermarkt.com/royale-union-saint-gilloise/startseite/verein/3948,1,3
+Ecuador,Venezia FC,607,https://www.transfermarkt.com/venezia-fc/startseite/verein/607,1,3
+Ecuador,VfB Stuttgart,79,https://www.transfermarkt.com/vfb-stuttgart/startseite/verein/79,1,3
+Egypt,Al Ahly FC,7,https://www.transfermarkt.com/el-ahly-kairo/startseite/verein/7,8,1
+Egypt,Pyramids FC,44664,https://www.transfermarkt.com/pyramids-fc/startseite/verein/44664,3,2
+Egypt,Zamalek SC,664,https://www.transfermarkt.com/zamalek-sc/startseite/verein/664,3,2
+Egypt,Zed FC,47010,https://www.transfermarkt.com/zed-fc/startseite/verein/47010,2,4
+Egypt,Al-Ain FC,2150,https://www.transfermarkt.com/al-ain-fc/startseite/verein/2150,1,5
+Egypt,Al-Najma SC,32328,https://www.transfermarkt.com/al-najma/startseite/verein/32328,1,5
+Egypt,Al-Wakrah SC,13509,https://www.transfermarkt.com/al-wakrah-sc/startseite/verein/13509,1,5
+Egypt,El Gouna FC,20572,https://www.transfermarkt.com/el-gouna-fc/startseite/verein/20572,1,5
+Egypt,FC Barcelona U19,2470,https://www.transfermarkt.com/fc-barcelona-u19/startseite/verein/2470,1,5
+Egypt,FC Nordsjaelland,2778,https://www.transfermarkt.com/fc-nordsjaelland/startseite/verein/2778,1,5
+Egypt,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,5
+Egypt,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,5
+Egypt,OGC Nice,417,https://www.transfermarkt.com/ogc-nizza/startseite/verein/417,1,5
+Egypt,Real Oviedo,2497,https://www.transfermarkt.com/real-oviedo/startseite/verein/2497,1,5
+England,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,4,1
+England,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,4,1
+England,Aston Villa,405,https://www.transfermarkt.com/aston-villa/startseite/verein/405,3,3
+England,Newcastle United,762,https://www.transfermarkt.com/newcastle-united/startseite/verein/762,3,3
+England,Al-Ahli SFC,18487,https://www.transfermarkt.com/al-ahli-dschidda/startseite/verein/18487,1,5
+England,Bayer 04 Leverkusen,15,https://www.transfermarkt.com/bayer-04-leverkusen/startseite/verein/15,1,5
+England,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,1,5
+England,Brentford FC,1148,https://www.transfermarkt.com/fc-brentford/startseite/verein/1148,1,5
+England,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,5
+England,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,5
+England,Everton FC,29,https://www.transfermarkt.com/fc-everton/startseite/verein/29,1,5
+England,FC Barcelona,131,https://www.transfermarkt.com/fc-barcelona/startseite/verein/131,1,5
+England,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,1,5
+England,Nottingham Forest,703,https://www.transfermarkt.com/nottingham-forest/startseite/verein/703,1,5
+England,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,5
+England,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,5
+France,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,5,1
+France,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,2,2
+France,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,2,2
+France,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,2,2
+France,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,2,2
+France,AS Monaco,162,https://www.transfermarkt.com/as-monaco/startseite/verein/162,1,6
+France,AS Roma,12,https://www.transfermarkt.com/as-rom/startseite/verein/12,1,6
+France,Al-Hilal SFC,1114,https://www.transfermarkt.com/al-hilal-riad/startseite/verein/1114,1,6
+France,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,1,6
+France,Aston Villa,405,https://www.transfermarkt.com/aston-villa/startseite/verein/405,1,6
+France,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,6
+France,FC Barcelona,131,https://www.transfermarkt.com/fc-barcelona/startseite/verein/131,1,6
+France,Fenerbahce,36,https://www.transfermarkt.com/fenerbahce-istanbul/startseite/verein/36,1,6
+France,Inter Milan,46,https://www.transfermarkt.com/inter-mailand/startseite/verein/46,1,6
+France,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,6
+France,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,6
+France,RC Lens,826,https://www.transfermarkt.com/rc-lens/startseite/verein/826,1,6
+France,Stade Rennais FC,273,https://www.transfermarkt.com/fc-stade-rennes/startseite/verein/273,1,6
+Germany,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,7,1
+Germany,Borussia Dortmund,16,https://www.transfermarkt.com/borussia-dortmund/startseite/verein/16,4,2
+Germany,VfB Stuttgart,79,https://www.transfermarkt.com/vfb-stuttgart/startseite/verein/79,4,2
+Germany,Newcastle United,762,https://www.transfermarkt.com/newcastle-united/startseite/verein/762,2,4
+Germany,1.FSV Mainz 05,39,https://www.transfermarkt.com/1-fsv-mainz-05/startseite/verein/39,1,5
+Germany,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,1,5
+Germany,Brighton & Hove Albion,1237,https://www.transfermarkt.com/brighton-amp-hove-albion/startseite/verein/1237,1,5
+Germany,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,5
+Germany,Galatasaray,141,https://www.transfermarkt.com/galatasaray-istanbul/startseite/verein/141,1,5
+Germany,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,5
+Germany,RB Leipzig,23826,https://www.transfermarkt.com/rasenballsport-leipzig/startseite/verein/23826,1,5
+Germany,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,5
+Germany,TSG 1899 Hoffenheim,533,https://www.transfermarkt.com/tsg-1899-hoffenheim/startseite/verein/533,1,5
+Ghana,AJ Auxerre,290,https://www.transfermarkt.com/aj-auxerre/startseite/verein/290,3,1
+Ghana,Leicester City,1003,https://www.transfermarkt.com/leicester-city/startseite/verein/1003,2,2
+Ghana,AS Saint-Étienne,618,https://www.transfermarkt.com/as-saint-etienne/startseite/verein/618,1,3
+Ghana,Al-Qadsiah FC,26069,https://www.transfermarkt.com/al-qadisiyah-fc/startseite/verein/26069,1,3
+Ghana,Atalanta BC,800,https://www.transfermarkt.com/atalanta-bergamo/startseite/verein/800,1,3
+Ghana,Athletic Bilbao,621,https://www.transfermarkt.com/athletic-bilbao/startseite/verein/621,1,3
+Ghana,Basaksehir FK,6890,https://www.transfermarkt.com/istanbul-basaksehir-fk/startseite/verein/6890,1,3
+Ghana,Coventry City,990,https://www.transfermarkt.com/coventry-city/startseite/verein/990,1,3
+Ghana,FC Nordsjaelland,2778,https://www.transfermarkt.com/fc-nordsjaelland/startseite/verein/2778,1,3
+Ghana,FC St. Gallen 1879,257,https://www.transfermarkt.com/fc-st-gallen-1879/startseite/verein/257,1,3
+Ghana,FC Viktoria Plzen,941,https://www.transfermarkt.com/fc-viktoria-pilsen/startseite/verein/941,1,3
+Ghana,Hearts of Oak,3601,https://www.transfermarkt.com/hearts-of-oak/startseite/verein/3601,1,3
+Ghana,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,3
+Ghana,OGC Nice,417,https://www.transfermarkt.com/ogc-nizza/startseite/verein/417,1,3
+Ghana,Olympique Lyon,1041,https://www.transfermarkt.com/olympique-lyon/startseite/verein/1041,1,3
+Ghana,PAOK Thessaloniki,1091,https://www.transfermarkt.com/paok-thessaloniki/startseite/verein/1091,1,3
+Ghana,Pafos FC,45457,https://www.transfermarkt.com/pafos-fc/startseite/verein/45457,1,3
+Ghana,Rayo Vallecano,367,https://www.transfermarkt.com/rayo-vallecano/startseite/verein/367,1,3
+Ghana,Real Oviedo,2497,https://www.transfermarkt.com/real-oviedo/startseite/verein/2497,1,3
+Ghana,St. Patrick's Athletic,1189,https://www.transfermarkt.com/st-patricks-athletic/startseite/verein/1189,1,3
+Ghana,Stade Rennais FC,273,https://www.transfermarkt.com/fc-stade-rennes/startseite/verein/273,1,3
+Ghana,VfL Wolfsburg,82,https://www.transfermarkt.com/vfl-wolfsburg/startseite/verein/82,1,3
+Ghana,Villarreal CF,1050,https://www.transfermarkt.com/fc-villarreal/startseite/verein/1050,1,3
+Haiti,FC Vizela,6912,https://www.transfermarkt.com/fc-vizela/startseite/verein/6912,2,1
+Haiti,AJ Auxerre,290,https://www.transfermarkt.com/aj-auxerre/startseite/verein/290,1,2
+Haiti,AS Nancy-Lorraine,1159,https://www.transfermarkt.com/as-nancy-lorraine/startseite/verein/1159,1,2
+Haiti,Almere City FC,723,https://www.transfermarkt.com/almere-city-fc/startseite/verein/723,1,2
+Haiti,Angers SCO,1420,https://www.transfermarkt.com/sco-angers/startseite/verein/1420,1,2
+Haiti,BSC Young Boys U21,5508,https://www.transfermarkt.com/bsc-young-boys-u21/startseite/verein/5508,1,2
+Haiti,Caykur Rizespor,126,https://www.transfermarkt.com/caykur-rizespor/startseite/verein/126,1,2
+Haiti,Colorado Springs Switchbacks FC,45805,https://www.transfermarkt.com/colorado-springs-switchbacks-fc/startseite/verein/45805,1,2
+Haiti,El Paso Locomotive FC,67375,https://www.transfermarkt.com/el-paso-locomotive-fc/startseite/verein/67375,1,2
+Haiti,Esteghlal FC,1076,https://www.transfermarkt.com/esteghlal-fc/startseite/verein/1076,1,2
+Haiti,FC Cosmos Koblenz,45062,https://www.transfermarkt.com/fc-cosmos-koblenz/startseite/verein/45062,1,2
+Haiti,FC Dallas,8816,https://www.transfermarkt.com/fc-dallas/startseite/verein/8816,1,2
+Haiti,FC Lugano,2790,https://www.transfermarkt.com/fc-lugano/startseite/verein/2790,1,2
+Haiti,FC Sochaux-Montbéliard,750,https://www.transfermarkt.com/fc-sochaux-montbeliard/startseite/verein/750,1,2
+Haiti,FC Tatran Presov,4531,https://www.transfermarkt.com/1-fc-tatran-presov/startseite/verein/4531,1,2
+Haiti,Ferencvárosi TC,279,https://www.transfermarkt.com/ferencvaros-budapest/startseite/verein/279,1,2
+Haiti,KAA Gent,157,https://www.transfermarkt.com/kaa-gent/startseite/verein/157,1,2
+Haiti,LDU Quito,9855,https://www.transfermarkt.com/ldu-quito/startseite/verein/9855,1,2
+Haiti,Philadelphia Union,25467,https://www.transfermarkt.com/philadelphia-union/startseite/verein/25467,1,2
+Haiti,SC Bastia,595,https://www.transfermarkt.com/sc-bastia/startseite/verein/595,1,2
+Haiti,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,1,2
+Haiti,Toronto FC,11141,https://www.transfermarkt.com/toronto-fc/startseite/verein/11141,1,2
+Haiti,Violette Athletic Club,14182,https://www.transfermarkt.com/violette-athletic-club/startseite/verein/14182,1,2
+Haiti,Wolverhampton Wanderers,543,https://www.transfermarkt.com/wolverhampton-wanderers/startseite/verein/543,1,2
+Haiti,Zulte Waregem,3508,https://www.transfermarkt.com/sv-zulte-waregem/startseite/verein/3508,1,2
+Iran,Persepolis FC,6079,https://www.transfermarkt.com/persepolis-fc/startseite/verein/6079,4,1
+Iran,Tractor FC,12935,https://www.transfermarkt.com/tractor-fc/startseite/verein/12935,4,1
+Iran,Esteghlal FC,1076,https://www.transfermarkt.com/esteghlal-fc/startseite/verein/1076,3,3
+Iran,Sepahan FC,4947,https://www.transfermarkt.com/sepahan-fc/startseite/verein/4947,3,3
+Iran,Foolad FC,6076,https://www.transfermarkt.com/foolad-fc/startseite/verein/6076,2,5
+Iran,Kalba FC,38040,https://www.transfermarkt.com/al-ittihad-kalba-sports-club/startseite/verein/38040,2,5
+Iran,Al-Nasr SC (UAE),5432,https://www.transfermarkt.com/al-nasr-dubai-/startseite/verein/5432,1,7
+Iran,Al-Wahda FC,161,https://www.transfermarkt.com/al-wahda-fc-abu-dhabi/startseite/verein/161,1,7
+Iran,FC Rostov,1083,https://www.transfermarkt.com/fk-rostov/startseite/verein/1083,1,7
+Iran,FCV Dender EH,9010,https://www.transfermarkt.com/fcv-dender-eh/startseite/verein/9010,1,7
+Iran,Malavan Bandar Anzali,17499,https://www.transfermarkt.com/malavan-of-bandar-anzali/startseite/verein/17499,1,7
+Iran,Olympiacos Piraeus,683,https://www.transfermarkt.com/olympiakos-piraus/startseite/verein/683,1,7
+Iran,Shabab Al-Ahli Club,60529,https://www.transfermarkt.com/fc-shabab-al-ahli-dubai/startseite/verein/60529,1,7
+Iran,Standard Liège,3057,https://www.transfermarkt.com/standard-luttich/startseite/verein/3057,1,7
+Iraq,Al-Shorta SC,13593,https://www.transfermarkt.com/al-shorta-sc/startseite/verein/13593,4,1
+Iraq,Al-Talaba SC,21726,https://www.transfermarkt.com/al-talaba-sc/startseite/verein/21726,3,2
+Iraq,Al-Zawraa SC,23806,https://www.transfermarkt.com/al-zawraa-sc/startseite/verein/23806,2,3
+Iraq,AEK Larnaca,2156,https://www.transfermarkt.com/aek-larnaka/startseite/verein/2156,1,4
+Iraq,Aarhus GF,678,https://www.transfermarkt.com/aarhus-gf/startseite/verein/678,1,4
+Iraq,Al-Dhafra FC,14456,https://www.transfermarkt.com/al-dhafra-scc/startseite/verein/14456,1,4
+Iraq,Al-Karma,103329,https://www.transfermarkt.com/al-karma/startseite/verein/103329,1,4
+Iraq,Al-Najma SC,32328,https://www.transfermarkt.com/al-najma/startseite/verein/32328,1,4
+Iraq,Cracovia,5689,https://www.transfermarkt.com/cracovia/startseite/verein/5689,1,4
+Iraq,Dibba SCC,44289,https://www.transfermarkt.com/dibba-al-fujairah/startseite/verein/44289,1,4
+Iraq,FC Utrecht U21,17596,https://www.transfermarkt.com/fc-utrecht-ii/startseite/verein/17596,1,4
+Iraq,FC Viktoria Plzen,941,https://www.transfermarkt.com/fc-viktoria-pilsen/startseite/verein/941,1,4
+Iraq,Luton Town,1031,https://www.transfermarkt.com/luton-town/startseite/verein/1031,1,4
+Iraq,Nashville SC,63966,https://www.transfermarkt.com/nashville-sc/startseite/verein/63966,1,4
+Iraq,PERSIB Bandung,14105,https://www.transfermarkt.com/persib-bandung/startseite/verein/14105,1,4
+Iraq,Pakhtakor Tashkent,3718,https://www.transfermarkt.com/pakhtakor-tashkent/startseite/verein/3718,1,4
+Iraq,Pogon Szczecin,324,https://www.transfermarkt.com/pogon-stettin/startseite/verein/324,1,4
+Iraq,Port FC,27092,https://www.transfermarkt.com/port-fc/startseite/verein/27092,1,4
+Iraq,Sarpsborg 08 FF,10217,https://www.transfermarkt.com/sarpsborg-08-ff/startseite/verein/10217,1,4
+Iraq,Venezia FC,607,https://www.transfermarkt.com/venezia-fc/startseite/verein/607,1,4
+Ivory Coast,Royal Charleroi SC,172,https://www.transfermarkt.com/rsc-charleroi/startseite/verein/172,2,1
+Ivory Coast,AS Monaco,162,https://www.transfermarkt.com/as-monaco/startseite/verein/162,1,2
+Ivory Coast,AS Roma,12,https://www.transfermarkt.com/as-rom/startseite/verein/12,1,2
+Ivory Coast,Al-Ahli SFC,18487,https://www.transfermarkt.com/al-ahli-dschidda/startseite/verein/18487,1,2
+Ivory Coast,Atalanta BC,800,https://www.transfermarkt.com/atalanta-bergamo/startseite/verein/800,1,2
+Ivory Coast,Basaksehir FK,6890,https://www.transfermarkt.com/istanbul-basaksehir-fk/startseite/verein/6890,1,2
+Ivory Coast,Besiktas JK,114,https://www.transfermarkt.com/besiktas-istanbul/startseite/verein/114,1,2
+Ivory Coast,Caykur Rizespor,126,https://www.transfermarkt.com/caykur-rizespor/startseite/verein/126,1,2
+Ivory Coast,Cercle Brugge ,520,https://www.transfermarkt.com/cercle-brugge/startseite/verein/520,1,2
+Ivory Coast,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,2
+Ivory Coast,FC Porto,720,https://www.transfermarkt.com/fc-porto/startseite/verein/720,1,2
+Ivory Coast,Galatasaray,141,https://www.transfermarkt.com/galatasaray-istanbul/startseite/verein/141,1,2
+Ivory Coast,Gil Vicente FC,2424,https://www.transfermarkt.com/gil-vicente-fc/startseite/verein/2424,1,2
+Ivory Coast,Inter Milan,46,https://www.transfermarkt.com/inter-mailand/startseite/verein/46,1,2
+Ivory Coast,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,1,2
+Ivory Coast,NK Maribor,790,https://www.transfermarkt.com/nk-maribor/startseite/verein/790,1,2
+Ivory Coast,Nottingham Forest,703,https://www.transfermarkt.com/nottingham-forest/startseite/verein/703,1,2
+Ivory Coast,OGC Nice,417,https://www.transfermarkt.com/ogc-nizza/startseite/verein/417,1,2
+Ivory Coast,Panathinaikos,265,https://www.transfermarkt.com/panathinaikos-athen/startseite/verein/265,1,2
+Ivory Coast,RB Leipzig,23826,https://www.transfermarkt.com/rasenballsport-leipzig/startseite/verein/23826,1,2
+Ivory Coast,RC Strasbourg Alsace,667,https://www.transfermarkt.com/rc-strassburg-alsace/startseite/verein/667,1,2
+Ivory Coast,Sporting CP,336,https://www.transfermarkt.com/sporting-lissabon/startseite/verein/336,1,2
+Ivory Coast,TSG 1899 Hoffenheim,533,https://www.transfermarkt.com/tsg-1899-hoffenheim/startseite/verein/533,1,2
+Ivory Coast,Trabzonspor,449,https://www.transfermarkt.com/trabzonspor/startseite/verein/449,1,2
+Ivory Coast,Villarreal CF,1050,https://www.transfermarkt.com/fc-villarreal/startseite/verein/1050,1,2
+Japan,Ajax Amsterdam,610,https://www.transfermarkt.com/ajax-amsterdam/startseite/verein/610,2,1
+Japan,Feyenoord Rotterdam,234,https://www.transfermarkt.com/feyenoord-rotterdam/startseite/verein/234,2,1
+Japan,Sint-Truidense VV,475,https://www.transfermarkt.com/vv-st-truiden/startseite/verein/475,2,1
+Japan,1.FSV Mainz 05,39,https://www.transfermarkt.com/1-fsv-mainz-05/startseite/verein/39,1,4
+Japan,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,1,4
+Japan,Celtic FC,371,https://www.transfermarkt.com/celtic-glasgow/startseite/verein/371,1,4
+Japan,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,4
+Japan,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,4
+Japan,FC Copenhagen,190,https://www.transfermarkt.com/fc-kopenhagen/startseite/verein/190,1,4
+Japan,FC Tokyo,6631,https://www.transfermarkt.com/fc-tokyo/startseite/verein/6631,1,4
+Japan,KRC Genk,1184,https://www.transfermarkt.com/krc-genk/startseite/verein/1184,1,4
+Japan,Kashima Antlers,2241,https://www.transfermarkt.com/kashima-antlers/startseite/verein/2241,1,4
+Japan,Le Havre AC,738,https://www.transfermarkt.com/ac-le-havre/startseite/verein/738,1,4
+Japan,Leeds United,399,https://www.transfermarkt.com/leeds-united/startseite/verein/399,1,4
+Japan,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,4
+Japan,NEC Nijmegen,467,https://www.transfermarkt.com/nec-nijmegen/startseite/verein/467,1,4
+Japan,Parma Calcio 1913,130,https://www.transfermarkt.com/parma-calcio-1913/startseite/verein/130,1,4
+Japan,Real Sociedad,681,https://www.transfermarkt.com/real-sociedad-san-sebastian/startseite/verein/681,1,4
+Japan,SC Freiburg,60,https://www.transfermarkt.com/sc-freiburg/startseite/verein/60,1,4
+Japan,SV Werder Bremen,86,https://www.transfermarkt.com/sv-werder-bremen/startseite/verein/86,1,4
+Japan,Sanfrecce Hiroshima,2697,https://www.transfermarkt.com/sanfrecce-hiroshima/startseite/verein/2697,1,4
+Japan,Stade Reims,1421,https://www.transfermarkt.com/stade-reims/startseite/verein/1421,1,4
+Japan,VfL Wolfsburg,82,https://www.transfermarkt.com/vfl-wolfsburg/startseite/verein/82,1,4
+Jordan,Al-Hussein SC (Irbid),15795,https://www.transfermarkt.com/al-hussein-sc-irbid-/startseite/verein/15795,6,1
+Jordan,Al-Faisaly SC,13592,https://www.transfermarkt.com/al-faisaly-amman/startseite/verein/13592,3,2
+Jordan,Al-Karma,103329,https://www.transfermarkt.com/al-karma/startseite/verein/103329,2,3
+Jordan,Al-Wehdat SC,15796,https://www.transfermarkt.com/al-wehdat/startseite/verein/15796,2,3
+Jordan,Al-Zawraa SC,23806,https://www.transfermarkt.com/al-zawraa-sc/startseite/verein/23806,2,3
+Jordan,Selangor FC,15831,https://www.transfermarkt.com/selangor-fc/startseite/verein/15831,2,3
+Jordan,Al-Quwa Al-Jawiya,23805,https://www.transfermarkt.com/al-quwa-al-jawiya/startseite/verein/23805,1,7
+Jordan,Al-Sailiya SC,4630,https://www.transfermarkt.com/al-sailiya-sc/startseite/verein/4630,1,7
+Jordan,Al-Shabab FC,9840,https://www.transfermarkt.com/al-shabab-riad/startseite/verein/9840,1,7
+Jordan,FC Seoul,6500,https://www.transfermarkt.com/fc-seoul/startseite/verein/6500,1,7
+Jordan,NK Lokomotiva Zagreb,11194,https://www.transfermarkt.com/nk-lokomotiva-zagreb/startseite/verein/11194,1,7
+Jordan,Pyramids FC,44664,https://www.transfermarkt.com/pyramids-fc/startseite/verein/44664,1,7
+Jordan,Qatar SC,965,https://www.transfermarkt.com/qatar-sc/startseite/verein/965,1,7
+Jordan,Raja Club Athletic,2068,https://www.transfermarkt.com/raja-casablanca/startseite/verein/2068,1,7
+Jordan,Stade Rennais FC,273,https://www.transfermarkt.com/fc-stade-rennes/startseite/verein/273,1,7
+Mexico,Deportivo Guadalajara,6711,https://www.transfermarkt.com/deportivo-guadalajara/startseite/verein/6711,5,1
+Mexico,Deportivo Toluca,1804,https://www.transfermarkt.com/deportivo-toluca/startseite/verein/1804,2,2
+Mexico,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,1,3
+Mexico,AEK Athens,2441,https://www.transfermarkt.com/aek-athen/startseite/verein/2441,1,3
+Mexico,AEL Limassol,786,https://www.transfermarkt.com/ael-limassol/startseite/verein/786,1,3
+Mexico,AZ Alkmaar,1090,https://www.transfermarkt.com/az-alkmaar/startseite/verein/1090,1,3
+Mexico,Al-Qadsiah FC,26069,https://www.transfermarkt.com/al-qadisiyah-fc/startseite/verein/26069,1,3
+Mexico,Atlético de Madrid,13,https://www.transfermarkt.com/atletico-madrid/startseite/verein/13,1,3
+Mexico,CD Cruz Azul,3711,https://www.transfermarkt.com/cd-cruz-azul/startseite/verein/3711,1,3
+Mexico,CF América,3631,https://www.transfermarkt.com/cf-america/startseite/verein/3631,1,3
+Mexico,Club Tijuana,13353,https://www.transfermarkt.com/club-tijuana/startseite/verein/13353,1,3
+Mexico,Dynamo Moscow,121,https://www.transfermarkt.com/dinamo-moskau/startseite/verein/121,1,3
+Mexico,Fenerbahce,36,https://www.transfermarkt.com/fenerbahce-istanbul/startseite/verein/36,1,3
+Mexico,Fulham FC,931,https://www.transfermarkt.com/fc-fulham/startseite/verein/931,1,3
+Mexico,Genoa CFC,252,https://www.transfermarkt.com/genua-cfc/startseite/verein/252,1,3
+Mexico,Lokomotiv Moscow,932,https://www.transfermarkt.com/lokomotiv-moskau/startseite/verein/932,1,3
+Mexico,PAOK Thessaloniki,1091,https://www.transfermarkt.com/paok-thessaloniki/startseite/verein/1091,1,3
+Mexico,RSC Anderlecht,58,https://www.transfermarkt.com/rsc-anderlecht/startseite/verein/58,1,3
+Mexico,Real Betis Balompié,150,https://www.transfermarkt.com/real-betis-sevilla/startseite/verein/150,1,3
+Mexico,Santos Laguna,1403,https://www.transfermarkt.com/santos-laguna/startseite/verein/1403,1,3
+Mexico,UNAM Pumas,7633,https://www.transfermarkt.com/unam-pumas/startseite/verein/7633,1,3
+Morocco,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,2,1
+Morocco,RC Strasbourg Alsace,667,https://www.transfermarkt.com/rc-strassburg-alsace/startseite/verein/667,2,1
+Morocco,Real Betis Balompié,150,https://www.transfermarkt.com/real-betis-sevilla/startseite/verein/150,2,1
+Morocco,AS FAR Rabat,9099,https://www.transfermarkt.com/far-rabat/startseite/verein/9099,1,4
+Morocco,AS Roma,12,https://www.transfermarkt.com/as-rom/startseite/verein/12,1,4
+Morocco,Al Ahly FC,7,https://www.transfermarkt.com/el-ahly-kairo/startseite/verein/7,1,4
+Morocco,Al-Ain FC,2150,https://www.transfermarkt.com/al-ain-fc/startseite/verein/2150,1,4
+Morocco,Al-Hilal SFC,1114,https://www.transfermarkt.com/al-hilal-riad/startseite/verein/1114,1,4
+Morocco,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,4
+Morocco,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,4
+Morocco,Fulham FC,931,https://www.transfermarkt.com/fc-fulham/startseite/verein/931,1,4
+Morocco,Girona FC,12321,https://www.transfermarkt.com/fc-girona/startseite/verein/12321,1,4
+Morocco,KRC Genk,1184,https://www.transfermarkt.com/krc-genk/startseite/verein/1184,1,4
+Morocco,KV Mechelen,354,https://www.transfermarkt.com/kv-mechelen/startseite/verein/354,1,4
+Morocco,LOSC Lille,1082,https://www.transfermarkt.com/losc-lille/startseite/verein/1082,1,4
+Morocco,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,1,4
+Morocco,Olympiacos Piraeus,683,https://www.transfermarkt.com/olympiakos-piraus/startseite/verein/683,1,4
+Morocco,Olympique Marseille,244,https://www.transfermarkt.com/olympique-marseille/startseite/verein/244,1,4
+Morocco,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,1,4
+Morocco,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,4
+Morocco,Renaissance de Berkane,37176,https://www.transfermarkt.com/renaissance-de-berkane/startseite/verein/37176,1,4
+Morocco,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,1,4
+Morocco,VfB Stuttgart,79,https://www.transfermarkt.com/vfb-stuttgart/startseite/verein/79,1,4
+Netherlands,Brighton & Hove Albion,1237,https://www.transfermarkt.com/brighton-amp-hove-albion/startseite/verein/1237,3,1
+Netherlands,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,3,1
+Netherlands,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,2,3
+Netherlands,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,2,3
+Netherlands,AFC Bournemouth,989,https://www.transfermarkt.com/afc-bournemouth/startseite/verein/989,1,5
+Netherlands,AS Roma,12,https://www.transfermarkt.com/as-rom/startseite/verein/12,1,5
+Netherlands,Ajax Amsterdam,610,https://www.transfermarkt.com/ajax-amsterdam/startseite/verein/610,1,5
+Netherlands,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,1,5
+Netherlands,Atalanta BC,800,https://www.transfermarkt.com/atalanta-bergamo/startseite/verein/800,1,5
+Netherlands,Bayer 04 Leverkusen,15,https://www.transfermarkt.com/bayer-04-leverkusen/startseite/verein/15,1,5
+Netherlands,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,5
+Netherlands,FC Barcelona,131,https://www.transfermarkt.com/fc-barcelona/startseite/verein/131,1,5
+Netherlands,Galatasaray,141,https://www.transfermarkt.com/galatasaray-istanbul/startseite/verein/141,1,5
+Netherlands,Inter Milan,46,https://www.transfermarkt.com/inter-mailand/startseite/verein/46,1,5
+Netherlands,Juventus FC,506,https://www.transfermarkt.com/juventus-turin/startseite/verein/506,1,5
+Netherlands,Olympique Marseille,244,https://www.transfermarkt.com/olympique-marseille/startseite/verein/244,1,5
+Netherlands,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,1,5
+Netherlands,Sport Club Corinthians Paulista,199,https://www.transfermarkt.com/corinthians-sao-paulo/startseite/verein/199,1,5
+Netherlands,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,5
+Netherlands,West Ham United,379,https://www.transfermarkt.com/west-ham-united/startseite/verein/379,1,5
+New Zealand,Auckland FC,118373,https://www.transfermarkt.com/auckland-fc/startseite/verein/118373,5,1
+New Zealand,Wellington Phoenix,8445,https://www.transfermarkt.com/wellington-phoenix/startseite/verein/8445,3,2
+New Zealand,AS Saint-Étienne,618,https://www.transfermarkt.com/as-saint-etienne/startseite/verein/618,1,3
+New Zealand,Braintree Town,6340,https://www.transfermarkt.com/braintree-town/startseite/verein/6340,1,3
+New Zealand,Lechia Gdansk,4000,https://www.transfermarkt.com/lechia-gdansk/startseite/verein/4000,1,3
+New Zealand,Millwall FC,1028,https://www.transfermarkt.com/fc-millwall/startseite/verein/1028,1,3
+New Zealand,Minnesota United FC,56089,https://www.transfermarkt.com/minnesota-united-fc/startseite/verein/56089,1,3
+New Zealand,Motherwell FC,987,https://www.transfermarkt.com/motherwell-fc/startseite/verein/987,1,3
+New Zealand,Newcastle United Jets,5551,https://www.transfermarkt.com/newcastle-united-jets/startseite/verein/5551,1,3
+New Zealand,Nottingham Forest,703,https://www.transfermarkt.com/nottingham-forest/startseite/verein/703,1,3
+New Zealand,PEC Zwolle,1269,https://www.transfermarkt.com/pec-zwolle/startseite/verein/1269,1,3
+New Zealand,Peterborough United,1072,https://www.transfermarkt.com/peterborough-united/startseite/verein/1072,1,3
+New Zealand,Port Vale FC,1211,https://www.transfermarkt.com/fc-port-vale/startseite/verein/1211,1,3
+New Zealand,Portland Timbers,4291,https://www.transfermarkt.com/portland-timbers/startseite/verein/4291,1,3
+New Zealand,Sheffield United,350,https://www.transfermarkt.com/sheffield-united/startseite/verein/350,1,3
+New Zealand,Silkeborg IF,1177,https://www.transfermarkt.com/silkeborg-if/startseite/verein/1177,1,3
+New Zealand,Swansea City,2288,https://www.transfermarkt.com/swansea-city/startseite/verein/2288,1,3
+New Zealand,Viking FK,239,https://www.transfermarkt.com/viking-stavanger/startseite/verein/239,1,3
+New Zealand,Western Sydney Wanderers,36100,https://www.transfermarkt.com/western-sydney-wanderers/startseite/verein/36100,1,3
+New Zealand,Wrexham AFC,1112,https://www.transfermarkt.com/afc-wrexham/startseite/verein/1112,1,3
+Norway,FK Bodø/Glimt,501,https://www.transfermarkt.com/fk-bodo-glimt/startseite/verein/501,3,1
+Norway,Fulham FC,931,https://www.transfermarkt.com/fc-fulham/startseite/verein/931,2,2
+Norway,SL Benfica,294,https://www.transfermarkt.com/benfica-lissabon/startseite/verein/294,2,2
+Norway,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,1,4
+Norway,Atlético de Madrid,13,https://www.transfermarkt.com/atletico-madrid/startseite/verein/13,1,4
+Norway,Bologna FC 1909,1025,https://www.transfermarkt.com/fc-bologna/startseite/verein/1025,1,4
+Norway,Borussia Dortmund,16,https://www.transfermarkt.com/borussia-dortmund/startseite/verein/16,1,4
+Norway,Brentford FC,1148,https://www.transfermarkt.com/fc-brentford/startseite/verein/1148,1,4
+Norway,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,4
+Norway,Derby County,22,https://www.transfermarkt.com/derby-county/startseite/verein/22,1,4
+Norway,Genoa CFC,252,https://www.transfermarkt.com/genua-cfc/startseite/verein/252,1,4
+Norway,Hamburger SV,41,https://www.transfermarkt.com/hamburger-sv/startseite/verein/41,1,4
+Norway,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,4
+Norway,RB Leipzig,23826,https://www.transfermarkt.com/rasenballsport-leipzig/startseite/verein/23826,1,4
+Norway,Rangers FC,124,https://www.transfermarkt.com/glasgow-rangers/startseite/verein/124,1,4
+Norway,Sevilla FC,368,https://www.transfermarkt.com/fc-sevilla/startseite/verein/368,1,4
+Norway,Torino FC,416,https://www.transfermarkt.com/fc-turin/startseite/verein/416,1,4
+Norway,US Cremonese,2239,https://www.transfermarkt.com/us-cremonese/startseite/verein/2239,1,4
+Norway,US Sassuolo,6574,https://www.transfermarkt.com/us-sassuolo/startseite/verein/6574,1,4
+Norway,Viking FK,239,https://www.transfermarkt.com/viking-stavanger/startseite/verein/239,1,4
+Norway,Watford FC,1010,https://www.transfermarkt.com/fc-watford/startseite/verein/1010,1,4
+Norway,Wolverhampton Wanderers,543,https://www.transfermarkt.com/wolverhampton-wanderers/startseite/verein/543,1,4
+Panama,CD Plaza Amador,20960,https://www.transfermarkt.com/cd-plaza-amador/startseite/verein/20960,2,1
+Panama,CD Universidad Católica,17584,https://www.transfermarkt.com/cd-universidad-catolica/startseite/verein/17584,2,1
+Panama,Deportivo Saprissa,4720,https://www.transfermarkt.com/deportivo-saprissa/startseite/verein/4720,2,1
+Panama,Academia Puerto Cabello,45193,https://www.transfermarkt.com/academia-puerto-cabello/startseite/verein/45193,1,4
+Panama,Al-Fayha FC,50531,https://www.transfermarkt.com/al-fayha-fc/startseite/verein/50531,1,4
+Panama,Besiktas JK,114,https://www.transfermarkt.com/besiktas-istanbul/startseite/verein/114,1,4
+Panama,CD Cobresal,17482,https://www.transfermarkt.com/cd-cobresal/startseite/verein/17482,1,4
+Panama,CD Marathón,4523,https://www.transfermarkt.com/cd-marathon/startseite/verein/4523,1,4
+Panama,Club León FC,4941,https://www.transfermarkt.com/club-leon-fc/startseite/verein/4941,1,4
+Panama,Club Nacional,866,https://www.transfermarkt.com/club-nacional/startseite/verein/866,1,4
+Panama,Deportivo La Guaira,26468,https://www.transfermarkt.com/deportivo-la-guaira/startseite/verein/26468,1,4
+Panama,FC Juárez,49283,https://www.transfermarkt.com/fc-juarez/startseite/verein/49283,1,4
+Panama,FC Pari Nizhniy Novgorod,49702,https://www.transfermarkt.com/fk-nizhny-novgorod/startseite/verein/49702,1,4
+Panama,Ironi Kiryat Shmona,6028,https://www.transfermarkt.com/ironi-kiryat-shmona/startseite/verein/6028,1,4
+Panama,LASK,413,https://www.transfermarkt.com/lask/startseite/verein/413,1,4
+Panama,Mazatlán FC,82696,https://www.transfermarkt.com/mazatlan-fc/startseite/verein/82696,1,4
+Panama,Minnesota United FC,56089,https://www.transfermarkt.com/minnesota-united-fc/startseite/verein/56089,1,4
+Panama,Norwich City,1123,https://www.transfermarkt.com/norwich-city/startseite/verein/1123,1,4
+Panama,San Diego FC,114977,https://www.transfermarkt.com/san-diego-fc/startseite/verein/114977,1,4
+Panama,Slovan Bratislava,540,https://www.transfermarkt.com/slovan-bratislava/startseite/verein/540,1,4
+Panama,Turan-Tovuz IK,9526,https://www.transfermarkt.com/turan-tovuz/startseite/verein/9526,1,4
+Panama,UNAM Pumas,7633,https://www.transfermarkt.com/unam-pumas/startseite/verein/7633,1,4
+Panama,Universidad de Concepción,5622,https://www.transfermarkt.com/universidad-concepcion/startseite/verein/5622,1,4
+Paraguay,Sociedade Esportiva Palmeiras,1023,https://www.transfermarkt.com/se-palmeiras-sao-paulo/startseite/verein/1023,3,1
+Paraguay,Atlanta United FC,51663,https://www.transfermarkt.com/atlanta-united-fc/startseite/verein/51663,2,2
+Paraguay,Club Cerro Porteño,1214,https://www.transfermarkt.com/club-cerro-porteno/startseite/verein/1214,2,2
+Paraguay,Al-Ain FC,2150,https://www.transfermarkt.com/al-ain-fc/startseite/verein/2150,1,4
+Paraguay,Brighton & Hove Albion,1237,https://www.transfermarkt.com/brighton-amp-hove-albion/startseite/verein/1237,1,4
+Paraguay,CA Independiente,1234,https://www.transfermarkt.com/club-atletico-independiente/startseite/verein/1234,1,4
+Paraguay,CA Lanús,333,https://www.transfermarkt.com/club-atletico-lanus/startseite/verein/333,1,4
+Paraguay,CA San Lorenzo de Almagro,1775,https://www.transfermarkt.com/club-atletico-san-lorenzo-de-almagro/startseite/verein/1775,1,4
+Paraguay,CA Talleres,3938,https://www.transfermarkt.com/club-atletico-talleres/startseite/verein/3938,1,4
+Paraguay,CS Independiente Rivadavia,12179,https://www.transfermarkt.com/independiente-rivadavia/startseite/verein/12179,1,4
+Paraguay,Clube Atlético Mineiro,330,https://www.transfermarkt.com/clube-atletico-mineiro/startseite/verein/330,1,4
+Paraguay,Dynamo Moscow,121,https://www.transfermarkt.com/dinamo-moskau/startseite/verein/121,1,4
+Paraguay,Grêmio Foot-Ball Porto Alegrense,210,https://www.transfermarkt.com/gremio-porto-alegre/startseite/verein/210,1,4
+Paraguay,Olimpia Asunción,629,https://www.transfermarkt.com/olimpia-asuncion/startseite/verein/629,1,4
+Paraguay,Orlando City SC,45604,https://www.transfermarkt.com/orlando-city-sc/startseite/verein/45604,1,4
+Paraguay,Portsmouth FC,1020,https://www.transfermarkt.com/fc-portsmouth/startseite/verein/1020,1,4
+Paraguay,RC Strasbourg Alsace,667,https://www.transfermarkt.com/rc-strassburg-alsace/startseite/verein/667,1,4
+Paraguay,Red Bull Bragantino,8793,https://www.transfermarkt.com/red-bull-bragantino/startseite/verein/8793,1,4
+Paraguay,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,1,4
+Paraguay,São Paulo Futebol Clube,585,https://www.transfermarkt.com/fc-sao-paulo/startseite/verein/585,1,4
+Paraguay,US Cremonese,2239,https://www.transfermarkt.com/us-cremonese/startseite/verein/2239,1,4
+Paraguay,Vancouver Whitecaps FC,6321,https://www.transfermarkt.com/vancouver-whitecaps-fc/startseite/verein/6321,1,4
+Portugal,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,4,1
+Portugal,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,3,2
+Portugal,Sporting CP,336,https://www.transfermarkt.com/sporting-lissabon/startseite/verein/336,3,2
+Portugal,Al-Nassr FC,18544,https://www.transfermarkt.com/al-nasr-riad/startseite/verein/18544,2,4
+Portugal,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,2,4
+Portugal,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,1,6
+Portugal,Al-Hilal SFC,1114,https://www.transfermarkt.com/al-hilal-riad/startseite/verein/1114,1,6
+Portugal,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,6
+Portugal,FC Barcelona,131,https://www.transfermarkt.com/fc-barcelona/startseite/verein/131,1,6
+Portugal,FC Porto,720,https://www.transfermarkt.com/fc-porto/startseite/verein/720,1,6
+Portugal,Fenerbahce,36,https://www.transfermarkt.com/fenerbahce-istanbul/startseite/verein/36,1,6
+Portugal,Juventus FC,506,https://www.transfermarkt.com/juventus-turin/startseite/verein/506,1,6
+Portugal,RCD Mallorca,237,https://www.transfermarkt.com/rcd-mallorca/startseite/verein/237,1,6
+Portugal,Real Sociedad,681,https://www.transfermarkt.com/real-sociedad-san-sebastian/startseite/verein/681,1,6
+Portugal,SL Benfica,294,https://www.transfermarkt.com/benfica-lissabon/startseite/verein/294,1,6
+Portugal,Villarreal CF,1050,https://www.transfermarkt.com/fc-villarreal/startseite/verein/1050,1,6
+Portugal,Wolverhampton Wanderers,543,https://www.transfermarkt.com/wolverhampton-wanderers/startseite/verein/543,1,6
+Qatar,Al-Duhail SC,26091,https://www.transfermarkt.com/al-duhail-sc/startseite/verein/26091,6,1
+Qatar,Al-Sadd SC,656,https://www.transfermarkt.com/al-sadd-sc/startseite/verein/656,5,2
+Qatar,Al-Rayyan SC,3229,https://www.transfermarkt.com/al-rayyan-sc/startseite/verein/3229,4,3
+Qatar,Al-Arabi SC,1230,https://www.transfermarkt.com/al-arabi-sc/startseite/verein/1230,3,4
+Qatar,Al-Gharafa SC,6297,https://www.transfermarkt.com/al-gharafa-sc/startseite/verein/6297,3,4
+Qatar,Al-Wakrah SC,13509,https://www.transfermarkt.com/al-wakrah-sc/startseite/verein/13509,3,4
+Qatar,Al-Shamal SC,10775,https://www.transfermarkt.com/al-shamal/startseite/verein/10775,1,7
+Qatar,Cultural Leonesa,4542,https://www.transfermarkt.com/cultural-leonesa/startseite/verein/4542,1,7
+Saudi Arabia,Al-Hilal SFC,1114,https://www.transfermarkt.com/al-hilal-riad/startseite/verein/1114,7,1
+Saudi Arabia,Al-Nassr FC,18544,https://www.transfermarkt.com/al-nasr-riad/startseite/verein/18544,6,2
+Saudi Arabia,Al-Qadsiah FC,26069,https://www.transfermarkt.com/al-qadisiyah-fc/startseite/verein/26069,4,3
+Saudi Arabia,Al-Ahli SFC,18487,https://www.transfermarkt.com/al-ahli-dschidda/startseite/verein/18487,3,4
+Saudi Arabia,Al-Ittihad Club,8023,https://www.transfermarkt.com/al-ittihad-dschidda/startseite/verein/8023,2,5
+Saudi Arabia,Al-Ettifaq FC,7732,https://www.transfermarkt.com/al-ettifaq/startseite/verein/7732,1,6
+Saudi Arabia,Al-Ula FC,107818,https://www.transfermarkt.com/al-ula-fc/startseite/verein/107818,1,6
+Saudi Arabia,NEOM SC,34911,https://www.transfermarkt.com/al-suqoor/startseite/verein/34911,1,6
+Saudi Arabia,RC Lens,826,https://www.transfermarkt.com/rc-lens/startseite/verein/826,1,6
+Scotland,Rangers FC,124,https://www.transfermarkt.com/glasgow-rangers/startseite/verein/124,3,1
+Scotland,AFC Bournemouth,989,https://www.transfermarkt.com/afc-bournemouth/startseite/verein/989,2,2
+Scotland,Celtic FC,371,https://www.transfermarkt.com/celtic-glasgow/startseite/verein/371,2,2
+Scotland,Heart of Midlothian FC,43,https://www.transfermarkt.com/heart-of-midlothian-fc/startseite/verein/43,2,2
+Scotland,Al-Ettifaq FC,7732,https://www.transfermarkt.com/al-ettifaq/startseite/verein/7732,1,5
+Scotland,Aston Villa,405,https://www.transfermarkt.com/aston-villa/startseite/verein/405,1,5
+Scotland,Bologna FC 1909,1025,https://www.transfermarkt.com/fc-bologna/startseite/verein/1025,1,5
+Scotland,Brentford FC,1148,https://www.transfermarkt.com/fc-brentford/startseite/verein/1148,1,5
+Scotland,Charlton Athletic,358,https://www.transfermarkt.com/charlton-athletic/startseite/verein/358,1,5
+Scotland,Everton FC,29,https://www.transfermarkt.com/fc-everton/startseite/verein/29,1,5
+Scotland,GNK Dinamo Zagreb,419,https://www.transfermarkt.com/gnk-dinamo-zagreb/startseite/verein/419,1,5
+Scotland,Hibernian FC,903,https://www.transfermarkt.com/hibernian-fc/startseite/verein/903,1,5
+Scotland,Ipswich Town,677,https://www.transfermarkt.com/ipswich-town/startseite/verein/677,1,5
+Scotland,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,5
+Scotland,Manchester United U21,9251,https://www.transfermarkt.com/manchester-united-u23/startseite/verein/9251,1,5
+Scotland,Norwich City,1123,https://www.transfermarkt.com/norwich-city/startseite/verein/1123,1,5
+Scotland,Nottingham Forest,703,https://www.transfermarkt.com/nottingham-forest/startseite/verein/703,1,5
+Scotland,SSC Napoli,6195,https://www.transfermarkt.com/ssc-neapel/startseite/verein/6195,1,5
+Scotland,Southampton FC,180,https://www.transfermarkt.com/fc-southampton/startseite/verein/180,1,5
+Scotland,Torino FC,416,https://www.transfermarkt.com/fc-turin/startseite/verein/416,1,5
+Scotland,Wrexham AFC,1112,https://www.transfermarkt.com/afc-wrexham/startseite/verein/1112,1,5
+Senegal,AS Monaco,162,https://www.transfermarkt.com/as-monaco/startseite/verein/162,2,1
+Senegal,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,2,1
+Senegal,Everton FC,29,https://www.transfermarkt.com/fc-everton/startseite/verein/29,2,1
+Senegal,OGC Nice,417,https://www.transfermarkt.com/ogc-nizza/startseite/verein/417,2,1
+Senegal,Al-Ahli SFC,18487,https://www.transfermarkt.com/al-ahli-dschidda/startseite/verein/18487,1,5
+Senegal,Al-Hilal SFC,1114,https://www.transfermarkt.com/al-hilal-riad/startseite/verein/1114,1,5
+Senegal,Al-Nassr FC,18544,https://www.transfermarkt.com/al-nasr-riad/startseite/verein/18544,1,5
+Senegal,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,5
+Senegal,Como 1907,1047,https://www.transfermarkt.com/como-1907/startseite/verein/1047,1,5
+Senegal,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,5
+Senegal,FC Lorient,1158,https://www.transfermarkt.com/fc-lorient/startseite/verein/1158,1,5
+Senegal,Galatasaray,141,https://www.transfermarkt.com/galatasaray-istanbul/startseite/verein/141,1,5
+Senegal,Le Havre AC,738,https://www.transfermarkt.com/ac-le-havre/startseite/verein/738,1,5
+Senegal,Maccabi Haifa,1064,https://www.transfermarkt.com/maccabi-haifa/startseite/verein/1064,1,5
+Senegal,Olympique Lyon,1041,https://www.transfermarkt.com/olympique-lyon/startseite/verein/1041,1,5
+Senegal,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,1,5
+Senegal,Rayo Vallecano,367,https://www.transfermarkt.com/rayo-vallecano/startseite/verein/367,1,5
+Senegal,Samsunspor,152,https://www.transfermarkt.com/samsunspor/startseite/verein/152,1,5
+Senegal,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,1,5
+Senegal,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,5
+Senegal,Villarreal CF,1050,https://www.transfermarkt.com/fc-villarreal/startseite/verein/1050,1,5
+Senegal,West Ham United,379,https://www.transfermarkt.com/west-ham-united/startseite/verein/379,1,5
+South Africa,Mamelodi Sundowns FC,6356,https://www.transfermarkt.com/mamelodi-sundowns-fc/startseite/verein/6356,8,1
+South Africa,Orlando Pirates,2557,https://www.transfermarkt.com/orlando-pirates/startseite/verein/2557,8,1
+South Africa,AEL Limassol,786,https://www.transfermarkt.com/ael-limassol/startseite/verein/786,1,3
+South Africa,Burnley FC,1132,https://www.transfermarkt.com/fc-burnley/startseite/verein/1132,1,3
+South Africa,CD Tondela,7179,https://www.transfermarkt.com/cd-tondela/startseite/verein/7179,1,3
+South Africa,Chicago Fire FC,432,https://www.transfermarkt.com/chicago-fire-fc/startseite/verein/432,1,3
+South Africa,Hannover 96,42,https://www.transfermarkt.com/hannover-96/startseite/verein/42,1,3
+South Africa,Kaizer Chiefs,568,https://www.transfermarkt.com/kaizer-chiefs/startseite/verein/568,1,3
+South Africa,Molde FK,687,https://www.transfermarkt.com/molde-fk/startseite/verein/687,1,3
+South Africa,Philadelphia Union,25467,https://www.transfermarkt.com/philadelphia-union/startseite/verein/25467,1,3
+South Africa,Polokwane City FC,21202,https://www.transfermarkt.com/polokwane-city-fc/startseite/verein/21202,1,3
+South Africa,Siwelele Football Club ,132785,https://www.transfermarkt.com/siwelele-football-club/startseite/verein/132785,1,3
+South Korea,Jeonbuk Hyundai Motors,6502,https://www.transfermarkt.com/jeonbuk-hyundai-motors/startseite/verein/6502,3,1
+South Korea,FC Midtjylland,865,https://www.transfermarkt.com/fc-midtjylland/startseite/verein/865,2,2
+South Korea,Ulsan HD FC,3535,https://www.transfermarkt.com/ulsan-hyundai/startseite/verein/3535,2,2
+South Korea,1.FSV Mainz 05,39,https://www.transfermarkt.com/1-fsv-mainz-05/startseite/verein/39,1,4
+South Korea,Austria Vienna,14,https://www.transfermarkt.com/fk-austria-wien/startseite/verein/14,1,4
+South Korea,Bayern Munich,27,https://www.transfermarkt.com/fc-bayern-munchen/startseite/verein/27,1,4
+South Korea,Besiktas JK,114,https://www.transfermarkt.com/besiktas-istanbul/startseite/verein/114,1,4
+South Korea,Birmingham City,337,https://www.transfermarkt.com/birmingham-city/startseite/verein/337,1,4
+South Korea,Borussia Mönchengladbach,18,https://www.transfermarkt.com/borussia-monchengladbach/startseite/verein/18,1,4
+South Korea,Celtic FC,371,https://www.transfermarkt.com/celtic-glasgow/startseite/verein/371,1,4
+South Korea,Daejeon Hana Citizen,6499,https://www.transfermarkt.com/daejeon-hana-citizen/startseite/verein/6499,1,4
+South Korea,FC Tokyo,6631,https://www.transfermarkt.com/fc-tokyo/startseite/verein/6631,1,4
+South Korea,Feyenoord Rotterdam,234,https://www.transfermarkt.com/feyenoord-rotterdam/startseite/verein/234,1,4
+South Korea,Gangwon FC,21459,https://www.transfermarkt.com/gangwon-fc/startseite/verein/21459,1,4
+South Korea,Kashima Antlers,2241,https://www.transfermarkt.com/kashima-antlers/startseite/verein/2241,1,4
+South Korea,Los Angeles FC,51828,https://www.transfermarkt.com/los-angeles-fc/startseite/verein/51828,1,4
+South Korea,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,1,4
+South Korea,Red Star Belgrade,159,https://www.transfermarkt.com/roter-stern-belgrad/startseite/verein/159,1,4
+South Korea,Stoke City,512,https://www.transfermarkt.com/stoke-city/startseite/verein/512,1,4
+South Korea,Swansea City,2288,https://www.transfermarkt.com/swansea-city/startseite/verein/2288,1,4
+South Korea,Wolverhampton Wanderers,543,https://www.transfermarkt.com/wolverhampton-wanderers/startseite/verein/543,1,4
+South Korea,Zhejiang FC,17276,https://www.transfermarkt.com/zhejiang-fc/startseite/verein/17276,1,4
+Spain,FC Barcelona,131,https://www.transfermarkt.com/fc-barcelona/startseite/verein/131,8,1
+Spain,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,3,2
+Spain,Athletic Bilbao,621,https://www.transfermarkt.com/athletic-bilbao/startseite/verein/621,3,2
+Spain,Atlético de Madrid,13,https://www.transfermarkt.com/atletico-madrid/startseite/verein/13,3,2
+Spain,Bayer 04 Leverkusen,15,https://www.transfermarkt.com/bayer-04-leverkusen/startseite/verein/15,1,5
+Spain,CA Osasuna,331,https://www.transfermarkt.com/ca-osasuna/startseite/verein/331,1,5
+Spain,Celta de Vigo,940,https://www.transfermarkt.com/celta-vigo/startseite/verein/940,1,5
+Spain,Chelsea FC,631,https://www.transfermarkt.com/fc-chelsea/startseite/verein/631,1,5
+Spain,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,5
+Spain,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,5
+Spain,Paris Saint-Germain,583,https://www.transfermarkt.com/fc-paris-saint-germain/startseite/verein/583,1,5
+Spain,Real Sociedad,681,https://www.transfermarkt.com/real-sociedad-san-sebastian/startseite/verein/681,1,5
+Spain,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,5
+Sweden,AIK,272,https://www.transfermarkt.com/aik-solna/startseite/verein/272,1,1
+Sweden,Arsenal FC,11,https://www.transfermarkt.com/fc-arsenal/startseite/verein/11,1,1
+Sweden,Aston Villa,405,https://www.transfermarkt.com/aston-villa/startseite/verein/405,1,1
+Sweden,Atalanta BC,800,https://www.transfermarkt.com/atalanta-bergamo/startseite/verein/800,1,1
+Sweden,Borussia Dortmund,16,https://www.transfermarkt.com/borussia-dortmund/startseite/verein/16,1,1
+Sweden,Brighton & Hove Albion,1237,https://www.transfermarkt.com/brighton-amp-hove-albion/startseite/verein/1237,1,1
+Sweden,Burnley FC,1132,https://www.transfermarkt.com/fc-burnley/startseite/verein/1132,1,1
+Sweden,Celta de Vigo,940,https://www.transfermarkt.com/celta-vigo/startseite/verein/940,1,1
+Sweden,Celtic FC,371,https://www.transfermarkt.com/celtic-glasgow/startseite/verein/371,1,1
+Sweden,Club Brugge KV,2282,https://www.transfermarkt.com/fc-brugge/startseite/verein/2282,1,1
+Sweden,Derby County,22,https://www.transfermarkt.com/derby-county/startseite/verein/22,1,1
+Sweden,FC Dallas,8816,https://www.transfermarkt.com/fc-dallas/startseite/verein/8816,1,1
+Sweden,FC St. Pauli,35,https://www.transfermarkt.com/fc-st-pauli/startseite/verein/35,1,1
+Sweden,Holstein Kiel,269,https://www.transfermarkt.com/holstein-kiel/startseite/verein/269,1,1
+Sweden,Leeds United,399,https://www.transfermarkt.com/leeds-united/startseite/verein/399,1,1
+Sweden,Liverpool FC,31,https://www.transfermarkt.com/fc-liverpool/startseite/verein/31,1,1
+Sweden,Malmö FF,496,https://www.transfermarkt.com/malmo-ff/startseite/verein/496,1,1
+Sweden,Mjällby AIF,2719,https://www.transfermarkt.com/mjallby-aif/startseite/verein/2719,1,1
+Sweden,Newcastle United,762,https://www.transfermarkt.com/newcastle-united/startseite/verein/762,1,1
+Sweden,Pafos FC,45457,https://www.transfermarkt.com/pafos-fc/startseite/verein/45457,1,1
+Sweden,SC Braga,1075,https://www.transfermarkt.com/sc-braga/startseite/verein/1075,1,1
+Sweden,Stoke City,512,https://www.transfermarkt.com/stoke-city/startseite/verein/512,1,1
+Sweden,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,1
+Sweden,Udinese Calcio,410,https://www.transfermarkt.com/udinese-calcio/startseite/verein/410,1,1
+Sweden,Union Saint-Gilloise,3948,https://www.transfermarkt.com/royale-union-saint-gilloise/startseite/verein/3948,1,1
+Sweden,VfL Wolfsburg,82,https://www.transfermarkt.com/vfl-wolfsburg/startseite/verein/82,1,1
+Switzerland,BSC Young Boys,452,https://www.transfermarkt.com/bsc-young-boys/startseite/verein/452,2,1
+Switzerland,Sevilla FC,368,https://www.transfermarkt.com/fc-sevilla/startseite/verein/368,2,1
+Switzerland,1.FSV Mainz 05,39,https://www.transfermarkt.com/1-fsv-mainz-05/startseite/verein/39,1,3
+Switzerland,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,1,3
+Switzerland,AS Monaco,162,https://www.transfermarkt.com/as-monaco/startseite/verein/162,1,3
+Switzerland,Bologna FC 1909,1025,https://www.transfermarkt.com/fc-bologna/startseite/verein/1025,1,3
+Switzerland,Borussia Dortmund,16,https://www.transfermarkt.com/borussia-dortmund/startseite/verein/16,1,3
+Switzerland,Borussia Mönchengladbach,18,https://www.transfermarkt.com/borussia-monchengladbach/startseite/verein/18,1,3
+Switzerland,Burnley FC,1132,https://www.transfermarkt.com/fc-burnley/startseite/verein/1132,1,3
+Switzerland,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,3
+Switzerland,FC Augsburg,167,https://www.transfermarkt.com/fc-augsburg/startseite/verein/167,1,3
+Switzerland,FC Lorient,1158,https://www.transfermarkt.com/fc-lorient/startseite/verein/1158,1,3
+Switzerland,Fortuna Düsseldorf,38,https://www.transfermarkt.com/fortuna-dusseldorf/startseite/verein/38,1,3
+Switzerland,Hamburger SV,41,https://www.transfermarkt.com/hamburger-sv/startseite/verein/41,1,3
+Switzerland,Inter Milan,46,https://www.transfermarkt.com/inter-mailand/startseite/verein/46,1,3
+Switzerland,Leeds United,399,https://www.transfermarkt.com/leeds-united/startseite/verein/399,1,3
+Switzerland,Nottingham Forest,703,https://www.transfermarkt.com/nottingham-forest/startseite/verein/703,1,3
+Switzerland,Pisa Sporting Club,4172,https://www.transfermarkt.com/ac-pisa-1909/startseite/verein/4172,1,3
+Switzerland,Real Betis Balompié,150,https://www.transfermarkt.com/real-betis-sevilla/startseite/verein/150,1,3
+Switzerland,SC Freiburg,60,https://www.transfermarkt.com/sc-freiburg/startseite/verein/60,1,3
+Switzerland,Stade Rennais FC,273,https://www.transfermarkt.com/fc-stade-rennes/startseite/verein/273,1,3
+Switzerland,Sunderland AFC,289,https://www.transfermarkt.com/afc-sunderland/startseite/verein/289,1,3
+Switzerland,Valencia CF,1049,https://www.transfermarkt.com/fc-valencia/startseite/verein/1049,1,3
+Switzerland,VfB Stuttgart,79,https://www.transfermarkt.com/vfb-stuttgart/startseite/verein/79,1,3
+Tunisia,Club Africain,819,https://www.transfermarkt.com/club-africain-tunis/startseite/verein/819,2,1
+Tunisia,Kasimpasa,10484,https://www.transfermarkt.com/kasimpasa/startseite/verein/10484,2,1
+Tunisia,1.FC Union Berlin,89,https://www.transfermarkt.com/1-fc-union-berlin/startseite/verein/89,1,3
+Tunisia,BSC Young Boys,452,https://www.transfermarkt.com/bsc-young-boys/startseite/verein/452,1,3
+Tunisia,Burnley FC,1132,https://www.transfermarkt.com/fc-burnley/startseite/verein/1132,1,3
+Tunisia,CS Sfaxien,581,https://www.transfermarkt.com/club-sportif-sfaxien/startseite/verein/581,1,3
+Tunisia,Celtic FC,371,https://www.transfermarkt.com/celtic-glasgow/startseite/verein/371,1,3
+Tunisia,Dinamo Makhachkala,75231,https://www.transfermarkt.com/fk-makhachkala/startseite/verein/75231,1,3
+Tunisia,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,3
+Tunisia,Esperance Tunis,3342,https://www.transfermarkt.com/esperance-tunis/startseite/verein/3342,1,3
+Tunisia,Etoile Sportive du Sahel,250,https://www.transfermarkt.com/etoile-sportive-du-sahel/startseite/verein/250,1,3
+Tunisia,FC Augsburg,167,https://www.transfermarkt.com/fc-augsburg/startseite/verein/167,1,3
+Tunisia,FC Copenhagen,190,https://www.transfermarkt.com/fc-kopenhagen/startseite/verein/190,1,3
+Tunisia,FC Lorient,1158,https://www.transfermarkt.com/fc-lorient/startseite/verein/1158,1,3
+Tunisia,FC Lugano,2790,https://www.transfermarkt.com/fc-lugano/startseite/verein/2790,1,3
+Tunisia,Hannover 96,42,https://www.transfermarkt.com/hannover-96/startseite/verein/42,1,3
+Tunisia,IFK Norrköping,2844,https://www.transfermarkt.com/ifk-norrkoping/startseite/verein/2844,1,3
+Tunisia,NK Maribor,790,https://www.transfermarkt.com/nk-maribor/startseite/verein/790,1,3
+Tunisia,Norwich City,1123,https://www.transfermarkt.com/norwich-city/startseite/verein/1123,1,3
+Tunisia,OGC Nice,417,https://www.transfermarkt.com/ogc-nizza/startseite/verein/417,1,3
+Tunisia,Paris Saint-Germain Espoirs,43570,https://www.transfermarkt.com/fc-paris-saint-germain-c/startseite/verein/43570,1,3
+Tunisia,Servette FC,61,https://www.transfermarkt.com/servette-fc/startseite/verein/61,1,3
+Tunisia,US Monastir,9890,https://www.transfermarkt.com/us-monastir/startseite/verein/9890,1,3
+Tunisia,Vancouver Whitecaps FC,6321,https://www.transfermarkt.com/vancouver-whitecaps-fc/startseite/verein/6321,1,3
+Turkey,Fenerbahce,36,https://www.transfermarkt.com/fenerbahce-istanbul/startseite/verein/36,6,1
+Turkey,Galatasaray,141,https://www.transfermarkt.com/galatasaray-istanbul/startseite/verein/141,6,1
+Turkey,AS Roma,12,https://www.transfermarkt.com/as-rom/startseite/verein/12,1,3
+Turkey,Al-Ahli SFC,18487,https://www.transfermarkt.com/al-ahli-dschidda/startseite/verein/18487,1,3
+Turkey,Besiktas JK,114,https://www.transfermarkt.com/besiktas-istanbul/startseite/verein/114,1,3
+Turkey,Borussia Dortmund,16,https://www.transfermarkt.com/borussia-dortmund/startseite/verein/16,1,3
+Turkey,Brighton & Hove Albion,1237,https://www.transfermarkt.com/brighton-amp-hove-albion/startseite/verein/1237,1,3
+Turkey,Caykur Rizespor,126,https://www.transfermarkt.com/caykur-rizespor/startseite/verein/126,1,3
+Turkey,Eintracht Frankfurt,24,https://www.transfermarkt.com/eintracht-frankfurt/startseite/verein/24,1,3
+Turkey,FC Porto,720,https://www.transfermarkt.com/fc-porto/startseite/verein/720,1,3
+Turkey,Inter Milan,46,https://www.transfermarkt.com/inter-mailand/startseite/verein/46,1,3
+Turkey,Juventus FC,506,https://www.transfermarkt.com/juventus-turin/startseite/verein/506,1,3
+Turkey,Kasimpasa,10484,https://www.transfermarkt.com/kasimpasa/startseite/verein/10484,1,3
+Turkey,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,1,3
+Turkey,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,3
+Turkey,TSG 1899 Hoffenheim,533,https://www.transfermarkt.com/tsg-1899-hoffenheim/startseite/verein/533,1,3
+United States,Borussia Mönchengladbach,18,https://www.transfermarkt.com/borussia-monchengladbach/startseite/verein/18,2,1
+United States,PSV Eindhoven,383,https://www.transfermarkt.com/psv-eindhoven/startseite/verein/383,2,1
+United States,AC Milan,5,https://www.transfermarkt.com/ac-mailand/startseite/verein/5,1,3
+United States,AFC Bournemouth,989,https://www.transfermarkt.com/afc-bournemouth/startseite/verein/989,1,3
+United States,AS Monaco,162,https://www.transfermarkt.com/as-monaco/startseite/verein/162,1,3
+United States,Bayer 04 Leverkusen,15,https://www.transfermarkt.com/bayer-04-leverkusen/startseite/verein/15,1,3
+United States,CF América,3631,https://www.transfermarkt.com/cf-america/startseite/verein/3631,1,3
+United States,Celtic FC,371,https://www.transfermarkt.com/celtic-glasgow/startseite/verein/371,1,3
+United States,Charlotte FC,78435,https://www.transfermarkt.com/charlotte-fc/startseite/verein/78435,1,3
+United States,Chicago Fire FC,432,https://www.transfermarkt.com/chicago-fire-fc/startseite/verein/432,1,3
+United States,Columbus Crew,813,https://www.transfermarkt.com/columbus-crew-sc/startseite/verein/813,1,3
+United States,Coventry City,990,https://www.transfermarkt.com/coventry-city/startseite/verein/990,1,3
+United States,Crystal Palace,873,https://www.transfermarkt.com/crystal-palace/startseite/verein/873,1,3
+United States,FC Cincinnati,51772,https://www.transfermarkt.com/fc-cincinnati/startseite/verein/51772,1,3
+United States,FC Toulouse,415,https://www.transfermarkt.com/fc-toulouse/startseite/verein/415,1,3
+United States,Fulham FC,931,https://www.transfermarkt.com/fc-fulham/startseite/verein/931,1,3
+United States,Juventus FC,506,https://www.transfermarkt.com/juventus-turin/startseite/verein/506,1,3
+United States,Leeds United,399,https://www.transfermarkt.com/leeds-united/startseite/verein/399,1,3
+United States,New England Revolution,626,https://www.transfermarkt.com/new-england-revolution/startseite/verein/626,1,3
+United States,New York City FC,40058,https://www.transfermarkt.com/new-york-city-fc/startseite/verein/40058,1,3
+United States,Olympique Marseille,244,https://www.transfermarkt.com/olympique-marseille/startseite/verein/244,1,3
+United States,Seattle Sounders FC,9636,https://www.transfermarkt.com/seattle-sounders-fc/startseite/verein/9636,1,3
+United States,Vancouver Whitecaps FC,6321,https://www.transfermarkt.com/vancouver-whitecaps-fc/startseite/verein/6321,1,3
+United States,Villarreal CF,1050,https://www.transfermarkt.com/fc-villarreal/startseite/verein/1050,1,3
+Uruguay,CR Flamengo,614,https://www.transfermarkt.com/flamengo-rio-de-janeiro/startseite/verein/614,3,1
+Uruguay,CF América,3631,https://www.transfermarkt.com/cf-america/startseite/verein/3631,2,2
+Uruguay,Sociedade Esportiva Palmeiras,1023,https://www.transfermarkt.com/se-palmeiras-sao-paulo/startseite/verein/1023,2,2
+Uruguay,Al-Hilal SFC,1114,https://www.transfermarkt.com/al-hilal-riad/startseite/verein/1114,1,4
+Uruguay,Atlético de Madrid,13,https://www.transfermarkt.com/atletico-madrid/startseite/verein/13,1,4
+Uruguay,CA River Plate,209,https://www.transfermarkt.com/club-atletico-river-plate/startseite/verein/209,1,4
+Uruguay,CF Monterrey,2407,https://www.transfermarkt.com/cf-monterrey/startseite/verein/2407,1,4
+Uruguay,Club Estudiantes de La Plata,288,https://www.transfermarkt.com/club-estudiantes-de-la-plata/startseite/verein/288,1,4
+Uruguay,FC Barcelona,131,https://www.transfermarkt.com/fc-barcelona/startseite/verein/131,1,4
+Uruguay,Fluminense Football Club,2462,https://www.transfermarkt.com/fluminense-rio-de-janeiro/startseite/verein/2462,1,4
+Uruguay,Manchester United,985,https://www.transfermarkt.com/manchester-united/startseite/verein/985,1,4
+Uruguay,Panathinaikos,265,https://www.transfermarkt.com/panathinaikos-athen/startseite/verein/265,1,4
+Uruguay,Real Madrid,418,https://www.transfermarkt.com/real-madrid/startseite/verein/418,1,4
+Uruguay,Real Oviedo,2497,https://www.transfermarkt.com/real-oviedo/startseite/verein/2497,1,4
+Uruguay,Real Salt Lake City,6643,https://www.transfermarkt.com/real-salt-lake-city/startseite/verein/6643,1,4
+Uruguay,SC Braga,1075,https://www.transfermarkt.com/sc-braga/startseite/verein/1075,1,4
+Uruguay,SSC Napoli,6195,https://www.transfermarkt.com/ssc-neapel/startseite/verein/6195,1,4
+Uruguay,Sport Club Internacional,6600,https://www.transfermarkt.com/sc-internacional-porto-alegre/startseite/verein/6600,1,4
+Uruguay,Sporting CP,336,https://www.transfermarkt.com/sporting-lissabon/startseite/verein/336,1,4
+Uruguay,Tigres UANL,7055,https://www.transfermarkt.com/tigres-uanl/startseite/verein/7055,1,4
+Uruguay,Tottenham Hotspur,148,https://www.transfermarkt.com/tottenham-hotspur/startseite/verein/148,1,4
+Uruguay,Wolverhampton Wanderers,543,https://www.transfermarkt.com/wolverhampton-wanderers/startseite/verein/543,1,4
+Uzbekistan,Pakhtakor Tashkent,3718,https://www.transfermarkt.com/pakhtakor-tashkent/startseite/verein/3718,4,1
+Uzbekistan,Neftchi Fergana,13306,https://www.transfermarkt.com/neftchi-fergana/startseite/verein/13306,3,2
+Uzbekistan,Basaksehir FK,6890,https://www.transfermarkt.com/istanbul-basaksehir-fk/startseite/verein/6890,2,3
+Uzbekistan,Dinamo Samarqand,15300,https://www.transfermarkt.com/dinamo-samarkand/startseite/verein/15300,2,3
+Uzbekistan,Esteghlal FC,1076,https://www.transfermarkt.com/esteghlal-fc/startseite/verein/1076,2,3
+Uzbekistan,Nasaf Qarshi,20591,https://www.transfermarkt.com/nasaf-qarshi/startseite/verein/20591,2,3
+Uzbekistan,Persepolis FC,6079,https://www.transfermarkt.com/persepolis-fc/startseite/verein/6079,2,3
+Uzbekistan,Al-Bataeh CSC,78312,https://www.transfermarkt.com/al-bataeh-club/startseite/verein/78312,1,8
+Uzbekistan,Dibba SCC,44289,https://www.transfermarkt.com/dibba-al-fujairah/startseite/verein/44289,1,8
+Uzbekistan,FC Baniyas,4785,https://www.transfermarkt.com/fc-baniyas/startseite/verein/4785,1,8
+Uzbekistan,FC Buxoro,20151,https://www.transfermarkt.com/fk-bukhara/startseite/verein/20151,1,8
+Uzbekistan,FC OKMK Olmaliq,31216,https://www.transfermarkt.com/fk-agmk-olmaliq/startseite/verein/31216,1,8
+Uzbekistan,Manchester City,281,https://www.transfermarkt.com/manchester-city/startseite/verein/281,1,8
+Uzbekistan,Navbahor Namangan,15310,https://www.transfermarkt.com/navbahor-namangan/startseite/verein/15310,1,8
+Uzbekistan,Surkhon Termiz,65036,https://www.transfermarkt.com/surkhon-termiz/startseite/verein/65036,1,8
+Uzbekistan,Tractor FC,12935,https://www.transfermarkt.com/tractor-fc/startseite/verein/12935,1,8
