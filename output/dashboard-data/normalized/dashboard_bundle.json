@@ -1,0 +1,2653 @@
+{
+  "fetched_at_utc": "2026-06-02T15:23:08.570292+00:00",
+  "data": {
+    "metadata": {
+      "generated_at_utc": "2026-06-02T15:23:08.547861+00:00",
+      "dataset_note": "The source file includes a 2026 cohort before kickoff. Treat 2026 as a dataset row, not completed tournament history.",
+      "trend_window_start_year": 1990,
+      "comparison_window_note": "Country history baselines prefer 1986 to 1996, then fall back to the latest earlier tournament."
+    },
+    "highlights": {
+      "height_gain_cm_since_1930": 8.86,
+      "height_gain_pct_since_1930": 5.1,
+      "age_gain_years_since_1930": 3.11,
+      "latest_average_height_cm": 182.76,
+      "latest_average_age": 27.94,
+      "previous_completed_average_age": 27.45,
+      "tallest_team_2026": "Bosnia and Herzegovina",
+      "oldest_team_2026": "Panama",
+      "tallest_group_2026": "Group B",
+      "oldest_group_2026": "Group K"
+    },
+    "trends": [
+      {
+        "tournament_year": 1990,
+        "average_height_cm": 180.42,
+        "average_age": 26.9,
+        "player_rows": 530,
+        "countries": 24,
+        "height_coverage_pct": 51.1
+      },
+      {
+        "tournament_year": 1994,
+        "average_height_cm": 180.61,
+        "average_age": 27.36,
+        "player_rows": 529,
+        "countries": 24,
+        "height_coverage_pct": 57.7
+      },
+      {
+        "tournament_year": 1998,
+        "average_height_cm": 181.26,
+        "average_age": 27.44,
+        "player_rows": 684,
+        "countries": 31,
+        "height_coverage_pct": 60.1
+      },
+      {
+        "tournament_year": 2002,
+        "average_height_cm": 181.01,
+        "average_age": 27.44,
+        "player_rows": 738,
+        "countries": 32,
+        "height_coverage_pct": 56.8
+      },
+      {
+        "tournament_year": 2006,
+        "average_height_cm": 181.78,
+        "average_age": 27.34,
+        "player_rows": 737,
+        "countries": 32,
+        "height_coverage_pct": 57.4
+      },
+      {
+        "tournament_year": 2010,
+        "average_height_cm": 181.63,
+        "average_age": 27.34,
+        "player_rows": 736,
+        "countries": 32,
+        "height_coverage_pct": 60.2
+      },
+      {
+        "tournament_year": 2014,
+        "average_height_cm": 181.95,
+        "average_age": 27.3,
+        "player_rows": 736,
+        "countries": 32,
+        "height_coverage_pct": 56.8
+      },
+      {
+        "tournament_year": 2018,
+        "average_height_cm": 182.46,
+        "average_age": 27.9,
+        "player_rows": 736,
+        "countries": 32,
+        "height_coverage_pct": 99.5
+      },
+      {
+        "tournament_year": 2022,
+        "average_height_cm": 182.38,
+        "average_age": 27.45,
+        "player_rows": 831,
+        "countries": 32,
+        "height_coverage_pct": 99.4
+      },
+      {
+        "tournament_year": 2026,
+        "average_height_cm": 182.76,
+        "average_age": 27.94,
+        "player_rows": 1247,
+        "countries": 48,
+        "height_coverage_pct": 65.2
+      }
+    ],
+    "countries_2026": [
+      {
+        "country": "Bosnia and Herzegovina",
+        "tournament_year": 2026,
+        "group": "Group B",
+        "confederation": "UEFA",
+        "average_height_cm": 193.0,
+        "average_age": 26.42,
+        "player_rows": 26,
+        "height_rank": 1,
+        "age_rank": 45,
+        "baseline_tournament_year": 2014,
+        "baseline_average_height_cm": 186.0,
+        "baseline_average_age": 27.06,
+        "height_delta_cm": 7.0,
+        "age_delta_years": -0.64
+      },
+      {
+        "country": "Czech Republic",
+        "tournament_year": 2026,
+        "group": "Group A",
+        "confederation": "UEFA",
+        "average_height_cm": 188.67,
+        "average_age": 27.62,
+        "player_rows": 26,
+        "height_rank": 2,
+        "age_rank": 28,
+        "baseline_tournament_year": 2006,
+        "baseline_average_height_cm": 188.5,
+        "baseline_average_age": 28.88,
+        "height_delta_cm": 0.17,
+        "age_delta_years": -1.26
+      },
+      {
+        "country": "Turkey",
+        "tournament_year": 2026,
+        "group": "Group D",
+        "confederation": "UEFA",
+        "average_height_cm": 187.6,
+        "average_age": 27.67,
+        "player_rows": 26,
+        "height_rank": 3,
+        "age_rank": 27,
+        "baseline_tournament_year": 2002,
+        "baseline_average_height_cm": 177.33,
+        "baseline_average_age": 28.04,
+        "height_delta_cm": 10.27,
+        "age_delta_years": -0.37
+      },
+      {
+        "country": "Belgium",
+        "tournament_year": 2026,
+        "group": "Group G",
+        "confederation": "UEFA",
+        "average_height_cm": 186.29,
+        "average_age": 27.62,
+        "player_rows": 26,
+        "height_rank": 4,
+        "age_rank": 29,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 180.57,
+        "baseline_average_age": 29.41,
+        "height_delta_cm": 5.71,
+        "age_delta_years": -1.8
+      },
+      {
+        "country": "Scotland",
+        "tournament_year": 2026,
+        "group": "Group C",
+        "confederation": "UEFA",
+        "average_height_cm": 186.2,
+        "average_age": 29.2,
+        "player_rows": 26,
+        "height_rank": 5,
+        "age_rank": 6,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 178.75,
+        "baseline_average_age": 27.57,
+        "height_delta_cm": 7.45,
+        "age_delta_years": 1.64
+      },
+      {
+        "country": "France",
+        "tournament_year": 2026,
+        "group": "Group I",
+        "confederation": "UEFA",
+        "average_height_cm": 186.19,
+        "average_age": 27.0,
+        "player_rows": 26,
+        "height_rank": 6,
+        "age_rank": 37,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 178.89,
+        "baseline_average_age": 27.96,
+        "height_delta_cm": 7.3,
+        "age_delta_years": -0.96
+      },
+      {
+        "country": "Norway",
+        "tournament_year": 2026,
+        "group": "Group I",
+        "confederation": "UEFA",
+        "average_height_cm": 185.93,
+        "average_age": 26.8,
+        "player_rows": 26,
+        "height_rank": 7,
+        "age_rank": 42,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 185.79,
+        "baseline_average_age": 26.95,
+        "height_delta_cm": 0.15,
+        "age_delta_years": -0.14
+      },
+      {
+        "country": "Switzerland",
+        "tournament_year": 2026,
+        "group": "Group B",
+        "confederation": "UEFA",
+        "average_height_cm": 185.39,
+        "average_age": 28.31,
+        "player_rows": 26,
+        "height_rank": 8,
+        "age_rank": 18,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 179.87,
+        "baseline_average_age": 28.36,
+        "height_delta_cm": 5.52,
+        "age_delta_years": -0.05
+      },
+      {
+        "country": "Senegal",
+        "tournament_year": 2026,
+        "group": "Group I",
+        "confederation": "CAF",
+        "average_height_cm": 185.15,
+        "average_age": 27.09,
+        "player_rows": 26,
+        "height_rank": 9,
+        "age_rank": 36,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 184.92,
+        "baseline_average_age": 26.46,
+        "height_delta_cm": 0.23,
+        "age_delta_years": 0.63
+      },
+      {
+        "country": "Netherlands",
+        "tournament_year": 2026,
+        "group": "Group F",
+        "confederation": "UEFA",
+        "average_height_cm": 185.04,
+        "average_age": 27.74,
+        "player_rows": 26,
+        "height_rank": 10,
+        "age_rank": 26,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 182.76,
+        "baseline_average_age": 27.38,
+        "height_delta_cm": 2.28,
+        "age_delta_years": 0.36
+      },
+      {
+        "country": "Germany",
+        "tournament_year": 2026,
+        "group": "Group E",
+        "confederation": "UEFA",
+        "average_height_cm": 184.89,
+        "average_age": 27.98,
+        "player_rows": 26,
+        "height_rank": 11,
+        "age_rank": 23,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 183.62,
+        "baseline_average_age": 29.0,
+        "height_delta_cm": 1.28,
+        "age_delta_years": -1.02
+      },
+      {
+        "country": "Australia",
+        "tournament_year": 2026,
+        "group": "Group D",
+        "confederation": "OFC",
+        "average_height_cm": 184.86,
+        "average_age": 27.36,
+        "player_rows": 26,
+        "height_rank": 12,
+        "age_rank": 32,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 180.96,
+        "baseline_average_age": 27.62,
+        "height_delta_cm": 3.9,
+        "age_delta_years": -0.26
+      },
+      {
+        "country": "Ivory Coast",
+        "tournament_year": 2026,
+        "group": "Group E",
+        "confederation": "CAF",
+        "average_height_cm": 184.67,
+        "average_age": 25.85,
+        "player_rows": 26,
+        "height_rank": 13,
+        "age_rank": 48,
+        "baseline_tournament_year": 2014,
+        "baseline_average_height_cm": 180.86,
+        "baseline_average_age": 27.83,
+        "height_delta_cm": 3.81,
+        "age_delta_years": -1.98
+      },
+      {
+        "country": "Sweden",
+        "tournament_year": 2026,
+        "group": "Group F",
+        "confederation": "UEFA",
+        "average_height_cm": 184.57,
+        "average_age": 27.56,
+        "player_rows": 26,
+        "height_rank": 14,
+        "age_rank": 31,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 183.28,
+        "baseline_average_age": 25.73,
+        "height_delta_cm": 1.29,
+        "age_delta_years": 1.82
+      },
+      {
+        "country": "England",
+        "tournament_year": 2026,
+        "group": "Group L",
+        "confederation": "UEFA",
+        "average_height_cm": 184.45,
+        "average_age": 27.14,
+        "player_rows": 26,
+        "height_rank": 15,
+        "age_rank": 34,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 180.62,
+        "baseline_average_age": 26.81,
+        "height_delta_cm": 3.83,
+        "age_delta_years": 0.33
+      },
+      {
+        "country": "Canada",
+        "tournament_year": 2026,
+        "group": "Group B",
+        "confederation": "CONCACAF",
+        "average_height_cm": 184.04,
+        "average_age": 27.1,
+        "player_rows": 25,
+        "height_rank": 16,
+        "age_rank": 35,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 179.45,
+        "baseline_average_age": 25.99,
+        "height_delta_cm": 4.59,
+        "age_delta_years": 1.11
+      },
+      {
+        "country": "Austria",
+        "tournament_year": 2026,
+        "group": "Group J",
+        "confederation": "UEFA",
+        "average_height_cm": 183.87,
+        "average_age": 28.54,
+        "player_rows": 26,
+        "height_rank": 17,
+        "age_rank": 13,
+        "baseline_tournament_year": 1998,
+        "baseline_average_height_cm": 183.25,
+        "baseline_average_age": 29.76,
+        "height_delta_cm": 0.62,
+        "age_delta_years": -1.22
+      },
+      {
+        "country": "Croatia",
+        "tournament_year": 2026,
+        "group": "Group L",
+        "confederation": "UEFA",
+        "average_height_cm": 183.71,
+        "average_age": 28.33,
+        "player_rows": 26,
+        "height_rank": 18,
+        "age_rank": 17,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 184.54,
+        "baseline_average_age": 27.91,
+        "height_delta_cm": -0.82,
+        "age_delta_years": 0.42
+      },
+      {
+        "country": "Tunisia",
+        "tournament_year": 2026,
+        "group": "Group F",
+        "confederation": "CAF",
+        "average_height_cm": 183.71,
+        "average_age": 26.64,
+        "player_rows": 26,
+        "height_rank": 18,
+        "age_rank": 44,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 182.69,
+        "baseline_average_age": 28.54,
+        "height_delta_cm": 1.02,
+        "age_delta_years": -1.89
+      },
+      {
+        "country": "Morocco",
+        "tournament_year": 2026,
+        "group": "Group C",
+        "confederation": "CAF",
+        "average_height_cm": 183.65,
+        "average_age": 26.39,
+        "player_rows": 26,
+        "height_rank": 20,
+        "age_rank": 46,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 181.28,
+        "baseline_average_age": 26.65,
+        "height_delta_cm": 2.37,
+        "age_delta_years": -0.26
+      },
+      {
+        "country": "United States",
+        "tournament_year": 2026,
+        "group": "Group D",
+        "confederation": "CONCACAF",
+        "average_height_cm": 183.42,
+        "average_age": 26.9,
+        "player_rows": 26,
+        "height_rank": 21,
+        "age_rank": 39,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 182.7,
+        "baseline_average_age": 25.59,
+        "height_delta_cm": 0.72,
+        "age_delta_years": 1.32
+      },
+      {
+        "country": "Iraq",
+        "tournament_year": 2026,
+        "group": "Group I",
+        "confederation": "AFC",
+        "average_height_cm": 183.32,
+        "average_age": 27.15,
+        "player_rows": 26,
+        "height_rank": 22,
+        "age_rank": 33,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 186.0,
+        "baseline_average_age": 26.95,
+        "height_delta_cm": -2.68,
+        "age_delta_years": 0.2
+      },
+      {
+        "country": "New Zealand",
+        "tournament_year": 2026,
+        "group": "Group G",
+        "confederation": "OFC",
+        "average_height_cm": 183.04,
+        "average_age": 28.12,
+        "player_rows": 26,
+        "height_rank": 23,
+        "age_rank": 19,
+        "baseline_tournament_year": 2010,
+        "baseline_average_height_cm": 184.89,
+        "baseline_average_age": 27.87,
+        "height_delta_cm": -1.85,
+        "age_delta_years": 0.25
+      },
+      {
+        "country": "Iran",
+        "tournament_year": 2026,
+        "group": "Group G",
+        "confederation": "AFC",
+        "average_height_cm": 182.78,
+        "average_age": 30.33,
+        "player_rows": 26,
+        "height_rank": 24,
+        "age_rank": 2,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 183.72,
+        "baseline_average_age": 29.42,
+        "height_delta_cm": -0.94,
+        "age_delta_years": 0.91
+      },
+      {
+        "country": "Brazil",
+        "tournament_year": 2026,
+        "group": "Group C",
+        "confederation": "CONMEBOL",
+        "average_height_cm": 182.58,
+        "average_age": 29.2,
+        "player_rows": 26,
+        "height_rank": 25,
+        "age_rank": 7,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 180.33,
+        "baseline_average_age": 27.84,
+        "height_delta_cm": 2.25,
+        "age_delta_years": 1.36
+      },
+      {
+        "country": "DR Congo",
+        "tournament_year": 2026,
+        "group": "Group K",
+        "confederation": "CAF",
+        "average_height_cm": 182.48,
+        "average_age": 29.07,
+        "player_rows": 26,
+        "height_rank": 26,
+        "age_rank": 8,
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Curaçao",
+        "tournament_year": 2026,
+        "group": "Group E",
+        "confederation": "CONCACAF",
+        "average_height_cm": 182.29,
+        "average_age": 28.02,
+        "player_rows": 26,
+        "height_rank": 27,
+        "age_rank": 22,
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Ghana",
+        "tournament_year": 2026,
+        "group": "Group L",
+        "confederation": "CAF",
+        "average_height_cm": 182.22,
+        "average_age": 26.98,
+        "player_rows": 26,
+        "height_rank": 28,
+        "age_rank": 38,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 179.46,
+        "baseline_average_age": 25.3,
+        "height_delta_cm": 2.76,
+        "age_delta_years": 1.68
+      },
+      {
+        "country": "Spain",
+        "tournament_year": 2026,
+        "group": "Group H",
+        "confederation": "UEFA",
+        "average_height_cm": 182.21,
+        "average_age": 26.75,
+        "player_rows": 26,
+        "height_rank": 29,
+        "age_rank": 43,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 181.75,
+        "baseline_average_age": 26.67,
+        "height_delta_cm": 0.46,
+        "age_delta_years": 0.08
+      },
+      {
+        "country": "Uruguay",
+        "tournament_year": 2026,
+        "group": "Group H",
+        "confederation": "CONMEBOL",
+        "average_height_cm": 181.92,
+        "average_age": 28.74,
+        "player_rows": 26,
+        "height_rank": 30,
+        "age_rank": 12,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 176.57,
+        "baseline_average_age": 26.63,
+        "height_delta_cm": 5.35,
+        "age_delta_years": 2.11
+      },
+      {
+        "country": "South Korea",
+        "tournament_year": 2026,
+        "group": "Group A",
+        "confederation": "AFC",
+        "average_height_cm": 181.83,
+        "average_age": 28.07,
+        "player_rows": 26,
+        "height_rank": 31,
+        "age_rank": 20,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 181.12,
+        "baseline_average_age": 28.17,
+        "height_delta_cm": 0.72,
+        "age_delta_years": -0.11
+      },
+      {
+        "country": "Haiti",
+        "tournament_year": 2026,
+        "group": "Group C",
+        "confederation": "CONCACAF",
+        "average_height_cm": 181.62,
+        "average_age": 27.58,
+        "player_rows": 26,
+        "height_rank": 32,
+        "age_rank": 30,
+        "baseline_tournament_year": 1974,
+        "baseline_average_height_cm": 182.0,
+        "baseline_average_age": 26.05,
+        "height_delta_cm": -0.38,
+        "age_delta_years": 1.52
+      },
+      {
+        "country": "Algeria",
+        "tournament_year": 2026,
+        "group": "Group J",
+        "confederation": "CAF",
+        "average_height_cm": 181.59,
+        "average_age": 26.86,
+        "player_rows": 26,
+        "height_rank": 33,
+        "age_rank": 40,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 177.56,
+        "baseline_average_age": 28.27,
+        "height_delta_cm": 4.03,
+        "age_delta_years": -1.41
+      },
+      {
+        "country": "Japan",
+        "tournament_year": 2026,
+        "group": "Group F",
+        "confederation": "AFC",
+        "average_height_cm": 181.4,
+        "average_age": 27.75,
+        "player_rows": 26,
+        "height_rank": 34,
+        "age_rank": 25,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 179.88,
+        "baseline_average_age": 28.24,
+        "height_delta_cm": 1.52,
+        "age_delta_years": -0.49
+      },
+      {
+        "country": "Cape Verde",
+        "tournament_year": 2026,
+        "group": "Group H",
+        "confederation": "CAF",
+        "average_height_cm": 181.25,
+        "average_age": 29.68,
+        "player_rows": 26,
+        "height_rank": 35,
+        "age_rank": 4,
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Portugal",
+        "tournament_year": 2026,
+        "group": "Group K",
+        "confederation": "UEFA",
+        "average_height_cm": 181.1,
+        "average_age": 28.04,
+        "player_rows": 26,
+        "height_rank": 36,
+        "age_rank": 21,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 177.0,
+        "baseline_average_age": 27.93,
+        "height_delta_cm": 4.1,
+        "age_delta_years": 0.11
+      },
+      {
+        "country": "Panama",
+        "tournament_year": 2026,
+        "group": "Group L",
+        "confederation": "CONCACAF",
+        "average_height_cm": 180.7,
+        "average_age": 30.43,
+        "player_rows": 26,
+        "height_rank": 37,
+        "age_rank": 1,
+        "baseline_tournament_year": 2018,
+        "baseline_average_height_cm": 182.91,
+        "baseline_average_age": 28.87,
+        "height_delta_cm": -2.21,
+        "age_delta_years": 1.56
+      },
+      {
+        "country": "Uzbekistan",
+        "tournament_year": 2026,
+        "group": "Group K",
+        "confederation": "AFC",
+        "average_height_cm": 180.68,
+        "average_age": 28.51,
+        "player_rows": 26,
+        "height_rank": 38,
+        "age_rank": 15,
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Egypt",
+        "tournament_year": 2026,
+        "group": "Group G",
+        "confederation": "CAF",
+        "average_height_cm": 180.35,
+        "average_age": 29.06,
+        "player_rows": 26,
+        "height_rank": 39,
+        "age_rank": 9,
+        "baseline_tournament_year": 2018,
+        "baseline_average_height_cm": 181.23,
+        "baseline_average_age": 28.98,
+        "height_delta_cm": -0.87,
+        "age_delta_years": 0.08
+      },
+      {
+        "country": "Qatar",
+        "tournament_year": 2026,
+        "group": "Group B",
+        "confederation": "AFC",
+        "average_height_cm": 180.31,
+        "average_age": 29.51,
+        "player_rows": 26,
+        "height_rank": 40,
+        "age_rank": 5,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 180.08,
+        "baseline_average_age": 27.53,
+        "height_delta_cm": 0.24,
+        "age_delta_years": 1.98
+      },
+      {
+        "country": "Jordan",
+        "tournament_year": 2026,
+        "group": "Group J",
+        "confederation": "AFC",
+        "average_height_cm": 180.05,
+        "average_age": 28.44,
+        "player_rows": 26,
+        "height_rank": 41,
+        "age_rank": 16,
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Ecuador",
+        "tournament_year": 2026,
+        "group": "Group E",
+        "confederation": "CONMEBOL",
+        "average_height_cm": 179.77,
+        "average_age": 26.08,
+        "player_rows": 26,
+        "height_rank": 42,
+        "age_rank": 47,
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 180.5,
+        "baseline_average_age": 26.07,
+        "height_delta_cm": -0.73,
+        "age_delta_years": 0.01
+      },
+      {
+        "country": "Mexico",
+        "tournament_year": 2026,
+        "group": "Group A",
+        "confederation": "CONCACAF",
+        "average_height_cm": 179.71,
+        "average_age": 27.9,
+        "player_rows": 26,
+        "height_rank": 43,
+        "age_rank": 24,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 179.33,
+        "baseline_average_age": 28.29,
+        "height_delta_cm": 0.38,
+        "age_delta_years": -0.39
+      },
+      {
+        "country": "Colombia",
+        "tournament_year": 2026,
+        "group": "Group K",
+        "confederation": "CONMEBOL",
+        "average_height_cm": 179.29,
+        "average_age": 30.09,
+        "player_rows": 26,
+        "height_rank": 44,
+        "age_rank": 3,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 176.8,
+        "baseline_average_age": 27.39,
+        "height_delta_cm": 2.49,
+        "age_delta_years": 2.7
+      },
+      {
+        "country": "Paraguay",
+        "tournament_year": 2026,
+        "group": "Group D",
+        "confederation": "CONMEBOL",
+        "average_height_cm": 179.17,
+        "average_age": 29.03,
+        "player_rows": 26,
+        "height_rank": 45,
+        "age_rank": 11,
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 178.0,
+        "baseline_average_age": 26.75,
+        "height_delta_cm": 1.17,
+        "age_delta_years": 2.28
+      },
+      {
+        "country": "Argentina",
+        "tournament_year": 2026,
+        "group": "Group J",
+        "confederation": "CONMEBOL",
+        "average_height_cm": 178.71,
+        "average_age": 29.05,
+        "player_rows": 26,
+        "height_rank": 46,
+        "age_rank": 10,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 179.85,
+        "baseline_average_age": 27.86,
+        "height_delta_cm": -1.13,
+        "age_delta_years": 1.19
+      },
+      {
+        "country": "South Africa",
+        "tournament_year": 2026,
+        "group": "Group A",
+        "confederation": "CAF",
+        "average_height_cm": 178.06,
+        "average_age": 26.81,
+        "player_rows": 26,
+        "height_rank": 47,
+        "age_rank": 41,
+        "baseline_tournament_year": 2010,
+        "baseline_average_height_cm": 178.71,
+        "baseline_average_age": 27.31,
+        "height_delta_cm": -0.66,
+        "age_delta_years": -0.5
+      },
+      {
+        "country": "Saudi Arabia",
+        "tournament_year": 2026,
+        "group": "Group H",
+        "confederation": "AFC",
+        "average_height_cm": 177.2,
+        "average_age": 28.52,
+        "player_rows": 26,
+        "height_rank": 48,
+        "age_rank": 14,
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 178.83,
+        "baseline_average_age": 24.23,
+        "height_delta_cm": -1.63,
+        "age_delta_years": 4.29
+      }
+    ],
+    "groups_2026": [
+      {
+        "group": "Group A",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 182.07,
+        "average_age": 27.6,
+        "height_rank": 9,
+        "age_rank": 9,
+        "tallest_team": "Czech Republic",
+        "oldest_team": "South Korea"
+      },
+      {
+        "group": "Group B",
+        "teams": 4,
+        "player_rows": 103,
+        "average_height_cm": 185.69,
+        "average_age": 27.84,
+        "height_rank": 1,
+        "age_rank": 7,
+        "tallest_team": "Bosnia and Herzegovina",
+        "oldest_team": "Qatar"
+      },
+      {
+        "group": "Group C",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 183.51,
+        "average_age": 28.09,
+        "height_rank": 5,
+        "age_rank": 6,
+        "tallest_team": "Scotland",
+        "oldest_team": "Scotland"
+      },
+      {
+        "group": "Group D",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 183.76,
+        "average_age": 27.74,
+        "height_rank": 3,
+        "age_rank": 8,
+        "tallest_team": "Turkey",
+        "oldest_team": "Paraguay"
+      },
+      {
+        "group": "Group E",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 182.9,
+        "average_age": 26.98,
+        "height_rank": 7,
+        "age_rank": 12,
+        "tallest_team": "Germany",
+        "oldest_team": "Curaçao"
+      },
+      {
+        "group": "Group F",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 183.68,
+        "average_age": 27.42,
+        "height_rank": 4,
+        "age_rank": 10,
+        "tallest_team": "Netherlands",
+        "oldest_team": "Japan"
+      },
+      {
+        "group": "Group G",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 183.12,
+        "average_age": 28.78,
+        "height_rank": 6,
+        "age_rank": 2,
+        "tallest_team": "Belgium",
+        "oldest_team": "Iran"
+      },
+      {
+        "group": "Group H",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 180.64,
+        "average_age": 28.42,
+        "height_rank": 12,
+        "age_rank": 3,
+        "tallest_team": "Spain",
+        "oldest_team": "Cape Verde"
+      },
+      {
+        "group": "Group I",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 185.15,
+        "average_age": 27.01,
+        "height_rank": 2,
+        "age_rank": 11,
+        "tallest_team": "France",
+        "oldest_team": "Iraq"
+      },
+      {
+        "group": "Group J",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 181.06,
+        "average_age": 28.22,
+        "height_rank": 10,
+        "age_rank": 4,
+        "tallest_team": "Austria",
+        "oldest_team": "Argentina"
+      },
+      {
+        "group": "Group K",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 180.89,
+        "average_age": 28.93,
+        "height_rank": 11,
+        "age_rank": 1,
+        "tallest_team": "DR Congo",
+        "oldest_team": "Colombia"
+      },
+      {
+        "group": "Group L",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 182.77,
+        "average_age": 28.22,
+        "height_rank": 8,
+        "age_rank": 4,
+        "tallest_team": "England",
+        "oldest_team": "Panama"
+      }
+    ],
+    "group_members_2026": [
+      {
+        "group": "Group A",
+        "teams": [
+          {
+            "country": "Czech Republic",
+            "average_height_cm": 188.67,
+            "average_age": 27.62,
+            "height_rank": 2,
+            "age_rank": 28
+          },
+          {
+            "country": "South Korea",
+            "average_height_cm": 181.83,
+            "average_age": 28.07,
+            "height_rank": 31,
+            "age_rank": 20
+          },
+          {
+            "country": "Mexico",
+            "average_height_cm": 179.71,
+            "average_age": 27.9,
+            "height_rank": 43,
+            "age_rank": 24
+          },
+          {
+            "country": "South Africa",
+            "average_height_cm": 178.06,
+            "average_age": 26.81,
+            "height_rank": 47,
+            "age_rank": 41
+          }
+        ]
+      },
+      {
+        "group": "Group B",
+        "teams": [
+          {
+            "country": "Bosnia and Herzegovina",
+            "average_height_cm": 193.0,
+            "average_age": 26.42,
+            "height_rank": 1,
+            "age_rank": 45
+          },
+          {
+            "country": "Switzerland",
+            "average_height_cm": 185.39,
+            "average_age": 28.31,
+            "height_rank": 8,
+            "age_rank": 18
+          },
+          {
+            "country": "Canada",
+            "average_height_cm": 184.04,
+            "average_age": 27.1,
+            "height_rank": 16,
+            "age_rank": 35
+          },
+          {
+            "country": "Qatar",
+            "average_height_cm": 180.31,
+            "average_age": 29.51,
+            "height_rank": 40,
+            "age_rank": 5
+          }
+        ]
+      },
+      {
+        "group": "Group C",
+        "teams": [
+          {
+            "country": "Scotland",
+            "average_height_cm": 186.2,
+            "average_age": 29.2,
+            "height_rank": 5,
+            "age_rank": 6
+          },
+          {
+            "country": "Morocco",
+            "average_height_cm": 183.65,
+            "average_age": 26.39,
+            "height_rank": 20,
+            "age_rank": 46
+          },
+          {
+            "country": "Brazil",
+            "average_height_cm": 182.58,
+            "average_age": 29.2,
+            "height_rank": 25,
+            "age_rank": 7
+          },
+          {
+            "country": "Haiti",
+            "average_height_cm": 181.62,
+            "average_age": 27.58,
+            "height_rank": 32,
+            "age_rank": 30
+          }
+        ]
+      },
+      {
+        "group": "Group D",
+        "teams": [
+          {
+            "country": "Turkey",
+            "average_height_cm": 187.6,
+            "average_age": 27.67,
+            "height_rank": 3,
+            "age_rank": 27
+          },
+          {
+            "country": "Australia",
+            "average_height_cm": 184.86,
+            "average_age": 27.36,
+            "height_rank": 12,
+            "age_rank": 32
+          },
+          {
+            "country": "United States",
+            "average_height_cm": 183.42,
+            "average_age": 26.9,
+            "height_rank": 21,
+            "age_rank": 39
+          },
+          {
+            "country": "Paraguay",
+            "average_height_cm": 179.17,
+            "average_age": 29.03,
+            "height_rank": 45,
+            "age_rank": 11
+          }
+        ]
+      },
+      {
+        "group": "Group E",
+        "teams": [
+          {
+            "country": "Germany",
+            "average_height_cm": 184.89,
+            "average_age": 27.98,
+            "height_rank": 11,
+            "age_rank": 23
+          },
+          {
+            "country": "Ivory Coast",
+            "average_height_cm": 184.67,
+            "average_age": 25.85,
+            "height_rank": 13,
+            "age_rank": 48
+          },
+          {
+            "country": "Curaçao",
+            "average_height_cm": 182.29,
+            "average_age": 28.02,
+            "height_rank": 27,
+            "age_rank": 22
+          },
+          {
+            "country": "Ecuador",
+            "average_height_cm": 179.77,
+            "average_age": 26.08,
+            "height_rank": 42,
+            "age_rank": 47
+          }
+        ]
+      },
+      {
+        "group": "Group F",
+        "teams": [
+          {
+            "country": "Netherlands",
+            "average_height_cm": 185.04,
+            "average_age": 27.74,
+            "height_rank": 10,
+            "age_rank": 26
+          },
+          {
+            "country": "Sweden",
+            "average_height_cm": 184.57,
+            "average_age": 27.56,
+            "height_rank": 14,
+            "age_rank": 31
+          },
+          {
+            "country": "Tunisia",
+            "average_height_cm": 183.71,
+            "average_age": 26.64,
+            "height_rank": 18,
+            "age_rank": 44
+          },
+          {
+            "country": "Japan",
+            "average_height_cm": 181.4,
+            "average_age": 27.75,
+            "height_rank": 34,
+            "age_rank": 25
+          }
+        ]
+      },
+      {
+        "group": "Group G",
+        "teams": [
+          {
+            "country": "Belgium",
+            "average_height_cm": 186.29,
+            "average_age": 27.62,
+            "height_rank": 4,
+            "age_rank": 29
+          },
+          {
+            "country": "New Zealand",
+            "average_height_cm": 183.04,
+            "average_age": 28.12,
+            "height_rank": 23,
+            "age_rank": 19
+          },
+          {
+            "country": "Iran",
+            "average_height_cm": 182.78,
+            "average_age": 30.33,
+            "height_rank": 24,
+            "age_rank": 2
+          },
+          {
+            "country": "Egypt",
+            "average_height_cm": 180.35,
+            "average_age": 29.06,
+            "height_rank": 39,
+            "age_rank": 9
+          }
+        ]
+      },
+      {
+        "group": "Group H",
+        "teams": [
+          {
+            "country": "Spain",
+            "average_height_cm": 182.21,
+            "average_age": 26.75,
+            "height_rank": 29,
+            "age_rank": 43
+          },
+          {
+            "country": "Uruguay",
+            "average_height_cm": 181.92,
+            "average_age": 28.74,
+            "height_rank": 30,
+            "age_rank": 12
+          },
+          {
+            "country": "Cape Verde",
+            "average_height_cm": 181.25,
+            "average_age": 29.68,
+            "height_rank": 35,
+            "age_rank": 4
+          },
+          {
+            "country": "Saudi Arabia",
+            "average_height_cm": 177.2,
+            "average_age": 28.52,
+            "height_rank": 48,
+            "age_rank": 14
+          }
+        ]
+      },
+      {
+        "group": "Group I",
+        "teams": [
+          {
+            "country": "France",
+            "average_height_cm": 186.19,
+            "average_age": 27.0,
+            "height_rank": 6,
+            "age_rank": 37
+          },
+          {
+            "country": "Norway",
+            "average_height_cm": 185.93,
+            "average_age": 26.8,
+            "height_rank": 7,
+            "age_rank": 42
+          },
+          {
+            "country": "Senegal",
+            "average_height_cm": 185.15,
+            "average_age": 27.09,
+            "height_rank": 9,
+            "age_rank": 36
+          },
+          {
+            "country": "Iraq",
+            "average_height_cm": 183.32,
+            "average_age": 27.15,
+            "height_rank": 22,
+            "age_rank": 33
+          }
+        ]
+      },
+      {
+        "group": "Group J",
+        "teams": [
+          {
+            "country": "Austria",
+            "average_height_cm": 183.87,
+            "average_age": 28.54,
+            "height_rank": 17,
+            "age_rank": 13
+          },
+          {
+            "country": "Algeria",
+            "average_height_cm": 181.59,
+            "average_age": 26.86,
+            "height_rank": 33,
+            "age_rank": 40
+          },
+          {
+            "country": "Jordan",
+            "average_height_cm": 180.05,
+            "average_age": 28.44,
+            "height_rank": 41,
+            "age_rank": 16
+          },
+          {
+            "country": "Argentina",
+            "average_height_cm": 178.71,
+            "average_age": 29.05,
+            "height_rank": 46,
+            "age_rank": 10
+          }
+        ]
+      },
+      {
+        "group": "Group K",
+        "teams": [
+          {
+            "country": "DR Congo",
+            "average_height_cm": 182.48,
+            "average_age": 29.07,
+            "height_rank": 26,
+            "age_rank": 8
+          },
+          {
+            "country": "Portugal",
+            "average_height_cm": 181.1,
+            "average_age": 28.04,
+            "height_rank": 36,
+            "age_rank": 21
+          },
+          {
+            "country": "Uzbekistan",
+            "average_height_cm": 180.68,
+            "average_age": 28.51,
+            "height_rank": 38,
+            "age_rank": 15
+          },
+          {
+            "country": "Colombia",
+            "average_height_cm": 179.29,
+            "average_age": 30.09,
+            "height_rank": 44,
+            "age_rank": 3
+          }
+        ]
+      },
+      {
+        "group": "Group L",
+        "teams": [
+          {
+            "country": "England",
+            "average_height_cm": 184.45,
+            "average_age": 27.14,
+            "height_rank": 15,
+            "age_rank": 34
+          },
+          {
+            "country": "Croatia",
+            "average_height_cm": 183.71,
+            "average_age": 28.33,
+            "height_rank": 18,
+            "age_rank": 17
+          },
+          {
+            "country": "Ghana",
+            "average_height_cm": 182.22,
+            "average_age": 26.98,
+            "height_rank": 28,
+            "age_rank": 38
+          },
+          {
+            "country": "Panama",
+            "average_height_cm": 180.7,
+            "average_age": 30.43,
+            "height_rank": 37,
+            "age_rank": 1
+          }
+        ]
+      }
+    ],
+    "confederations_2026": [
+      {
+        "confederation": "UEFA",
+        "teams": 16,
+        "average_height_cm": 185.57,
+        "average_age": 27.67
+      },
+      {
+        "confederation": "OFC",
+        "teams": 2,
+        "average_height_cm": 183.95,
+        "average_age": 27.74
+      },
+      {
+        "confederation": "CAF",
+        "teams": 10,
+        "average_height_cm": 182.31,
+        "average_age": 27.44
+      },
+      {
+        "confederation": "CONCACAF",
+        "teams": 6,
+        "average_height_cm": 181.96,
+        "average_age": 27.99
+      },
+      {
+        "confederation": "AFC",
+        "teams": 8,
+        "average_height_cm": 180.95,
+        "average_age": 28.54
+      },
+      {
+        "confederation": "CONMEBOL",
+        "teams": 6,
+        "average_height_cm": 180.24,
+        "average_age": 28.7
+      }
+    ],
+    "confederation_history": [
+      {
+        "tournament_year": 1990,
+        "confederation": "UEFA",
+        "teams": 7,
+        "player_rows": 155,
+        "average_height_cm": 181.72,
+        "average_age": 26.77
+      },
+      {
+        "tournament_year": 1990,
+        "confederation": "CAF",
+        "teams": 1,
+        "player_rows": 22,
+        "average_height_cm": 179.71,
+        "average_age": 27.26
+      },
+      {
+        "tournament_year": 1990,
+        "confederation": "CONMEBOL",
+        "teams": 4,
+        "player_rows": 89,
+        "average_height_cm": 178.61,
+        "average_age": 26.98
+      },
+      {
+        "tournament_year": 1994,
+        "confederation": "UEFA",
+        "teams": 7,
+        "player_rows": 154,
+        "average_height_cm": 182.57,
+        "average_age": 27.64
+      },
+      {
+        "tournament_year": 1994,
+        "confederation": "CAF",
+        "teams": 1,
+        "player_rows": 22,
+        "average_height_cm": 181.28,
+        "average_age": 26.65
+      },
+      {
+        "tournament_year": 1994,
+        "confederation": "CONCACAF",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 179.33,
+        "average_age": 28.29
+      },
+      {
+        "tournament_year": 1994,
+        "confederation": "CONMEBOL",
+        "teams": 3,
+        "player_rows": 66,
+        "average_height_cm": 179.19,
+        "average_age": 27.7
+      },
+      {
+        "tournament_year": 1994,
+        "confederation": "AFC",
+        "teams": 1,
+        "player_rows": 22,
+        "average_height_cm": 178.83,
+        "average_age": 24.23
+      },
+      {
+        "tournament_year": 1998,
+        "confederation": "UEFA",
+        "teams": 9,
+        "player_rows": 198,
+        "average_height_cm": 183.18,
+        "average_age": 28.39
+      },
+      {
+        "tournament_year": 1998,
+        "confederation": "CAF",
+        "teams": 3,
+        "player_rows": 67,
+        "average_height_cm": 180.71,
+        "average_age": 26.45
+      },
+      {
+        "tournament_year": 1998,
+        "confederation": "CONMEBOL",
+        "teams": 4,
+        "player_rows": 88,
+        "average_height_cm": 178.94,
+        "average_age": 27.3
+      },
+      {
+        "tournament_year": 1998,
+        "confederation": "AFC",
+        "teams": 3,
+        "player_rows": 67,
+        "average_height_cm": 178.68,
+        "average_age": 26.25
+      },
+      {
+        "tournament_year": 1998,
+        "confederation": "CONCACAF",
+        "teams": 1,
+        "player_rows": 22,
+        "average_height_cm": 175.9,
+        "average_age": 27.36
+      },
+      {
+        "tournament_year": 2002,
+        "confederation": "UEFA",
+        "teams": 9,
+        "player_rows": 207,
+        "average_height_cm": 182.54,
+        "average_age": 28.04
+      },
+      {
+        "tournament_year": 2002,
+        "confederation": "CAF",
+        "teams": 3,
+        "player_rows": 70,
+        "average_height_cm": 180.51,
+        "average_age": 26.58
+      },
+      {
+        "tournament_year": 2002,
+        "confederation": "CONMEBOL",
+        "teams": 5,
+        "player_rows": 115,
+        "average_height_cm": 178.98,
+        "average_age": 27.48
+      },
+      {
+        "tournament_year": 2002,
+        "confederation": "AFC",
+        "teams": 2,
+        "player_rows": 47,
+        "average_height_cm": 178.43,
+        "average_age": 26.03
+      },
+      {
+        "tournament_year": 2002,
+        "confederation": "CONCACAF",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 177.74,
+        "average_age": 28.99
+      },
+      {
+        "tournament_year": 2006,
+        "confederation": "UEFA",
+        "teams": 10,
+        "player_rows": 230,
+        "average_height_cm": 183.39,
+        "average_age": 27.38
+      },
+      {
+        "tournament_year": 2006,
+        "confederation": "OFC",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 181.86,
+        "average_age": 28.49
+      },
+      {
+        "tournament_year": 2006,
+        "confederation": "CAF",
+        "teams": 3,
+        "player_rows": 69,
+        "average_height_cm": 181.32,
+        "average_age": 26.16
+      },
+      {
+        "tournament_year": 2006,
+        "confederation": "AFC",
+        "teams": 3,
+        "player_rows": 69,
+        "average_height_cm": 180.45,
+        "average_age": 27.16
+      },
+      {
+        "tournament_year": 2006,
+        "confederation": "CONCACAF",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 178.71,
+        "average_age": 27.84
+      },
+      {
+        "tournament_year": 2006,
+        "confederation": "CONMEBOL",
+        "teams": 4,
+        "player_rows": 92,
+        "average_height_cm": 177.35,
+        "average_age": 27.37
+      },
+      {
+        "tournament_year": 2010,
+        "confederation": "OFC",
+        "teams": 2,
+        "player_rows": 46,
+        "average_height_cm": 183.21,
+        "average_age": 28.45
+      },
+      {
+        "tournament_year": 2010,
+        "confederation": "UEFA",
+        "teams": 7,
+        "player_rows": 161,
+        "average_height_cm": 182.4,
+        "average_age": 27.46
+      },
+      {
+        "tournament_year": 2010,
+        "confederation": "CONMEBOL",
+        "teams": 4,
+        "player_rows": 92,
+        "average_height_cm": 180.97,
+        "average_age": 28.15
+      },
+      {
+        "tournament_year": 2010,
+        "confederation": "CAF",
+        "teams": 4,
+        "player_rows": 92,
+        "average_height_cm": 180.47,
+        "average_age": 26.4
+      },
+      {
+        "tournament_year": 2010,
+        "confederation": "AFC",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 179.9,
+        "average_age": 28.25
+      },
+      {
+        "tournament_year": 2010,
+        "confederation": "CONCACAF",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 178.2,
+        "average_age": 27.57
+      },
+      {
+        "tournament_year": 2014,
+        "confederation": "UEFA",
+        "teams": 10,
+        "player_rows": 230,
+        "average_height_cm": 183.67,
+        "average_age": 26.93
+      },
+      {
+        "tournament_year": 2014,
+        "confederation": "AFC",
+        "teams": 2,
+        "player_rows": 46,
+        "average_height_cm": 181.15,
+        "average_age": 27.87
+      },
+      {
+        "tournament_year": 2014,
+        "confederation": "OFC",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 180.84,
+        "average_age": 26.36
+      },
+      {
+        "tournament_year": 2014,
+        "confederation": "CAF",
+        "teams": 3,
+        "player_rows": 69,
+        "average_height_cm": 180.55,
+        "average_age": 26.63
+      },
+      {
+        "tournament_year": 2014,
+        "confederation": "CONMEBOL",
+        "teams": 5,
+        "player_rows": 115,
+        "average_height_cm": 179.39,
+        "average_age": 28.21
+      },
+      {
+        "tournament_year": 2014,
+        "confederation": "CONCACAF",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 178.14,
+        "average_age": 27.26
+      },
+      {
+        "tournament_year": 2018,
+        "confederation": "UEFA",
+        "teams": 9,
+        "player_rows": 207,
+        "average_height_cm": 183.43,
+        "average_age": 27.44
+      },
+      {
+        "tournament_year": 2018,
+        "confederation": "CAF",
+        "teams": 4,
+        "player_rows": 92,
+        "average_height_cm": 182.76,
+        "average_age": 27.43
+      },
+      {
+        "tournament_year": 2018,
+        "confederation": "CONCACAF",
+        "teams": 2,
+        "player_rows": 46,
+        "average_height_cm": 181.16,
+        "average_age": 29.06
+      },
+      {
+        "tournament_year": 2018,
+        "confederation": "OFC",
+        "teams": 1,
+        "player_rows": 23,
+        "average_height_cm": 180.87,
+        "average_age": 28.14
+      },
+      {
+        "tournament_year": 2018,
+        "confederation": "AFC",
+        "teams": 4,
+        "player_rows": 92,
+        "average_height_cm": 180.73,
+        "average_age": 28.08
+      },
+      {
+        "tournament_year": 2018,
+        "confederation": "CONMEBOL",
+        "teams": 4,
+        "player_rows": 92,
+        "average_height_cm": 180.29,
+        "average_age": 28.66
+      },
+      {
+        "tournament_year": 2022,
+        "confederation": "UEFA",
+        "teams": 9,
+        "player_rows": 234,
+        "average_height_cm": 183.69,
+        "average_age": 27.28
+      },
+      {
+        "tournament_year": 2022,
+        "confederation": "CAF",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 182.52,
+        "average_age": 26.75
+      },
+      {
+        "tournament_year": 2022,
+        "confederation": "CONCACAF",
+        "teams": 3,
+        "player_rows": 78,
+        "average_height_cm": 181.07,
+        "average_age": 27.36
+      },
+      {
+        "tournament_year": 2022,
+        "confederation": "OFC",
+        "teams": 1,
+        "player_rows": 26,
+        "average_height_cm": 180.96,
+        "average_age": 27.62
+      },
+      {
+        "tournament_year": 2022,
+        "confederation": "AFC",
+        "teams": 5,
+        "player_rows": 129,
+        "average_height_cm": 180.74,
+        "average_age": 28.23
+      },
+      {
+        "tournament_year": 2022,
+        "confederation": "CONMEBOL",
+        "teams": 4,
+        "player_rows": 104,
+        "average_height_cm": 180.42,
+        "average_age": 27.78
+      },
+      {
+        "tournament_year": 2026,
+        "confederation": "UEFA",
+        "teams": 16,
+        "player_rows": 416,
+        "average_height_cm": 184.96,
+        "average_age": 27.67
+      },
+      {
+        "tournament_year": 2026,
+        "confederation": "OFC",
+        "teams": 2,
+        "player_rows": 52,
+        "average_height_cm": 183.89,
+        "average_age": 27.74
+      },
+      {
+        "tournament_year": 2026,
+        "confederation": "CONCACAF",
+        "teams": 6,
+        "player_rows": 155,
+        "average_height_cm": 182.46,
+        "average_age": 28.0
+      },
+      {
+        "tournament_year": 2026,
+        "confederation": "CAF",
+        "teams": 10,
+        "player_rows": 260,
+        "average_height_cm": 182.26,
+        "average_age": 27.44
+      },
+      {
+        "tournament_year": 2026,
+        "confederation": "AFC",
+        "teams": 8,
+        "player_rows": 208,
+        "average_height_cm": 181.02,
+        "average_age": 28.54
+      },
+      {
+        "tournament_year": 2026,
+        "confederation": "CONMEBOL",
+        "teams": 6,
+        "player_rows": 156,
+        "average_height_cm": 180.48,
+        "average_age": 28.7
+      }
+    ],
+    "country_history_2026": [
+      {
+        "country": "Algeria",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 177.56,
+        "baseline_average_age": 28.27,
+        "height_delta_cm": 4.03,
+        "age_delta_years": -1.41
+      },
+      {
+        "country": "Argentina",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 179.85,
+        "baseline_average_age": 27.86,
+        "height_delta_cm": -1.13,
+        "age_delta_years": 1.19
+      },
+      {
+        "country": "Australia",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 180.96,
+        "baseline_average_age": 27.62,
+        "height_delta_cm": 3.9,
+        "age_delta_years": -0.26
+      },
+      {
+        "country": "Austria",
+        "baseline_tournament_year": 1998,
+        "baseline_average_height_cm": 183.25,
+        "baseline_average_age": 29.76,
+        "height_delta_cm": 0.62,
+        "age_delta_years": -1.22
+      },
+      {
+        "country": "Belgium",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 180.57,
+        "baseline_average_age": 29.41,
+        "height_delta_cm": 5.71,
+        "age_delta_years": -1.8
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "baseline_tournament_year": 2014,
+        "baseline_average_height_cm": 186.0,
+        "baseline_average_age": 27.06,
+        "height_delta_cm": 7.0,
+        "age_delta_years": -0.64
+      },
+      {
+        "country": "Brazil",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 180.33,
+        "baseline_average_age": 27.84,
+        "height_delta_cm": 2.25,
+        "age_delta_years": 1.36
+      },
+      {
+        "country": "Canada",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 179.45,
+        "baseline_average_age": 25.99,
+        "height_delta_cm": 4.59,
+        "age_delta_years": 1.11
+      },
+      {
+        "country": "Cape Verde",
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Colombia",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 176.8,
+        "baseline_average_age": 27.39,
+        "height_delta_cm": 2.49,
+        "age_delta_years": 2.7
+      },
+      {
+        "country": "Croatia",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 184.54,
+        "baseline_average_age": 27.91,
+        "height_delta_cm": -0.82,
+        "age_delta_years": 0.42
+      },
+      {
+        "country": "Curaçao",
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Czech Republic",
+        "baseline_tournament_year": 2006,
+        "baseline_average_height_cm": 188.5,
+        "baseline_average_age": 28.88,
+        "height_delta_cm": 0.17,
+        "age_delta_years": -1.26
+      },
+      {
+        "country": "DR Congo",
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Ecuador",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 180.5,
+        "baseline_average_age": 26.07,
+        "height_delta_cm": -0.73,
+        "age_delta_years": 0.01
+      },
+      {
+        "country": "Egypt",
+        "baseline_tournament_year": 2018,
+        "baseline_average_height_cm": 181.23,
+        "baseline_average_age": 28.98,
+        "height_delta_cm": -0.87,
+        "age_delta_years": 0.08
+      },
+      {
+        "country": "England",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 180.62,
+        "baseline_average_age": 26.81,
+        "height_delta_cm": 3.83,
+        "age_delta_years": 0.33
+      },
+      {
+        "country": "France",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 178.89,
+        "baseline_average_age": 27.96,
+        "height_delta_cm": 7.3,
+        "age_delta_years": -0.96
+      },
+      {
+        "country": "Germany",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 183.62,
+        "baseline_average_age": 29.0,
+        "height_delta_cm": 1.28,
+        "age_delta_years": -1.02
+      },
+      {
+        "country": "Ghana",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 179.46,
+        "baseline_average_age": 25.3,
+        "height_delta_cm": 2.76,
+        "age_delta_years": 1.68
+      },
+      {
+        "country": "Haiti",
+        "baseline_tournament_year": 1974,
+        "baseline_average_height_cm": 182.0,
+        "baseline_average_age": 26.05,
+        "height_delta_cm": -0.38,
+        "age_delta_years": 1.52
+      },
+      {
+        "country": "Iran",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 183.72,
+        "baseline_average_age": 29.42,
+        "height_delta_cm": -0.94,
+        "age_delta_years": 0.91
+      },
+      {
+        "country": "Iraq",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 186.0,
+        "baseline_average_age": 26.95,
+        "height_delta_cm": -2.68,
+        "age_delta_years": 0.2
+      },
+      {
+        "country": "Ivory Coast",
+        "baseline_tournament_year": 2014,
+        "baseline_average_height_cm": 180.86,
+        "baseline_average_age": 27.83,
+        "height_delta_cm": 3.81,
+        "age_delta_years": -1.98
+      },
+      {
+        "country": "Japan",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 179.88,
+        "baseline_average_age": 28.24,
+        "height_delta_cm": 1.52,
+        "age_delta_years": -0.49
+      },
+      {
+        "country": "Jordan",
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      },
+      {
+        "country": "Mexico",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 179.33,
+        "baseline_average_age": 28.29,
+        "height_delta_cm": 0.38,
+        "age_delta_years": -0.39
+      },
+      {
+        "country": "Morocco",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 181.28,
+        "baseline_average_age": 26.65,
+        "height_delta_cm": 2.37,
+        "age_delta_years": -0.26
+      },
+      {
+        "country": "Netherlands",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 182.76,
+        "baseline_average_age": 27.38,
+        "height_delta_cm": 2.28,
+        "age_delta_years": 0.36
+      },
+      {
+        "country": "New Zealand",
+        "baseline_tournament_year": 2010,
+        "baseline_average_height_cm": 184.89,
+        "baseline_average_age": 27.87,
+        "height_delta_cm": -1.85,
+        "age_delta_years": 0.25
+      },
+      {
+        "country": "Norway",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 185.79,
+        "baseline_average_age": 26.95,
+        "height_delta_cm": 0.15,
+        "age_delta_years": -0.14
+      },
+      {
+        "country": "Panama",
+        "baseline_tournament_year": 2018,
+        "baseline_average_height_cm": 182.91,
+        "baseline_average_age": 28.87,
+        "height_delta_cm": -2.21,
+        "age_delta_years": 1.56
+      },
+      {
+        "country": "Paraguay",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 178.0,
+        "baseline_average_age": 26.75,
+        "height_delta_cm": 1.17,
+        "age_delta_years": 2.28
+      },
+      {
+        "country": "Portugal",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 177.0,
+        "baseline_average_age": 27.93,
+        "height_delta_cm": 4.1,
+        "age_delta_years": 0.11
+      },
+      {
+        "country": "Qatar",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 180.08,
+        "baseline_average_age": 27.53,
+        "height_delta_cm": 0.24,
+        "age_delta_years": 1.98
+      },
+      {
+        "country": "Saudi Arabia",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 178.83,
+        "baseline_average_age": 24.23,
+        "height_delta_cm": -1.63,
+        "age_delta_years": 4.29
+      },
+      {
+        "country": "Scotland",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 178.75,
+        "baseline_average_age": 27.57,
+        "height_delta_cm": 7.45,
+        "age_delta_years": 1.64
+      },
+      {
+        "country": "Senegal",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 184.92,
+        "baseline_average_age": 26.46,
+        "height_delta_cm": 0.23,
+        "age_delta_years": 0.63
+      },
+      {
+        "country": "South Africa",
+        "baseline_tournament_year": 2010,
+        "baseline_average_height_cm": 178.71,
+        "baseline_average_age": 27.31,
+        "height_delta_cm": -0.66,
+        "age_delta_years": -0.5
+      },
+      {
+        "country": "South Korea",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 181.12,
+        "baseline_average_age": 28.17,
+        "height_delta_cm": 0.72,
+        "age_delta_years": -0.11
+      },
+      {
+        "country": "Spain",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 181.75,
+        "baseline_average_age": 26.67,
+        "height_delta_cm": 0.46,
+        "age_delta_years": 0.08
+      },
+      {
+        "country": "Sweden",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 183.28,
+        "baseline_average_age": 25.73,
+        "height_delta_cm": 1.29,
+        "age_delta_years": 1.82
+      },
+      {
+        "country": "Switzerland",
+        "baseline_tournament_year": 1994,
+        "baseline_average_height_cm": 179.87,
+        "baseline_average_age": 28.36,
+        "height_delta_cm": 5.52,
+        "age_delta_years": -0.05
+      },
+      {
+        "country": "Tunisia",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 182.69,
+        "baseline_average_age": 28.54,
+        "height_delta_cm": 1.02,
+        "age_delta_years": -1.89
+      },
+      {
+        "country": "Turkey",
+        "baseline_tournament_year": 2002,
+        "baseline_average_height_cm": 177.33,
+        "baseline_average_age": 28.04,
+        "height_delta_cm": 10.27,
+        "age_delta_years": -0.37
+      },
+      {
+        "country": "United States",
+        "baseline_tournament_year": 2022,
+        "baseline_average_height_cm": 182.7,
+        "baseline_average_age": 25.59,
+        "height_delta_cm": 0.72,
+        "age_delta_years": 1.32
+      },
+      {
+        "country": "Uruguay",
+        "baseline_tournament_year": 1986,
+        "baseline_average_height_cm": 176.57,
+        "baseline_average_age": 26.63,
+        "height_delta_cm": 5.35,
+        "age_delta_years": 2.11
+      },
+      {
+        "country": "Uzbekistan",
+        "baseline_tournament_year": null,
+        "baseline_average_height_cm": null,
+        "baseline_average_age": null,
+        "height_delta_cm": null,
+        "age_delta_years": null
+      }
+    ],
+    "position_trends": [
+      {
+        "tournament_year": 1990,
+        "position": "Defender",
+        "average_height_cm": 181.04,
+        "player_rows": 175
+      },
+      {
+        "tournament_year": 1990,
+        "position": "Forward",
+        "average_height_cm": 179.43,
+        "player_rows": 115
+      },
+      {
+        "tournament_year": 1990,
+        "position": "Goalkeeper",
+        "average_height_cm": 185.84,
+        "player_rows": 71
+      },
+      {
+        "tournament_year": 1990,
+        "position": "Midfielder",
+        "average_height_cm": 177.65,
+        "player_rows": 168
+      },
+      {
+        "tournament_year": 1990,
+        "position": "unspecified",
+        "average_height_cm": 193.0,
+        "player_rows": 1
+      },
+      {
+        "tournament_year": 1994,
+        "position": "Defender",
+        "average_height_cm": 181.39,
+        "player_rows": 176
+      },
+      {
+        "tournament_year": 1994,
+        "position": "Forward",
+        "average_height_cm": 180.16,
+        "player_rows": 115
+      },
+      {
+        "tournament_year": 1994,
+        "position": "Goalkeeper",
+        "average_height_cm": 186.25,
+        "player_rows": 69
+      },
+      {
+        "tournament_year": 1994,
+        "position": "Midfielder",
+        "average_height_cm": 177.72,
+        "player_rows": 168
+      },
+      {
+        "tournament_year": 1994,
+        "position": "unspecified",
+        "average_height_cm": null,
+        "player_rows": 1
+      },
+      {
+        "tournament_year": 1998,
+        "position": "Defender",
+        "average_height_cm": 182.01,
+        "player_rows": 219
+      },
+      {
+        "tournament_year": 1998,
+        "position": "Forward",
+        "average_height_cm": 179.91,
+        "player_rows": 148
+      },
+      {
+        "tournament_year": 1998,
+        "position": "Goalkeeper",
+        "average_height_cm": 186.79,
+        "player_rows": 90
+      },
+      {
+        "tournament_year": 1998,
+        "position": "Midfielder",
+        "average_height_cm": 178.98,
+        "player_rows": 226
+      },
+      {
+        "tournament_year": 1998,
+        "position": "unspecified",
+        "average_height_cm": null,
+        "player_rows": 1
+      },
+      {
+        "tournament_year": 2002,
+        "position": "Defender",
+        "average_height_cm": 182.45,
+        "player_rows": 231
+      },
+      {
+        "tournament_year": 2002,
+        "position": "Forward",
+        "average_height_cm": 180.51,
+        "player_rows": 166
+      },
+      {
+        "tournament_year": 2002,
+        "position": "Goalkeeper",
+        "average_height_cm": 186.09,
+        "player_rows": 96
+      },
+      {
+        "tournament_year": 2002,
+        "position": "Midfielder",
+        "average_height_cm": 178.08,
+        "player_rows": 245
+      },
+      {
+        "tournament_year": 2006,
+        "position": "Defender",
+        "average_height_cm": 182.75,
+        "player_rows": 238
+      },
+      {
+        "tournament_year": 2006,
+        "position": "Forward",
+        "average_height_cm": 181.23,
+        "player_rows": 166
+      },
+      {
+        "tournament_year": 2006,
+        "position": "Goalkeeper",
+        "average_height_cm": 188.79,
+        "player_rows": 96
+      },
+      {
+        "tournament_year": 2006,
+        "position": "Midfielder",
+        "average_height_cm": 178.63,
+        "player_rows": 236
+      },
+      {
+        "tournament_year": 2006,
+        "position": "unspecified",
+        "average_height_cm": null,
+        "player_rows": 1
+      },
+      {
+        "tournament_year": 2010,
+        "position": "Defender",
+        "average_height_cm": 182.62,
+        "player_rows": 239
+      },
+      {
+        "tournament_year": 2010,
+        "position": "Forward",
+        "average_height_cm": 181.52,
+        "player_rows": 167
+      },
+      {
+        "tournament_year": 2010,
+        "position": "Goalkeeper",
+        "average_height_cm": 187.02,
+        "player_rows": 96
+      },
+      {
+        "tournament_year": 2010,
+        "position": "Midfielder",
+        "average_height_cm": 178.75,
+        "player_rows": 234
+      },
+      {
+        "tournament_year": 2014,
+        "position": "Defender",
+        "average_height_cm": 183.38,
+        "player_rows": 230
+      },
+      {
+        "tournament_year": 2014,
+        "position": "Forward",
+        "average_height_cm": 180.99,
+        "player_rows": 160
+      },
+      {
+        "tournament_year": 2014,
+        "position": "Goalkeeper",
+        "average_height_cm": 188.38,
+        "player_rows": 96
+      },
+      {
+        "tournament_year": 2014,
+        "position": "Midfielder",
+        "average_height_cm": 178.6,
+        "player_rows": 250
+      },
+      {
+        "tournament_year": 2018,
+        "position": "Defender",
+        "average_height_cm": 183.31,
+        "player_rows": 246
+      },
+      {
+        "tournament_year": 2018,
+        "position": "Forward",
+        "average_height_cm": 181.3,
+        "player_rows": 158
+      },
+      {
+        "tournament_year": 2018,
+        "position": "Goalkeeper",
+        "average_height_cm": 188.81,
+        "player_rows": 96
+      },
+      {
+        "tournament_year": 2018,
+        "position": "Midfielder",
+        "average_height_cm": 179.79,
+        "player_rows": 236
+      },
+      {
+        "tournament_year": 2022,
+        "position": "Defender",
+        "average_height_cm": 183.07,
+        "player_rows": 272
+      },
+      {
+        "tournament_year": 2022,
+        "position": "Forward",
+        "average_height_cm": 181.01,
+        "player_rows": 188
+      },
+      {
+        "tournament_year": 2022,
+        "position": "Goalkeeper",
+        "average_height_cm": 190.0,
+        "player_rows": 99
+      },
+      {
+        "tournament_year": 2022,
+        "position": "Midfielder",
+        "average_height_cm": 179.82,
+        "player_rows": 272
+      },
+      {
+        "tournament_year": 2026,
+        "position": "Defender",
+        "average_height_cm": 184.05,
+        "player_rows": 421
+      },
+      {
+        "tournament_year": 2026,
+        "position": "Forward",
+        "average_height_cm": 181.38,
+        "player_rows": 311
+      },
+      {
+        "tournament_year": 2026,
+        "position": "Goalkeeper",
+        "average_height_cm": 189.14,
+        "player_rows": 145
+      },
+      {
+        "tournament_year": 2026,
+        "position": "Midfielder",
+        "average_height_cm": 179.93,
+        "player_rows": 370
+      }
+    ],
+    "position_share_trends": [
+      {
+        "tournament_year": 1990,
+        "Goalkeeper": 13.4,
+        "Defender": 33.02,
+        "Midfielder": 31.7,
+        "Forward": 21.7
+      },
+      {
+        "tournament_year": 1994,
+        "Goalkeeper": 13.04,
+        "Defender": 33.27,
+        "Midfielder": 31.76,
+        "Forward": 21.74
+      },
+      {
+        "tournament_year": 1998,
+        "Goalkeeper": 13.16,
+        "Defender": 32.02,
+        "Midfielder": 33.04,
+        "Forward": 21.64
+      },
+      {
+        "tournament_year": 2002,
+        "Goalkeeper": 13.01,
+        "Defender": 31.3,
+        "Midfielder": 33.2,
+        "Forward": 22.49
+      },
+      {
+        "tournament_year": 2006,
+        "Goalkeeper": 13.03,
+        "Defender": 32.29,
+        "Midfielder": 32.02,
+        "Forward": 22.52
+      },
+      {
+        "tournament_year": 2010,
+        "Goalkeeper": 13.04,
+        "Defender": 32.47,
+        "Midfielder": 31.79,
+        "Forward": 22.69
+      },
+      {
+        "tournament_year": 2014,
+        "Goalkeeper": 13.04,
+        "Defender": 31.25,
+        "Midfielder": 33.97,
+        "Forward": 21.74
+      },
+      {
+        "tournament_year": 2018,
+        "Goalkeeper": 13.04,
+        "Defender": 33.42,
+        "Midfielder": 32.07,
+        "Forward": 21.47
+      },
+      {
+        "tournament_year": 2022,
+        "Goalkeeper": 11.91,
+        "Defender": 32.73,
+        "Midfielder": 32.73,
+        "Forward": 22.62
+      },
+      {
+        "tournament_year": 2026,
+        "Goalkeeper": 11.63,
+        "Defender": 33.76,
+        "Midfielder": 29.67,
+        "Forward": 24.94
+      }
+    ],
+    "story_manifest": [
+      {
+        "slug": "world-cup-players-have-grown-taller",
+        "headline": "World Cup players have grown taller",
+        "metric": "average_height_cm",
+        "summary": "Average listed height rises from 173.90 cm in 1930 to 182.76 cm in 2026."
+      },
+      {
+        "slug": "world-cup-squads-are-older-now",
+        "headline": "World Cup squads are older now",
+        "metric": "average_age",
+        "summary": "Average age rises from 24.83 years in 1930 to 27.94 in 2026."
+      },
+      {
+        "slug": "tallest-team-2026",
+        "headline": "Bosnia and Herzegovina is the tallest 2026 squad in the file",
+        "metric": "average_height_cm",
+        "summary": "Bosnia and Herzegovina averages 193.00 cm."
+      },
+      {
+        "slug": "oldest-team-2026",
+        "headline": "Panama is the oldest 2026 squad in the file",
+        "metric": "average_age",
+        "summary": "Panama averages 30.43 years."
+      },
+      {
+        "slug": "group-physical-profile",
+        "headline": "Group B is the tallest group on average",
+        "metric": "group_average_height_cm",
+        "summary": "Group B averages 185.69 cm, while Group K is oldest at 28.93 years."
+      },
+      {
+        "slug": "uefa-height-edge",
+        "headline": "UEFA enters 2026 with the tallest confederation profile",
+        "metric": "confederation_average_height_cm",
+        "summary": "UEFA teams average 185.57 cm, ahead of CONMEBOL at 180.24 cm and the rest of the field."
+      },
+      {
+        "slug": "old-vs-big-groups",
+        "headline": "The oldest groups are not always the tallest ones",
+        "metric": "group_average_age",
+        "summary": "Group K leads on age at 28.93 years, while Group B leads on height."
+      },
+      {
+        "slug": "country-body-shifts",
+        "headline": "Some 2026 teams changed physically far more than others",
+        "metric": "height_delta_cm",
+        "summary": "The country comparison module shows which squads are much taller or older than their nearest 1994 or 1986 benchmark, and which ones barely moved."
+      }
+    ]
+  }
+}

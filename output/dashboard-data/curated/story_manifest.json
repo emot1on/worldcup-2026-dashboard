@@ -1,0 +1,53 @@
+{
+  "fetched_at_utc": "2026-06-02T15:23:08.569908+00:00",
+  "data": [
+    {
+      "slug": "world-cup-players-have-grown-taller",
+      "headline": "World Cup players have grown taller",
+      "metric": "average_height_cm",
+      "summary": "Average listed height rises from 173.90 cm in 1930 to 182.76 cm in 2026."
+    },
+    {
+      "slug": "world-cup-squads-are-older-now",
+      "headline": "World Cup squads are older now",
+      "metric": "average_age",
+      "summary": "Average age rises from 24.83 years in 1930 to 27.94 in 2026."
+    },
+    {
+      "slug": "tallest-team-2026",
+      "headline": "Bosnia and Herzegovina is the tallest 2026 squad in the file",
+      "metric": "average_height_cm",
+      "summary": "Bosnia and Herzegovina averages 193.00 cm."
+    },
+    {
+      "slug": "oldest-team-2026",
+      "headline": "Panama is the oldest 2026 squad in the file",
+      "metric": "average_age",
+      "summary": "Panama averages 30.43 years."
+    },
+    {
+      "slug": "group-physical-profile",
+      "headline": "Group B is the tallest group on average",
+      "metric": "group_average_height_cm",
+      "summary": "Group B averages 185.69 cm, while Group K is oldest at 28.93 years."
+    },
+    {
+      "slug": "uefa-height-edge",
+      "headline": "UEFA enters 2026 with the tallest confederation profile",
+      "metric": "confederation_average_height_cm",
+      "summary": "UEFA teams average 185.57 cm, ahead of CONMEBOL at 180.24 cm and the rest of the field."
+    },
+    {
+      "slug": "old-vs-big-groups",
+      "headline": "The oldest groups are not always the tallest ones",
+      "metric": "group_average_age",
+      "summary": "Group K leads on age at 28.93 years, while Group B leads on height."
+    },
+    {
+      "slug": "country-body-shifts",
+      "headline": "Some 2026 teams changed physically far more than others",
+      "metric": "height_delta_cm",
+      "summary": "The country comparison module shows which squads are much taller or older than their nearest 1994 or 1986 benchmark, and which ones barely moved."
+    }
+  ]
+}

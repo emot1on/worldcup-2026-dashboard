@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Cup Players Height</title>
+  <style>
+    :root {
+      --bg: #f3f0ea;
+      --panel: #faf7f2;
+      --text: #2f2a24;
+      --muted: #6b655f;
+      --line: #8c5a4b;
+      --rule: #d8d2c8;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin: 0 0 10px;
+    }
+    .deck {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 28px;
+      max-width: 52rem;
+    }
+    figure {
+      margin: 0;
+      background: var(--panel);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      padding: 18px 18px 12px;
+    }
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    figcaption {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 26px 0;
+    }
+    .stat {
+      background: var(--panel);
+      border-top: 3px solid var(--line);
+      padding: 14px 16px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+    .note {
+      padding: 14px 16px;
+      background: #ebe5dc;
+      border-left: 4px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>World Cup players have grown taller</h1>
+    <p class="deck">Average listed height of players in the dataset has risen steadily from the early tournaments to the modern era, with the series climbing by 8.9 cm between 1930 and 2026.</p>
+    <figure>
+      <img src="worldcup-average-height-ft.png" alt="Financial Times style chart showing average height of World Cup players over time">
+      <figcaption>Source: WorldCup_players_all_data.csv. Rendered from a local Matplotlib script for easy export to static sites.</figcaption>
+    </figure>
+    <section class="stats">
+      <div class="stat"><strong>173.9 cm</strong>1930 average</div>
+      <div class="stat"><strong>182.8 cm</strong>2026 average</div>
+      <div class="stat"><strong>6,419</strong>player rows with height data</div>
+    </section>
+    <p class="note"><strong>Note:</strong> The 2026 row is included in the source file, but its tournament start date is June 11, 2026, so it should be treated as a dataset cohort rather than completed tournament history.</p>
+  </main>
+</body>
+</html>

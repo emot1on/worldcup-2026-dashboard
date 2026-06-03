@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Cup player trends report</title>
+  <style>
+    :root {
+      --bg: #f3f0ea;
+      --panel: #faf7f2;
+      --text: #2f2a24;
+      --muted: #6b655f;
+      --rule: #d8d2c8;
+      --accent: #8c5a4b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+    .deck {
+      max-width: 60rem;
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin: 0 0 28px;
+    }
+    .note {
+      background: #ebe5dc;
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      margin: 0 0 28px;
+    }
+    .lede-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 28px 0 40px;
+    }
+    .card {
+      background: var(--panel);
+      border-top: 3px solid var(--accent);
+      padding: 14px 16px;
+    }
+    .card strong {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1.05;
+      margin-bottom: 6px;
+    }
+    section {
+      margin: 44px 0 54px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    p {
+      margin: 0 0 14px;
+      max-width: 58rem;
+    }
+    figure {
+      margin: 20px 0 0;
+      background: var(--panel);
+      padding: 12px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0 0;
+      background: var(--panel);
+      font-size: 0.98rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    th {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      background: rgba(0,0,0,0.02);
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .two-up {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+    @media (min-width: 980px) {
+      .two-up {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>World Cup player trends, in one file</h1>
+    <p class="deck">The sharpest headline is simple: the source file's 2026 cohort is both the tallest on record and, when rounded to one decimal place, tied with 2018 for the oldest average squad age. Average player height rises by 8.9 cm, or 5.1%, from 1930 to the 2026 row, while average age moves from 24.8 to 27.9 years and then mostly plateaus from 1994 onward.</p>
+    <p class="note"><strong>Dataset note:</strong> the source file already includes a 2026 row even though the tournament start date in the same file is June 11, 2026. In this report, 2026 is treated as a dataset cohort, not completed tournament history.</p>
+    <div class="lede-grid">
+      <div class="card"><strong>182.8 cm in 2026</strong>The tallest tournament row in the dataset, up 8.9 cm from 1930.</div>
+      <div class="card"><strong>27.94 years in 2026</strong>Oldest average age in the file, effectively tied with 2018 when rounded to one decimal.</div>
+      <div class="card"><strong>26.12 to 30.14 years</strong>Average goalkeeper age from 1930 to 2022.</div>
+      <div class="card"><strong>13 to 48 countries</strong>Representation growth from the first World Cup to the dataset's 2026 row.</div>
+    </div>
+
+    <section>
+      <h2>1. Players have grown taller, but early height coverage is thin</h2>
+      <p>The direction is clear enough. Average listed height rises from 173.9 cm in 1930 to 182.8 cm in the source file's 2026 row, a gain of 8.9 cm or 5.1%. The catch is coverage: only 28 of 222 player rows in 1930 include height, or 12.6%. By 2022 that becomes 826 of 831, or 99.4%.</p>
+      <figure>
+        <img src="worldcup-average-height-ft.png" alt="Average World Cup player height over time">
+        <figcaption>The trend is real. The exact early levels are less secure than the late ones.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>2. Squads are older now</h2>
+      <p>This is one of the cleaner findings in the file because age coverage is far stronger than height coverage. Average age climbs from 24.83 years in 1930 to 27.45 in 2022, with the dataset's 2026 row at 27.94. The more interesting twist is that the series mostly settles into a narrow band from 1994 onward rather than rising cleanly every cycle.</p>
+      <figure>
+        <img src="worldcup-average-age-ft.png" alt="Average squad age over time">
+        <figcaption>The general direction is up, even if the series flattens in some tournaments.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>3. Goalkeepers have aged more than anyone else</h2>
+      <p>The role-specific version is sharper. Average goalkeeper age goes from 26.12 years in 1930 to 30.14 in 2022. That supports a simple reading: elite keepers are staying useful later, and teams tolerate age in goal more than they do elsewhere.</p>
+      <figure>
+        <img src="worldcup-goalkeeper-age-ft.png" alt="Average goalkeeper age over time">
+        <figcaption>Goalkeepers stand out as the clearest aging story in the dataset.</figcaption>
+      </figure>
+      <table>
+        <thead>
+          <tr>
+            <th>Tournament year</th>
+            <th>Average goalkeeper age</th>
+            <th>Goalkeeper rows</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1930</td>
+            <td>26.12</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>1982</td>
+            <td>28.53</td>
+            <td>72</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>30.14</td>
+            <td>99</td>
+          </tr>
+          <tr>
+            <td>2026 dataset row</td>
+            <td>30.29</td>
+            <td>145</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>4. The tournament has expanded dramatically</h2>
+      <p>Any raw count story has to be read through tournament expansion. The dataset goes from 13 represented countries in 1930 to 48 in the 2026 row, with intermediate steps like 16 in 1954, 24 in 1982, 31 in 1998 and 32 in 2022. That changes the baseline for everything from player totals to positional depth.</p>
+      <figure>
+        <img src="worldcup-countries-per-tournament-ft.png" alt="Countries represented per tournament">
+        <figcaption>More teams means a wider funnel of player types, ages and physical profiles.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>5. The old forward-heavy squad mix has faded</h2>
+      <p>The 1930 tournament looks like a different sport in squad construction terms. Forwards accounted for 43.7% of listed positions in 1930. By 2022 that drops to 22.6%, while defenders and midfielders each sit above 32%.</p>
+      <figure>
+        <img src="worldcup-position-shares-ft.png" alt="Position shares over time">
+        <figcaption>This is a tidy proxy for tactical change without overclaiming too much from the raw file.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>6. Every position has grown taller</h2>
+      <p>This is the best follow-up to the headline height chart because it shows the pattern is broad rather than just a goalkeeper artifact. From 1930 to 2022, listed average height rises from 176.33 to 190.00 cm for goalkeepers, 177.03 to 183.07 for defenders, 172.80 to 179.82 for midfielders, and 171.00 to 181.01 for forwards.</p>
+      <figure>
+        <img src="worldcup-height-by-position-ft.png" alt="Average height by position over time">
+        <figcaption>The magnitude differs by role, but the direction is the same everywhere.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>7. The 2026 height spread by position looks exactly like you would expect, only more extreme</h2>
+      <p>The positional hierarchy is blunt. Goalkeepers are tallest, defenders next, then forwards, then midfielders. In the 2026 row, the averages are 189.14 cm for goalkeepers, 184.05 for defenders, 181.38 for forwards, and 179.93 for midfielders.</p>
+      <figure>
+        <img src="worldcup-height-distribution-2026-ft.png" alt="2026 height distribution by position with boxplots and points">
+        <figcaption>The boxplot-plus-dots layout makes the positional spread obvious without flattening everyone into an average.</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

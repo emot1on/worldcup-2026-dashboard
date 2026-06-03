@@ -1,0 +1,13 @@
+group,teams,player_rows,average_height_cm,average_age,tallest_team,oldest_team,height_rank,age_rank
+Group A,4,104,182.07,27.6,Czech Republic,South Korea,9,9
+Group B,4,103,185.69,27.84,Bosnia and Herzegovina,Qatar,1,7
+Group C,4,104,183.51,28.09,Scotland,Scotland,5,6
+Group D,4,104,183.76,27.74,Turkey,Paraguay,3,8
+Group E,4,104,182.9,26.98,Germany,Curaçao,7,12
+Group F,4,104,183.68,27.42,Netherlands,Japan,4,10
+Group G,4,104,183.12,28.78,Belgium,Iran,6,2
+Group H,4,104,180.64,28.42,Spain,Cape Verde,12,3
+Group I,4,104,185.15,27.01,France,Iraq,2,11
+Group J,4,104,181.06,28.22,Austria,Argentina,10,4
+Group K,4,104,180.89,28.93,DR Congo,Colombia,11,1
+Group L,4,104,182.77,28.22,England,Panama,8,4

@@ -1,0 +1,9 @@
+.DS_Store
+**/.DS_Store
+.env
+.mplconfig/
+__pycache__/
+.pytest_cache/
+
+# Keep shareable built artifacts, but not raw API pulls or local noise.
+output/dashboard-data/raw/

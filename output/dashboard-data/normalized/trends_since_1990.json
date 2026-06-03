@@ -1,0 +1,85 @@
+{
+  "fetched_at_utc": "2026-06-02T15:23:08.574462+00:00",
+  "data": [
+    {
+      "tournament_year": 1990,
+      "average_height_cm": 180.42,
+      "average_age": 26.9,
+      "player_rows": 530,
+      "countries": 24,
+      "height_coverage_pct": 51.1
+    },
+    {
+      "tournament_year": 1994,
+      "average_height_cm": 180.61,
+      "average_age": 27.36,
+      "player_rows": 529,
+      "countries": 24,
+      "height_coverage_pct": 57.7
+    },
+    {
+      "tournament_year": 1998,
+      "average_height_cm": 181.26,
+      "average_age": 27.44,
+      "player_rows": 684,
+      "countries": 31,
+      "height_coverage_pct": 60.1
+    },
+    {
+      "tournament_year": 2002,
+      "average_height_cm": 181.01,
+      "average_age": 27.44,
+      "player_rows": 738,
+      "countries": 32,
+      "height_coverage_pct": 56.8
+    },
+    {
+      "tournament_year": 2006,
+      "average_height_cm": 181.78,
+      "average_age": 27.34,
+      "player_rows": 737,
+      "countries": 32,
+      "height_coverage_pct": 57.4
+    },
+    {
+      "tournament_year": 2010,
+      "average_height_cm": 181.63,
+      "average_age": 27.34,
+      "player_rows": 736,
+      "countries": 32,
+      "height_coverage_pct": 60.2
+    },
+    {
+      "tournament_year": 2014,
+      "average_height_cm": 181.95,
+      "average_age": 27.3,
+      "player_rows": 736,
+      "countries": 32,
+      "height_coverage_pct": 56.8
+    },
+    {
+      "tournament_year": 2018,
+      "average_height_cm": 182.46,
+      "average_age": 27.9,
+      "player_rows": 736,
+      "countries": 32,
+      "height_coverage_pct": 99.5
+    },
+    {
+      "tournament_year": 2022,
+      "average_height_cm": 182.38,
+      "average_age": 27.45,
+      "player_rows": 831,
+      "countries": 32,
+      "height_coverage_pct": 99.4
+    },
+    {
+      "tournament_year": 2026,
+      "average_height_cm": 182.76,
+      "average_age": 27.94,
+      "player_rows": 1247,
+      "countries": 48,
+      "height_coverage_pct": 65.2
+    }
+  ]
+}

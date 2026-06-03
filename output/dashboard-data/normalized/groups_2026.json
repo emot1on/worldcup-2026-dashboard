@@ -1,0 +1,137 @@
+{
+  "fetched_at_utc": "2026-06-02T15:23:08.574142+00:00",
+  "data": [
+    {
+      "group": "Group A",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 182.07,
+      "average_age": 27.6,
+      "height_rank": 9,
+      "age_rank": 9,
+      "tallest_team": "Czech Republic",
+      "oldest_team": "South Korea"
+    },
+    {
+      "group": "Group B",
+      "teams": 4,
+      "player_rows": 103,
+      "average_height_cm": 185.69,
+      "average_age": 27.84,
+      "height_rank": 1,
+      "age_rank": 7,
+      "tallest_team": "Bosnia and Herzegovina",
+      "oldest_team": "Qatar"
+    },
+    {
+      "group": "Group C",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 183.51,
+      "average_age": 28.09,
+      "height_rank": 5,
+      "age_rank": 6,
+      "tallest_team": "Scotland",
+      "oldest_team": "Scotland"
+    },
+    {
+      "group": "Group D",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 183.76,
+      "average_age": 27.74,
+      "height_rank": 3,
+      "age_rank": 8,
+      "tallest_team": "Turkey",
+      "oldest_team": "Paraguay"
+    },
+    {
+      "group": "Group E",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 182.9,
+      "average_age": 26.98,
+      "height_rank": 7,
+      "age_rank": 12,
+      "tallest_team": "Germany",
+      "oldest_team": "Curaçao"
+    },
+    {
+      "group": "Group F",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 183.68,
+      "average_age": 27.42,
+      "height_rank": 4,
+      "age_rank": 10,
+      "tallest_team": "Netherlands",
+      "oldest_team": "Japan"
+    },
+    {
+      "group": "Group G",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 183.12,
+      "average_age": 28.78,
+      "height_rank": 6,
+      "age_rank": 2,
+      "tallest_team": "Belgium",
+      "oldest_team": "Iran"
+    },
+    {
+      "group": "Group H",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 180.64,
+      "average_age": 28.42,
+      "height_rank": 12,
+      "age_rank": 3,
+      "tallest_team": "Spain",
+      "oldest_team": "Cape Verde"
+    },
+    {
+      "group": "Group I",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 185.15,
+      "average_age": 27.01,
+      "height_rank": 2,
+      "age_rank": 11,
+      "tallest_team": "France",
+      "oldest_team": "Iraq"
+    },
+    {
+      "group": "Group J",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 181.06,
+      "average_age": 28.22,
+      "height_rank": 10,
+      "age_rank": 4,
+      "tallest_team": "Austria",
+      "oldest_team": "Argentina"
+    },
+    {
+      "group": "Group K",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 180.89,
+      "average_age": 28.93,
+      "height_rank": 11,
+      "age_rank": 1,
+      "tallest_team": "DR Congo",
+      "oldest_team": "Colombia"
+    },
+    {
+      "group": "Group L",
+      "teams": 4,
+      "player_rows": 104,
+      "average_height_cm": 182.77,
+      "average_age": 28.22,
+      "height_rank": 8,
+      "age_rank": 4,
+      "tallest_team": "England",
+      "oldest_team": "Panama"
+    }
+  ]
+}
