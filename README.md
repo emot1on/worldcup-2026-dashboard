@@ -1,6 +1,10 @@
-# Dataviz Lab
+# World Cup 2026 Dashboard
 
-This is a small, reproducible starting point for report-style data visualization work that can be exported to static HTML without needing a live notebook runtime.
+This repository contains a World Cup 2026 data-storytelling project built for fans and journalists. It combines report-style charting, a live-updatable dashboard shell, and a static export path that can be shipped quickly before and during the tournament.
+
+Live site:
+
+- `https://worldcup-2026-dashboard.pages.dev`
 
 ## Current shape
 
@@ -11,12 +15,15 @@ This is a small, reproducible starting point for report-style data visualization
 - `scripts/worldcup_dashboard.py`: separate World Cup dashboard surface for fans and journalists, built from the normalized bundle.
 - `docs/worldcup-dashboard-source-plan.md`: concrete data-source and dashboard plan for a pre-tournament launch that can keep updating during the World Cup.
 
-## First artifact
+## Main outputs
 
 - `scripts/worldcup_height_ft.py`: reads the World Cup players CSV and renders an FT-style Matplotlib chart.
 - `output/worldcup-height/`: generated PNG, SVG, HTML, and summary CSV artifacts.
+- `output/worldcup-report/`: static longform report outputs.
+- `output/worldcup-report-interactive/`: interactive report output.
+- `output/worldcup-dashboard/worldcup-dashboard-v2.html`: canonical dashboard build.
 
-## Run
+## Build
 
 ```bash
 ./.venv/bin/python dataviz-lab/scripts/worldcup_height_ft.py
@@ -59,6 +66,16 @@ node "/Users/emot/Documents/New project/daily-news-worker-fix/node_modules/wrang
 Token template:
 
 - `dataviz-lab/.env.example`
+
+## Publish
+
+The deployed site currently points at the canonical dashboard build:
+
+- `output/worldcup-dashboard/worldcup-dashboard-v2.html`
+
+Cloudflare Pages project:
+
+- `worldcup-2026-dashboard`
 
 ## Why this structure
 
