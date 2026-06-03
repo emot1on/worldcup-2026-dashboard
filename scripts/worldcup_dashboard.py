@@ -1095,33 +1095,42 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           </div>
         </div>
         <div class="list-card">
-          <div class="mini">Current-season output</div>
+          <div class="toolbar">
+            <div class="mini">Attack leaders</div>
+            <select id="attack-view-select">
+              <option value="goals">Top scorers</option>
+              <option value="assists">Top assisters</option>
+              <option value="contributions">Top goal contributions</option>
+              <option value="youngest-scorers">Youngest scorers</option>
+              <option value="oldest-assisters">Oldest assisters</option>
+            </select>
+          </div>
+          <p class="section-copy" id="attack-copy" style="margin-top: 10px;"></p>
           <table>
             <thead>
               <tr>
                 <th>Player</th>
-                <th class="numeric">Goals</th>
-                <th class="numeric">Assists</th>
+                <th>Team</th>
+                <th class="numeric" id="attack-metric-head">Goals</th>
+                <th class="numeric" id="attack-support-head">Assists</th>
               </tr>
             </thead>
-            <tbody id="scorer-body"></tbody>
+            <tbody id="attack-body"></tbody>
           </table>
-          <div class="stacked-block">
-            <div class="mini">Top creators</div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Player</th>
-                  <th class="numeric">Assists</th>
-                  <th class="numeric">Goals</th>
-                </tr>
-              </thead>
-              <tbody id="assister-body"></tbody>
-            </table>
-          </div>
         </div>
         <div class="list-card">
-          <div class="mini">Coach desk</div>
+          <div class="toolbar">
+            <div class="mini">Coach desk</div>
+            <select id="coach-view-select">
+              <option value="decorated">Most decorated</option>
+              <option value="oldest">Oldest coaches</option>
+              <option value="youngest">Youngest coaches</option>
+              <option value="tenure">Longest tenure</option>
+              <option value="foreign">Foreign coaches</option>
+              <option value="native">Native coaches</option>
+              <option value="former-player">Former players</option>
+            </select>
+          </div>
           <p class="section-copy" id="coach-copy" style="margin-top: 10px;"></p>
           <table>
             <thead>
@@ -1130,6 +1139,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                 <th>Team</th>
                 <th class="numeric">Age</th>
                 <th class="numeric">Titles</th>
+                <th>Tenure</th>
               </tr>
             </thead>
             <tbody id="coach-body"></tbody>
@@ -1520,8 +1530,12 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const globalClubBody = document.getElementById("global-club-body");
       const countrySelect = document.getElementById("club-country-select");
       const countryClubBody = document.getElementById("country-club-body");
-      const scorerBody = document.getElementById("scorer-body");
-      const assisterBody = document.getElementById("assister-body");
+      const attackViewSelect = document.getElementById("attack-view-select");
+      const attackCopy = document.getElementById("attack-copy");
+      const attackMetricHead = document.getElementById("attack-metric-head");
+      const attackSupportHead = document.getElementById("attack-support-head");
+      const attackBody = document.getElementById("attack-body");
+      const coachViewSelect = document.getElementById("coach-view-select");
       const coachBody = document.getElementById("coach-body");
       const coachCopy = document.getElementById("coach-copy");
 
@@ -1545,29 +1559,6 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           <td>${{row.player}}<div class="mini">${{row.club || "Club n/a"}}</div></td>
           <td>${{row.country}}</td>
           <td class="numeric">${{row.market_value_text}}</td>
-        </tr>
-      `).join("");
-
-      const scorers = [...playerSeasonStats]
-        .sort((a, b) => b.goals - a.goals || b.assists - a.assists || a.player.localeCompare(b.player))
-        .slice(0, 10);
-      const assisters = [...playerSeasonStats]
-        .sort((a, b) => b.assists - a.assists || b.goals - a.goals || a.player.localeCompare(b.player))
-        .slice(0, 10);
-
-      scorerBody.innerHTML = scorers.map((row) => `
-        <tr>
-          <td>${{row.player}}<div class="mini">${{row.country}} • ${{row.club || "Club n/a"}} • season ${{row.current_season_id}}</div></td>
-          <td class="numeric">${{row.goals}}</td>
-          <td class="numeric">${{row.assists}}</td>
-        </tr>
-      `).join("");
-
-      assisterBody.innerHTML = assisters.map((row) => `
-        <tr>
-          <td>${{row.player}}<div class="mini">${{row.country}} • ${{row.club || "Club n/a"}} • season ${{row.current_season_id}}</div></td>
-          <td class="numeric">${{row.assists}}</td>
-          <td class="numeric">${{row.goals}}</td>
         </tr>
       `).join("");
 
@@ -1600,22 +1591,176 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }}
       renderCountryClubs();
 
-      if (!coaches.length) {{
-        coachCopy.textContent = "Coach enrichment was not loaded for this build.";
-      }} else {{
-        const oldest = [...coaches].sort((a, b) => b.age - a.age || a.manager.localeCompare(b.manager))[0];
-        const youngest = [...coaches].sort((a, b) => a.age - b.age || a.manager.localeCompare(b.manager))[0];
-        const decorated = [...coaches].sort((a, b) => b.total_titles_won - a.total_titles_won || a.manager.localeCompare(b.manager))[0];
-        coachCopy.textContent = `Oldest: ${{oldest.manager}} (${{oldest.age.toFixed(0)}}). Youngest: ${{youngest.manager}} (${{youngest.age.toFixed(0)}}). Most decorated: ${{decorated.manager}} with ${{decorated.total_titles_won}} titled honours counted on Transfermarkt.`;
+      function parseTenureDays(text) {{
+        if (!text) return -1;
+        const yearMatch = text.match(/(\\d+)\\s+year/);
+        const monthMatch = text.match(/(\\d+)\\s+month/);
+        const dayMatch = text.match(/(\\d+)\\s+day/);
+        const years = yearMatch ? Number(yearMatch[1]) : 0;
+        const months = monthMatch ? Number(monthMatch[1]) : 0;
+        const days = dayMatch ? Number(dayMatch[1]) : 0;
+        return years * 365 + months * 30 + days;
       }}
-      coachBody.innerHTML = coaches.slice(0, 10).map((row) => `
-        <tr>
-          <td>${{row.manager}}<div class="mini">${{row.nationality || "Nationality n/a"}}${{row.foreign_to_team === true ? " • foreign to team" : ""}}</div></td>
-          <td>${{row.country}}</td>
-          <td class="numeric">${{row.age != null ? row.age.toFixed(0) : "n/a"}}</td>
-          <td class="numeric">${{row.total_titles_won}}</td>
-        </tr>
-      `).join("");
+
+      function renderAttack() {{
+        const view = attackViewSelect.value;
+        let rows = [...playerSeasonStats];
+        let copy = "Current club-season output from Transfermarkt player performance pages, excluding national-team matches.";
+        let metricLabel = "Goals";
+        let supportLabel = "Assists";
+
+        if (view === "goals") {{
+          rows = rows
+            .filter((row) => row.goals > 0)
+            .sort((a, b) => b.goals - a.goals || b.assists - a.assists || a.player.localeCompare(b.player))
+            .slice(0, 10);
+          copy = "Top scorers among 2026 World Cup players, ranked by goals in each player's latest club season in the fetched Transfermarkt performance data.";
+        }} else if (view === "assists") {{
+          rows = rows
+            .filter((row) => row.assists > 0)
+            .sort((a, b) => b.assists - a.assists || b.goals - a.goals || a.player.localeCompare(b.player))
+            .slice(0, 10);
+          copy = "Top assisters among 2026 World Cup players, ranked by assists in each player's latest club season in the fetched Transfermarkt performance data.";
+          metricLabel = "Assists";
+          supportLabel = "Goals";
+        }} else if (view === "contributions") {{
+          rows = rows
+            .filter((row) => row.goal_contributions > 0)
+            .sort((a, b) => b.goal_contributions - a.goal_contributions || b.goals - a.goals || a.player.localeCompare(b.player))
+            .slice(0, 10);
+          copy = "Goal contributions can be cleaner than raw goals because they catch elite creators and scorers in the same table.";
+          metricLabel = "G+A";
+          supportLabel = "Season";
+        }} else if (view === "youngest-scorers") {{
+          rows = rows
+            .filter((row) => row.goals > 0 && row.age != null)
+            .sort((a, b) => a.age - b.age || b.goals - a.goals || a.player.localeCompare(b.player))
+            .slice(0, 10);
+          copy = "This isolates the youngest players who already arrive with real club-season scoring output rather than hype alone.";
+          metricLabel = "Age";
+          supportLabel = "Goals";
+        }} else if (view === "oldest-assisters") {{
+          rows = rows
+            .filter((row) => row.assists > 0 && row.age != null)
+            .sort((a, b) => b.age - a.age || b.assists - a.assists || a.player.localeCompare(b.player))
+            .slice(0, 10);
+          copy = "This catches the veteran creators still shaping attacks late in their careers.";
+          metricLabel = "Age";
+          supportLabel = "Assists";
+        }}
+
+        attackCopy.textContent = copy;
+        attackMetricHead.textContent = metricLabel;
+        attackSupportHead.textContent = supportLabel;
+        attackBody.innerHTML = rows.map((row) => {{
+          let metricValue = row.goals;
+          let supportValue = row.assists;
+          if (view === "assists") {{
+            metricValue = row.assists;
+            supportValue = row.goals;
+          }} else if (view === "contributions") {{
+            metricValue = row.goal_contributions;
+            supportValue = row.current_season_id;
+          }} else if (view === "youngest-scorers") {{
+            metricValue = row.age != null ? `${{row.age.toFixed(0)}}y` : "n/a";
+            supportValue = row.goals;
+          }} else if (view === "oldest-assisters") {{
+            metricValue = row.age != null ? `${{row.age.toFixed(0)}}y` : "n/a";
+            supportValue = row.assists;
+          }}
+          return `
+            <tr>
+              <td>${{row.player}}<div class="mini">${{row.country}} • ${{row.position || "Position n/a"}}</div></td>
+              <td>${{row.club || "Club n/a"}}<div class="mini">season ${{row.current_season_id}}</div></td>
+              <td class="numeric">${{metricValue}}</td>
+              <td class="numeric">${{supportValue}}</td>
+            </tr>
+          `;
+        }}).join("");
+      }}
+
+      function renderCoachDesk() {{
+        if (!coaches.length) {{
+          coachCopy.textContent = "Coach enrichment was not loaded for this build.";
+          coachBody.innerHTML = "";
+          return;
+        }}
+
+        const view = coachViewSelect.value;
+        let rows = [...coaches];
+        let copy = "";
+
+        if (view === "decorated") {{
+          rows = rows
+            .sort((a, b) => b.total_titles_won - a.total_titles_won || a.manager.localeCompare(b.manager))
+            .slice(0, 10);
+          const leader = rows[0];
+          copy = `Most decorated coaches by counted Transfermarkt honours. ${{
+            leader ? `${{leader.manager}} leads this field with ${{leader.total_titles_won}} titles.` : ""
+          }}`;
+        }} else if (view === "oldest") {{
+          rows = rows
+            .filter((row) => row.age != null)
+            .sort((a, b) => b.age - a.age || b.total_titles_won - a.total_titles_won || a.manager.localeCompare(b.manager))
+            .slice(0, 10);
+          const leader = rows[0];
+          copy = `Oldest coaches in the 2026 field. ${{
+            leader ? `${{leader.manager}} is the oldest at ${{leader.age.toFixed(0)}}.` : ""
+          }}`;
+        }} else if (view === "youngest") {{
+          rows = rows
+            .filter((row) => row.age != null)
+            .sort((a, b) => a.age - b.age || b.total_titles_won - a.total_titles_won || a.manager.localeCompare(b.manager))
+            .slice(0, 10);
+          const leader = rows[0];
+          copy = `Youngest coaches in the 2026 field. ${{
+            leader ? `${{leader.manager}} is the youngest at ${{leader.age.toFixed(0)}}.` : ""
+          }}`;
+        }} else if (view === "tenure") {{
+          rows = rows
+            .filter((row) => row.tenure_text)
+            .sort((a, b) => parseTenureDays(b.tenure_text) - parseTenureDays(a.tenure_text) || b.total_titles_won - a.total_titles_won || a.manager.localeCompare(b.manager))
+            .slice(0, 10);
+          const leader = rows[0];
+          copy = `Longest-serving coaches in the current World Cup field. ${{
+            leader ? `${{leader.manager}} has been in post for ${{leader.tenure_text}}.` : ""
+          }}`;
+        }} else if (view === "foreign") {{
+          rows = rows
+            .filter((row) => row.foreign_to_team === true)
+            .sort((a, b) => b.total_titles_won - a.total_titles_won || b.age - a.age || a.manager.localeCompare(b.manager))
+            .slice(0, 10);
+          copy = "Foreign coaches only. This is where the tournament shows which federations imported experience rather than promoting a domestic national figure.";
+        }} else if (view === "native") {{
+          rows = rows
+            .filter((row) => row.foreign_to_team === false)
+            .sort((a, b) => b.total_titles_won - a.total_titles_won || b.age - a.age || a.manager.localeCompare(b.manager))
+            .slice(0, 10);
+          copy = "Native-nationality coaches only. This is the cleaner view if you want to compare homegrown managerial trust.";
+        }} else if (view === "former-player") {{
+          rows = rows
+            .filter((row) => row.former_player === true)
+            .sort((a, b) => b.total_titles_won - a.total_titles_won || b.age - a.age || a.manager.localeCompare(b.manager))
+            .slice(0, 10);
+          copy = "Former-player coaches only. This catches the ex-playing class that moved into the dugout and still dominates the tournament's most decorated bench profile.";
+        }}
+
+        coachCopy.textContent = copy;
+        coachBody.innerHTML = rows.map((row) => `
+          <tr>
+            <td>${{row.manager}}<div class="mini">${{row.nationality || "Nationality n/a"}}${{row.foreign_to_team === true ? " • foreign to team" : ""}}</div></td>
+            <td>${{row.country}}</td>
+            <td class="numeric">${{row.age != null ? row.age.toFixed(0) : "n/a"}}</td>
+            <td class="numeric">${{row.total_titles_won}}</td>
+            <td>${{row.tenure_text || "n/a"}}</td>
+          </tr>
+        `).join("");
+      }}
+
+      attackViewSelect.addEventListener("change", renderAttack);
+      coachViewSelect.addEventListener("change", renderCoachDesk);
+      renderAttack();
+      renderCoachDesk();
     }})();
 
     (() => {{

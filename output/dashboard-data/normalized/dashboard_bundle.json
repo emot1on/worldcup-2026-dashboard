@@ -1,8 +1,8 @@
 {
-  "fetched_at_utc": "2026-06-03T18:52:02.814516+00:00",
+  "fetched_at_utc": "2026-06-03T19:18:49.197720+00:00",
   "data": {
     "metadata": {
-      "generated_at_utc": "2026-06-03T18:52:02.779430+00:00",
+      "generated_at_utc": "2026-06-03T19:18:49.149836+00:00",
       "dataset_note": "The source file includes a 2026 cohort before kickoff. Treat 2026 as a dataset row, not completed tournament history.",
       "transfermarkt_note": "Transfermarkt squad pages fetched for this build total 1246 player rows rather than the full 1,248. The short pages are: Austria, Canada.",
       "trend_window_start_year": 1990,
