@@ -508,6 +508,13 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       width: 100% !important;
       max-width: 100% !important;
     }}
+    .table-wrap {{
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }}
+    .table-wrap table.is-wide {{
+      min-width: 820px;
+    }}
     .module-grid {{
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
@@ -614,6 +621,36 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--muted);
+    }}
+    .mobile-card-list {{
+      display: none;
+      gap: 10px;
+      margin-top: 12px;
+    }}
+    .mobile-data-card {{
+      background: var(--card);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }}
+    .mobile-data-card h3 {{
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }}
+    .mobile-data-grid {{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 12px;
+    }}
+    .mobile-data-item {{
+      min-width: 0;
+    }}
+    .mobile-data-item strong {{
+      display: block;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 2px;
     }}
     td.numeric, th.numeric {{
       text-align: right;
@@ -859,6 +896,47 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         grid-template-columns: 1fr;
       }}
     }}
+    @media (max-width: 640px) {{
+      main {{
+        padding: 24px 14px 72px;
+      }}
+      h1 {{
+        font-size: clamp(2.2rem, 11vw, 3.6rem);
+      }}
+      h2 {{
+        font-size: 1.6rem;
+      }}
+      .deck, .section-copy {{
+        font-size: 0.96rem;
+      }}
+      .panel {{
+        padding: 10px 10px 6px;
+      }}
+      .list-card {{
+        padding: 14px;
+      }}
+      .toolbar {{
+        align-items: stretch;
+      }}
+      .toolbar input, .toolbar select {{
+        width: 100%;
+      }}
+      .toolbar > .mini {{
+        width: 100%;
+      }}
+      .table-wrap.desktop-only {{
+        display: none;
+      }}
+      .mobile-card-list {{
+        display: grid;
+      }}
+      .mobile-data-grid {{
+        grid-template-columns: 1fr;
+      }}
+      .js-plotly-plot .modebar {{
+        display: none !important;
+      }}
+    }}
   </style>
 </head>
 <body>
@@ -941,22 +1019,25 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           <select id="confed-year-b-select"></select>
         </div>
         <p class="section-copy" id="confed-copy" style="margin-top: 10px;"></p>
-        <table>
-          <thead>
-            <tr>
-              <th>Confederation</th>
-              <th class="numeric">Teams A</th>
-              <th class="numeric">Height A</th>
-              <th class="numeric">Age A</th>
-              <th class="numeric">Teams B</th>
-              <th class="numeric">Height B</th>
-              <th class="numeric">Age B</th>
-              <th class="numeric">Height Δ</th>
-              <th class="numeric">Age Δ</th>
-            </tr>
-          </thead>
-          <tbody id="confed-table-body"></tbody>
-        </table>
+        <div class="table-wrap desktop-only">
+          <table class="is-wide">
+            <thead>
+              <tr>
+                <th>Confederation</th>
+                <th class="numeric">Teams A</th>
+                <th class="numeric">Height A</th>
+                <th class="numeric">Age A</th>
+                <th class="numeric">Teams B</th>
+                <th class="numeric">Height B</th>
+                <th class="numeric">Age B</th>
+                <th class="numeric">Height Δ</th>
+                <th class="numeric">Age Δ</th>
+              </tr>
+            </thead>
+            <tbody id="confed-table-body"></tbody>
+          </table>
+        </div>
+        <div id="confed-mobile-cards" class="mobile-card-list"></div>
       </div>
     </section>
 
@@ -1239,6 +1320,53 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     const coaches = {coaches_json};
 
     (() => {{
+      function applyMobilePlotlyLayout() {{
+        if (!window.Plotly) return;
+        const isMobile = window.innerWidth <= 640;
+        document.querySelectorAll(".js-plotly-plot").forEach((plot) => {{
+          const layout = plot.layout || {{}};
+          const update = isMobile
+            ? {{
+                "title.font.size": 16,
+                "margin.l": 42,
+                "margin.r": 28,
+                "margin.t": 88,
+                "margin.b": layout.showlegend ? 92 : 54,
+              }}
+            : {{
+                "title.font.size": 24,
+                "margin.l": 58,
+                "margin.r": 40,
+                "margin.t": 106,
+                "margin.b": 56,
+              }};
+          if (Array.isArray(layout.annotations) && layout.annotations.length) {{
+            update["annotations[0].font.size"] = isMobile ? 10 : 13;
+            update["annotations[0].y"] = isMobile ? 1.03 : 1.1;
+          }}
+          if (layout.showlegend) {{
+            update["legend.font.size"] = isMobile ? 11 : 14;
+            update["legend.y"] = isMobile ? -0.24 : 1.01;
+            update["legend.yanchor"] = isMobile ? "top" : "bottom";
+            update["legend.x"] = 0;
+            update["legend.xanchor"] = "left";
+            update["legend.orientation"] = "h";
+          }}
+          window.Plotly.relayout(plot, update);
+        }});
+      }}
+
+      let plotlyResizeTimer = null;
+      window.addEventListener("load", () => {{
+        window.setTimeout(applyMobilePlotlyLayout, 250);
+      }});
+      window.addEventListener("resize", () => {{
+        window.clearTimeout(plotlyResizeTimer);
+        plotlyResizeTimer = window.setTimeout(applyMobilePlotlyLayout, 150);
+      }});
+    }})();
+
+    (() => {{
       const sourceList = document.getElementById("source-list");
       sourceList.innerHTML = sourceCatalog.map((source) => `
         <div class="source-item">
@@ -1263,6 +1391,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const yearBSelect = document.getElementById("confed-year-b-select");
       const tableBody = document.getElementById("confed-table-body");
       const copy = document.getElementById("confed-copy");
+      const mobileCards = document.getElementById("confed-mobile-cards");
       const years = [...new Set(confederationHistory.map((row) => row.tournament_year))].sort((a, b) => b - a);
       const options = years.map((year) => `<option value="${{year}}">${{year}}</option>`).join("");
       yearASelect.innerHTML = options;
@@ -1315,6 +1444,27 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             <td class="numeric">${{formatDelta(ageDelta, " years")}}</td>
           </tr>
         `;
+        }}).join("");
+        mobileCards.innerHTML = confeds.map((confed) => {{
+          const rowA = mapA.get(confed);
+          const rowB = mapB.get(confed);
+          const heightDelta = rowA && rowB ? rowA.average_height_cm - rowB.average_height_cm : null;
+          const ageDelta = rowA && rowB ? rowA.average_age - rowB.average_age : null;
+          return `
+            <article class="mobile-data-card">
+              <h3>${{confed}}</h3>
+              <div class="mobile-data-grid">
+                <div class="mobile-data-item"><strong>${{yearA}} teams</strong>${{rowA ? rowA.teams : "n/a"}}</div>
+                <div class="mobile-data-item"><strong>${{yearA}} height</strong>${{formatMetric(rowA, "average_height_cm", " cm")}}</div>
+                <div class="mobile-data-item"><strong>${{yearA}} age</strong>${{formatMetric(rowA, "average_age", " years")}}</div>
+                <div class="mobile-data-item"><strong>${{yearB}} teams</strong>${{rowB ? rowB.teams : "n/a"}}</div>
+                <div class="mobile-data-item"><strong>${{yearB}} height</strong>${{formatMetric(rowB, "average_height_cm", " cm")}}</div>
+                <div class="mobile-data-item"><strong>${{yearB}} age</strong>${{formatMetric(rowB, "average_age", " years")}}</div>
+                <div class="mobile-data-item"><strong>Height Δ</strong>${{formatDelta(heightDelta, " cm")}}</div>
+                <div class="mobile-data-item"><strong>Age Δ</strong>${{formatDelta(ageDelta, " years")}}</div>
+              </div>
+            </article>
+          `;
         }}).join("");
       }}
 
