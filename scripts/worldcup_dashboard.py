@@ -495,7 +495,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     .section-guide {{
       position: fixed;
       top: 26px;
-      right: -208px;
+      right: -246px;
       width: 248px;
       background: rgba(255,255,255,0.72);
       border: 1px solid rgba(0,0,0,0.07);
@@ -510,7 +510,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     .section-guide::before {{
       content: "Guide";
       position: absolute;
-      left: -34px;
+      left: -36px;
       top: 28px;
       padding: 10px 8px;
       border-radius: 14px 0 0 14px;
@@ -526,7 +526,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     }}
     .section-guide:hover,
     .section-guide:focus-within {{
-      right: 12px;
+      right: 10px;
       opacity: 1;
       box-shadow: 0 20px 52px rgba(0,0,0,0.12);
     }}
