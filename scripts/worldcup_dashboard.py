@@ -487,21 +487,49 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       margin: 18px 0 34px;
     }}
     .page-shell {{
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 22px;
-      align-items: start;
+      position: relative;
     }}
     .content-shell {{
       min-width: 0;
     }}
     .section-guide {{
-      position: sticky;
-      top: 22px;
+      position: fixed;
+      top: 26px;
+      right: max(14px, calc((100vw - 1280px) / 2 - 2px));
+      width: 248px;
       background: rgba(255,255,255,0.72);
       border: 1px solid rgba(0,0,0,0.07);
       border-radius: 22px;
       padding: 18px 18px 16px;
+      z-index: 40;
+      box-shadow: 0 16px 44px rgba(0,0,0,0.08);
+      backdrop-filter: blur(8px);
+      transform: translateX(calc(100% - 36px));
+      opacity: 0.78;
+      transition: transform 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+    }}
+    .section-guide::before {{
+      content: "Guide";
+      position: absolute;
+      left: -34px;
+      top: 28px;
+      padding: 10px 8px;
+      border-radius: 14px 0 0 14px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(0,0,0,0.07);
+      border-right: 0;
+      color: var(--muted);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }}
+    .section-guide:hover,
+    .section-guide:focus-within {{
+      transform: translateX(0);
+      opacity: 1;
+      box-shadow: 0 20px 52px rgba(0,0,0,0.12);
     }}
     .section-guide h3 {{
       margin: 0 0 10px;
@@ -1008,7 +1036,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       margin-top: 10px;
     }}
     @media (max-width: 980px) {{
-      .hero, .grid-2, .module-grid, .live-shell, .ranking-grid, .page-shell {{
+      .hero, .grid-2, .module-grid, .live-shell, .ranking-grid {{
         grid-template-columns: 1fr;
       }}
       .compare-toolbar {{
@@ -1016,6 +1044,15 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }}
       .section-guide {{
         display: none;
+      }}
+    }}
+    @media (min-width: 1480px) {{
+      .section-guide {{
+        transform: translateX(0);
+        opacity: 0.96;
+      }}
+      .section-guide::before {{
+        opacity: 0;
       }}
     }}
     @media (max-width: 640px) {{
