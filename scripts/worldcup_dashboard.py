@@ -1204,9 +1204,19 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         <div class="metric-copy">The most physically imposing group on average.</div>
       </div>
       <div class="metric-card">
-        <div class="metric-kicker">Oldest group</div>
-        <div class="metric-value">{highlights["oldest_group_2026"]}</div>
-        <div class="metric-copy">The group that leans most heavily toward experience.</div>
+        <div class="metric-kicker">Top club pipeline</div>
+        <div class="metric-value">{highlights["top_player_supply_club"] or "n/a"}</div>
+        <div class="metric-copy">{highlights["top_player_supply_club_count"] or "n/a"} players in the 2026 squad pool come from the most represented club.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-kicker">Biggest club-country ceiling</div>
+        <div class="metric-value">{highlights["top_club_country_benefit"] or "n/a"}</div>
+        <div class="metric-copy">{highlights["top_club_country_benefit_ceiling_text"] or "n/a"} estimated ceiling across {highlights["top_club_country_benefit_player_count"] or "n/a"} released players.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-kicker">Biggest club payout ceiling</div>
+        <div class="metric-value">{highlights["top_club_benefit_club"] or "n/a"}</div>
+        <div class="metric-copy">{highlights["top_club_benefit_club_ceiling_text"] or "n/a"} estimated ceiling from {highlights["top_club_benefit_club_player_count"] or "n/a"} released players.</div>
       </div>
     </div>
 

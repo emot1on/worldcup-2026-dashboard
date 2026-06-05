@@ -420,6 +420,8 @@ def build_story_manifest(
         player_stats = transfermarkt_enrichment.get("player_season_stats")
         squad_values = transfermarkt_enrichment.get("squad_values")
         clubs = transfermarkt_enrichment.get("global_clubs")
+        club_benefits = transfermarkt_enrichment.get("club_benefits")
+        club_benefits_clubs = transfermarkt_enrichment.get("club_benefits_clubs")
         coaches = transfermarkt_enrichment.get("coaches")
         if isinstance(players, pd.DataFrame) and not players.empty:
             most_valuable = players.sort_values(["market_value_eur", "player"], ascending=[False, True]).iloc[0]
@@ -522,6 +524,39 @@ def build_story_manifest(
                     "summary": (
                         f"{top_club['club']} contributes {int(top_club['player_count'])} players across "
                         f"{int(top_club['represented_countries'])} national teams."
+                    ),
+                }
+            )
+        if isinstance(club_benefits, pd.DataFrame) and not club_benefits.empty:
+            top_benefit_country = club_benefits.sort_values(
+                ["estimated_ceiling_usd", "club_country"], ascending=[False, True]
+            ).iloc[0]
+            stories.append(
+                {
+                    "slug": "club-benefits-country-leader-2026",
+                    "headline": f"{top_benefit_country['club_country']} clubs sit on the biggest payout ceiling",
+                    "metric": "estimated_ceiling_usd",
+                    "summary": (
+                        f"Using FIFA's club-benefits framework and the current 2026 schedule, clubs based in "
+                        f"{top_benefit_country['club_country']} have an estimated ceiling of "
+                        f"{top_benefit_country['estimated_ceiling_text']} across "
+                        f"{int(top_benefit_country['player_count'])} players."
+                    ),
+                }
+            )
+        if isinstance(club_benefits_clubs, pd.DataFrame) and not club_benefits_clubs.empty:
+            top_benefit_club = club_benefits_clubs.sort_values(
+                ["estimated_ceiling_usd", "club"], ascending=[False, True]
+            ).iloc[0]
+            stories.append(
+                {
+                    "slug": "club-benefits-club-leader-2026",
+                    "headline": f"{top_benefit_club['club']} could bank the biggest World Cup club payout",
+                    "metric": "estimated_ceiling_usd",
+                    "summary": (
+                        f"The same estimate puts {top_benefit_club['club']} on a ceiling of "
+                        f"{top_benefit_club['estimated_ceiling_text']} from "
+                        f"{int(top_benefit_club['player_count'])} released players."
                     ),
                 }
             )
@@ -858,6 +893,22 @@ def build_normalized_bundle(
             "oldest_team_2026": oldest_team["country"],
             "tallest_group_2026": tallest_group["group"],
             "oldest_group_2026": oldest_group["group"],
+            "top_club_country_benefit": club_benefits_rows[0]["club_country"] if club_benefits_rows else None,
+            "top_club_country_benefit_ceiling_text": (
+                club_benefits_rows[0]["estimated_ceiling_text"] if club_benefits_rows else None
+            ),
+            "top_club_country_benefit_player_count": (
+                club_benefits_rows[0]["player_count"] if club_benefits_rows else None
+            ),
+            "top_club_benefit_club": club_benefits_club_rows[0]["club"] if club_benefits_club_rows else None,
+            "top_club_benefit_club_ceiling_text": (
+                club_benefits_club_rows[0]["estimated_ceiling_text"] if club_benefits_club_rows else None
+            ),
+            "top_club_benefit_club_player_count": (
+                club_benefits_club_rows[0]["player_count"] if club_benefits_club_rows else None
+            ),
+            "top_player_supply_club": global_club_counts[0]["club"] if global_club_counts else None,
+            "top_player_supply_club_count": global_club_counts[0]["player_count"] if global_club_counts else None,
         },
         "market_value_players_2026": top_market_players,
         "least_valuable_players_2026": least_market_players,

@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-06-05T20:01:35.990153+00:00",
+  "fetched_at_utc": "2026-06-05T20:20:00.388216+00:00",
   "data": [
     {
       "slug": "world-cup-players-have-grown-taller",
@@ -96,6 +96,18 @@
       "headline": "Manchester City sends the most players to this World Cup",
       "metric": "club_player_count",
       "summary": "Manchester City contributes 19 players across 12 national teams."
+    },
+    {
+      "slug": "club-benefits-country-leader-2026",
+      "headline": "England clubs sit on the biggest payout ceiling",
+      "metric": "estimated_ceiling_usd",
+      "summary": "Using FIFA's club-benefits framework and the current 2026 schedule, clubs based in England have an estimated ceiling of $57.40m across 205 players."
+    },
+    {
+      "slug": "club-benefits-club-leader-2026",
+      "headline": "Manchester City could bank the biggest World Cup club payout",
+      "metric": "estimated_ceiling_usd",
+      "summary": "The same estimate puts Manchester City on a ceiling of $5.32m from 19 released players."
     },
     {
       "slug": "most-decorated-coach-2026",
