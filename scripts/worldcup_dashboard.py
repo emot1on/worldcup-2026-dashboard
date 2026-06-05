@@ -33,6 +33,9 @@ FAVICON_SVG = """
 </svg>
 """.strip()
 FAVICON_DATA_URL = f"data:image/svg+xml;utf8,{quote(FAVICON_SVG)}"
+ECB_USD_PER_EUR = 1.1614
+ECB_RATE_DATE = "3 June 2026"
+ECB_EUR_PER_USD = 1 / ECB_USD_PER_EUR
 
 
 def read_wrapped_json(path: Path) -> dict:
@@ -88,6 +91,12 @@ def figure_html(fig: go.Figure, include_js: bool) -> str:
             "toImageButtonOptions": {"format": "png", "filename": "worldcup-dashboard-chart", "scale": 2},
         },
     )
+
+
+def format_eur_millions_from_usd(value: float | int | None) -> str:
+    if value is None:
+        return "n/a"
+    return f"€{(float(value) * ECB_EUR_PER_USD) / 1_000_000:.2f}m"
 
 
 def make_trend_chart(bundle: dict) -> go.Figure:
@@ -357,6 +366,12 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     highlights = bundle["highlights"]
     countries = bundle["countries_2026"]
     sources = bundle.get("sources", [])
+    club_benefit_country_rows = bundle.get("club_benefits_countries_2026", [])
+    club_benefit_club_rows = bundle.get("club_benefits_clubs_2026", [])
+    top_benefit_country = club_benefit_country_rows[0] if club_benefit_country_rows else {}
+    top_benefit_club = club_benefit_club_rows[0] if club_benefit_club_rows else {}
+    top_benefit_country_ceiling_eur = format_eur_millions_from_usd(top_benefit_country.get("estimated_ceiling_usd"))
+    top_benefit_club_ceiling_eur = format_eur_millions_from_usd(top_benefit_club.get("estimated_ceiling_usd"))
     transfermarkt_note = bundle.get("metadata", {}).get("transfermarkt_note")
     live_json = json.dumps(live_snapshot)
     country_json = json.dumps(countries)
@@ -372,8 +387,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     squad_value_json = json.dumps(bundle.get("squad_market_values_2026", []))
     global_club_json = json.dumps(bundle.get("global_club_representation_2026", []))
     country_club_json = json.dumps(bundle.get("country_club_representation_2026", []))
-    club_benefits_json = json.dumps(bundle.get("club_benefits_countries_2026", []))
-    club_benefits_clubs_json = json.dumps(bundle.get("club_benefits_clubs_2026", []))
+    club_benefits_json = json.dumps(club_benefit_country_rows)
+    club_benefits_clubs_json = json.dumps(club_benefit_club_rows)
     coaches_json = json.dumps(bundle.get("coaches_2026", []))
     return f"""<!doctype html>
 <html lang="en">
@@ -1256,12 +1271,12 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       <div class="metric-card">
         <div class="metric-kicker">Biggest club-country ceiling</div>
         <div class="metric-value">{highlights["top_club_country_benefit"] or "n/a"}</div>
-        <div class="metric-copy">{highlights["top_club_country_benefit_ceiling_text"] or "n/a"} estimated ceiling across {highlights["top_club_country_benefit_player_count"] or "n/a"} released players.</div>
+        <div class="metric-copy">{top_benefit_country_ceiling_eur} estimated ceiling across {highlights["top_club_country_benefit_player_count"] or "n/a"} released players, converted from USD using the ECB reference rate from {ECB_RATE_DATE}.</div>
       </div>
       <div class="metric-card">
         <div class="metric-kicker">Biggest club payout ceiling</div>
         <div class="metric-value">{highlights["top_club_benefit_club"] or "n/a"}</div>
-        <div class="metric-copy">{highlights["top_club_benefit_club_ceiling_text"] or "n/a"} estimated ceiling from {highlights["top_club_benefit_club_player_count"] or "n/a"} released players.</div>
+        <div class="metric-copy">{top_benefit_club_ceiling_eur} estimated ceiling from {highlights["top_club_benefit_club_player_count"] or "n/a"} released players, converted from USD using the ECB reference rate from {ECB_RATE_DATE}.</div>
       </div>
     </div>
 
@@ -1684,6 +1699,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     const clubBenefitsCountries = {club_benefits_json};
     const clubBenefitsClubs = {club_benefits_clubs_json};
     const coaches = {coaches_json};
+    const usdPerEur = {ECB_USD_PER_EUR};
+    const eurPerUsd = 1 / usdPerEur;
+    const ecbRateDate = "{ECB_RATE_DATE}";
 
     (() => {{
       function applyMobilePlotlyLayout() {{
@@ -1806,6 +1824,11 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       function formatMetric(row, key, unit) {{
         if (!row) return "n/a";
         return `${{row[key].toFixed(2)}}${{unit}}`;
+      }}
+
+      function formatUsdEstimateAsEur(value) {{
+        if (value == null || Number.isNaN(Number(value))) return "n/a";
+        return `€${{((Number(value) * eurPerUsd) / 1_000_000).toFixed(2)}}m`;
       }}
 
       function renderConfederations() {{
@@ -2212,8 +2235,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         clubBenefitsClubView.classList.toggle("active", clubBenefitsView === "club");
         clubBenefitsSearch.placeholder = clubBenefitsView === "country" ? "Search club country..." : "Search club...";
         clubBenefitsCopy.textContent = clubBenefitsView === "country"
-          ? "Estimated from the AP-reported ~$5,000-per-player-per-day figure plus FIFA's 25 May 2026 release date and the current match schedule. Qualifier payments are excluded, and club country is inferred from current Transfermarkt club profile headers."
-          : "This ranks individual clubs by the same estimated World Cup release-window compensation range. It is an estimate, not an official FIFA settlement file.";
+          ? `Converted to euro using the ECB reference rate from ${{ecbRateDate}}. Original estimate starts from the AP-reported US$5,000-per-player-per-day figure, plus FIFA's 25 May 2026 release date and the current match schedule. Qualifier payments are excluded, and club country is inferred from current Transfermarkt club profile headers.`
+          : `Converted to euro using the ECB reference rate from ${{ecbRateDate}}. This ranks individual clubs by the same estimated World Cup release-window compensation range. It is an estimate, not an official FIFA settlement file.`;
         clubBenefitsBody.innerHTML = rows.map((row) => {{
           const primary = clubBenefitsView === "country" ? row.club_country : row.club;
           const meta = clubBenefitsView === "country" ? `${{row.club_count}} clubs` : (row.club_country || "club country n/a");
@@ -2221,8 +2244,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             <tr>
               <td>${{primary}}<div class="mini">${{meta}} • ${{row.represented_squads}} squads</div></td>
               <td class="numeric">${{row.player_count}}</td>
-              <td class="numeric">${{row.estimated_floor_text}}</td>
-              <td class="numeric">${{row.estimated_ceiling_text}}</td>
+              <td class="numeric">${{formatUsdEstimateAsEur(row.estimated_floor_usd)}}</td>
+              <td class="numeric">${{formatUsdEstimateAsEur(row.estimated_ceiling_usd)}}</td>
             </tr>
           `;
         }}).join("");
