@@ -369,6 +369,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     global_club_json = json.dumps(bundle.get("global_club_representation_2026", []))
     country_club_json = json.dumps(bundle.get("country_club_representation_2026", []))
     club_benefits_json = json.dumps(bundle.get("club_benefits_countries_2026", []))
+    club_benefits_clubs_json = json.dumps(bundle.get("club_benefits_clubs_2026", []))
     coaches_json = json.dumps(bundle.get("coaches_2026", []))
     return f"""<!doctype html>
 <html lang="en">
@@ -507,6 +508,15 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       backdrop-filter: blur(8px);
       opacity: 0.9;
       transition: right 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+    }}
+    .mobile-guide-toggle {{
+      display: none;
+    }}
+    .mobile-guide-sheet {{
+      display: none;
+    }}
+    .mobile-guide-backdrop {{
+      display: none;
     }}
     .section-guide::before {{
       content: "Guide";
@@ -751,6 +761,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       display: none;
       gap: 10px;
       margin-top: 12px;
+    }}
+    .desktop-only {{
+      display: block;
     }}
     .mobile-data-card {{
       background: var(--card);
@@ -1045,6 +1058,59 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       .section-guide {{
         display: none;
       }}
+      .mobile-guide-toggle {{
+        display: inline-flex;
+        position: fixed;
+        right: 14px;
+        bottom: 14px;
+        z-index: 60;
+        border: 1px solid rgba(0,0,0,0.12);
+        background: rgba(255,253,248,0.96);
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 999px;
+        font: inherit;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+      }}
+      .mobile-guide-backdrop.visible {{
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(19, 16, 13, 0.28);
+        z-index: 61;
+      }}
+      .mobile-guide-sheet {{
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        z-index: 62;
+        background: rgba(255,253,248,0.98);
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 22px;
+        padding: 16px;
+        box-shadow: 0 20px 44px rgba(0,0,0,0.18);
+        transform: translateY(calc(100% + 20px));
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 180ms ease, opacity 180ms ease;
+      }}
+      .mobile-guide-sheet.visible {{
+        display: block;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }}
+      .mobile-guide-sheet-head {{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 10px;
+      }}
+      .desktop-only {{
+        display: none !important;
+      }}
     }}
     @media (max-width: 640px) {{
       main {{
@@ -1079,6 +1145,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }}
       .mobile-card-list {{
         display: grid;
+      }}
+      .country-table-mobile .mobile-data-grid {{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }}
       .mobile-data-grid {{
         grid-template-columns: 1fr;
@@ -1220,7 +1289,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
               <option value="average_age-asc">Sort: youngest first</option>
             </select>
           </div>
-          <table>
+          <table class="desktop-only">
             <thead>
               <tr>
                 <th>Country</th>
@@ -1232,6 +1301,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             </thead>
             <tbody id="country-table-body"></tbody>
           </table>
+          <div id="country-mobile-cards" class="mobile-card-list country-table-mobile"></div>
           <div class="inline-tools">
             <button id="country-more-button" class="small-button" type="button">Show more</button>
           </div>
@@ -1280,6 +1350,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             </thead>
             <tbody id="market-value-body"></tbody>
           </table>
+          <div class="inline-tools">
+            <button id="market-more-button" class="small-button" type="button">Show more</button>
+          </div>
           <div class="stacked-block">
             <div class="mini">Most valuable squads</div>
             <div class="control-stack">
@@ -1333,13 +1406,17 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           <div class="stacked-block">
             <div class="mini">Club-benefit estimate by club country</div>
             <p class="section-copy" id="club-benefits-copy" style="margin-top: 8px;"></p>
+            <div class="toggle-row" style="margin-top: 8px;">
+              <button id="club-benefits-country-view" class="active" type="button">By club country</button>
+              <button id="club-benefits-club-view" type="button">By club</button>
+            </div>
             <div class="control-stack">
               <input id="club-benefits-search" type="text" placeholder="Search club country...">
             </div>
             <table>
               <thead>
                 <tr>
-                  <th>Club country</th>
+                  <th id="club-benefits-head">Club country</th>
                   <th class="numeric">Players</th>
                   <th class="numeric">Floor</th>
                   <th class="numeric">Ceiling</th>
@@ -1515,6 +1592,24 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </aside>
     </div>
   </main>
+  <button id="mobile-guide-toggle" class="mobile-guide-toggle" type="button" aria-expanded="false" aria-controls="mobile-guide-sheet">Guide</button>
+  <div id="mobile-guide-backdrop" class="mobile-guide-backdrop"></div>
+  <div id="mobile-guide-sheet" class="mobile-guide-sheet" aria-label="Mobile dashboard guide">
+    <div class="mobile-guide-sheet-head">
+      <strong>Dashboard guide</strong>
+      <button id="mobile-guide-close" class="small-button" type="button">Close</button>
+    </div>
+    <div class="section-guide-list">
+      <a href="#core-trends">Core trends</a>
+      <a href="#group-confed-points">Group and confederation pressure points</a>
+      <a href="#country-story-desk">Country and story desk</a>
+      <a href="#quick-comparison">Quick comparison</a>
+      <a href="#value-clubs-coaches">Value, clubs and coaches</a>
+      <a href="#squad-distribution-heatmap">Squad distribution heatmap</a>
+      <a href="#tactical-shape">Tactical shape</a>
+      <a href="#live-center-readiness">Live center readiness</a>
+    </div>
+  </div>
   <div id="heatmap-tooltip" class="heatmap-tooltip" role="tooltip"></div>
 
   <script>
@@ -1533,6 +1628,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     const globalClubCounts = {global_club_json};
     const countryClubCounts = {country_club_json};
     const clubBenefitsCountries = {club_benefits_json};
+    const clubBenefitsClubs = {club_benefits_clubs_json};
     const coaches = {coaches_json};
 
     (() => {{
@@ -1612,6 +1708,26 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         renderStories();
       }});
       renderStories();
+    }})();
+
+    (() => {{
+      const mobileGuideToggle = document.getElementById("mobile-guide-toggle");
+      const mobileGuideSheet = document.getElementById("mobile-guide-sheet");
+      const mobileGuideBackdrop = document.getElementById("mobile-guide-backdrop");
+      const mobileGuideClose = document.getElementById("mobile-guide-close");
+
+      function setMobileGuide(open) {{
+        mobileGuideToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        mobileGuideSheet.classList.toggle("visible", open);
+        mobileGuideBackdrop.classList.toggle("visible", open);
+      }}
+
+      mobileGuideToggle.addEventListener("click", () => setMobileGuide(!mobileGuideSheet.classList.contains("visible")));
+      mobileGuideClose.addEventListener("click", () => setMobileGuide(false));
+      mobileGuideBackdrop.addEventListener("click", () => setMobileGuide(false));
+      mobileGuideSheet.querySelectorAll("a").forEach((anchor) => {{
+        anchor.addEventListener("click", () => setMobileGuide(false));
+      }});
     }})();
 
     (() => {{
@@ -1705,6 +1821,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const search = document.getElementById("country-search");
       const sort = document.getElementById("country-sort");
       const body = document.getElementById("country-table-body");
+      const mobileCards = document.getElementById("country-mobile-cards");
       const moreButton = document.getElementById("country-more-button");
       let rowLimit = 18;
 
@@ -1728,6 +1845,17 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             <td class="numeric">${{row.average_age.toFixed(2)}} years</td>
             <td class="numeric">${{row.baseline_tournament_year ? row.baseline_tournament_year : "n/a"}}</td>
           </tr>
+        `).join("");
+        mobileCards.innerHTML = rows.map((row) => `
+          <article class="mobile-data-card">
+            <h3>${{row.country}}</h3>
+            <div class="mobile-data-grid">
+              <div class="mobile-data-item"><strong>Group</strong>${{row.group}}</div>
+              <div class="mobile-data-item"><strong>Height</strong>${{row.average_height_cm.toFixed(2)}} cm</div>
+              <div class="mobile-data-item"><strong>Age</strong>${{row.average_age.toFixed(2)}} years</div>
+              <div class="mobile-data-item"><strong>History</strong>${{row.baseline_tournament_year ? row.baseline_tournament_year : "n/a"}}</div>
+            </div>
+          </article>
         `).join("");
         moreButton.hidden = rowLimit >= allRows.length;
       }}
@@ -1916,6 +2044,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
 
     (() => {{
       const marketBody = document.getElementById("market-value-body");
+      const marketMoreButton = document.getElementById("market-more-button");
       const squadValueBody = document.getElementById("squad-value-body");
       const squadSearch = document.getElementById("squad-value-search");
       const squadMoreButton = document.getElementById("squad-more-button");
@@ -1927,6 +2056,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const clubBenefitsSearch = document.getElementById("club-benefits-search");
       const clubBenefitsCopy = document.getElementById("club-benefits-copy");
       const clubBenefitsMoreButton = document.getElementById("club-benefits-more-button");
+      const clubBenefitsHead = document.getElementById("club-benefits-head");
+      const clubBenefitsCountryView = document.getElementById("club-benefits-country-view");
+      const clubBenefitsClubView = document.getElementById("club-benefits-club-view");
       const countrySelect = document.getElementById("club-country-select");
       const countryClubSearch = document.getElementById("country-club-search");
       const countryClubBody = document.getElementById("country-club-body");
@@ -1940,18 +2072,24 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const coachViewSelect = document.getElementById("coach-view-select");
       const coachBody = document.getElementById("coach-body");
       const coachCopy = document.getElementById("coach-copy");
+      let marketValueLimit = 10;
       let squadLimit = 8;
       let globalClubLimit = 12;
       let clubBenefitsLimit = 10;
       let attackLimit = 10;
+      let clubBenefitsView = "country";
 
-      marketBody.innerHTML = marketValuePlayers.slice(0, 10).map((row) => `
-        <tr>
-          <td>${{row.player}}<div class="mini">${{row.club || "Club n/a"}}</div></td>
-          <td>${{row.country}}</td>
-          <td class="numeric">${{row.market_value_text}}</td>
-        </tr>
-      `).join("");
+      function renderMarketValues() {{
+        const rows = marketValuePlayers.slice(0, marketValueLimit);
+        marketBody.innerHTML = rows.map((row) => `
+          <tr>
+            <td>${{row.player}}<div class="mini">${{row.club || "Club n/a"}}</div></td>
+            <td>${{row.country}}</td>
+            <td class="numeric">${{row.market_value_text}}</td>
+          </tr>
+        `).join("");
+        marketMoreButton.hidden = marketValueLimit >= marketValuePlayers.length;
+      }}
 
       function renderSquadValues() {{
         const query = squadSearch.value.trim().toLowerCase();
@@ -1992,17 +2130,32 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
 
       function renderClubBenefits() {{
         const query = clubBenefitsSearch.value.trim().toLowerCase();
-        const filtered = clubBenefitsCountries.filter((row) => (row.club_country || "").toLowerCase().includes(query));
+        const sourceRows = clubBenefitsView === "country" ? clubBenefitsCountries : clubBenefitsClubs;
+        const filtered = sourceRows.filter((row) => {{
+          const left = clubBenefitsView === "country" ? (row.club_country || "") : (row.club || "");
+          const right = row.club_country || "";
+          return left.toLowerCase().includes(query) || right.toLowerCase().includes(query);
+        }});
         const rows = filtered.slice(0, clubBenefitsLimit);
-        clubBenefitsCopy.textContent = "Estimated from the AP-reported ~$5,000-per-player-per-day figure plus FIFA's 25 May 2026 release date and the current match schedule. Qualifier payments are excluded, and club country is inferred from current Transfermarkt club profile headers.";
-        clubBenefitsBody.innerHTML = rows.map((row) => `
-          <tr>
-            <td>${{row.club_country}}<div class="mini">${{row.club_count}} clubs • ${{row.represented_squads}} squads</div></td>
-            <td class="numeric">${{row.player_count}}</td>
-            <td class="numeric">${{row.estimated_floor_text}}</td>
-            <td class="numeric">${{row.estimated_ceiling_text}}</td>
-          </tr>
-        `).join("");
+        clubBenefitsHead.textContent = clubBenefitsView === "country" ? "Club country" : "Club";
+        clubBenefitsCountryView.classList.toggle("active", clubBenefitsView === "country");
+        clubBenefitsClubView.classList.toggle("active", clubBenefitsView === "club");
+        clubBenefitsSearch.placeholder = clubBenefitsView === "country" ? "Search club country..." : "Search club...";
+        clubBenefitsCopy.textContent = clubBenefitsView === "country"
+          ? "Estimated from the AP-reported ~$5,000-per-player-per-day figure plus FIFA's 25 May 2026 release date and the current match schedule. Qualifier payments are excluded, and club country is inferred from current Transfermarkt club profile headers."
+          : "This ranks individual clubs by the same estimated World Cup release-window compensation range. It is an estimate, not an official FIFA settlement file.";
+        clubBenefitsBody.innerHTML = rows.map((row) => {{
+          const primary = clubBenefitsView === "country" ? row.club_country : row.club;
+          const meta = clubBenefitsView === "country" ? `${{row.club_count}} clubs` : (row.club_country || "club country n/a");
+          return `
+            <tr>
+              <td>${{primary}}<div class="mini">${{meta}} • ${{row.represented_squads}} squads</div></td>
+              <td class="numeric">${{row.player_count}}</td>
+              <td class="numeric">${{row.estimated_floor_text}}</td>
+              <td class="numeric">${{row.estimated_ceiling_text}}</td>
+            </tr>
+          `;
+        }}).join("");
         clubBenefitsMoreButton.hidden = clubBenefitsLimit >= filtered.length;
       }}
 
@@ -2029,6 +2182,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }}
       renderCountryClubs();
       renderClubBenefits();
+      renderMarketValues();
 
       function parseTenureDays(text) {{
         if (!text) return -1;
@@ -2205,6 +2359,10 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         squadLimit = 8;
         renderSquadValues();
       }});
+      marketMoreButton.addEventListener("click", () => {{
+        marketValueLimit += 10;
+        renderMarketValues();
+      }});
       squadMoreButton.addEventListener("click", () => {{
         squadLimit += 10;
         renderSquadValues();
@@ -2223,6 +2381,16 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }});
       clubBenefitsMoreButton.addEventListener("click", () => {{
         clubBenefitsLimit += 10;
+        renderClubBenefits();
+      }});
+      clubBenefitsCountryView.addEventListener("click", () => {{
+        clubBenefitsView = "country";
+        clubBenefitsLimit = 10;
+        renderClubBenefits();
+      }});
+      clubBenefitsClubView.addEventListener("click", () => {{
+        clubBenefitsView = "club";
+        clubBenefitsLimit = 10;
         renderClubBenefits();
       }});
       attackSearch.addEventListener("input", () => {{

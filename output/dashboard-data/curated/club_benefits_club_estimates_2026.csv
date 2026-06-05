@@ -1,0 +1,451 @@
+club,club_country,player_count,represented_squads,estimated_floor_usd,estimated_ceiling_usd,ceiling_rank,estimated_floor_text,estimated_ceiling_text
+Manchester City,England,19,12,3205000,5320000,1,$3.21m,$5.32m
+Bayern Munich,Germany,18,10,2940000,5040000,2,$2.94m,$5.04m
+Arsenal FC,England,16,10,2640000,4480000,3,$2.64m,$4.48m
+Paris Saint-Germain,France,15,8,2470000,4200000,4,$2.47m,$4.20m
+FC Barcelona,Spain,14,7,2350000,3920000,5,$2.35m,$3.92m
+Al-Hilal SFC,Saudi Arabia,12,6,2015000,3360000,6,$2.02m,$3.36m
+Atlético de Madrid,Spain,12,5,2055000,3360000,6,$2.06m,$3.36m
+Crystal Palace,England,12,10,1980000,3360000,6,$1.98m,$3.36m
+Borussia Dortmund,Germany,11,7,1810000,3080000,9,$1.81m,$3.08m
+Galatasaray,Türkiye,11,6,1805000,3080000,9,$1.80m,$3.08m
+Liverpool FC,England,11,9,1780000,3080000,9,$1.78m,$3.08m
+Manchester United,England,11,9,1815000,3080000,9,$1.81m,$3.08m
+AC Milan,Italy,10,8,1650000,2800000,13,$1.65m,$2.80m
+Fenerbahce,Türkiye,10,5,1640000,2800000,13,$1.64m,$2.80m
+PSV Eindhoven,Netherlands,10,8,1620000,2800000,13,$1.62m,$2.80m
+Real Madrid,Spain,10,9,1650000,2800000,13,$1.65m,$2.80m
+SK Slavia Prague,Czech Republic,10,1,1600000,2800000,13,$1.60m,$2.80m
+Al Ahly FC,Egypt,9,2,1515000,2520000,18,$1.51m,$2.52m
+Al-Ahli SFC,Saudi Arabia,9,7,1500000,2520000,18,$1.50m,$2.52m
+Al-Nassr FC,Saudi Arabia,9,3,1525000,2520000,18,$1.52m,$2.52m
+Aston Villa,England,9,6,1505000,2520000,18,$1.50m,$2.52m
+CR Flamengo,Brazil,9,4,1460000,2520000,18,$1.46m,$2.52m
+Sunderland AFC,England,9,8,1445000,2520000,18,$1.45m,$2.52m
+Brighton & Hove Albion,England,8,6,1300000,2240000,24,$1.30m,$2.24m
+Celtic FC,Scotland,8,7,1270000,2240000,24,$1.27m,$2.24m
+Chelsea FC,England,8,8,1335000,2240000,24,$1.33m,$2.24m
+Eintracht Frankfurt,Germany,8,8,1300000,2240000,24,$1.30m,$2.24m
+LOSC Lille,France,8,4,1355000,2240000,24,$1.35m,$2.24m
+Mamelodi Sundowns FC,South Africa,8,1,1280000,2240000,24,$1.28m,$2.24m
+Newcastle United,England,8,5,1315000,2240000,24,$1.31m,$2.24m
+OGC Nice,France,8,7,1320000,2240000,24,$1.32m,$2.24m
+Olympique Marseille,France,8,6,1335000,2240000,24,$1.33m,$2.24m
+Orlando Pirates,South Africa,8,1,1280000,2240000,24,$1.28m,$2.24m
+SL Benfica,Portugal,8,7,1340000,2240000,24,$1.34m,$2.24m
+TSG 1899 Hoffenheim,Germany,8,6,1310000,2240000,24,$1.31m,$2.24m
+Tottenham Hotspur,England,8,8,1345000,2240000,24,$1.34m,$2.24m
+VfB Stuttgart,Germany,8,5,1265000,2240000,24,$1.26m,$2.24m
+Villarreal CF,Spain,8,7,1310000,2240000,24,$1.31m,$2.24m
+Al-Duhail SC,Qatar,7,2,1105000,1960000,39,$1.10m,$1.96m
+Atalanta BC,Italy,7,7,1145000,1960000,39,$1.15m,$1.96m
+Bayer 04 Leverkusen,Germany,7,7,1175000,1960000,39,$1.18m,$1.96m
+FC Viktoria Plzen,Czech Republic,7,5,1145000,1960000,39,$1.15m,$1.96m
+Inter Milan,Italy,7,7,1150000,1960000,39,$1.15m,$1.96m
+RC Strasbourg Alsace,France,7,5,1150000,1960000,39,$1.15m,$1.96m
+Real Betis Balompié,Spain,7,6,1140000,1960000,39,$1.14m,$1.96m
+Sociedade Esportiva Palmeiras,Brazil,7,4,1180000,1960000,39,$1.18m,$1.96m
+Sporting CP,Portugal,7,5,1180000,1960000,39,$1.18m,$1.96m
+1.FSV Mainz 05,Germany,6,5,985000,1680000,48,$0.98m,$1.68m
+AS Monaco,France,6,5,975000,1680000,48,$0.97m,$1.68m
+AS Roma,Italy,6,6,960000,1680000,48,$0.96m,$1.68m
+Al-Hussein SC (Irbid),Jordan,6,1,1050000,1680000,48,$1.05m,$1.68m
+Al-Qadsiah FC,Saudi Arabia,6,3,1010000,1680000,48,$1.01m,$1.68m
+Esteghlal FC,Iran,6,3,1005000,1680000,48,$1.00m,$1.68m
+Fulham FC,England,6,5,980000,1680000,48,$0.98m,$1.68m
+Juventus FC,Italy,6,6,970000,1680000,48,$0.97m,$1.68m
+Persepolis FC,Iran,6,2,1020000,1680000,48,$1.02m,$1.68m
+Wolverhampton Wanderers,England,6,6,980000,1680000,48,$0.98m,$1.68m
+AFC Bournemouth,England,5,4,790000,1400000,58,$0.79m,$1.40m
+Al-Sadd SC,Qatar,5,1,775000,1400000,58,$0.78m,$1.40m
+Auckland FC,Australia,5,1,850000,1400000,58,$0.85m,$1.40m
+BSC Young Boys,Switzerland,5,4,800000,1400000,58,$0.80m,$1.40m
+Basaksehir FK,Türkiye,5,4,840000,1400000,58,$0.84m,$1.40m
+Bologna FC 1909,Italy,5,5,815000,1400000,58,$0.81m,$1.40m
+Borussia Mönchengladbach,Germany,5,4,800000,1400000,58,$0.80m,$1.40m
+Burnley FC,England,5,5,805000,1400000,58,$0.81m,$1.40m
+CA River Plate,Argentina,5,4,845000,1400000,58,$0.84m,$1.40m
+Club Brugge KV,Belgium,5,3,830000,1400000,58,$0.83m,$1.40m
+Deportivo Guadalajara,Mexico,5,1,800000,1400000,58,$0.80m,$1.40m
+Feyenoord Rotterdam,Netherlands,5,4,820000,1400000,58,$0.82m,$1.40m
+Norwich City,England,5,5,805000,1400000,58,$0.81m,$1.40m
+Nottingham Forest,England,5,5,810000,1400000,58,$0.81m,$1.40m
+Olympique Lyon,France,5,5,825000,1400000,58,$0.82m,$1.40m
+Pakhtakor Tashkent,Uzbekistan,5,2,845000,1400000,58,$0.84m,$1.40m
+Pyramids FC,Egypt,5,3,855000,1400000,58,$0.85m,$1.40m
+RB Leipzig,Germany,5,4,835000,1400000,58,$0.83m,$1.40m
+Rangers FC,Scotland,5,3,800000,1400000,58,$0.80m,$1.40m
+Real Sociedad,Spain,5,4,840000,1400000,58,$0.84m,$1.40m
+Tractor FC,Iran,5,2,850000,1400000,58,$0.85m,$1.40m
+VfL Wolfsburg,Germany,5,5,840000,1400000,58,$0.84m,$1.40m
+AJ Auxerre,France,4,2,665000,1120000,80,$0.67m,$1.12m
+Ajax Amsterdam,Netherlands,4,3,650000,1120000,80,$0.65m,$1.12m
+Al-Ittihad Club,Saudi Arabia,4,3,670000,1120000,80,$0.67m,$1.12m
+Al-Rayyan SC,Qatar,4,1,620000,1120000,80,$0.62m,$1.12m
+Al-Shorta SC,Iraq,4,1,660000,1120000,80,$0.66m,$1.12m
+Al-Wakrah SC,Qatar,4,2,635000,1120000,80,$0.64m,$1.12m
+Al-Zawraa SC,Iraq,4,2,680000,1120000,80,$0.68m,$1.12m
+Athletic Bilbao,Spain,4,2,680000,1120000,80,$0.68m,$1.12m
+Besiktas JK,Türkiye,4,4,655000,1120000,80,$0.66m,$1.12m
+Brentford FC,England,4,4,645000,1120000,80,$0.65m,$1.12m
+CF América,Mexico,4,3,665000,1120000,80,$0.67m,$1.12m
+Clube Atlético Mineiro,Brazil,4,2,645000,1120000,80,$0.65m,$1.12m
+Everton FC,England,4,3,655000,1120000,80,$0.66m,$1.12m
+FC Augsburg,Germany,4,4,660000,1120000,80,$0.66m,$1.12m
+FC Midtjylland,Denmark,4,3,650000,1120000,80,$0.65m,$1.12m
+FC St. Pauli,Germany,4,3,645000,1120000,80,$0.65m,$1.12m
+KRC Genk,Belgium,4,4,645000,1120000,80,$0.65m,$1.12m
+Leeds United,England,4,4,640000,1120000,80,$0.64m,$1.12m
+Los Angeles FC,United States,4,2,625000,1120000,80,$0.62m,$1.12m
+RC Lens,France,4,4,660000,1120000,80,$0.66m,$1.12m
+SC Braga,Portugal,4,4,665000,1120000,80,$0.67m,$1.12m
+SC Freiburg,Germany,4,4,660000,1120000,80,$0.66m,$1.12m
+SSC Napoli,Italy,4,3,665000,1120000,80,$0.67m,$1.12m
+Stade Rennais FC,France,4,4,665000,1120000,80,$0.67m,$1.12m
+US Sassuolo,Italy,4,4,640000,1120000,80,$0.64m,$1.12m
+West Ham United,England,4,4,655000,1120000,80,$0.66m,$1.12m
+AC Sparta Prague,Czech Republic,3,1,480000,840000,106,$0.48m,$0.84m
+Al-Ain FC,United Arab Emirates,3,3,490000,840000,106,$0.49m,$0.84m
+Al-Arabi SC,Qatar,3,1,465000,840000,106,$0.47m,$0.84m
+Al-Faisaly SC,Jordan,3,1,525000,840000,106,$0.53m,$0.84m
+Al-Gharafa SC,Qatar,3,1,465000,840000,106,$0.47m,$0.84m
+Al-Karma,Iraq,3,2,515000,840000,106,$0.52m,$0.84m
+Al-Talaba SC,Iraq,3,1,495000,840000,106,$0.49m,$0.84m
+Caykur Rizespor,Türkiye,3,3,480000,840000,106,$0.48m,$0.84m
+Chicago Fire FC,United States,3,3,480000,840000,106,$0.48m,$0.84m
+Como 1907,Italy,3,3,510000,840000,106,$0.51m,$0.84m
+FC Copenhagen,Denmark,3,3,490000,840000,106,$0.49m,$0.84m
+FC Dallas,United States,3,3,485000,840000,106,$0.48m,$0.84m
+FC Lorient,France,3,3,480000,840000,106,$0.48m,$0.84m
+FC Porto,Portugal,3,3,495000,840000,106,$0.49m,$0.84m
+FK Bodø/Glimt,Norway,3,1,495000,840000,106,$0.49m,$0.84m
+HNK Rijeka,Croatia,3,2,480000,840000,106,$0.48m,$0.84m
+Hamburger SV,Germany,3,3,490000,840000,106,$0.49m,$0.84m
+Heart of Midlothian FC,Scotland,3,2,475000,840000,106,$0.47m,$0.84m
+Hull City,England,3,3,480000,840000,106,$0.48m,$0.84m
+Inter Miami CF,United States,3,2,505000,840000,106,$0.51m,$0.84m
+Jeonbuk Hyundai Motors,"Korea, South",3,1,480000,840000,106,$0.48m,$0.84m
+Kasimpasa,Türkiye,3,2,485000,840000,106,$0.48m,$0.84m
+Le Havre AC,France,3,3,495000,840000,106,$0.49m,$0.84m
+Leicester City,England,3,2,505000,840000,106,$0.51m,$0.84m
+Melbourne City FC,Australia,3,1,495000,840000,106,$0.49m,$0.84m
+Minnesota United FC,United States,3,3,510000,840000,106,$0.51m,$0.84m
+Neftchi Fergana,Uzbekistan,3,1,510000,840000,106,$0.51m,$0.84m
+New York City FC,United States,3,2,495000,840000,106,$0.49m,$0.84m
+Orlando City SC,United States,3,3,490000,840000,106,$0.49m,$0.84m
+PEC Zwolle,Netherlands,3,3,500000,840000,106,$0.50m,$0.84m
+Pafos FC,Cyprus,3,3,485000,840000,106,$0.48m,$0.84m
+Real Oviedo,Spain,3,3,510000,840000,106,$0.51m,$0.84m
+Royal Charleroi SC,Belgium,3,2,495000,840000,106,$0.49m,$0.84m
+SV Werder Bremen,Germany,3,2,510000,840000,106,$0.51m,$0.84m
+Sepahan FC,Iran,3,1,510000,840000,106,$0.51m,$0.84m
+Sevilla FC,Spain,3,2,475000,840000,106,$0.47m,$0.84m
+Swansea City,England,3,3,495000,840000,106,$0.49m,$0.84m
+Torino FC,Italy,3,3,490000,840000,106,$0.49m,$0.84m
+Toronto FC,United States,3,2,465000,840000,106,$0.47m,$0.84m
+UNAM Pumas,Mexico,3,3,490000,840000,106,$0.49m,$0.84m
+Union Saint-Gilloise,Belgium,3,3,475000,840000,106,$0.47m,$0.84m
+Vancouver Whitecaps FC,United States,3,3,490000,840000,106,$0.49m,$0.84m
+Venezia FC,Italy,3,3,500000,840000,106,$0.50m,$0.84m
+Watford FC,England,3,3,500000,840000,106,$0.50m,$0.84m
+Wellington Phoenix,Australia,3,1,510000,840000,106,$0.51m,$0.84m
+Zamalek SC,Egypt,3,1,510000,840000,106,$0.51m,$0.84m
+AE Kifisia,Greece,2,2,320000,560000,152,$0.32m,$0.56m
+AE Larisa,Greece,2,1,340000,560000,152,$0.34m,$0.56m
+AEL Limassol,Cyprus,2,2,320000,560000,152,$0.32m,$0.56m
+AS Saint-Étienne,France,2,2,340000,560000,152,$0.34m,$0.56m
+Al-Bataeh CSC,United Arab Emirates,2,2,340000,560000,152,$0.34m,$0.56m
+Al-Ettifaq FC,Saudi Arabia,2,2,325000,560000,152,$0.33m,$0.56m
+Al-Najma SC,Saudi Arabia,2,2,335000,560000,152,$0.34m,$0.56m
+Al-Wehdat SC,Jordan,2,1,350000,560000,152,$0.35m,$0.56m
+Atlanta United FC,United States,2,1,330000,560000,152,$0.33m,$0.56m
+Bröndby IF,Denmark,2,2,330000,560000,152,$0.33m,$0.56m
+CA Huracán,Argentina,2,1,320000,560000,152,$0.32m,$0.56m
+CA Independiente,Argentina,2,2,335000,560000,152,$0.34m,$0.56m
+CA Osasuna,Spain,2,2,340000,560000,152,$0.34m,$0.56m
+CD Castellón,Spain,2,2,335000,560000,152,$0.34m,$0.56m
+CD Cruz Azul,Mexico,2,2,330000,560000,152,$0.33m,$0.56m
+CD Plaza Amador,Panama,2,1,340000,560000,152,$0.34m,$0.56m
+CD Universidad Católica,Ecuador,2,1,340000,560000,152,$0.34m,$0.56m
+Celta de Vigo,Spain,2,2,330000,560000,152,$0.33m,$0.56m
+Club Africain,Tunisia,2,1,320000,560000,152,$0.32m,$0.56m
+Club Cerro Porteño,Paraguay,2,1,330000,560000,152,$0.33m,$0.56m
+Club Tijuana,Mexico,2,2,320000,560000,152,$0.32m,$0.56m
+Columbus Crew,United States,2,2,335000,560000,152,$0.34m,$0.56m
+Coventry City,England,2,2,335000,560000,152,$0.34m,$0.56m
+Deportivo Saprissa,Costa Rica,2,1,340000,560000,152,$0.34m,$0.56m
+Deportivo Toluca,Mexico,2,1,320000,560000,152,$0.32m,$0.56m
+Derby County,England,2,2,325000,560000,152,$0.33m,$0.56m
+Dibba SCC,United Arab Emirates,2,2,335000,560000,152,$0.34m,$0.56m
+Dinamo Samarqand,Uzbekistan,2,1,340000,560000,152,$0.34m,$0.56m
+Dynamo Moscow,Russia,2,2,325000,560000,152,$0.33m,$0.56m
+Esperance Tunis,Tunisia,2,2,335000,560000,152,$0.34m,$0.56m
+FC Krasnodar,Russia,2,2,340000,560000,152,$0.34m,$0.56m
+FC Lugano,Switzerland,2,2,315000,560000,152,$0.32m,$0.56m
+FC Nordsjaelland,Denmark,2,2,340000,560000,152,$0.34m,$0.56m
+FC Schalke 04,Germany,2,1,310000,560000,152,$0.31m,$0.56m
+FC Tokyo,Japan,2,2,320000,560000,152,$0.32m,$0.56m
+FC Vizela,Portugal,2,1,310000,560000,152,$0.31m,$0.56m
+FC Volendam,Netherlands,2,1,320000,560000,152,$0.32m,$0.56m
+FCV Dender EH,Belgium,2,2,325000,560000,152,$0.33m,$0.56m
+Foolad FC,Iran,2,1,340000,560000,152,$0.34m,$0.56m
+GNK Dinamo Zagreb,Croatia,2,2,325000,560000,152,$0.33m,$0.56m
+Genoa CFC,Italy,2,2,325000,560000,152,$0.33m,$0.56m
+Girona FC,Spain,2,2,325000,560000,152,$0.33m,$0.56m
+Grêmio Foot-Ball Porto Alegrense,Brazil,2,2,320000,560000,152,$0.32m,$0.56m
+Hannover 96,Germany,2,2,320000,560000,152,$0.32m,$0.56m
+Igdir FK,Türkiye,2,2,330000,560000,152,$0.33m,$0.56m
+Kalba FC,United Arab Emirates,2,1,340000,560000,152,$0.34m,$0.56m
+Kashima Antlers,Japan,2,2,320000,560000,152,$0.32m,$0.56m
+LASK,Austria,2,2,345000,560000,152,$0.34m,$0.56m
+LDU Quito,Ecuador,2,2,315000,560000,152,$0.32m,$0.56m
+Maccabi Haifa,Israel,2,2,325000,560000,152,$0.33m,$0.56m
+Miami FC,United States,2,1,320000,560000,152,$0.32m,$0.56m
+Middlesbrough FC,England,2,2,315000,560000,152,$0.32m,$0.56m
+NEC Nijmegen,Netherlands,2,2,320000,560000,152,$0.32m,$0.56m
+NK Maribor,Slovenia,2,2,320000,560000,152,$0.32m,$0.56m
+Nasaf Qarshi,Uzbekistan,2,1,340000,560000,152,$0.34m,$0.56m
+Olympiacos Piraeus,Greece,2,2,325000,560000,152,$0.33m,$0.56m
+PAOK Thessaloniki,Greece,2,2,330000,560000,152,$0.33m,$0.56m
+Panathinaikos,Greece,2,2,330000,560000,152,$0.33m,$0.56m
+Parma Calcio 1913,Italy,2,2,325000,560000,152,$0.33m,$0.56m
+Philadelphia Union,United States,2,2,315000,560000,152,$0.32m,$0.56m
+RCD Mallorca,Spain,2,2,340000,560000,152,$0.34m,$0.56m
+RKC Waalwijk,Netherlands,2,1,320000,560000,152,$0.32m,$0.56m
+RSC Anderlecht,Belgium,2,2,315000,560000,152,$0.32m,$0.56m
+Rayo Vallecano,Spain,2,2,335000,560000,152,$0.34m,$0.56m
+Red Bull Salzburg,Austria,2,2,330000,560000,152,$0.33m,$0.56m
+Red Star Belgrade,Serbia,2,2,335000,560000,152,$0.34m,$0.56m
+SC Telstar,Netherlands,2,1,320000,560000,152,$0.32m,$0.56m
+San Diego FC,United States,2,2,340000,560000,152,$0.34m,$0.56m
+Selangor FC,Malaysia,2,1,350000,560000,152,$0.35m,$0.56m
+Sheffield United,England,2,2,330000,560000,152,$0.33m,$0.56m
+Sint-Truidense VV,Belgium,2,1,320000,560000,152,$0.32m,$0.56m
+Southampton FC,England,2,2,310000,560000,152,$0.31m,$0.56m
+Sport Club Internacional,Brazil,2,2,330000,560000,152,$0.33m,$0.56m
+Standard Liège,Belgium,2,2,340000,560000,152,$0.34m,$0.56m
+Stoke City,England,2,2,320000,560000,152,$0.32m,$0.56m
+Trabzonspor,Türkiye,2,2,330000,560000,152,$0.33m,$0.56m
+US Cremonese,Italy,2,2,330000,560000,152,$0.33m,$0.56m
+USM Alger,Algeria,2,1,350000,560000,152,$0.35m,$0.56m
+Ulsan HD FC,"Korea, South",2,1,320000,560000,152,$0.32m,$0.56m
+Viking FK,Norway,2,2,335000,560000,152,$0.34m,$0.56m
+Wrexham AFC,England,2,2,325000,560000,152,$0.33m,$0.56m
+Zed FC,Egypt,2,1,340000,560000,152,$0.34m,$0.56m
+Zenit St. Petersburg,Russia,2,1,310000,560000,152,$0.31m,$0.56m
+1.FC Union Berlin,Germany,1,1,160000,280000,235,$0.16m,$0.28m
+ACF Fiorentina,Italy,1,1,170000,280000,235,$0.17m,$0.28m
+AEK Athens,Greece,1,1,160000,280000,235,$0.16m,$0.28m
+AEK Larnaca,Cyprus,1,1,165000,280000,235,$0.17m,$0.28m
+AIK,Sweden,1,1,160000,280000,235,$0.16m,$0.28m
+APOEL Nicosia,Cyprus,1,1,165000,280000,235,$0.17m,$0.28m
+AS FAR Rabat,Morocco,1,1,155000,280000,235,$0.15m,$0.28m
+AS Nancy-Lorraine,France,1,1,155000,280000,235,$0.15m,$0.28m
+AZ Alkmaar,Netherlands,1,1,160000,280000,235,$0.16m,$0.28m
+Aarhus GF,Denmark,1,1,165000,280000,235,$0.17m,$0.28m
+Abha Club,Saudi Arabia,1,1,160000,280000,235,$0.16m,$0.28m
+Academia Puerto Cabello,Venezuela,1,1,170000,280000,235,$0.17m,$0.28m
+Akron Tolyatti,Russia,1,1,170000,280000,235,$0.17m,$0.28m
+Al-Dhafra FC,United Arab Emirates,1,1,165000,280000,235,$0.17m,$0.28m
+Al-Fayha FC,Saudi Arabia,1,1,170000,280000,235,$0.17m,$0.28m
+Al-Jazira Club,United Arab Emirates,1,1,170000,280000,235,$0.17m,$0.28m
+Al-Nasr SC (UAE),United Arab Emirates,1,1,170000,280000,235,$0.17m,$0.28m
+Al-Quwa Al-Jawiya,Iraq,1,1,175000,280000,235,$0.17m,$0.28m
+Al-Sailiya SC,Qatar,1,1,175000,280000,235,$0.17m,$0.28m
+Al-Shabab FC,Saudi Arabia,1,1,175000,280000,235,$0.17m,$0.28m
+Al-Shamal SC,Qatar,1,1,155000,280000,235,$0.15m,$0.28m
+Al-Ula FC,Saudi Arabia,1,1,170000,280000,235,$0.17m,$0.28m
+Al-Wahda FC,United Arab Emirates,1,1,170000,280000,235,$0.17m,$0.28m
+Alanyaspor,Türkiye,1,1,170000,280000,235,$0.17m,$0.28m
+Albirex Niigata,Japan,1,1,165000,280000,235,$0.17m,$0.28m
+Almere City FC,Netherlands,1,1,155000,280000,235,$0.15m,$0.28m
+Angers SCO,France,1,1,155000,280000,235,$0.15m,$0.28m
+Apollon Limassol,Cyprus,1,1,170000,280000,235,$0.17m,$0.28m
+Aris Limassol,Cyprus,1,1,170000,280000,235,$0.17m,$0.28m
+Atlas Guadalajara,Mexico,1,1,170000,280000,235,$0.17m,$0.28m
+Atlético Nacional,Colombia,1,1,170000,280000,235,$0.17m,$0.28m
+Atromitos Athens,Greece,1,1,170000,280000,235,$0.17m,$0.28m
+Austria Vienna,Austria,1,1,160000,280000,235,$0.16m,$0.28m
+BSC Young Boys U21,Switzerland,1,1,155000,280000,235,$0.15m,$0.28m
+Barnsley FC,England,1,1,155000,280000,235,$0.15m,$0.28m
+Birmingham City,England,1,1,160000,280000,235,$0.16m,$0.28m
+Botafogo de Futebol e Regatas,Brazil,1,1,155000,280000,235,$0.15m,$0.28m
+Braintree Town,England,1,1,170000,280000,235,$0.17m,$0.28m
+CA Boca Juniors,Argentina,1,1,175000,280000,235,$0.17m,$0.28m
+CA Lanús,Argentina,1,1,165000,280000,235,$0.17m,$0.28m
+CA Rosario Central,Argentina,1,1,170000,280000,235,$0.17m,$0.28m
+CA San Lorenzo de Almagro,Argentina,1,1,165000,280000,235,$0.17m,$0.28m
+CA Talleres,Argentina,1,1,165000,280000,235,$0.17m,$0.28m
+CA Vélez Sarsfield,Argentina,1,1,170000,280000,235,$0.17m,$0.28m
+CD Cobresal,Chile,1,1,170000,280000,235,$0.17m,$0.28m
+CD Marathón,Honduras,1,1,170000,280000,235,$0.17m,$0.28m
+CD Tondela,Portugal,1,1,160000,280000,235,$0.16m,$0.28m
+CF Estrela Amadora,Portugal,1,1,170000,280000,235,$0.17m,$0.28m
+CF Monterrey,Mexico,1,1,170000,280000,235,$0.17m,$0.28m
+CF Pachuca,Mexico,1,1,160000,280000,235,$0.16m,$0.28m
+CS Independiente Rivadavia,Argentina,1,1,165000,280000,235,$0.17m,$0.28m
+CS Sfaxien,Tunisia,1,1,160000,280000,235,$0.16m,$0.28m
+Cagliari Calcio,Italy,1,1,170000,280000,235,$0.17m,$0.28m
+Casa Pia AC,Portugal,1,1,170000,280000,235,$0.17m,$0.28m
+Cercle Brugge ,Belgium,1,1,160000,280000,235,$0.16m,$0.28m
+Charlotte FC,United States,1,1,165000,280000,235,$0.17m,$0.28m
+Charlton Athletic,England,1,1,155000,280000,235,$0.15m,$0.28m
+Club Athletico Paranaense,Brazil,1,1,170000,280000,235,$0.17m,$0.28m
+Club Estudiantes de La Plata,Argentina,1,1,170000,280000,235,$0.17m,$0.28m
+Club León FC,Mexico,1,1,170000,280000,235,$0.17m,$0.28m
+Club Nacional,Uruguay,1,1,170000,280000,235,$0.17m,$0.28m
+Clube de Regatas Vasco da Gama,Brazil,1,1,170000,280000,235,$0.17m,$0.28m
+Colorado Rapids,United States,1,1,165000,280000,235,$0.17m,$0.28m
+Colorado Springs Switchbacks FC,United States,1,1,155000,280000,235,$0.15m,$0.28m
+Cracovia,Poland,1,1,165000,280000,235,$0.17m,$0.28m
+Cultural Leonesa,Spain,1,1,155000,280000,235,$0.15m,$0.28m
+Daejeon Hana Citizen,"Korea, South",1,1,160000,280000,235,$0.16m,$0.28m
+Deportivo La Guaira,Venezuela,1,1,170000,280000,235,$0.17m,$0.28m
+Dinamo Makhachkala,Russia,1,1,160000,280000,235,$0.16m,$0.28m
+ETO FC,Hungary,1,1,175000,280000,235,$0.17m,$0.28m
+El Gouna FC,Egypt,1,1,170000,280000,235,$0.17m,$0.28m
+El Paso Locomotive FC,United States,1,1,155000,280000,235,$0.15m,$0.28m
+Elche CF,Spain,1,1,175000,280000,235,$0.17m,$0.28m
+Etoile Sportive du Sahel,Tunisia,1,1,160000,280000,235,$0.16m,$0.28m
+FC Astana,Kazakhstan,1,1,155000,280000,235,$0.15m,$0.28m
+FC Baniyas,United Arab Emirates,1,1,170000,280000,235,$0.17m,$0.28m
+FC Buxoro,Uzbekistan,1,1,170000,280000,235,$0.17m,$0.28m
+FC Cincinnati,United States,1,1,165000,280000,235,$0.17m,$0.28m
+FC Cosmos Koblenz,Germany,1,1,155000,280000,235,$0.15m,$0.28m
+FC Den Bosch,Netherlands,1,1,160000,280000,235,$0.16m,$0.28m
+FC Hradec Kralove,Czech Republic,1,1,160000,280000,235,$0.16m,$0.28m
+FC Juárez,Mexico,1,1,170000,280000,235,$0.17m,$0.28m
+FC Nantes,France,1,1,170000,280000,235,$0.17m,$0.28m
+FC Noah Yerevan,Armenia,1,1,170000,280000,235,$0.17m,$0.28m
+FC OKMK Olmaliq,Uzbekistan,1,1,170000,280000,235,$0.17m,$0.28m
+FC Pari Nizhniy Novgorod,Russia,1,1,170000,280000,235,$0.17m,$0.28m
+FC Rostov,Russia,1,1,170000,280000,235,$0.17m,$0.28m
+FC Seoul,"Korea, South",1,1,175000,280000,235,$0.17m,$0.28m
+FC Slovan Liberec,Czech Republic,1,1,155000,280000,235,$0.15m,$0.28m
+FC Sochaux-Montbéliard,France,1,1,155000,280000,235,$0.15m,$0.28m
+FC St. Gallen 1879,Switzerland,1,1,170000,280000,235,$0.17m,$0.28m
+FC Stade Nyonnais,Switzerland,1,1,175000,280000,235,$0.17m,$0.28m
+FC Tatran Presov,Slovakia,1,1,155000,280000,235,$0.15m,$0.28m
+FC Toulouse,France,1,1,165000,280000,235,$0.17m,$0.28m
+FC Twente Enschede,Netherlands,1,1,175000,280000,235,$0.17m,$0.28m
+FC Universitatea Cluj,Romania,1,1,155000,280000,235,$0.15m,$0.28m
+FC Utrecht U21,Netherlands,1,1,165000,280000,235,$0.17m,$0.28m
+FC Zürich,Switzerland,1,1,160000,280000,235,$0.16m,$0.28m
+FCSB,Romania,1,1,170000,280000,235,$0.17m,$0.28m
+FK Borac Banja Luka,Bosnia-Herzegovina,1,1,155000,280000,235,$0.15m,$0.28m
+Ferencvárosi TC,Hungary,1,1,155000,280000,235,$0.15m,$0.28m
+Fluminense Football Club,Brazil,1,1,170000,280000,235,$0.17m,$0.28m
+Fortuna Düsseldorf,Germany,1,1,155000,280000,235,$0.15m,$0.28m
+Frosinone Calcio,Italy,1,1,175000,280000,235,$0.17m,$0.28m
+GD Chaves,Portugal,1,1,170000,280000,235,$0.17m,$0.28m
+Gangwon FC,"Korea, South",1,1,160000,280000,235,$0.16m,$0.28m
+Gaziantep FK,Türkiye,1,1,155000,280000,235,$0.15m,$0.28m
+Gil Vicente FC,Portugal,1,1,160000,280000,235,$0.16m,$0.28m
+Granada CF,Spain,1,1,175000,280000,235,$0.17m,$0.28m
+Grazer AK 1902,Austria,1,1,165000,280000,235,$0.17m,$0.28m
+HNK Hajduk Split,Croatia,1,1,155000,280000,235,$0.15m,$0.28m
+Hearts of Oak,Ghana,1,1,170000,280000,235,$0.17m,$0.28m
+Hellas Verona,Italy,1,1,175000,280000,235,$0.17m,$0.28m
+Heracles Almelo,Netherlands,1,1,165000,280000,235,$0.17m,$0.28m
+Hibernian FC,Scotland,1,1,155000,280000,235,$0.15m,$0.28m
+Holstein Kiel,Germany,1,1,160000,280000,235,$0.16m,$0.28m
+IFK Norrköping,Sweden,1,1,160000,280000,235,$0.16m,$0.28m
+Independiente del Valle,Ecuador,1,1,160000,280000,235,$0.16m,$0.28m
+Ipswich Town,England,1,1,155000,280000,235,$0.15m,$0.28m
+Ironi Kiryat Shmona,Israel,1,1,170000,280000,235,$0.17m,$0.28m
+JS Kabylie,Algeria,1,1,175000,280000,235,$0.17m,$0.28m
+Jagiellonia Bialystok,Poland,1,1,155000,280000,235,$0.15m,$0.28m
+KAA Gent,Belgium,1,1,155000,280000,235,$0.15m,$0.28m
+KV Mechelen,Belgium,1,1,155000,280000,235,$0.15m,$0.28m
+Kaizer Chiefs,South Africa,1,1,160000,280000,235,$0.16m,$0.28m
+Karlsruher SC,Germany,1,1,155000,280000,235,$0.15m,$0.28m
+Kayserispor,Türkiye,1,1,160000,280000,235,$0.16m,$0.28m
+Kilmarnock FC,Scotland,1,1,170000,280000,235,$0.17m,$0.28m
+Konyaspor,Türkiye,1,1,160000,280000,235,$0.16m,$0.28m
+Lechia Gdansk,Poland,1,1,170000,280000,235,$0.17m,$0.28m
+Levante UD,Spain,1,1,165000,280000,235,$0.17m,$0.28m
+Lokomotiv Moscow,Russia,1,1,160000,280000,235,$0.16m,$0.28m
+Ludogorets Razgrad,Bulgaria,1,1,170000,280000,235,$0.17m,$0.28m
+Luton Town,England,1,1,165000,280000,235,$0.17m,$0.28m
+Maccabi Tel Aviv,Israel,1,1,170000,280000,235,$0.17m,$0.28m
+Machida Zelvia,Japan,1,1,165000,280000,235,$0.17m,$0.28m
+Malavan Bandar Anzali,Iran,1,1,170000,280000,235,$0.17m,$0.28m
+Malmö FF,Sweden,1,1,160000,280000,235,$0.16m,$0.28m
+Manchester United U21,England,1,1,155000,280000,235,$0.15m,$0.28m
+Mazatlán FC,Mexico,1,1,170000,280000,235,$0.17m,$0.28m
+Melbourne Victory,Australia,1,1,165000,280000,235,$0.17m,$0.28m
+Millwall FC,England,1,1,170000,280000,235,$0.17m,$0.28m
+Mjällby AIF,Sweden,1,1,160000,280000,235,$0.16m,$0.28m
+Molde FK,Norway,1,1,160000,280000,235,$0.16m,$0.28m
+Montana,Bulgaria,1,1,170000,280000,235,$0.17m,$0.28m
+Montpellier HSC,France,1,1,170000,280000,235,$0.17m,$0.28m
+Motherwell FC,Scotland,1,1,170000,280000,235,$0.17m,$0.28m
+NEOM SC,Saudi Arabia,1,1,170000,280000,235,$0.17m,$0.28m
+NK Lokomotiva Zagreb,Croatia,1,1,175000,280000,235,$0.17m,$0.28m
+Nashville SC,United States,1,1,165000,280000,235,$0.17m,$0.28m
+Navbahor Namangan,Uzbekistan,1,1,170000,280000,235,$0.17m,$0.28m
+New England Revolution,United States,1,1,165000,280000,235,$0.17m,$0.28m
+Newcastle United Jets,Australia,1,1,170000,280000,235,$0.17m,$0.28m
+Olimpia Asunción,Paraguay,1,1,165000,280000,235,$0.17m,$0.28m
+Omonia Nicosia,Cyprus,1,1,170000,280000,235,$0.17m,$0.28m
+PERSIB Bandung,Indonesia,1,1,165000,280000,235,$0.17m,$0.28m
+Paris FC,France,1,1,175000,280000,235,$0.17m,$0.28m
+Peterborough United,England,1,1,170000,280000,235,$0.17m,$0.28m
+Pisa Sporting Club,Italy,1,1,155000,280000,235,$0.15m,$0.28m
+Pogon Szczecin,Poland,1,1,165000,280000,235,$0.17m,$0.28m
+Polokwane City FC,South Africa,1,1,160000,280000,235,$0.16m,$0.28m
+Port FC,Thailand,1,1,165000,280000,235,$0.17m,$0.28m
+Port Vale FC,England,1,1,170000,280000,235,$0.17m,$0.28m
+Portland Timbers,United States,1,1,170000,280000,235,$0.17m,$0.28m
+Portsmouth FC,England,1,1,165000,280000,235,$0.17m,$0.28m
+Puskás Akadémia FC,Hungary,1,1,170000,280000,235,$0.17m,$0.28m
+Qatar SC,Qatar,1,1,175000,280000,235,$0.17m,$0.28m
+RCD Espanyol Barcelona,Spain,1,1,170000,280000,235,$0.17m,$0.28m
+Racing Santander,Spain,1,1,170000,280000,235,$0.17m,$0.28m
+Raja Club Athletic,Morocco,1,1,175000,280000,235,$0.17m,$0.28m
+Randers FC,Denmark,1,1,165000,280000,235,$0.17m,$0.28m
+Real Salt Lake City,United States,1,1,170000,280000,235,$0.17m,$0.28m
+Red Bull Bragantino,Brazil,1,1,165000,280000,235,$0.17m,$0.28m
+Renaissance de Berkane,Morocco,1,1,155000,280000,235,$0.15m,$0.28m
+Rotherham United,England,1,1,160000,280000,235,$0.16m,$0.28m
+Royal Antwerp FC,Belgium,1,1,160000,280000,235,$0.16m,$0.28m
+SC Bastia,France,1,1,155000,280000,235,$0.15m,$0.28m
+SC Farense,Portugal,1,1,170000,280000,235,$0.17m,$0.28m
+SC União Torreense,Portugal,1,1,170000,280000,235,$0.17m,$0.28m
+SJK Seinäjoki,Finland,1,1,170000,280000,235,$0.17m,$0.28m
+SK Beveren,Belgium,1,1,160000,280000,235,$0.16m,$0.28m
+Samsunspor,Türkiye,1,1,165000,280000,235,$0.17m,$0.28m
+Sanfrecce Hiroshima,Japan,1,1,160000,280000,235,$0.16m,$0.28m
+Santos FC,Brazil,1,1,155000,280000,235,$0.15m,$0.28m
+Santos Laguna,Mexico,1,1,160000,280000,235,$0.16m,$0.28m
+Sarpsborg 08 FF,Norway,1,1,165000,280000,235,$0.17m,$0.28m
+Seattle Sounders FC,United States,1,1,165000,280000,235,$0.17m,$0.28m
+Servette FC,Switzerland,1,1,160000,280000,235,$0.16m,$0.28m
+Shabab Al-Ahli Club,United Arab Emirates,1,1,170000,280000,235,$0.17m,$0.28m
+Shamrock Rovers,Ireland,1,1,170000,280000,235,$0.17m,$0.28m
+Silkeborg IF,Denmark,1,1,170000,280000,235,$0.17m,$0.28m
+Siwelele Football Club ,South Africa,1,1,160000,280000,235,$0.16m,$0.28m
+Slovan Bratislava,Slovakia,1,1,170000,280000,235,$0.17m,$0.28m
+Sparta Rotterdam,Netherlands,1,1,160000,280000,235,$0.16m,$0.28m
+Spartak Moscow,Russia,1,1,170000,280000,235,$0.17m,$0.28m
+Sport Club Corinthians Paulista,Brazil,1,1,160000,280000,235,$0.16m,$0.28m
+St. Patrick's Athletic,Ireland,1,1,170000,280000,235,$0.17m,$0.28m
+Stade Reims,France,1,1,160000,280000,235,$0.16m,$0.28m
+Surkhon Termiz,Uzbekistan,1,1,170000,280000,235,$0.17m,$0.28m
+Sydney FC,Australia,1,1,165000,280000,235,$0.17m,$0.28m
+São Paulo Futebol Clube,Brazil,1,1,165000,280000,235,$0.17m,$0.28m
+Terengganu FC,Malaysia,1,1,160000,280000,235,$0.16m,$0.28m
+Tigres UANL,Mexico,1,1,170000,280000,235,$0.17m,$0.28m
+Turan-Tovuz IK,Azerbaijan,1,1,170000,280000,235,$0.17m,$0.28m
+UC Sampdoria,Italy,1,1,155000,280000,235,$0.15m,$0.28m
+US Monastir,Tunisia,1,1,160000,280000,235,$0.16m,$0.28m
+Udinese Calcio,Italy,1,1,160000,280000,235,$0.16m,$0.28m
+Universidad de Concepción,Chile,1,1,170000,280000,235,$0.17m,$0.28m
+VVV-Venlo,Netherlands,1,1,160000,280000,235,$0.16m,$0.28m
+Valencia CF,Spain,1,1,155000,280000,235,$0.15m,$0.28m
+Vitória Guimarães SC,Portugal,1,1,170000,280000,235,$0.17m,$0.28m
+Western Sydney Wanderers,Australia,1,1,170000,280000,235,$0.17m,$0.28m
+Widzew Lodz,Poland,1,1,170000,280000,235,$0.17m,$0.28m
+Wolfsberger AC,Austria,1,1,175000,280000,235,$0.17m,$0.28m
+Zhejiang FC,China,1,1,160000,280000,235,$0.16m,$0.28m
+Zulte Waregem,Belgium,1,1,155000,280000,235,$0.15m,$0.28m
