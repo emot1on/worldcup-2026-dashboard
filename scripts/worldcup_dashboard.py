@@ -440,6 +440,19 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       display: block;
       margin-bottom: 2px;
     }}
+    .byline {{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }}
+    .byline a, .text-link {{
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(139, 91, 71, 0.28);
+    }}
+    .byline a:hover, .text-link:hover {{
+      border-bottom-color: rgba(139, 91, 71, 0.7);
+    }}
     .card-grid {{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -546,6 +559,29 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     .story-item strong {{
       display: block;
       margin-bottom: 4px;
+    }}
+    .control-stack {{
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }}
+    .inline-tools {{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }}
+    .small-button {{
+      border: 1px solid rgba(0,0,0,0.12);
+      background: #fffdfa;
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+    }}
+    .small-button[hidden] {{
+      display: none;
     }}
     .toolbar {{
       display: flex;
@@ -946,6 +982,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         <div class="eyebrow">World Cup 2026 Dashboard</div>
         <h1>Built for the weeks before kickoff, and ready for the tournament itself.</h1>
         <p class="deck">A World Cup 2026 dashboard designed for fans and journalists: rankings, group comparisons, country comparisons, fast chart reads, and a live-updatable tournament shell. The current editorial focus is on height, age, market value, club representation, and coaches.</p>
+        <p class="byline">A project by emot. <a href="https://joaotome.com" target="_blank" rel="noreferrer">joaotome.com</a></p>
       </div>
       <div class="hero-note">
         <strong>Data note</strong><br>
@@ -1050,8 +1087,11 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
       <div class="module-grid">
         <div class="list-card">
-          <div class="mini">Story prompts</div>
+          <div class="mini">Story trends</div>
           <div id="story-list" class="story-list"></div>
+          <div class="inline-tools">
+            <button id="story-more-button" class="small-button" type="button">Show more</button>
+          </div>
         </div>
         <div class="list-card">
           <div class="mini">Country explorer</div>
@@ -1076,6 +1116,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             </thead>
             <tbody id="country-table-body"></tbody>
           </table>
+          <div class="inline-tools">
+            <button id="country-more-button" class="small-button" type="button">Show more</button>
+          </div>
         </div>
       </div>
     </section>
@@ -1123,6 +1166,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           </table>
           <div class="stacked-block">
             <div class="mini">Most valuable squads</div>
+            <div class="control-stack">
+              <input id="squad-value-search" type="text" placeholder="Search squad...">
+            </div>
             <table>
               <thead>
                 <tr>
@@ -1132,6 +1178,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
               </thead>
               <tbody id="squad-value-body"></tbody>
             </table>
+            <div class="inline-tools">
+              <button id="squad-more-button" class="small-button" type="button">Show more</button>
+            </div>
           </div>
           <div class="stacked-block">
             <div class="mini">Lowest listed values</div>
@@ -1149,6 +1198,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         </div>
         <div class="list-card">
           <div class="mini">Clubs sending the most players</div>
+          <div class="control-stack">
+            <input id="global-club-search" type="text" placeholder="Search club...">
+          </div>
           <table>
             <thead>
               <tr>
@@ -1159,9 +1211,13 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             </thead>
             <tbody id="global-club-body"></tbody>
           </table>
+          <div class="inline-tools">
+            <button id="global-club-more-button" class="small-button" type="button">Show more</button>
+          </div>
           <div class="stacked-block">
             <div class="toolbar">
               <div class="mini">Top clubs by squad</div>
+              <input id="country-club-search" type="text" placeholder="Search club in squad...">
               <select id="club-country-select"></select>
             </div>
             <table>
@@ -1178,6 +1234,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         <div class="list-card">
           <div class="toolbar">
             <div class="mini">Attack leaders</div>
+            <input id="attack-search" type="text" placeholder="Search player or team...">
             <select id="attack-view-select">
               <option value="goals">Top scorers</option>
               <option value="assists">Top assisters</option>
@@ -1198,6 +1255,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             </thead>
             <tbody id="attack-body"></tbody>
           </table>
+          <div class="inline-tools">
+            <button id="attack-more-button" class="small-button" type="button">Show more</button>
+          </div>
         </div>
         <div class="list-card">
           <div class="toolbar">
@@ -1280,7 +1340,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             <div class="mini" id="timezone-label">Times shown in UTC.</div>
             <div class="tz-toggle">
               <button id="tz-utc" class="active" type="button">Show UTC</button>
-              <button id="tz-local" type="button">Show local time</button>
+              <button id="tz-local" type="button">Show my local time</button>
+              <button id="tz-host" type="button">Show host reference time</button>
             </div>
           </div>
           <div class="live-tools">
@@ -1378,12 +1439,25 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
 
     (() => {{
       const storyList = document.getElementById("story-list");
-      storyList.innerHTML = stories.map((story) => `
-        <div class="story-item">
-          <strong>${{story.headline}}</strong>
-          <div class="mini">${{story.summary}}</div>
-        </div>
-      `).join("");
+      const storyMoreButton = document.getElementById("story-more-button");
+      let storyLimit = 5;
+
+      function renderStories() {{
+        const rows = stories.slice(0, storyLimit);
+        storyList.innerHTML = rows.map((story) => `
+          <div class="story-item">
+            <strong>${{story.headline}}</strong>
+            <div class="mini">${{story.summary}}</div>
+          </div>
+        `).join("");
+        storyMoreButton.hidden = storyLimit >= stories.length;
+      }}
+
+      storyMoreButton.addEventListener("click", () => {{
+        storyLimit = Math.min(storyLimit + 5, stories.length);
+        renderStories();
+      }});
+      renderStories();
     }})();
 
     (() => {{
@@ -1477,19 +1551,21 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const search = document.getElementById("country-search");
       const sort = document.getElementById("country-sort");
       const body = document.getElementById("country-table-body");
+      const moreButton = document.getElementById("country-more-button");
+      let rowLimit = 18;
 
       function render() {{
         const [key, direction] = sort.value.split("-");
         const query = search.value.trim().toLowerCase();
-        const rows = [...countries]
+        const allRows = [...countries]
           .filter((row) => row.country.toLowerCase().includes(query))
           .sort((a, b) => {{
             const dir = direction === "asc" ? 1 : -1;
             if (a[key] < b[key]) return -1 * dir;
             if (a[key] > b[key]) return 1 * dir;
             return a.country.localeCompare(b.country);
-          }})
-          .slice(0, 18);
+          }});
+        const rows = allRows.slice(0, rowLimit);
         body.innerHTML = rows.map((row) => `
           <tr>
             <td>${{row.country}}</td>
@@ -1499,10 +1575,21 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             <td class="numeric">${{row.baseline_tournament_year ? row.baseline_tournament_year : "n/a"}}</td>
           </tr>
         `).join("");
+        moreButton.hidden = rowLimit >= allRows.length;
       }}
 
-      search.addEventListener("input", render);
-      sort.addEventListener("change", render);
+      search.addEventListener("input", () => {{
+        rowLimit = 18;
+        render();
+      }});
+      sort.addEventListener("change", () => {{
+        rowLimit = 18;
+        render();
+      }});
+      moreButton.addEventListener("click", () => {{
+        rowLimit += 18;
+        render();
+      }});
       render();
     }})();
 
@@ -1676,18 +1763,28 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     (() => {{
       const marketBody = document.getElementById("market-value-body");
       const squadValueBody = document.getElementById("squad-value-body");
+      const squadSearch = document.getElementById("squad-value-search");
+      const squadMoreButton = document.getElementById("squad-more-button");
       const leastBody = document.getElementById("least-value-body");
       const globalClubBody = document.getElementById("global-club-body");
+      const globalClubSearch = document.getElementById("global-club-search");
+      const globalClubMoreButton = document.getElementById("global-club-more-button");
       const countrySelect = document.getElementById("club-country-select");
+      const countryClubSearch = document.getElementById("country-club-search");
       const countryClubBody = document.getElementById("country-club-body");
+      const attackSearch = document.getElementById("attack-search");
       const attackViewSelect = document.getElementById("attack-view-select");
       const attackCopy = document.getElementById("attack-copy");
       const attackMetricHead = document.getElementById("attack-metric-head");
       const attackSupportHead = document.getElementById("attack-support-head");
       const attackBody = document.getElementById("attack-body");
+      const attackMoreButton = document.getElementById("attack-more-button");
       const coachViewSelect = document.getElementById("coach-view-select");
       const coachBody = document.getElementById("coach-body");
       const coachCopy = document.getElementById("coach-copy");
+      let squadLimit = 8;
+      let globalClubLimit = 12;
+      let attackLimit = 10;
 
       marketBody.innerHTML = marketValuePlayers.slice(0, 10).map((row) => `
         <tr>
@@ -1697,12 +1794,20 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         </tr>
       `).join("");
 
-      squadValueBody.innerHTML = squadValues.slice(0, 8).map((row) => `
-        <tr>
-          <td>${{row.country}}</td>
-          <td class="numeric">${{row.squad_market_value_text}}</td>
-        </tr>
-      `).join("");
+      function renderSquadValues() {{
+        const query = squadSearch.value.trim().toLowerCase();
+        const rows = squadValues
+          .filter((row) => row.country.toLowerCase().includes(query))
+          .slice(0, squadLimit);
+        squadValueBody.innerHTML = rows.map((row) => `
+          <tr>
+            <td>${{row.country}}</td>
+            <td class="numeric">${{row.squad_market_value_text}}</td>
+          </tr>
+        `).join("");
+        const total = squadValues.filter((row) => row.country.toLowerCase().includes(query)).length;
+        squadMoreButton.hidden = squadLimit >= total;
+      }}
 
       leastBody.innerHTML = leastValuePlayers.slice(0, 8).map((row) => `
         <tr>
@@ -1712,13 +1817,19 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         </tr>
       `).join("");
 
-      globalClubBody.innerHTML = globalClubCounts.slice(0, 12).map((row) => `
-        <tr>
-          <td>${{row.club}}</td>
-          <td class="numeric">${{row.player_count}}</td>
-          <td class="numeric">${{row.represented_countries}}</td>
-        </tr>
-      `).join("");
+      function renderGlobalClubs() {{
+        const query = globalClubSearch.value.trim().toLowerCase();
+        const filtered = globalClubCounts.filter((row) => row.club.toLowerCase().includes(query));
+        const rows = filtered.slice(0, globalClubLimit);
+        globalClubBody.innerHTML = rows.map((row) => `
+          <tr>
+            <td>${{row.club}}</td>
+            <td class="numeric">${{row.player_count}}</td>
+            <td class="numeric">${{row.represented_countries}}</td>
+          </tr>
+        `).join("");
+        globalClubMoreButton.hidden = globalClubLimit >= filtered.length;
+      }}
 
       const clubCountries = [...new Set(countryClubCounts.map((row) => row.country))].sort((a, b) => a.localeCompare(b));
       countrySelect.innerHTML = clubCountries.map((country) => `<option value="${{country}}">${{country}}</option>`).join("");
@@ -1727,6 +1838,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         const country = countrySelect.value;
         const rows = countryClubCounts
           .filter((row) => row.country === country)
+          .filter((row) => row.club.toLowerCase().includes(countryClubSearch.value.trim().toLowerCase()))
           .sort((a, b) => a.country_rank - b.country_rank || b.player_count - a.player_count || a.club.localeCompare(b.club));
         countryClubBody.innerHTML = rows.map((row) => `
           <tr>
@@ -1736,6 +1848,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         `).join("");
       }}
       countrySelect.addEventListener("change", renderCountryClubs);
+      countryClubSearch.addEventListener("input", renderCountryClubs);
       if (clubCountries.includes("Brazil")) {{
         countrySelect.value = "Brazil";
       }}
@@ -1763,46 +1876,50 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           rows = rows
             .filter((row) => row.goals > 0)
             .sort((a, b) => b.goals - a.goals || b.assists - a.assists || a.player.localeCompare(b.player))
-            .slice(0, 10);
           copy = "Top scorers among 2026 World Cup players, ranked by goals in each player's latest club season in the fetched Transfermarkt performance data.";
         }} else if (view === "assists") {{
           rows = rows
             .filter((row) => row.assists > 0)
-            .sort((a, b) => b.assists - a.assists || b.goals - a.goals || a.player.localeCompare(b.player))
-            .slice(0, 10);
+            .sort((a, b) => b.assists - a.assists || b.goals - a.goals || a.player.localeCompare(b.player));
           copy = "Top assisters among 2026 World Cup players, ranked by assists in each player's latest club season in the fetched Transfermarkt performance data.";
           metricLabel = "Assists";
           supportLabel = "Goals";
         }} else if (view === "contributions") {{
           rows = rows
             .filter((row) => row.goal_contributions > 0)
-            .sort((a, b) => b.goal_contributions - a.goal_contributions || b.goals - a.goals || a.player.localeCompare(b.player))
-            .slice(0, 10);
+            .sort((a, b) => b.goal_contributions - a.goal_contributions || b.goals - a.goals || a.player.localeCompare(b.player));
           copy = "Goal contributions can be cleaner than raw goals because they catch elite creators and scorers in the same table.";
           metricLabel = "G+A";
           supportLabel = "Season";
         }} else if (view === "youngest-scorers") {{
           rows = rows
             .filter((row) => row.goals > 0 && row.age != null)
-            .sort((a, b) => a.age - b.age || b.goals - a.goals || a.player.localeCompare(b.player))
-            .slice(0, 10);
+            .sort((a, b) => a.age - b.age || b.goals - a.goals || a.player.localeCompare(b.player));
           copy = "This isolates the youngest players who already arrive with real club-season scoring output rather than hype alone.";
           metricLabel = "Age";
           supportLabel = "Goals";
         }} else if (view === "oldest-assisters") {{
           rows = rows
             .filter((row) => row.assists > 0 && row.age != null)
-            .sort((a, b) => b.age - a.age || b.assists - a.assists || a.player.localeCompare(b.player))
-            .slice(0, 10);
+            .sort((a, b) => b.age - a.age || b.assists - a.assists || a.player.localeCompare(b.player));
           copy = "This catches the veteran creators still shaping attacks late in their careers.";
           metricLabel = "Age";
           supportLabel = "Assists";
         }}
 
+        const query = attackSearch.value.trim().toLowerCase();
+        rows = rows.filter((row) => {{
+          const player = row.player?.toLowerCase() || "";
+          const club = row.club?.toLowerCase() || "";
+          const country = row.country?.toLowerCase() || "";
+          return player.includes(query) || club.includes(query) || country.includes(query);
+        }});
+
         attackCopy.textContent = copy;
         attackMetricHead.textContent = metricLabel;
         attackSupportHead.textContent = supportLabel;
-        attackBody.innerHTML = rows.map((row) => {{
+        const visibleRows = rows.slice(0, attackLimit);
+        attackBody.innerHTML = visibleRows.map((row) => {{
           let metricValue = row.goals;
           let supportValue = row.assists;
           if (view === "assists") {{
@@ -1827,6 +1944,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             </tr>
           `;
         }}).join("");
+        attackMoreButton.hidden = attackLimit >= rows.length;
       }}
 
       function renderCoachDesk() {{
@@ -1907,8 +2025,37 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         `).join("");
       }}
 
-      attackViewSelect.addEventListener("change", renderAttack);
+      squadSearch.addEventListener("input", () => {{
+        squadLimit = 8;
+        renderSquadValues();
+      }});
+      squadMoreButton.addEventListener("click", () => {{
+        squadLimit += 10;
+        renderSquadValues();
+      }});
+      globalClubSearch.addEventListener("input", () => {{
+        globalClubLimit = 12;
+        renderGlobalClubs();
+      }});
+      globalClubMoreButton.addEventListener("click", () => {{
+        globalClubLimit += 12;
+        renderGlobalClubs();
+      }});
+      attackSearch.addEventListener("input", () => {{
+        attackLimit = 10;
+        renderAttack();
+      }});
+      attackViewSelect.addEventListener("change", () => {{
+        attackLimit = 10;
+        renderAttack();
+      }});
+      attackMoreButton.addEventListener("click", () => {{
+        attackLimit += 10;
+        renderAttack();
+      }});
       coachViewSelect.addEventListener("change", renderCoachDesk);
+      renderSquadValues();
+      renderGlobalClubs();
       renderAttack();
       renderCoachDesk();
     }})();
@@ -2025,7 +2172,13 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
               const bg = colorForRatio(ratio);
               const label = bins[index].label;
               const unit = metric === "age" ? "years" : "cm bucket";
-              return `<div class="heatmap-cell" style="background:${{bg}}" title="${{team.country}} • ${{label}} ${{unit}} • ${{count}} player${{count === 1 ? "" : "s"}}"></div>`;
+              const players = team.rows
+                .filter((row) => bins[index].test(row))
+                .map((row) => row.player)
+                .filter(Boolean)
+                .join(", ");
+              const playerText = players ? ` • Players: ${{players}}` : "";
+              return `<div class="heatmap-cell" style="background:${{bg}}" title="${{team.country}} • ${{label}} ${{unit}} • ${{count}} player${{count === 1 ? "" : "s"}}${{playerText}}"></div>`;
             }}).join("")}}
           </div>
         `).join("");
@@ -2057,12 +2210,14 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const filterLabel = document.getElementById("filter-label");
       const utcButton = document.getElementById("tz-utc");
       const localButton = document.getElementById("tz-local");
+      const hostButton = document.getElementById("tz-host");
       const filterToday = document.getElementById("filter-today");
       const filter24h = document.getElementById("filter-24h");
       const filter3d = document.getElementById("filter-3d");
       const filterAll = document.getElementById("filter-all");
       let timeMode = "utc";
       let fixtureFilter = "all";
+      const hostReferenceTimeZone = "America/New_York";
 
       function localTimeZone() {{
         try {{
@@ -2070,6 +2225,12 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         }} catch (error) {{
           return "local time";
         }}
+      }}
+
+      function activeTimeZone() {{
+        if (timeMode === "local") return undefined;
+        if (timeMode === "host") return hostReferenceTimeZone;
+        return "UTC";
       }}
 
       function formatKickoff(isoText) {{
@@ -2092,7 +2253,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           day: "numeric",
           hour: "2-digit",
           minute: "2-digit",
-          timeZone: "UTC",
+          timeZone: activeTimeZone(),
           timeZoneName: "short",
         }}).format(date);
       }}
@@ -2102,7 +2263,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         if (Number.isNaN(date.getTime())) return isoText;
         const options = timeMode === "local"
           ? {{ weekday: "long", month: "short", day: "numeric" }}
-          : {{ weekday: "long", month: "short", day: "numeric", timeZone: "UTC" }};
+          : {{ weekday: "long", month: "short", day: "numeric", timeZone: activeTimeZone() }};
         return new Intl.DateTimeFormat(undefined, options).format(date);
       }}
 
@@ -2130,7 +2291,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         if (fixtureFilter === "today") {{
           const currentFormatter = timeMode === "local"
             ? new Intl.DateTimeFormat(undefined, {{ year: "numeric", month: "2-digit", day: "2-digit" }})
-            : new Intl.DateTimeFormat("en-CA", {{ year: "numeric", month: "2-digit", day: "2-digit", timeZone: "UTC" }});
+            : new Intl.DateTimeFormat("en-CA", {{ year: "numeric", month: "2-digit", day: "2-digit", timeZone: activeTimeZone() }});
           return currentFormatter.format(date) === currentFormatter.format(now);
         }}
         return true;
@@ -2150,16 +2311,19 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           year: "numeric",
           month: "2-digit",
           day: "2-digit",
-          timeZone: "UTC",
+          timeZone: activeTimeZone(),
         }}).format(date);
       }}
 
       function renderLive() {{
         timezoneLabel.textContent = timeMode === "local"
           ? `Times shown in your computer timezone: ${{localTimeZone()}}.`
-          : "Times shown in UTC.";
+          : timeMode === "host"
+            ? `Times shown in host reference time: ${{hostReferenceTimeZone}}. This is a single North America reference timezone, not a venue-by-venue local clock.`
+            : "Times shown in UTC.";
         utcButton.classList.toggle("active", timeMode === "utc");
         localButton.classList.toggle("active", timeMode === "local");
+        hostButton.classList.toggle("active", timeMode === "host");
         filterToday.classList.toggle("active", fixtureFilter === "today");
         filter24h.classList.toggle("active", fixtureFilter === "24h");
         filter3d.classList.toggle("active", fixtureFilter === "3d");
@@ -2220,6 +2384,10 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }});
       localButton.addEventListener("click", () => {{
         timeMode = "local";
+        renderLive();
+      }});
+      hostButton.addEventListener("click", () => {{
+        timeMode = "host";
         renderLive();
       }});
       filterToday.addEventListener("click", () => {{
