@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import unicodedata
 from urllib.parse import quote
 
 import pandas as pd
@@ -13,6 +14,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DASHBOARD_DATA_DIR = PROJECT_ROOT / "output" / "dashboard-data"
 NORMALIZED_BUNDLE_PATH = DASHBOARD_DATA_DIR / "normalized" / "dashboard_bundle.json"
 RAW_FOOTBALL_DATA_DIR = DASHBOARD_DATA_DIR / "raw" / "football_data"
+TRANSFERMARKT_PLAYERS_PATH = DASHBOARD_DATA_DIR / "curated" / "transfermarkt_players_2026.csv"
 OUTPUT_DIR = PROJECT_ROOT / "output" / "worldcup-dashboard"
 
 BG = "#f6f2ea"
@@ -97,6 +99,112 @@ def format_eur_millions_from_usd(value: float | int | None) -> str:
     if value is None:
         return "n/a"
     return f"€{(float(value) * ECB_EUR_PER_USD) / 1_000_000:.2f}m"
+
+
+COUNTRY_NAME_ALIASES = {
+    "turkiye": "turkey",
+    "korea, south": "south korea",
+    "usa": "united states",
+    "u.s.a.": "united states",
+    "cote d'ivoire": "ivory coast",
+    "czechia": "czech republic",
+    "iran, islamic republic of": "iran",
+    "congo dr": "dr congo",
+    "curacao": "curaçao",
+    "cabo verde": "cape verde",
+}
+
+
+def normalize_country_name(value: str | None) -> str:
+    if value is None:
+        return ""
+    compact = " ".join(str(value).strip().split()).casefold()
+    compact = "".join(
+        character
+        for character in unicodedata.normalize("NFKD", compact)
+        if not unicodedata.combining(character)
+    )
+    return COUNTRY_NAME_ALIASES.get(compact, compact)
+
+
+def build_club_pathway_data() -> tuple[list[dict], list[dict]]:
+    if not TRANSFERMARKT_PLAYERS_PATH.exists():
+        return [], []
+    players = pd.read_csv(TRANSFERMARKT_PLAYERS_PATH)
+    needed = ["country", "player", "club", "club_country", "competition_name", "position"]
+    if any(column not in players.columns for column in needed):
+        return [], []
+    players = players.dropna(subset=["country", "player", "club", "club_country"]).copy()
+    if players.empty:
+        return [], []
+    players["competition_name"] = players["competition_name"].fillna("Unknown tier")
+    players["country_norm"] = players["country"].map(normalize_country_name)
+    players["club_country_norm"] = players["club_country"].map(normalize_country_name)
+    players["is_domestic"] = players["country_norm"] == players["club_country_norm"]
+    players["league_bucket"] = players["club_country"] + " • " + players["competition_name"]
+
+    rows = [
+        {
+            "country": row["country"],
+            "player": row["player"],
+            "club": row["club"],
+            "club_country": row["club_country"],
+            "competition_name": row["competition_name"],
+            "league_bucket": row["league_bucket"],
+            "position": row["position"] if pd.notna(row["position"]) else None,
+            "is_domestic": bool(row["is_domestic"]),
+        }
+        for row in players.sort_values(["country", "is_domestic", "league_bucket", "club", "player"]).to_dict("records")
+    ]
+
+    country_summary = (
+        players.groupby("country", as_index=False)
+        .agg(players=("player", "count"), domestic=("is_domestic", "sum"))
+        .sort_values(["domestic", "players", "country"], ascending=[False, False, True])
+    )
+    country_summary["overseas"] = country_summary["players"] - country_summary["domestic"]
+    country_summary["domestic_pct"] = country_summary["domestic"] / country_summary["players"] * 100
+
+    top_domestic = country_summary.sort_values(
+        ["domestic_pct", "players", "country"], ascending=[False, False, True]
+    ).iloc[0]
+    zero_domestic = country_summary[country_summary["domestic"] == 0].sort_values("country")
+    top_bucket = (
+        players.groupby("league_bucket", as_index=False)
+        .agg(players=("player", "count"), countries=("country", "nunique"))
+        .sort_values(["players", "countries", "league_bucket"], ascending=[False, False, True])
+        .iloc[0]
+    )
+    stories = [
+        {
+            "slug": "domestic-core-leader-2026",
+            "headline": f"{top_domestic['country']} keeps the strongest home-league core",
+            "metric": "domestic_pct",
+            "summary": (
+                f"{top_domestic['domestic']} of {top_domestic['players']} players are domestic-based "
+                f"({top_domestic['domestic_pct']:.1f}%)."
+            ),
+        },
+        {
+            "slug": "overseas-only-squads-2026",
+            "headline": f"{len(zero_domestic)} squads have no domestic-based players at all",
+            "metric": "domestic_zero_count",
+            "summary": (
+                f"{', '.join(zero_domestic['country'].head(6).tolist())}"
+                + (" and others are fully overseas-based." if len(zero_domestic) > 6 else " are fully overseas-based.")
+            ),
+        },
+        {
+            "slug": "league-bucket-leader-2026",
+            "headline": f"{top_bucket['league_bucket']} is the biggest club-location pipeline",
+            "metric": "league_bucket_players",
+            "summary": (
+                f"It supplies {int(top_bucket['players'])} World Cup players across "
+                f"{int(top_bucket['countries'])} national teams."
+            ),
+        },
+    ]
+    return rows, stories
 
 
 def make_trend_chart(bundle: dict) -> go.Figure:
@@ -366,17 +474,34 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     highlights = bundle["highlights"]
     countries = bundle["countries_2026"]
     sources = bundle.get("sources", [])
+    club_pathway_rows, club_pathway_stories = build_club_pathway_data()
     club_benefit_country_rows = bundle.get("club_benefits_countries_2026", [])
     club_benefit_club_rows = bundle.get("club_benefits_clubs_2026", [])
     top_benefit_country = club_benefit_country_rows[0] if club_benefit_country_rows else {}
     top_benefit_club = club_benefit_club_rows[0] if club_benefit_club_rows else {}
     top_benefit_country_ceiling_eur = format_eur_millions_from_usd(top_benefit_country.get("estimated_ceiling_usd"))
     top_benefit_club_ceiling_eur = format_eur_millions_from_usd(top_benefit_club.get("estimated_ceiling_usd"))
+    all_stories = []
+    for story in bundle["story_manifest"]:
+        adjusted = dict(story)
+        if story.get("slug") == "club-benefits-country-leader-2026" and top_benefit_country:
+            adjusted["summary"] = (
+                f"Using FIFA's club-benefits framework and the current 2026 schedule, clubs based in "
+                f"{top_benefit_country['club_country']} have an estimated ceiling of "
+                f"{top_benefit_country_ceiling_eur} across {int(top_benefit_country['player_count'])} players."
+            )
+        elif story.get("slug") == "club-benefits-club-leader-2026" and top_benefit_club:
+            adjusted["summary"] = (
+                f"The same estimate puts {top_benefit_club['club']} on a ceiling of "
+                f"{top_benefit_club_ceiling_eur} from {int(top_benefit_club['player_count'])} released players."
+            )
+        all_stories.append(adjusted)
+    all_stories.extend(club_pathway_stories)
     transfermarkt_note = bundle.get("metadata", {}).get("transfermarkt_note")
     live_json = json.dumps(live_snapshot)
     country_json = json.dumps(countries)
     group_members = json.dumps(bundle["group_members_2026"])
-    story_json = json.dumps(bundle["story_manifest"])
+    story_json = json.dumps(all_stories)
     confed_history_json = json.dumps(bundle["confederation_history"])
     distribution_json = json.dumps(bundle["player_distribution_pool"])
     distribution_years_json = json.dumps(bundle["metadata"]["distribution_window_years"])
@@ -387,6 +512,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     squad_value_json = json.dumps(bundle.get("squad_market_values_2026", []))
     global_club_json = json.dumps(bundle.get("global_club_representation_2026", []))
     country_club_json = json.dumps(bundle.get("country_club_representation_2026", []))
+    club_pathway_json = json.dumps(club_pathway_rows)
     club_benefits_json = json.dumps(club_benefit_country_rows)
     club_benefits_clubs_json = json.dumps(club_benefit_club_rows)
     coaches_json = json.dumps(bundle.get("coaches_2026", []))
@@ -677,6 +803,94 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     .story-item strong {{
       display: block;
       margin-bottom: 4px;
+    }}
+    .pathway-shell {{
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      margin-top: 18px;
+    }}
+    .pathway-bars {{
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }}
+    .pathway-row {{
+      border: 1px solid rgba(0,0,0,0.08);
+      background: #fffdfa;
+      border-radius: 14px;
+      padding: 10px 12px;
+      cursor: pointer;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+    }}
+    .pathway-row.active {{
+      border-color: rgba(44,125,160,0.4);
+      box-shadow: inset 0 0 0 1px rgba(44,125,160,0.24);
+      background: rgba(44,125,160,0.06);
+    }}
+    .pathway-row-head {{
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }}
+    .pathway-row-head strong {{
+      font-size: 0.98rem;
+    }}
+    .pathway-bar-track {{
+      height: 10px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 999px;
+      overflow: hidden;
+    }}
+    .pathway-bar-fill {{
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #9ad4e5 0%, #2c7da0 100%);
+    }}
+    .pathway-player-list {{
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }}
+    .pathway-player-card {{
+      border: 1px solid rgba(0,0,0,0.08);
+      background: #fffdfa;
+      border-radius: 14px;
+      padding: 12px;
+    }}
+    .pathway-player-card strong {{
+      display: block;
+      margin-bottom: 4px;
+    }}
+    .pathway-stat-strip {{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }}
+    .pathway-badge {{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: rgba(0,0,0,0.05);
+      color: var(--muted);
+      font-size: 0.84rem;
+    }}
+    .pathway-badge.is-domestic {{
+      background: rgba(44,125,160,0.10);
+      color: #245d74;
+      font-weight: 600;
+    }}
+    .pathway-badge.is-overseas {{
+      background: rgba(207,109,62,0.10);
+      color: #8f4f31;
+      font-weight: 600;
     }}
     .control-stack {{
       display: grid;
@@ -1109,7 +1323,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       margin-top: 10px;
     }}
     @media (max-width: 980px) {{
-      .hero, .grid-2, .module-grid, .live-shell, .ranking-grid {{
+      .hero, .grid-2, .module-grid, .live-shell, .ranking-grid, .pathway-shell {{
         grid-template-columns: 1fr;
       }}
       .compare-toolbar {{
@@ -1398,6 +1612,39 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       <div class="compare-grid" id="compare-grid"></div>
     </section>
 
+    <section id="club-pathways">
+      <div class="section-head">
+        <div>
+          <h2>Domestic and overseas club pathways</h2>
+          <p class="section-copy">This view tracks where each 2026 squad plays its club football. It uses current Transfermarkt club pages and groups players by club country plus league tier. That is strong enough to show domestic cores, export-heavy squads, and the main club pathways into each national team, even if it is not yet a full exact-league feed.</p>
+        </div>
+      </div>
+      <div class="pathway-shell">
+        <div class="list-card">
+          <div class="toolbar">
+            <div class="mini">League pathways by team</div>
+            <select id="pathway-country-select"></select>
+            <div class="toggle-row">
+              <button id="pathway-all" class="active" type="button">All</button>
+              <button id="pathway-domestic" type="button">Domestic only</button>
+              <button id="pathway-overseas" type="button">Overseas only</button>
+            </div>
+          </div>
+          <p class="section-copy" id="pathway-copy" style="margin-top: 10px;"></p>
+          <div class="pathway-stat-strip" id="pathway-stat-strip"></div>
+          <div id="pathway-bars" class="pathway-bars"></div>
+        </div>
+        <div class="list-card">
+          <div class="toolbar">
+            <div class="mini">Selected pathway details</div>
+            <select id="pathway-club-select"></select>
+          </div>
+          <p class="section-copy" id="pathway-detail-copy" style="margin-top: 10px;"></p>
+          <div id="pathway-player-list" class="pathway-player-list"></div>
+        </div>
+      </div>
+    </section>
+
     <section id="value-clubs-coaches">
       <div class="section-head">
         <div>
@@ -1653,6 +1900,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           <a href="#group-confed-points">Group and confederation pressure points</a>
           <a href="#country-story-desk">Country and story desk</a>
           <a href="#quick-comparison">Quick comparison</a>
+          <a href="#club-pathways">Domestic and overseas pathways</a>
           <a href="#value-clubs-coaches">Value, clubs and coaches</a>
           <a href="#squad-distribution-heatmap">Squad distribution heatmap</a>
           <a href="#tactical-shape">Tactical shape</a>
@@ -1673,6 +1921,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       <a href="#group-confed-points">Group and confederation pressure points</a>
       <a href="#country-story-desk">Country and story desk</a>
       <a href="#quick-comparison">Quick comparison</a>
+      <a href="#club-pathways">Domestic and overseas pathways</a>
       <a href="#value-clubs-coaches">Value, clubs and coaches</a>
       <a href="#squad-distribution-heatmap">Squad distribution heatmap</a>
       <a href="#tactical-shape">Tactical shape</a>
@@ -1696,6 +1945,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     const squadValues = {squad_value_json};
     const globalClubCounts = {global_club_json};
     const countryClubCounts = {country_club_json};
+    const clubPathwayPlayers = {club_pathway_json};
     const clubBenefitsCountries = {club_benefits_json};
     const clubBenefitsClubs = {club_benefits_clubs_json};
     const coaches = {coaches_json};
@@ -2133,6 +2383,157 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }});
 
       renderCards();
+    }})();
+
+    (() => {{
+      const pathwayCountrySelect = document.getElementById("pathway-country-select");
+      const pathwayAll = document.getElementById("pathway-all");
+      const pathwayDomestic = document.getElementById("pathway-domestic");
+      const pathwayOverseas = document.getElementById("pathway-overseas");
+      const pathwayCopy = document.getElementById("pathway-copy");
+      const pathwayStatStrip = document.getElementById("pathway-stat-strip");
+      const pathwayBars = document.getElementById("pathway-bars");
+      const pathwayClubSelect = document.getElementById("pathway-club-select");
+      const pathwayDetailCopy = document.getElementById("pathway-detail-copy");
+      const pathwayPlayerList = document.getElementById("pathway-player-list");
+
+      const pathwayCountries = [...new Set(clubPathwayPlayers.map((row) => row.country))].sort((a, b) => a.localeCompare(b));
+      pathwayCountrySelect.innerHTML = pathwayCountries.map((country) => `<option value="${{country}}">${{country}}</option>`).join("");
+      if (pathwayCountries.includes("Brazil")) pathwayCountrySelect.value = "Brazil";
+
+      let pathwayScope = "all";
+      let selectedBucket = null;
+      let selectedClubName = null;
+
+      function scopeMatches(row) {{
+        if (pathwayScope === "domestic") return row.is_domestic;
+        if (pathwayScope === "overseas") return !row.is_domestic;
+        return true;
+      }}
+
+      function activeCountryRows() {{
+        return clubPathwayPlayers.filter((row) => row.country === pathwayCountrySelect.value);
+      }}
+
+      function renderPathways() {{
+        const country = pathwayCountrySelect.value;
+        const rows = activeCountryRows();
+        const filtered = rows.filter(scopeMatches);
+        const domesticCount = rows.filter((row) => row.is_domestic).length;
+        const overseasCount = rows.length - domesticCount;
+        const domesticPct = rows.length ? (domesticCount / rows.length) * 100 : 0;
+
+        const bucketMap = new Map();
+        filtered.forEach((row) => {{
+          if (!bucketMap.has(row.league_bucket)) {{
+            bucketMap.set(row.league_bucket, {{
+              league_bucket: row.league_bucket,
+              club_country: row.club_country,
+              competition_name: row.competition_name,
+              is_domestic: row.is_domestic,
+              player_count: 0,
+              clubs: new Map(),
+            }});
+          }}
+          const bucket = bucketMap.get(row.league_bucket);
+          bucket.player_count += 1;
+          if (!bucket.clubs.has(row.club)) {{
+            bucket.clubs.set(row.club, []);
+          }}
+          bucket.clubs.get(row.club).push(row);
+        }});
+
+        const buckets = [...bucketMap.values()]
+          .map((bucket) => ({{
+            ...bucket,
+            clubs: [...bucket.clubs.entries()]
+              .map(([club, players]) => ({{
+                club,
+                player_count: players.length,
+                players: players.sort((left, right) => left.player.localeCompare(right.player)),
+              }}))
+              .sort((left, right) => right.player_count - left.player_count || left.club.localeCompare(right.club)),
+          }}))
+          .sort((left, right) => right.player_count - left.player_count || left.league_bucket.localeCompare(right.league_bucket));
+
+        const topBucket = buckets[0];
+        const scopeLabel = pathwayScope === "all" ? "all players" : pathwayScope === "domestic" ? "domestic-based players only" : "overseas-based players only";
+        pathwayCopy.textContent = !rows.length
+          ? "No club-pathway rows are available for this team."
+          : !topBucket
+            ? `${{country}} has no players in this view.`
+            : `${{country}} is ${{domesticPct >= 50 ? "more domestic-based" : "more overseas-based"}} in the current squad snapshot: ${{domesticCount}} domestic and ${{overseasCount}} overseas. In the ${{scopeLabel}} view, the biggest pathway is ${{topBucket.league_bucket}} with ${{topBucket.player_count}} player${{topBucket.player_count === 1 ? "" : "s"}}.`;
+
+        pathwayStatStrip.innerHTML = `
+          <span class="pathway-badge is-domestic">Domestic: ${{domesticCount}} / ${{rows.length || 0}} (${{domesticPct.toFixed(1)}}%)</span>
+          <span class="pathway-badge is-overseas">Overseas: ${{overseasCount}} / ${{rows.length || 0}} (${{(rows.length ? (overseasCount / rows.length) * 100 : 0).toFixed(1)}}%)</span>
+          <span class="pathway-badge">${{topBucket ? `${{buckets.length}} pathway buckets` : "No pathway buckets in this filter"}}</span>
+        `;
+
+        const maxCount = Math.max(...buckets.map((bucket) => bucket.player_count), 1);
+        pathwayBars.innerHTML = buckets.map((bucket) => `
+          <button class="pathway-row ${{selectedBucket === bucket.league_bucket ? "active" : ""}}" type="button" data-bucket="${{bucket.league_bucket}}">
+            <div class="pathway-row-head">
+              <strong>${{bucket.league_bucket}}</strong>
+              <span class="mini">${{bucket.player_count}} player${{bucket.player_count === 1 ? "" : "s"}}</span>
+            </div>
+            <div class="pathway-bar-track">
+              <div class="pathway-bar-fill" style="width:${{(bucket.player_count / maxCount) * 100}}%"></div>
+            </div>
+          </button>
+        `).join("");
+
+        if (!topBucket) {{
+          selectedBucket = null;
+          selectedClubName = null;
+          pathwayClubSelect.innerHTML = "<option value=''>No clubs</option>";
+          pathwayDetailCopy.textContent = "This filter leaves no clubs to inspect.";
+          pathwayPlayerList.innerHTML = "";
+        }} else {{
+          if (!selectedBucket || !buckets.find((bucket) => bucket.league_bucket === selectedBucket)) {{
+            selectedBucket = topBucket.league_bucket;
+          }}
+          const selected = buckets.find((bucket) => bucket.league_bucket === selectedBucket) || topBucket;
+          pathwayClubSelect.innerHTML = selected.clubs.map((club) => `<option value="${{club.club}}">${{club.club}} (${{club.player_count}})</option>`).join("");
+          if (!selected.clubs.find((club) => club.club === selectedClubName)) {{
+            selectedClubName = selected.clubs[0]?.club || null;
+          }}
+          pathwayClubSelect.value = selectedClubName || selected.clubs[0]?.club || "";
+          const selectedClub = selected.clubs.find((club) => club.club === pathwayClubSelect.value) || selected.clubs[0];
+          pathwayDetailCopy.textContent = `${{selected.league_bucket}} is represented here by ${{selected.clubs.length}} club${{selected.clubs.length === 1 ? "" : "s"}}. ${{selectedClub ? `${{selectedClub.club}} contributes ${{selectedClub.player_count}} player${{selectedClub.player_count === 1 ? "" : "s"}}.` : ""}}`;
+          pathwayPlayerList.innerHTML = selectedClub
+            ? selectedClub.players.map((row) => `
+                <div class="pathway-player-card">
+                  <strong>${{row.player}}</strong>
+                  <div class="mini">${{row.club}} • ${{row.position || "Position n/a"}}</div>
+                  <div class="mini">${{row.is_domestic ? "Domestic-based" : "Overseas-based"}} • ${{row.club_country}} • ${{row.competition_name}}</div>
+                </div>
+              `).join("")
+            : "";
+        }}
+
+        pathwayBars.querySelectorAll(".pathway-row").forEach((button) => {{
+          button.addEventListener("click", () => {{
+            selectedBucket = button.dataset.bucket;
+            renderPathways();
+          }});
+        }});
+
+        pathwayAll.classList.toggle("active", pathwayScope === "all");
+        pathwayDomestic.classList.toggle("active", pathwayScope === "domestic");
+        pathwayOverseas.classList.toggle("active", pathwayScope === "overseas");
+      }}
+
+      pathwayCountrySelect.addEventListener("change", () => {{
+        selectedBucket = null;
+        selectedClubName = null;
+        renderPathways();
+      }});
+      pathwayClubSelect.addEventListener("change", () => {{ selectedClubName = pathwayClubSelect.value; renderPathways(); }});
+      pathwayAll.addEventListener("click", () => {{ pathwayScope = "all"; selectedBucket = null; selectedClubName = null; renderPathways(); }});
+      pathwayDomestic.addEventListener("click", () => {{ pathwayScope = "domestic"; selectedBucket = null; selectedClubName = null; renderPathways(); }});
+      pathwayOverseas.addEventListener("click", () => {{ pathwayScope = "overseas"; selectedBucket = null; selectedClubName = null; renderPathways(); }});
+      renderPathways();
     }})();
 
     (() => {{
