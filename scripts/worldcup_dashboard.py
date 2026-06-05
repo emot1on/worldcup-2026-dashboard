@@ -495,7 +495,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     .section-guide {{
       position: fixed;
       top: 26px;
-      right: max(14px, calc((100vw - 1280px) / 2 - 2px));
+      right: -208px;
       width: 248px;
       background: rgba(255,255,255,0.72);
       border: 1px solid rgba(0,0,0,0.07);
@@ -504,9 +504,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       z-index: 40;
       box-shadow: 0 16px 44px rgba(0,0,0,0.08);
       backdrop-filter: blur(8px);
-      transform: translateX(calc(100% - 36px));
-      opacity: 0.78;
-      transition: transform 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+      opacity: 0.9;
+      transition: right 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
     }}
     .section-guide::before {{
       content: "Guide";
@@ -527,7 +526,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     }}
     .section-guide:hover,
     .section-guide:focus-within {{
-      transform: translateX(0);
+      right: 12px;
       opacity: 1;
       box-shadow: 0 20px 52px rgba(0,0,0,0.12);
     }}
@@ -1044,15 +1043,6 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       }}
       .section-guide {{
         display: none;
-      }}
-    }}
-    @media (min-width: 1480px) {{
-      .section-guide {{
-        transform: translateX(0);
-        opacity: 0.96;
-      }}
-      .section-guide::before {{
-        opacity: 0;
       }}
     }}
     @media (max-width: 640px) {{
