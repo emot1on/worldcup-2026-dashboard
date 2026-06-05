@@ -474,6 +474,40 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       gap: 14px;
       margin: 18px 0 34px;
     }}
+    .page-shell {{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 22px;
+      align-items: start;
+    }}
+    .content-shell {{
+      min-width: 0;
+    }}
+    .section-guide {{
+      position: sticky;
+      top: 22px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+    }}
+    .section-guide h3 {{
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      color: var(--text);
+    }}
+    .section-guide-list {{
+      display: grid;
+      gap: 10px;
+    }}
+    .section-guide-list a {{
+      color: var(--muted);
+      text-decoration: none;
+      line-height: 1.25;
+    }}
+    .section-guide-list a:hover {{
+      color: var(--accent);
+    }}
     .metric-card {{
       background: var(--panel);
       border: 1px solid rgba(0,0,0,0.06);
@@ -828,6 +862,28 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       border-radius: 2px;
       border: 1px solid rgba(255,255,255,0.4);
       box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+      cursor: pointer;
+    }}
+    .heatmap-tooltip {{
+      position: fixed;
+      z-index: 50;
+      max-width: 320px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(25, 21, 18, 0.96);
+      color: #fffdfa;
+      font-size: 0.84rem;
+      line-height: 1.35;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.22);
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 120ms ease, transform 120ms ease;
+      white-space: normal;
+    }}
+    .heatmap-tooltip.visible {{
+      opacity: 1;
+      transform: translateY(0);
     }}
     .heatmap-legend {{
       display: flex;
@@ -940,11 +996,14 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       margin-top: 10px;
     }}
     @media (max-width: 980px) {{
-      .hero, .grid-2, .module-grid, .live-shell, .ranking-grid {{
+      .hero, .grid-2, .module-grid, .live-shell, .ranking-grid, .page-shell {{
         grid-template-columns: 1fr;
       }}
       .compare-toolbar {{
         grid-template-columns: 1fr;
+      }}
+      .section-guide {{
+        display: none;
       }}
     }}
     @media (max-width: 640px) {{
@@ -1007,6 +1066,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
     </div>
 
+    <div class="page-shell">
+      <div class="content-shell">
     <div class="card-grid">
       <div class="metric-card">
         <div class="metric-kicker">2026 height record</div>
@@ -1040,7 +1101,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
     </div>
 
-    <section>
+    <section id="core-trends">
       <div class="section-head">
         <div>
           <h2>Core trends</h2>
@@ -1053,7 +1114,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
     </section>
 
-    <section>
+    <section id="group-confed-points">
       <div class="section-head">
         <div>
           <h2>Group and confederation pressure points</h2>
@@ -1093,7 +1154,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
     </section>
 
-    <section>
+    <section id="country-story-desk">
       <div class="section-head">
         <div>
           <h2>Country and story desk</h2>
@@ -1138,7 +1199,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
     </section>
 
-    <section>
+    <section id="quick-comparison">
       <div class="section-head">
         <div>
           <h2>Quick comparison</h2>
@@ -1158,7 +1219,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       <div class="compare-grid" id="compare-grid"></div>
     </section>
 
-    <section>
+    <section id="value-clubs-coaches">
       <div class="section-head">
         <div>
           <h2>Value, clubs and coaches</h2>
@@ -1304,7 +1365,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
     </section>
 
-    <section>
+    <section id="squad-distribution-heatmap">
       <div class="section-head">
         <div>
           <h2>Squad distribution heatmap</h2>
@@ -1331,7 +1392,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       </div>
     </section>
 
-    <section>
+    <section id="tactical-shape">
       <div class="section-head">
         <div>
           <h2>Tactical shape</h2>
@@ -1341,7 +1402,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       <div class="panel">{charts[4]}</div>
     </section>
 
-    <section>
+    <section id="live-center-readiness">
       <div class="section-head">
         <div>
           <h2>Live center readiness</h2>
@@ -1376,7 +1437,23 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         </div>
       </div>
     </section>
+      </div>
+      <aside class="section-guide" aria-label="Section guide">
+        <h3>Dashboard guide</h3>
+        <div class="section-guide-list">
+          <a href="#core-trends">Core trends</a>
+          <a href="#group-confed-points">Group and confederation pressure points</a>
+          <a href="#country-story-desk">Country and story desk</a>
+          <a href="#quick-comparison">Quick comparison</a>
+          <a href="#value-clubs-coaches">Value, clubs and coaches</a>
+          <a href="#squad-distribution-heatmap">Squad distribution heatmap</a>
+          <a href="#tactical-shape">Tactical shape</a>
+          <a href="#live-center-readiness">Live center readiness</a>
+        </div>
+      </aside>
+    </div>
   </main>
+  <div id="heatmap-tooltip" class="heatmap-tooltip" role="tooltip"></div>
 
   <script>
     const countries = {country_json};
@@ -2082,7 +2159,55 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const copy = document.getElementById("distribution-copy");
       const legend = document.getElementById("distribution-legend");
       const stage = document.getElementById("distribution-stage");
+      const tooltip = document.getElementById("heatmap-tooltip");
       let metric = "age";
+
+      function hideTooltip() {{
+        tooltip.classList.remove("visible");
+      }}
+
+      function positionTooltip(event) {{
+        const offset = 14;
+        const maxWidth = 320;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const rect = tooltip.getBoundingClientRect();
+        let left = event.clientX + offset;
+        let top = event.clientY + offset;
+        if (left + maxWidth > viewportWidth - 12) {{
+          left = Math.max(12, event.clientX - maxWidth - offset);
+        }}
+        if (top + rect.height > viewportHeight - 12) {{
+          top = Math.max(12, event.clientY - rect.height - offset);
+        }}
+        tooltip.style.left = `${{left}}px`;
+        tooltip.style.top = `${{top}}px`;
+      }}
+
+      stage.addEventListener("mouseover", (event) => {{
+        const cell = event.target.closest(".heatmap-cell");
+        if (!cell || !cell.dataset.tooltip) return;
+        tooltip.textContent = cell.dataset.tooltip;
+        tooltip.classList.add("visible");
+        positionTooltip(event);
+      }});
+
+      stage.addEventListener("mousemove", (event) => {{
+        const cell = event.target.closest(".heatmap-cell");
+        if (!cell || !cell.dataset.tooltip) {{
+          hideTooltip();
+          return;
+        }}
+        if (!tooltip.classList.contains("visible")) {{
+          tooltip.textContent = cell.dataset.tooltip;
+          tooltip.classList.add("visible");
+        }}
+        positionTooltip(event);
+      }});
+
+      stage.addEventListener("mouseleave", hideTooltip);
+      window.addEventListener("scroll", hideTooltip, {{ passive: true }});
+      window.addEventListener("resize", hideTooltip);
 
       yearSelect.innerHTML = distributionYears
         .slice()
@@ -2192,11 +2317,13 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                 .filter(Boolean)
                 .join(", ");
               const playerText = players ? ` • Players: ${{players}}` : "";
-              return `<div class="heatmap-cell" style="background:${{bg}}" title="${{team.country}} • ${{label}} ${{unit}} • ${{count}} player${{count === 1 ? "" : "s"}}${{playerText}}"></div>`;
+              const tooltipText = `${{team.country}} • ${{label}} ${{unit}} • ${{count}} player${{count === 1 ? "" : "s"}}${{playerText}}`;
+              return `<div class="heatmap-cell" style="background:${{bg}}" data-tooltip="${{tooltipText.replace(/"/g, "&quot;")}}"></div>`;
             }}).join("")}}
           </div>
         `).join("");
         stage.innerHTML = header + rowsHtml;
+        hideTooltip();
       }}
 
       yearSelect.addEventListener("change", render);
