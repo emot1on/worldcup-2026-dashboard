@@ -368,6 +368,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     squad_value_json = json.dumps(bundle.get("squad_market_values_2026", []))
     global_club_json = json.dumps(bundle.get("global_club_representation_2026", []))
     country_club_json = json.dumps(bundle.get("country_club_representation_2026", []))
+    club_benefits_json = json.dumps(bundle.get("club_benefits_countries_2026", []))
     coaches_json = json.dumps(bundle.get("coaches_2026", []))
     return f"""<!doctype html>
 <html lang="en">
@@ -1330,11 +1331,33 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             <button id="global-club-more-button" class="small-button" type="button">Show more</button>
           </div>
           <div class="stacked-block">
+            <div class="mini">Club-benefit estimate by club country</div>
+            <p class="section-copy" id="club-benefits-copy" style="margin-top: 8px;"></p>
+            <div class="control-stack">
+              <input id="club-benefits-search" type="text" placeholder="Search club country...">
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Club country</th>
+                  <th class="numeric">Players</th>
+                  <th class="numeric">Floor</th>
+                  <th class="numeric">Ceiling</th>
+                </tr>
+              </thead>
+              <tbody id="club-benefits-body"></tbody>
+            </table>
+            <div class="inline-tools">
+              <button id="club-benefits-more-button" class="small-button" type="button">Show more</button>
+            </div>
+          </div>
+          <div class="stacked-block">
             <div class="toolbar">
-              <div class="mini">Top clubs by squad</div>
+              <div class="mini">All clubs in selected squad</div>
               <input id="country-club-search" type="text" placeholder="Search club in squad...">
               <select id="club-country-select"></select>
             </div>
+            <p class="section-copy" style="margin-top: 8px;">This list includes every club represented in the selected 2026 squad, including one-player clubs.</p>
             <table>
               <thead>
                 <tr>
@@ -1509,6 +1532,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     const squadValues = {squad_value_json};
     const globalClubCounts = {global_club_json};
     const countryClubCounts = {country_club_json};
+    const clubBenefitsCountries = {club_benefits_json};
     const coaches = {coaches_json};
 
     (() => {{
@@ -1899,6 +1923,10 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const globalClubBody = document.getElementById("global-club-body");
       const globalClubSearch = document.getElementById("global-club-search");
       const globalClubMoreButton = document.getElementById("global-club-more-button");
+      const clubBenefitsBody = document.getElementById("club-benefits-body");
+      const clubBenefitsSearch = document.getElementById("club-benefits-search");
+      const clubBenefitsCopy = document.getElementById("club-benefits-copy");
+      const clubBenefitsMoreButton = document.getElementById("club-benefits-more-button");
       const countrySelect = document.getElementById("club-country-select");
       const countryClubSearch = document.getElementById("country-club-search");
       const countryClubBody = document.getElementById("country-club-body");
@@ -1914,6 +1942,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       const coachCopy = document.getElementById("coach-copy");
       let squadLimit = 8;
       let globalClubLimit = 12;
+      let clubBenefitsLimit = 10;
       let attackLimit = 10;
 
       marketBody.innerHTML = marketValuePlayers.slice(0, 10).map((row) => `
@@ -1949,16 +1978,32 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
 
       function renderGlobalClubs() {{
         const query = globalClubSearch.value.trim().toLowerCase();
-        const filtered = globalClubCounts.filter((row) => row.club.toLowerCase().includes(query));
+        const filtered = globalClubCounts.filter((row) => (row.club || "").toLowerCase().includes(query));
         const rows = filtered.slice(0, globalClubLimit);
         globalClubBody.innerHTML = rows.map((row) => `
           <tr>
-            <td>${{row.club}}</td>
+            <td>${{row.club}}<div class="mini">${{row.club_country || "club country n/a"}}</div></td>
             <td class="numeric">${{row.player_count}}</td>
             <td class="numeric">${{row.represented_countries}}</td>
           </tr>
         `).join("");
         globalClubMoreButton.hidden = globalClubLimit >= filtered.length;
+      }}
+
+      function renderClubBenefits() {{
+        const query = clubBenefitsSearch.value.trim().toLowerCase();
+        const filtered = clubBenefitsCountries.filter((row) => (row.club_country || "").toLowerCase().includes(query));
+        const rows = filtered.slice(0, clubBenefitsLimit);
+        clubBenefitsCopy.textContent = "Estimated from the AP-reported ~$5,000-per-player-per-day figure plus FIFA's 25 May 2026 release date and the current match schedule. Qualifier payments are excluded, and club country is inferred from current Transfermarkt club profile headers.";
+        clubBenefitsBody.innerHTML = rows.map((row) => `
+          <tr>
+            <td>${{row.club_country}}<div class="mini">${{row.club_count}} clubs • ${{row.represented_squads}} squads</div></td>
+            <td class="numeric">${{row.player_count}}</td>
+            <td class="numeric">${{row.estimated_floor_text}}</td>
+            <td class="numeric">${{row.estimated_ceiling_text}}</td>
+          </tr>
+        `).join("");
+        clubBenefitsMoreButton.hidden = clubBenefitsLimit >= filtered.length;
       }}
 
       const clubCountries = [...new Set(countryClubCounts.map((row) => row.country))].sort((a, b) => a.localeCompare(b));
@@ -1968,11 +2013,11 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         const country = countrySelect.value;
         const rows = countryClubCounts
           .filter((row) => row.country === country)
-          .filter((row) => row.club.toLowerCase().includes(countryClubSearch.value.trim().toLowerCase()))
+          .filter((row) => (row.club || "").toLowerCase().includes(countryClubSearch.value.trim().toLowerCase()))
           .sort((a, b) => a.country_rank - b.country_rank || b.player_count - a.player_count || a.club.localeCompare(b.club));
         countryClubBody.innerHTML = rows.map((row) => `
           <tr>
-            <td>${{row.club}}</td>
+            <td>${{row.club}}<div class="mini">${{row.club_country || "club country n/a"}}</div></td>
             <td class="numeric">${{row.player_count}}</td>
           </tr>
         `).join("");
@@ -1983,6 +2028,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         countrySelect.value = "Brazil";
       }}
       renderCountryClubs();
+      renderClubBenefits();
 
       function parseTenureDays(text) {{
         if (!text) return -1;
@@ -2170,6 +2216,14 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       globalClubMoreButton.addEventListener("click", () => {{
         globalClubLimit += 12;
         renderGlobalClubs();
+      }});
+      clubBenefitsSearch.addEventListener("input", () => {{
+        clubBenefitsLimit = 10;
+        renderClubBenefits();
+      }});
+      clubBenefitsMoreButton.addEventListener("click", () => {{
+        clubBenefitsLimit += 10;
+        renderClubBenefits();
       }});
       attackSearch.addEventListener("input", () => {{
         attackLimit = 10;

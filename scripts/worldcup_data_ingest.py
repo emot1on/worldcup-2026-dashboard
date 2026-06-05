@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -91,6 +91,17 @@ WORLD_CUP_2026_GROUPS = {
     "Group K": ["Portugal", "Colombia", "Uzbekistan", "DR Congo"],
     "Group L": ["England", "Croatia", "Panama", "Ghana"],
 }
+
+FOOTBALL_DATA_NAME_ALIASES = {
+    "Bosnia-Herzegovina": "Bosnia and Herzegovina",
+    "Cape Verde Islands": "Cape Verde",
+    "Congo DR": "DR Congo",
+    "Czechia": "Czech Republic",
+    "Korea Republic": "South Korea",
+}
+
+FIFA_WORLD_CUP_2026_RELEASE_DATE = date(2026, 5, 25)
+FIFA_WORLD_CUP_2026_APPROX_PLAYER_DAY_USD = 5000
 
 TEAM_TO_GROUP_2026 = {
     team: group
@@ -619,6 +630,12 @@ def build_normalized_bundle(
             "scope": "fixtures, standings, and live-center tournament service",
             "url": "https://docs.football-data.org/general/v4/index.html",
         },
+        {
+            "key": "fifa_club_benefits_programme_2026",
+            "label": "FIFA Club Benefits Programme",
+            "scope": "USD 355m overall fund, 25 May 2026 release date, and tournament compensation framework for clubs",
+            "url": "https://inside.fifa.com/organisation/media-releases/club-benefits-programme-reward-record-number-of-clubs",
+        },
     ]
     if transfermarkt_enrichment and transfermarkt_enrichment.get("source_rows"):
         source_catalog.extend(transfermarkt_enrichment["source_rows"])
@@ -628,6 +645,7 @@ def build_normalized_bundle(
     squad_market_values = []
     global_club_counts = []
     country_club_counts = []
+    club_benefits_rows = []
     coach_rows = []
     coach_title_rows = []
     player_season_rows = []
@@ -638,6 +656,7 @@ def build_normalized_bundle(
         squad_values_df = transfermarkt_enrichment.get("squad_values")
         clubs_df = transfermarkt_enrichment.get("global_clubs")
         country_clubs_df = transfermarkt_enrichment.get("country_clubs")
+        club_benefits_df = transfermarkt_enrichment.get("club_benefits")
         coaches_df = transfermarkt_enrichment.get("coaches")
         coach_titles_df = transfermarkt_enrichment.get("coach_titles")
 
@@ -724,23 +743,46 @@ def build_normalized_bundle(
             global_club_counts = [
                 {
                     "club": row["club"],
+                    "club_country": row.get("club_country") if pd.notna(row.get("club_country")) else None,
+                    "competition_name": (
+                        row.get("competition_name") if pd.notna(row.get("competition_name")) else None
+                    ),
                     "player_count": int(row["player_count"]),
                     "represented_countries": int(row["represented_countries"]),
                     "total_market_value_eur": int(row["total_market_value_eur"]),
                     "total_market_value_text": format_money_short(int(row["total_market_value_eur"])),
                     "player_count_rank": int(row["player_count_rank"]),
                 }
-                for row in clubs_df.head(25).to_dict("records")
+                for row in clubs_df.to_dict("records")
             ]
         if isinstance(country_clubs_df, pd.DataFrame) and not country_clubs_df.empty:
             country_club_counts = [
                 {
                     "country": row["country"],
                     "club": row["club"],
+                    "club_country": row.get("club_country") if pd.notna(row.get("club_country")) else None,
+                    "competition_name": (
+                        row.get("competition_name") if pd.notna(row.get("competition_name")) else None
+                    ),
                     "player_count": int(row["player_count"]),
                     "country_rank": int(row["country_rank"]),
                 }
-                for row in country_clubs_df[country_clubs_df["country_rank"] <= 3].to_dict("records")
+                for row in country_clubs_df.to_dict("records")
+            ]
+        if isinstance(club_benefits_df, pd.DataFrame) and not club_benefits_df.empty:
+            club_benefits_rows = [
+                {
+                    "club_country": row["club_country"],
+                    "player_count": int(row["player_count"]),
+                    "club_count": int(row["club_count"]),
+                    "represented_squads": int(row["represented_squads"]),
+                    "estimated_floor_usd": int(row["estimated_floor_usd"]),
+                    "estimated_ceiling_usd": int(row["estimated_ceiling_usd"]),
+                    "estimated_floor_text": row["estimated_floor_text"],
+                    "estimated_ceiling_text": row["estimated_ceiling_text"],
+                    "ceiling_rank": int(row["ceiling_rank"]),
+                }
+                for row in club_benefits_df.to_dict("records")
             ]
         if isinstance(coaches_df, pd.DataFrame) and not coaches_df.empty:
             coach_rows = [
@@ -806,6 +848,7 @@ def build_normalized_bundle(
         "squad_market_values_2026": squad_market_values,
         "global_club_representation_2026": global_club_counts,
         "country_club_representation_2026": country_club_counts,
+        "club_benefits_countries_2026": club_benefits_rows,
         "coaches_2026": coach_rows,
         "coach_titles_2026": coach_title_rows,
         "trends": [
@@ -909,6 +952,81 @@ def write_json(data: Any, path: Path) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def read_wrapped_json(path: Path) -> Any:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return payload.get("data", payload)
+
+
+def normalize_football_data_team_name(name: str | None) -> str | None:
+    if not name:
+        return None
+    return FOOTBALL_DATA_NAME_ALIASES.get(name, name)
+
+
+def build_club_benefits_estimates(players_df: pd.DataFrame) -> pd.DataFrame:
+    if players_df.empty or "club_country" not in players_df.columns:
+        return pd.DataFrame()
+    matches_path = RAW_DIR / "football_data" / "matches_wc.json"
+    if not matches_path.exists():
+        return pd.DataFrame()
+
+    matches_payload = read_wrapped_json(matches_path)
+    matches = matches_payload.get("matches", [])
+    if not matches:
+        return pd.DataFrame()
+
+    last_group_day_by_team: dict[str, date] = {}
+    final_window_end = max(
+        datetime.fromisoformat(match["utcDate"].replace("Z", "+00:00")).date() + timedelta(days=1)
+        for match in matches
+        if match.get("utcDate")
+    )
+    for match in matches:
+        if match.get("stage") != "GROUP_STAGE" or not match.get("utcDate"):
+            continue
+        match_end = datetime.fromisoformat(match["utcDate"].replace("Z", "+00:00")).date() + timedelta(days=1)
+        for side in ("homeTeam", "awayTeam"):
+            team_name = normalize_football_data_team_name(match.get(side, {}).get("name"))
+            if not team_name:
+                continue
+            current = last_group_day_by_team.get(team_name)
+            if current is None or match_end > current:
+                last_group_day_by_team[team_name] = match_end
+
+    eligible = players_df.dropna(subset=["club", "club_country", "country"]).copy()
+    if eligible.empty:
+        return pd.DataFrame()
+
+    eligible["group_stage_end_date"] = eligible["country"].map(last_group_day_by_team)
+    eligible = eligible[eligible["group_stage_end_date"].notna()].copy()
+    if eligible.empty:
+        return pd.DataFrame()
+
+    eligible["floor_days"] = eligible["group_stage_end_date"].apply(
+        lambda value: int((value - FIFA_WORLD_CUP_2026_RELEASE_DATE).days)
+    )
+    eligible["ceiling_days"] = int((final_window_end - FIFA_WORLD_CUP_2026_RELEASE_DATE).days)
+    eligible["estimated_floor_usd"] = eligible["floor_days"] * FIFA_WORLD_CUP_2026_APPROX_PLAYER_DAY_USD
+    eligible["estimated_ceiling_usd"] = eligible["ceiling_days"] * FIFA_WORLD_CUP_2026_APPROX_PLAYER_DAY_USD
+
+    grouped = (
+        eligible.groupby("club_country", as_index=False)
+        .agg(
+            player_count=("player", "size"),
+            club_count=("club", "nunique"),
+            represented_squads=("country", "nunique"),
+            estimated_floor_usd=("estimated_floor_usd", "sum"),
+            estimated_ceiling_usd=("estimated_ceiling_usd", "sum"),
+        )
+        .sort_values(["estimated_ceiling_usd", "player_count", "club_country"], ascending=[False, False, True])
+        .reset_index(drop=True)
+    )
+    grouped["ceiling_rank"] = grouped["estimated_ceiling_usd"].rank(method="min", ascending=False).astype(int)
+    grouped["estimated_floor_text"] = grouped["estimated_floor_usd"].apply(lambda value: f"${value/1_000_000:.2f}m")
+    grouped["estimated_ceiling_text"] = grouped["estimated_ceiling_usd"].apply(lambda value: f"${value/1_000_000:.2f}m")
+    return grouped
+
+
 def fetch_rest_countries() -> Path:
     data = fetch_json("https://restcountries.com/v3.1/all")
     out = REFERENCE_DIR / "rest_countries.json"
@@ -942,6 +1060,11 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
     position_trends, position_share_trends = build_position_trends(df)
     confederation_history = build_confederation_history(df)
     transfermarkt_enrichment = build_transfermarkt_enrichment(RAW_DIR)
+    players_df = transfermarkt_enrichment.get("players")
+    if isinstance(players_df, pd.DataFrame) and not players_df.empty:
+        transfermarkt_enrichment["club_benefits"] = build_club_benefits_estimates(players_df)
+    else:
+        transfermarkt_enrichment["club_benefits"] = pd.DataFrame()
     story_manifest = build_story_manifest(
         tournament_trends,
         country_snapshot,
@@ -971,7 +1094,6 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
         write_csv(position_share_trends, "position_share_trends.csv"),
         write_csv(confederation_history, "confederation_history.csv"),
     ]
-    players_df = transfermarkt_enrichment.get("players")
     if isinstance(players_df, pd.DataFrame) and not players_df.empty:
         written.append(write_csv(players_df, "transfermarkt_players_2026.csv"))
     global_clubs_df = transfermarkt_enrichment.get("global_clubs")
@@ -980,6 +1102,9 @@ def build_local_layer(dataset_path: Path) -> list[Path]:
     country_clubs_df = transfermarkt_enrichment.get("country_clubs")
     if isinstance(country_clubs_df, pd.DataFrame) and not country_clubs_df.empty:
         written.append(write_csv(country_clubs_df, "club_representation_by_country_2026.csv"))
+    club_benefits_df = transfermarkt_enrichment.get("club_benefits")
+    if isinstance(club_benefits_df, pd.DataFrame) and not club_benefits_df.empty:
+        written.append(write_csv(club_benefits_df, "club_benefits_country_estimates_2026.csv"))
     squad_values_df = transfermarkt_enrichment.get("squad_values")
     if isinstance(squad_values_df, pd.DataFrame) and not squad_values_df.empty:
         written.append(write_csv(squad_values_df, "squad_market_values_2026.csv"))

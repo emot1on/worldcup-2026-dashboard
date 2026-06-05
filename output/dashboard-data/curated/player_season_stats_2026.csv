@@ -1,25 +1,25 @@
 player_id,player,country,position,age,club,market_value_eur,market_value_text,current_season_id,appearances,minutes,goals,assists,goal_contributions,competition_count
 132098,Harry Kane,England,Centre-Forward,32.0,Bayern Munich,60000000,€60.00m,2025,53,0,61,7,68,4
 251664,Ivan Toney,England,Centre-Forward,30.0,Al-Ahli SFC,20000000,€20.00m,2025,53,0,41,11,52,5
-342229,Kylian Mbappé,France,Centre-Forward,27.0,Real Madrid,200000000,€200.00m,2025,47,0,42,6,48,4
+342229,Kylian Mbappé,France,Centre-Forward,27.0,Real Madrid,180000000,€180.00m,2025,47,0,42,6,48,4
 566723,Michael Olise,France,Right Winger,24.0,Bayern Munich,150000000,€150.00m,2025,55,0,22,26,48,4
 418560,Erling Haaland,Norway,Centre-Forward,25.0,Manchester City,200000000,€200.00m,2025,59,0,38,9,47,4
 480692,Luis Díaz,Colombia,Left Winger,29.0,Bayern Munich,70000000,€70.00m,2025,55,0,26,19,45,4
 424784,Luis Suárez,Colombia,Centre-Forward,28.0,Sporting CP,30000000,€30.00m,2025,56,0,36,8,44,5
-462250,João Félix,Portugal,Second Striker,26.0,Al-Nassr FC,25000000,€25.00m,2025,49,0,25,18,43,4
-416090,Julián Quiñones,Mexico,Centre-Forward,29.0,Al-Qadsiah FC,12000000,€12.00m,2025,35,0,37,4,41,3
+462250,João Félix,Portugal,Second Striker,26.0,Al-Nassr FC,28000000,€28.00m,2025,49,0,25,18,43,4
+416090,Julián Quiñones,Mexico,Centre-Forward,29.0,Al-Qadsiah FC,14000000,€14.00m,2025,35,0,37,4,41,3
 937958,Lamine Yamal,Spain,Right Winger,18.0,FC Barcelona,200000000,€200.00m,2025,46,0,24,17,41,4
 339314,Deniz Undav,Germany,Centre-Forward,29.0,VfB Stuttgart,22000000,€22.00m,2025,47,0,25,15,40,4
 336646,Akram Afif,Qatar,Left Winger,29.0,Al-Sadd SC,8000000,€8.00m,2025,46,0,16,18,34,4
-8198,Cristiano Ronaldo,Portugal,Centre-Forward,41.0,Al-Nassr FC,12000000,€12.00m,2025,47,0,30,3,33,4
-371998,Vinicius Junior,Brazil,Left Winger,25.0,Real Madrid,150000000,€150.00m,2025,56,0,22,10,32,4
+8198,Cristiano Ronaldo,Portugal,Centre-Forward,41.0,Al-Nassr FC,10000000,€10.00m,2025,47,0,30,3,33,4
+371998,Vinicius Junior,Brazil,Left Winger,25.0,Real Madrid,140000000,€140.00m,2025,56,0,22,10,32,4
 288230,Ousmane Dembélé,France,Centre-Forward,29.0,Paris Saint-Germain,100000000,€100.00m,2025,42,0,20,11,31,6
 240306,Bruno Fernandes,Portugal,Attacking Midfield,31.0,Manchester United,35000000,€35.00m,2025,37,0,9,22,31,3
 475949,Benjamin Nygren,Sweden,Attacking Midfield,24.0,Celtic FC,14000000,€14.00m,2025,59,0,21,9,30,6
-576024,Julián Álvarez,Argentina,Centre-Forward,26.0,Atlético de Madrid,90000000,€90.00m,2025,60,0,20,9,29,4
+576024,Julián Álvarez,Argentina,Centre-Forward,26.0,Atlético de Madrid,100000000,€100.00m,2025,60,0,20,9,29,4
 358166,Eldor Shomurodov,Uzbekistan,Centre-Forward,30.0,Basaksehir FK,7000000,€7.00m,2025,44,0,22,6,28,3
 406625,Lautaro Martínez,Argentina,Centre-Forward,28.0,Inter Milan,85000000,€85.00m,2025,46,0,22,6,28,4
-411295,Raphinha,Brazil,Left Winger,29.0,FC Barcelona,80000000,€80.00m,2025,38,0,21,7,28,4
+411295,Raphinha,Brazil,Left Winger,29.0,FC Barcelona,70000000,€70.00m,2025,38,0,21,7,28,4
 589128,Ayase Ueda,Japan,Centre-Forward,27.0,Feyenoord Rotterdam,17000000,€17.00m,2025,40,0,26,1,27,4
 583255,Antoine Semenyo,Ghana,Right Winger,26.0,Manchester City,80000000,€80.00m,2025,51,0,21,6,27,4
 606752,Rodrigo Zalazar,Uruguay,Attacking Midfield,26.0,SC Braga,30000000,€30.00m,2025,58,0,21,6,27,5
@@ -32,20 +32,20 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 702869,Ismael Saibari,Morocco,Attacking Midfield,25.0,PSV Eindhoven,40000000,€40.00m,2025,44,0,18,8,26,4
 318528,Marcus Thuram,France,Centre-Forward,28.0,Inter Milan,50000000,€50.00m,2025,47,0,18,8,26,4
 412669,Francisco Trincão,Portugal,Attacking Midfield,26.0,Sporting CP,40000000,€40.00m,2025,56,0,11,15,26,5
-724520,Abde Ezzalzouli,Morocco,Left Winger,24.0,Real Betis Balompié,30000000,€30.00m,2025,51,0,15,10,25,3
+724520,Abde Ezzalzouli,Morocco,Left Winger,24.0,Real Betis Balompié,40000000,€40.00m,2025,51,0,15,10,25,3
 193082,Alejandro Grimaldo,Spain,Left-Back,30.0,Bayer 04 Leverkusen,20000000,€20.00m,2025,48,0,14,11,25,3
 258923,Marcus Rashford,England,Left Winger,28.0,FC Barcelona,40000000,€40.00m,2025,54,0,14,11,25,4
 503743,Morgan Rogers,England,Attacking Midfield,23.0,Aston Villa,90000000,€90.00m,2025,56,0,14,11,25,4
 607223,Rayan Cherki,France,Attacking Midfield,22.0,Manchester City,90000000,€90.00m,2025,53,0,10,15,25,4
 398184,Ferran Torres,Spain,Centre-Forward,26.0,FC Barcelona,50000000,€50.00m,2025,53,0,21,3,24,4
-325443,Viktor Gyökeres,Sweden,Centre-Forward,27.0,Arsenal FC,65000000,€65.00m,2025,59,0,21,3,24,4
+325443,Viktor Gyökeres,Sweden,Centre-Forward,28.0,Arsenal FC,65000000,€65.00m,2025,59,0,21,3,24,4
 225744,Lawrence Shankland,Scotland,Centre-Forward,30.0,Heart of Midlothian FC,3000000,€3.00m,2025,36,0,20,4,24,4
 372267,Guus Til,Netherlands,Attacking Midfield,28.0,PSV Eindhoven,15000000,€15.00m,2025,42,0,17,7,24,4
 382528,Kerem Aktürkoğlu,Turkey,Left Winger,27.0,Fenerbahce,20000000,€20.00m,2025,55,0,16,8,24,7
 420931,Daizen Maeda,Japan,Left Winger,28.0,Celtic FC,13000000,€13.00m,2025,59,0,15,9,24,6
 844797,José Manuel López,Argentina,Centre-Forward,25.0,Sociedade Esportiva Palmeiras,25000000,€25.00m,2025,38,0,14,10,24,4
 500053,Pavel Sulc,Czech Republic,Attacking Midfield,25.0,Olympique Lyon,20000000,€20.00m,2025,45,0,14,10,24,5
-521127,Ayoub El Kaabi,Morocco,Centre-Forward,32.0,Olympiacos Piraeus,5000000,€5.00m,2025,46,0,20,3,23,5
+521127,Ayoub El Kaabi,Morocco,Centre-Forward,32.0,Olympiacos Piraeus,4500000,€4.50m,2025,46,0,20,3,23,5
 503770,Folarin Balogun,United States,Centre-Forward,24.0,AS Monaco,40000000,€40.00m,2025,45,0,19,4,23,3
 185245,Jhon Córdoba,Colombia,Centre-Forward,33.0,FC Krasnodar,10000000,€10.00m,2025,44,0,17,6,23,3
 46580,Andrej Kramaric,Croatia,Attacking Midfield,34.0,TSG 1899 Hoffenheim,2500000,€2.50m,2025,36,0,15,8,23,2
@@ -56,24 +56,24 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 639246,Hyeon-gyu Oh,South Korea,Centre-Forward,25.0,Besiktas JK,15000000,€15.00m,2025,52,0,17,5,22,6
 840254,Nadhir Benbouali,Algeria,Centre-Forward,26.0,ETO FC,1200000,€1.20m,2025,44,0,17,5,22,3
 648195,Enzo Fernández,Argentina,Central Midfield,25.0,Chelsea FC,90000000,€90.00m,2025,58,0,15,7,22,4
-200512,Sadio Mané,Senegal,Left Winger,34.0,Al-Nassr FC,7000000,€7.00m,2025,48,0,13,9,22,4
+200512,Sadio Mané,Senegal,Left Winger,34.0,Al-Nassr FC,6000000,€6.00m,2025,48,0,13,9,22,4
 1390649,Yan Diomande,Ivory Coast,Left Winger,19.0,RB Leipzig,90000000,€90.00m,2025,38,0,13,9,22,2
-439914,John Yeboah,Ecuador,Second Striker,25.0,Venezia FC,5000000,€5.00m,2025,40,0,12,10,22,2
+439914,John Yeboah,Ecuador,Second Striker,25.0,Venezia FC,5500000,€5.50m,2025,40,0,12,10,22,2
 148455,Mohamed Salah,Egypt,Right Winger,33.0,Liverpool FC,22000000,€22.00m,2025,54,0,12,10,22,5
 225161,Rúben Neves,Portugal,Defensive Midfield,29.0,Al-Hilal SFC,25000000,€25.00m,2025,47,0,12,10,22,3
 541537,Barış Alper Yılmaz,Turkey,Left Winger,26.0,Galatasaray,30000000,€30.00m,2025,53,0,10,12,22,4
-369081,Federico Valverde,Uruguay,Central Midfield,27.0,Real Madrid,120000000,€120.00m,2025,52,0,9,13,22,4
+369081,Federico Valverde,Uruguay,Central Midfield,27.0,Real Madrid,90000000,€90.00m,2025,52,0,9,13,22,4
 42460,Ivan Perišić,Croatia,Left Winger,37.0,PSV Eindhoven,1200000,€1.20m,2025,47,0,9,13,22,4
-171424,Riyad Mahrez,Algeria,Right Winger,35.0,Al-Ahli SFC,7000000,€7.00m,2025,53,0,8,14,22,5
-238407,Alexander Sørloth,Norway,Centre-Forward,30.0,Atlético de Madrid,20000000,€20.00m,2025,61,0,20,1,21,4
+171424,Riyad Mahrez,Algeria,Right Winger,35.0,Al-Ahli SFC,5000000,€5.00m,2025,53,0,8,14,22,5
+238407,Alexander Sørloth,Norway,Centre-Forward,30.0,Atlético de Madrid,18000000,€18.00m,2025,61,0,20,1,21,4
 627207,Ricardo Pepi,United States,Centre-Forward,23.0,PSV Eindhoven,30000000,€30.00m,2025,36,0,19,2,21,4
 198614,Tomas Chory,Czech Republic,Centre-Forward,31.0,SK Slavia Prague,2700000,€2.70m,2025,46,0,17,4,21,4
 917911,Anis Hadj Moussa,Algeria,Right Winger,24.0,Feyenoord Rotterdam,23000000,€23.00m,2025,44,0,14,7,21,4
 914562,Désiré Doué,France,Right Winger,21.0,Paris Saint-Germain,120000000,€120.00m,2025,43,0,13,8,21,6
 660867,Julio Enciso,Paraguay,Attacking Midfield,22.0,RC Strasbourg Alsace,25000000,€25.00m,2025,49,0,12,9,21,4
 315291,Haji Wright,United States,Centre-Forward,28.0,Coventry City,16000000,€16.00m,2025,45,0,18,2,20,3
-457738,Jovo Lukić,Bosnia and Herzegovina,Centre-Forward,27.0,FC Universitatea Cluj,1500000,€1.50m,2025,43,0,18,2,20,4
-278359,Borja Iglesias,Spain,Centre-Forward,33.0,Celta de Vigo,3000000,€3.00m,2025,54,0,17,3,20,3
+457738,Jovo Lukić,Bosnia and Herzegovina,Centre-Forward,27.0,FC Universitatea Cluj,2200000,€2.20m,2025,43,0,18,2,20,4
+278359,Borja Iglesias,Spain,Centre-Forward,33.0,Celta de Vigo,2800000,€2.80m,2025,54,0,17,3,20,3
 232454,Nadiem Amiri,Germany,Central Midfield,29.0,1.FSV Mainz 05,17000000,€17.00m,2025,37,0,17,3,20,4
 432758,Toni Fruk,Croatia,Attacking Midfield,25.0,HNK Rijeka,9000000,€9.00m,2025,53,0,17,3,20,5
 742770,Mohamed Touré,Australia,Centre-Forward,22.0,Norwich City,8000000,€8.00m,2025,32,0,14,6,20,4
@@ -84,37 +84,37 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 487465,Pedro Neto,Portugal,Right Winger,26.0,Chelsea FC,60000000,€60.00m,2025,55,0,10,10,20,4
 486049,Jérémy Doku,Belgium,Left Winger,24.0,Manchester City,75000000,€75.00m,2025,50,0,8,12,20,4
 861410,Arda Güler,Turkey,Attacking Midfield,21.0,Real Madrid,90000000,€90.00m,2025,51,0,6,14,20,4
-46413,Ante Budimir,Croatia,Centre-Forward,34.0,CA Osasuna,3000000,€3.00m,2025,41,0,19,0,19,2
+46413,Ante Budimir,Croatia,Centre-Forward,34.0,CA Osasuna,2800000,€2.80m,2025,41,0,19,0,19,2
 243856,Cedric Itten,Switzerland,Centre-Forward,29.0,Fortuna Düsseldorf,1800000,€1.80m,2025,34,0,16,3,19,3
-337884,Iqraam Rayners,South Africa,Centre-Forward,30.0,Mamelodi Sundowns FC,3000000,€3.00m,2025,49,0,16,3,19,5
+337884,Iqraam Rayners,South Africa,Centre-Forward,30.0,Mamelodi Sundowns FC,2800000,€2.80m,2025,49,0,16,3,19,5
 420002,Jean-Philippe Mateta,France,Centre-Forward,28.0,Crystal Palace,30000000,€30.00m,2025,52,0,16,3,19,6
 335457,Ermedin Demirovic,Bosnia and Herzegovina,Centre-Forward,28.0,VfB Stuttgart,22000000,€22.00m,2025,38,0,15,4,19,4
 395693,Houssem Aouar,Algeria,Attacking Midfield,27.0,Al-Ittihad Club,8000000,€8.00m,2025,42,0,15,4,19,4
 605268,Igor Matanovic,Croatia,Centre-Forward,23.0,SC Freiburg,22000000,€22.00m,2025,51,0,15,4,19,3
 708265,Bradley Barcola,France,Left Winger,23.0,Paris Saint-Germain,70000000,€70.00m,2025,52,0,13,6,19,6
-631923,Khalid Al-Ghannam,Saudi Arabia,Left Winger,25.0,Al-Ettifaq FC,900000,€900k,2025,35,0,13,6,19,2
+631923,Khalid Al-Ghannam,Saudi Arabia,Left Winger,25.0,Al-Ettifaq FC,2500000,€2.50m,2025,35,0,13,6,19,2
 126414,Hakan Çalhanoğlu,Turkey,Defensive Midfield,32.0,Inter Milan,16000000,€16.00m,2025,40,0,12,7,19,4
-137576,Hans Vanaken,Belgium,Attacking Midfield,33.0,Club Brugge KV,6000000,€6.00m,2025,57,0,12,7,19,6
+137576,Hans Vanaken,Belgium,Attacking Midfield,33.0,Club Brugge KV,5000000,€5.00m,2025,57,0,12,7,19,6
 28003,Lionel Messi,Argentina,Right Winger,38.0,Inter Miami CF,15000000,€15.00m,2025,16,0,12,7,19,2
 799993,Ayoube Amaimouni-Echghouyab,Morocco,Right Winger,21.0,Eintracht Frankfurt,10000000,€10.00m,2025,40,0,11,8,19,3
-1125037,Relebohile Mofokeng,South Africa,Left Winger,21.0,Orlando Pirates,2000000,€2.00m,2025,44,0,11,8,19,5
+1125037,Relebohile Mofokeng,South Africa,Left Winger,21.0,Orlando Pirates,3000000,€3.00m,2025,44,0,11,8,19,5
 396908,Yunus Akgün,Turkey,Right Winger,25.0,Galatasaray,18000000,€18.00m,2025,47,0,10,9,19,4
 538958,Jearl Margaritha,Curaçao,Left Winger,26.0,SK Beveren,1000000,€1.00m,2025,34,0,7,12,19,2
 292779,Lukas Provod,Czech Republic,Left Winger,29.0,SK Slavia Prague,8000000,€8.00m,2025,42,0,7,12,19,4
 234189,Trezeguet,Egypt,Left Winger,31.0,Al Ahly FC,4500000,€4.50m,2025,41,0,17,1,18,6
 459463,Cucho Hernández,Colombia,Centre-Forward,27.0,Real Betis Balompié,18000000,€18.00m,2025,47,0,15,3,18,3
-888738,Farès Ghedjemis,Algeria,Right Winger,23.0,Frosinone Calcio,5500000,€5.50m,2025,40,0,15,3,18,2
+888738,Farès Ghedjemis,Algeria,Right Winger,23.0,Frosinone Calcio,7500000,€7.50m,2025,40,0,15,3,18,2
 203123,Haris Tabakovic,Bosnia and Herzegovina,Centre-Forward,31.0,Borussia Mönchengladbach,3500000,€3.50m,2025,35,0,15,3,18,2
 748443,Adil Boulbina,Algeria,Left Winger,23.0,Al-Duhail SC,3000000,€3.00m,2025,45,0,12,6,18,5
 433177,Bukayo Saka,England,Right Winger,24.0,Arsenal FC,110000000,€110.00m,2025,52,0,11,7,18,4
 655488,Gabriel Martinelli,Brazil,Left Winger,24.0,Arsenal FC,45000000,€45.00m,2025,59,0,11,7,18,4
-916623,Keisuke Goto,Japan,Centre-Forward,21.0,Sint-Truidense VV,8000000,€8.00m,2025,44,0,11,7,18,4
+916623,Keisuke Goto,Japan,Centre-Forward,21.0,Sint-Truidense VV,10000000,€10.00m,2025,44,0,11,7,18,4
 351505,Álex Zendejas,United States,Right Winger,28.0,CF América,10000000,€10.00m,2025,44,0,11,7,18,5
-195332,Salem Al-Dawsari,Saudi Arabia,Left Winger,34.0,Al-Hilal SFC,1300000,€1.30m,2025,45,0,10,8,18,3
+195332,Salem Al-Dawsari,Saudi Arabia,Left Winger,34.0,Al-Hilal SFC,1200000,€1.20m,2025,45,0,10,8,18,3
 654982,Bilal El Khannouss,Morocco,Attacking Midfield,22.0,VfB Stuttgart,35000000,€35.00m,2025,54,0,9,9,18,5
-41384,Marko Arnautovic,Austria,Centre-Forward,37.0,Red Star Belgrade,2500000,€2.50m,2025,54,0,9,9,18,5
+41384,Marko Arnautovic,Austria,Centre-Forward,37.0,Red Star Belgrade,2000000,€2.00m,2025,54,0,9,9,18,5
 144028,Leandro Trossard,Belgium,Left Winger,31.0,Arsenal FC,18000000,€18.00m,2025,59,0,8,10,18,4
-901181,Musab Al-Juwayr,Saudi Arabia,Central Midfield,22.0,Al-Qadsiah FC,4500000,€4.50m,2025,38,0,7,11,18,3
+901181,Musab Al-Juwayr,Saudi Arabia,Central Midfield,22.0,Al-Qadsiah FC,6000000,€6.00m,2025,38,0,7,11,18,3
 370789,Julian Ryerson,Norway,Right-Back,28.0,Borussia Dortmund,25000000,€25.00m,2025,46,0,0,18,18,3
 405397,Keito Nakamura,Japan,Left Winger,25.0,Stade Reims,10000000,€10.00m,2025,40,0,14,3,17,2
 315969,Scott McTominay,Scotland,Central Midfield,29.0,SSC Napoli,40000000,€40.00m,2025,44,0,14,3,17,4
@@ -122,18 +122,18 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 929994,Kerim Alajbegovic,Bosnia and Herzegovina,Left Winger,18.0,Red Bull Salzburg,22000000,€22.00m,2025,47,0,13,4,17,4
 400797,Callum McCowatt,New Zealand,Attacking Midfield,27.0,Silkeborg IF,2500000,€2.50m,2025,39,0,12,5,17,4
 294808,Franck Kessié,Ivory Coast,Central Midfield,29.0,Al-Ahli SFC,12000000,€12.00m,2025,52,0,12,5,17,5
-820474,Zakaria El Ouahdi,Morocco,Right-Back,24.0,KRC Genk,15000000,€15.00m,2025,47,0,12,5,17,5
+820474,Zakaria El Ouahdi,Morocco,Right-Back,24.0,KRC Genk,17000000,€17.00m,2025,47,0,12,5,17,5
 193116,John McGinn,Scotland,Central Midfield,31.0,Aston Villa,13000000,€13.00m,2025,45,0,10,7,17,4
 578392,Maximilian Beier,Germany,Centre-Forward,23.0,Borussia Dortmund,40000000,€40.00m,2025,45,0,10,7,17,3
 225122,Gonçalo Guedes,Portugal,Left Winger,29.0,Real Sociedad,6000000,€6.00m,2025,46,0,9,8,17,2
 454567,Orkun Kökçü,Turkey,Central Midfield,25.0,Besiktas JK,25000000,€25.00m,2025,46,0,9,8,17,4
 293385,Dani Olmo,Spain,Attacking Midfield,28.0,FC Barcelona,60000000,€60.00m,2025,49,0,8,9,17,4
 343052,Nicolas Pépé,Ivory Coast,Right Winger,31.0,Villarreal CF,6000000,€6.00m,2025,49,0,8,9,17,3
-673381,Oswin Appollis,South Africa,Left Winger,24.0,Orlando Pirates,2000000,€2.00m,2025,44,0,8,9,17,5
+673381,Oswin Appollis,South Africa,Left Winger,24.0,Orlando Pirates,2500000,€2.50m,2025,44,0,8,9,17,5
 745200,Maghnes Akliouche,France,Right Winger,24.0,AS Monaco,50000000,€50.00m,2025,46,0,7,10,17,3
 487469,Vitinha,Portugal,Defensive Midfield,26.0,Paris Saint-Germain,140000000,€140.00m,2025,54,0,7,10,17,6
 822458,Bamba Dieng,Senegal,Centre-Forward,26.0,FC Lorient,15000000,€15.00m,2025,35,0,15,1,16,3
-307058,Mehdi Taremi,Iran,Centre-Forward,33.0,Olympiacos Piraeus,2500000,€2.50m,2025,47,0,12,4,16,6
+307058,Mehdi Taremi,Iran,Centre-Forward,33.0,Olympiacos Piraeus,2000000,€2.00m,2025,47,0,12,4,16,6
 455661,Nick Woltemade,Germany,Centre-Forward,24.0,Newcastle United,55000000,€55.00m,2025,58,0,12,4,16,7
 418659,Amine Gouiri,Algeria,Centre-Forward,26.0,Olympique Marseille,28000000,€28.00m,2025,30,0,11,5,16,4
 179643,Vladimír Darida,Czech Republic,Central Midfield,35.0,FC Hradec Kralove,375000,€375k,2025,38,0,11,5,16,3
@@ -143,11 +143,11 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 677509,Jesse Randall,New Zealand,Left Winger,23.0,Auckland FC,900000,€900k,2025,44,0,9,7,16,3
 1075147,Lennart Karl,Germany,Attacking Midfield,18.0,Bayern Munich,60000000,€60.00m,2025,49,0,9,7,16,5
 422763,Nicolas Raskin,Belgium,Defensive Midfield,25.0,Rangers FC,12000000,€12.00m,2025,58,0,7,9,16,6
-300716,Kieran Tierney,Scotland,Left-Back,28.0,Celtic FC,8000000,€8.00m,2025,59,0,5,11,16,6
-1119447,Christopher Bonsu Baah,Ghana,Left Winger,21.0,Al-Qadsiah FC,12000000,€12.00m,2025,38,0,3,13,16,3
+300716,Kieran Tierney,Scotland,Left-Back,29.0,Celtic FC,8000000,€8.00m,2025,59,0,5,11,16,6
+1119447,Christopher Bonsu Baah,Ghana,Left Winger,21.0,Al-Qadsiah FC,14000000,€14.00m,2025,38,0,3,13,16,3
 91845,Heung-min Son,South Korea,Left Winger,33.0,Los Angeles FC,15000000,€15.00m,2025,22,0,2,14,16,2
 598506,Soufiane Rahimi,Morocco,Left Winger,30.0,Al-Ain FC,6000000,€6.00m,2025,37,0,12,3,15,3
-684159,Kevin Rodríguez,Ecuador,Centre-Forward,26.0,Union Saint-Gilloise,5000000,€5.00m,2025,42,0,11,4,15,5
+684159,Kevin Rodríguez,Ecuador,Centre-Forward,26.0,Union Saint-Gilloise,6000000,€6.00m,2025,42,0,11,4,15,5
 815359,Lenny Joseph,Haiti,Centre-Forward,25.0,Ferencvárosi TC,2000000,€2.00m,2025,57,0,11,4,15,4
 816585,Can Uzun,Turkey,Attacking Midfield,20.0,Eintracht Frankfurt,45000000,€45.00m,2025,30,0,10,5,15,3
 479999,Eberechi Eze,England,Attacking Midfield,27.0,Arsenal FC,65000000,€65.00m,2025,62,0,10,5,15,6
@@ -176,15 +176,15 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 776890,Nicolas Jackson,Senegal,Centre-Forward,24.0,Bayern Munich,40000000,€40.00m,2025,54,0,11,3,14,4
 447995,Ross Stewart,Scotland,Centre-Forward,29.0,Southampton FC,2500000,€2.50m,2025,40,0,11,3,14,4
 315779,Christian Pulisic,United States,Right Winger,27.0,AC Milan,40000000,€40.00m,2025,35,0,10,4,14,3
-546543,Darwin Núñez,Uruguay,Centre-Forward,26.0,Al-Hilal SFC,25000000,€25.00m,2025,45,0,9,5,14,3
-74297,Gaël Kakuta,DR Congo,Attacking Midfield,34.0,AE Larisa,300000,€300k,2025,41,0,9,5,14,4
+546543,Darwin Núñez,Uruguay,Centre-Forward,26.0,Al-Hilal SFC,20000000,€20.00m,2025,45,0,9,5,14,3
+74297,Gaël Kakuta,DR Congo,Attacking Midfield,34.0,AE Larisa,250000,€250k,2025,41,0,9,5,14,4
 675178,Isidro Pitta,Paraguay,Centre-Forward,26.0,Red Bull Bragantino,7500000,€7.50m,2025,29,0,9,5,14,4
 293200,Nikola Vlašić,Croatia,Attacking Midfield,28.0,Torino FC,10000000,€10.00m,2025,42,0,9,5,14,2
 624913,Parfait Guiagon,Ivory Coast,Left Winger,25.0,Royal Charleroi SC,5000000,€5.00m,2025,41,0,9,5,14,4
-844485,Tshepang Moremi,South Africa,Left Winger,25.0,Orlando Pirates,1000000,€1.00m,2025,44,0,9,5,14,5
+844485,Tshepang Moremi,South Africa,Left Winger,25.0,Orlando Pirates,1400000,€1.40m,2025,44,0,9,5,14,5
 668606,Yuito Suzuki,Japan,Second Striker,24.0,SC Freiburg,24000000,€24.00m,2025,50,0,9,5,14,3
 724129,Matias Fernandez-Pardo,Belgium,Centre-Forward,21.0,LOSC Lille,35000000,€35.00m,2025,44,0,8,6,14,3
-210349,Sultan Mandash,Saudi Arabia,Right Winger,31.0,Al-Hilal SFC,400000,€400k,2025,40,0,8,6,14,3
+210349,Sultan Mandash,Saudi Arabia,Right Winger,31.0,Al-Hilal SFC,350000,€350k,2025,40,0,8,6,14,3
 647384,Thelo Aasgaard,Norway,Attacking Midfield,24.0,Rangers FC,2800000,€2.80m,2025,58,0,8,6,14,6
 827734,Ange-Yoan Bonny,Ivory Coast,Centre-Forward,22.0,Inter Milan,35000000,€35.00m,2025,50,0,7,7,14,4
 485672,Elijah Just,New Zealand,Right Winger,26.0,Motherwell FC,2500000,€2.50m,2025,47,0,7,7,14,4
@@ -203,17 +203,17 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 206040,Raúl Jiménez,Mexico,Centre-Forward,35.0,Fulham FC,3000000,€3.00m,2025,43,0,10,3,13,3
 126014,Leandro Bacuna,Curaçao,Central Midfield,34.0,Igdir FK,250000,€250k,2025,42,0,9,4,13,2
 896616,Mostafa Ziko,Egypt,Left Winger,29.0,Pyramids FC,1800000,€1.80m,2025,55,0,9,4,13,8
-339808,Theo Hernández,France,Left-Back,28.0,Al-Hilal SFC,28000000,€28.00m,2025,48,0,9,4,13,3
+339808,Theo Hernández,France,Left-Back,28.0,Al-Hilal SFC,20000000,€20.00m,2025,48,0,9,4,13,3
 228645,Wout Weghorst,Netherlands,Centre-Forward,33.0,Ajax Amsterdam,2000000,€2.00m,2025,35,0,9,4,13,3
 533738,Jonathan David,Canada,Centre-Forward,26.0,Juventus FC,30000000,€30.00m,2025,49,0,8,5,13,3
-581678,Jude Bellingham,England,Attacking Midfield,22.0,Real Madrid,140000000,€140.00m,2025,43,0,8,5,13,4
-348791,Junya Ito,Japan,Right Winger,33.0,KRC Genk,3500000,€3.50m,2025,40,0,8,5,13,5
+581678,Jude Bellingham,England,Attacking Midfield,22.0,Real Madrid,130000000,€130.00m,2025,43,0,8,5,13,4
+348791,Junya Ito,Japan,Right Winger,33.0,KRC Genk,3000000,€3.00m,2025,40,0,8,5,13,5
 422355,Jens Petter Hauge,Norway,Left Winger,26.0,FK Bodø/Glimt,12000000,€12.00m,2025,30,0,7,6,13,4
 927353,Johan Manzambi,Switzerland,Central Midfield,20.0,SC Freiburg,50000000,€50.00m,2025,54,0,7,6,13,3
 572675,Maxi Araújo,Uruguay,Left-Back,26.0,Sporting CP,35000000,€35.00m,2025,53,0,7,6,13,5
 735573,Richard Ríos,Colombia,Defensive Midfield,26.0,SL Benfica,25000000,€25.00m,2025,48,0,7,6,13,6
 616341,Nuno Mendes,Portugal,Left-Back,23.0,Paris Saint-Germain,80000000,€80.00m,2025,48,0,6,7,13,6
-981196,Joaquin Seys,Belgium,Left-Back,21.0,Club Brugge KV,17000000,€17.00m,2025,57,0,5,8,13,6
+981196,Joaquin Seys,Belgium,Left-Back,21.0,Club Brugge KV,20000000,€20.00m,2025,57,0,5,8,13,6
 320722,Zizo,Egypt,Right Winger,30.0,Al Ahly FC,3500000,€3.50m,2025,37,0,5,8,13,6
 633454,Alexander Bernhardsson,Sweden,Right Winger,27.0,Holstein Kiel,3000000,€3.00m,2025,27,0,4,9,13,2
 855731,Jordan Bos,Australia,Left-Back,23.0,Feyenoord Rotterdam,12000000,€12.00m,2025,38,0,4,9,13,4
@@ -232,7 +232,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 903611,Nilson Angulo,Ecuador,Left Winger,22.0,Sunderland AFC,17000000,€17.00m,2025,43,0,7,5,12,6
 745191,Ramón Sosa,Paraguay,Second Striker,26.0,Sociedade Esportiva Palmeiras,10000000,€10.00m,2025,36,0,7,5,12,4
 358504,Ritsu Doan,Japan,Right Winger,27.0,Eintracht Frankfurt,17000000,€17.00m,2025,43,0,7,5,12,3
-935231,Víctor Muñoz,Spain,Left Winger,22.0,CA Osasuna,20000000,€20.00m,2025,42,0,7,5,12,2
+935231,Víctor Muñoz,Spain,Left Winger,22.0,CA Osasuna,30000000,€30.00m,2025,42,0,7,5,12,2
 941418,Denil Castillo,Ecuador,Central Midfield,22.0,FC Midtjylland,7000000,€7.00m,2025,55,0,6,6,12,6
 478573,Ryan Gravenberch,Netherlands,Defensive Midfield,24.0,Liverpool FC,80000000,€80.00m,2025,55,0,6,6,12,5
 534033,Alexis Mac Allister,Argentina,Central Midfield,27.0,Liverpool FC,70000000,€70.00m,2025,56,0,5,7,12,5
@@ -281,31 +281,31 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 182913,Adrien Rabiot,France,Central Midfield,31.0,AC Milan,18000000,€18.00m,2025,37,0,6,4,10,4
 314398,Jae-sung Lee,South Korea,Attacking Midfield,33.0,1.FSV Mainz 05,2000000,€2.00m,2025,40,0,6,4,10,4
 68290,Neymar,Brazil,Attacking Midfield,34.0,Santos FC,8000000,€8.00m,2025,19,0,6,4,10,4
-709187,Nico Williams,Spain,Left Winger,23.0,Athletic Bilbao,50000000,€50.00m,2025,35,0,6,4,10,4
+709187,Nico Williams,Spain,Left Winger,23.0,Athletic Bilbao,40000000,€40.00m,2025,35,0,6,4,10,4
 118397,Alessandro Schöpf,Austria,Central Midfield,32.0,Wolfsberger AC,800000,€800k,2025,34,0,5,5,10,5
 651269,Armin Gigovic,Bosnia and Herzegovina,Central Midfield,24.0,BSC Young Boys,2500000,€2.50m,2025,48,0,5,5,10,5
-308120,Mohamed Kanno,Saudi Arabia,Central Midfield,31.0,Al-Hilal SFC,900000,€900k,2025,48,0,5,5,10,3
+308120,Mohamed Kanno,Saudi Arabia,Central Midfield,31.0,Al-Hilal SFC,800000,€800k,2025,48,0,5,5,10,3
 334042,Orbelín Pineda,Mexico,Central Midfield,30.0,AEK Athens,7000000,€7.00m,2025,53,0,5,5,10,5
-255508,Iñaki Williams,Ghana,Right Winger,31.0,Athletic Bilbao,10000000,€10.00m,2025,43,0,4,6,10,4
+255508,Iñaki Williams,Ghana,Right Winger,31.0,Athletic Bilbao,8000000,€8.00m,2025,43,0,4,6,10,4
 420243,Jurriën Timber,Netherlands,Right-Back,24.0,Arsenal FC,70000000,€70.00m,2025,51,0,4,6,10,4
-374889,Kenji Gorré,Curaçao,Left Winger,31.0,Maccabi Haifa,650000,€650k,2025,32,0,4,6,10,4
+374889,Kenji Gorré,Curaçao,Left Winger,31.0,Maccabi Haifa,600000,€600k,2025,32,0,4,6,10,4
 691892,Nathaniel Brown,Germany,Left-Back,22.0,Eintracht Frankfurt,40000000,€40.00m,2025,43,0,4,6,10,3
 631927,Saud Abdulhamid,Saudi Arabia,Right-Back,26.0,RC Lens,9000000,€9.00m,2025,40,0,3,7,10,2
 443710,Angelo Stiller,Germany,Defensive Midfield,25.0,VfB Stuttgart,45000000,€45.00m,2025,52,0,2,8,10,4
-1181852,Mohammed Abu Al-Shamat,Saudi Arabia,Right-Back,23.0,Al-Qadsiah FC,1400000,€1.40m,2025,38,0,2,8,10,3
+1181852,Mohammed Abu Al-Shamat,Saudi Arabia,Right-Back,23.0,Al-Qadsiah FC,1800000,€1.80m,2025,38,0,2,8,10,3
 347932,Guillermo Martínez,Mexico,Centre-Forward,31.0,UNAM Pumas,1500000,€1.50m,2025,43,0,9,0,9,5
 539502,Ben Waine,New Zealand,Centre-Forward,24.0,Port Vale FC,400000,€400k,2025,61,0,8,1,9,4
-631922,Firas Al-Buraikan,Saudi Arabia,Centre-Forward,26.0,Al-Ahli SFC,4000000,€4.00m,2025,53,0,8,1,9,5
+631922,Firas Al-Buraikan,Saudi Arabia,Centre-Forward,26.0,Al-Ahli SFC,3500000,€3.50m,2025,53,0,8,1,9,5
 467437,Malik Tillman,United States,Attacking Midfield,24.0,Bayer 04 Leverkusen,30000000,€30.00m,2025,42,0,8,1,9,3
 734799,Prince Adu,Ghana,Centre-Forward,22.0,FC Viktoria Plzen,3000000,€3.00m,2025,52,0,8,1,9,5
 357125,Shahriar Moghanlou,Iran,Centre-Forward,31.0,Kalba FC,800000,€800k,2025,29,0,8,1,9,3
-236168,Brandon Mechele,Belgium,Centre-Back,33.0,Club Brugge KV,3000000,€3.00m,2025,58,0,7,2,9,6
+236168,Brandon Mechele,Belgium,Centre-Back,33.0,Club Brugge KV,2800000,€2.80m,2025,58,0,7,2,9,6
 1012564,Rayan,Brazil,Right Winger,19.0,AFC Bournemouth,60000000,€60.00m,2025,19,0,7,2,9,2
 657430,Samú Costa,Portugal,Defensive Midfield,25.0,RCD Mallorca,15000000,€15.00m,2025,41,0,7,2,9,2
-972465,Tani Oluwaseyi,Canada,Centre-Forward,26.0,Villarreal CF,8000000,€8.00m,2025,47,0,7,2,9,3
-436372,Teboho Mokoena,South Africa,Defensive Midfield,29.0,Mamelodi Sundowns FC,2500000,€2.50m,2025,50,0,7,2,9,5
+972465,Tani Oluwaseyi,Canada,Centre-Forward,26.0,Villarreal CF,7000000,€7.00m,2025,47,0,7,2,9,3
+436372,Teboho Mokoena,South Africa,Defensive Midfield,29.0,Mamelodi Sundowns FC,2800000,€2.80m,2025,50,0,7,2,9,5
 355915,Cristian Romero,Argentina,Centre-Back,28.0,Tottenham Hotspur,45000000,€45.00m,2025,42,0,6,3,9,5
-746781,Evidence Makgopa,South Africa,Centre-Forward,25.0,Orlando Pirates,1200000,€1.20m,2025,44,0,6,3,9,5
+746781,Evidence Makgopa,South Africa,Centre-Forward,26.0,Orlando Pirates,1400000,€1.40m,2025,44,0,6,3,9,5
 507341,Fabian Rieder,Switzerland,Attacking Midfield,24.0,FC Augsburg,12000000,€12.00m,2025,36,0,6,3,9,3
 623570,Iliman Ndiaye,Senegal,Right Winger,26.0,Everton FC,55000000,€55.00m,2025,41,0,6,3,9,3
 108354,Jordan Ayew,Ghana,Centre-Forward,34.0,Leicester City,1000000,€1.00m,2025,49,0,6,3,9,3
@@ -325,11 +325,11 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 567576,Elliot Anderson,England,Central Midfield,23.0,Nottingham Forest,75000000,€75.00m,2025,56,0,4,5,9,4
 487474,Francisco Conceição,Portugal,Right Winger,23.0,Juventus FC,30000000,€30.00m,2025,45,0,4,5,9,3
 435338,Gabriel,Brazil,Centre-Back,28.0,Arsenal FC,75000000,€75.00m,2025,54,0,4,5,9,4
-282411,Marcos Llorente,Spain,Right-Back,31.0,Atlético de Madrid,22000000,€22.00m,2025,54,0,4,5,9,4
+282411,Marcos Llorente,Spain,Right-Back,31.0,Atlético de Madrid,20000000,€20.00m,2025,54,0,4,5,9,4
 557614,Nathanaël Mbuku,DR Congo,Left Winger,24.0,Montpellier HSC,2000000,€2.00m,2025,39,0,4,5,9,2
 533295,Patrick Wimmer,Austria,Right Winger,25.0,VfL Wolfsburg,12000000,€12.00m,2025,28,0,4,5,9,2
-255729,Awer Mabil,Australia,Left Winger,30.0,CD Castellón,400000,€400k,2025,43,0,3,6,9,2
-715653,Besfort Zeneli,Sweden,Central Midfield,23.0,Union Saint-Gilloise,4500000,€4.50m,2025,23,0,3,6,9,5
+255729,Awer Mabil,Australia,Left Winger,30.0,CD Castellón,500000,€500k,2025,43,0,3,6,9,2
+715653,Besfort Zeneli,Sweden,Central Midfield,23.0,Union Saint-Gilloise,6000000,€6.00m,2025,23,0,3,6,9,5
 440383,César Blackman,Panama,Right-Back,28.0,Slovan Bratislava,2500000,€2.50m,2025,48,0,3,6,9,6
 425028,José Luis Rodríguez,Panama,Left Winger,27.0,FC Juárez,2500000,€2.50m,2025,38,0,3,6,9,3
 345886,Rubén Vargas,Switzerland,Left Winger,27.0,Sevilla FC,12000000,€12.00m,2025,25,0,3,6,9,2
@@ -338,7 +338,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 1151929,Gessime Yassine,Morocco,Right Winger,20.0,RC Strasbourg Alsace,12000000,€12.00m,2025,48,0,2,7,9,4
 711980,Guéla Doué,Ivory Coast,Right-Back,23.0,RC Strasbourg Alsace,20000000,€20.00m,2025,42,0,2,7,9,3
 249565,Youri Tielemans,Belgium,Central Midfield,29.0,Aston Villa,30000000,€30.00m,2025,35,0,2,7,9,3
-326330,Frenkie de Jong,Netherlands,Central Midfield,29.0,FC Barcelona,45000000,€45.00m,2025,44,0,1,8,9,4
+326330,Frenkie de Jong,Netherlands,Central Midfield,29.0,FC Barcelona,35000000,€35.00m,2025,44,0,1,8,9,4
 157672,Vladimír Coufal,Czech Republic,Right-Back,33.0,TSG 1899 Hoffenheim,2500000,€2.50m,2025,35,0,1,8,9,2
 360412,Jordy Caicedo,Ecuador,Centre-Forward,28.0,CA Huracán,2000000,€2.00m,2025,44,0,8,0,8,6
 473169,Brian Brobbey,Netherlands,Centre-Forward,24.0,Sunderland AFC,30000000,€30.00m,2025,38,0,7,1,8,4
@@ -348,7 +348,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 344869,Simon Banza,DR Congo,Centre-Forward,29.0,Al-Jazira Club,10000000,€10.00m,2025,42,0,7,1,8,5
 638793,Tajon Buchanan,Canada,Right Winger,27.0,Villarreal CF,12000000,€12.00m,2025,49,0,7,1,8,3
 849429,Tete Yengi,Australia,Centre-Forward,25.0,Machida Zelvia,450000,€450k,2025,55,0,7,1,8,5
-68626,Abdullah Al-Hamdan,Saudi Arabia,Centre-Forward,26.0,Al-Nassr FC,325000,€325k,2025,48,0,6,2,8,4
+68626,Abdullah Al-Hamdan,Saudi Arabia,Centre-Forward,26.0,Al-Nassr FC,350000,€350k,2025,48,0,6,2,8,4
 897051,Alan Minda,Ecuador,Right Winger,23.0,Clube Atlético Mineiro,3000000,€3.00m,2025,53,0,6,2,8,6
 558086,Dong-gyeong Lee,South Korea,Attacking Midfield,28.0,Ulsan HD FC,1600000,€1.60m,2025,20,0,5,3,8,2
 406640,Felix Nmecha,Germany,Central Midfield,25.0,Borussia Dortmund,50000000,€50.00m,2025,42,0,5,3,8,3
@@ -364,7 +364,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 241641,Bernardo Silva,Portugal,Attacking Midfield,31.0,Manchester City,22000000,€22.00m,2025,60,0,3,5,8,4
 861852,Damián Bobadilla,Paraguay,Central Midfield,24.0,São Paulo Futebol Clube,6000000,€6.00m,2025,31,0,3,5,8,4
 483046,Josip Stanisic,Croatia,Right-Back,26.0,Bayern Munich,40000000,€40.00m,2025,44,0,3,5,8,4
-182712,João Cancelo,Portugal,Right-Back,32.0,FC Barcelona,9000000,€9.00m,2025,44,0,3,5,8,6
+182712,João Cancelo,Portugal,Right-Back,32.0,FC Barcelona,8000000,€8.00m,2025,44,0,3,5,8,6
 487417,Liam Millar,Canada,Left Winger,26.0,Hull City,3000000,€3.00m,2025,46,0,3,5,8,4
 620322,Malo Gusto,France,Right-Back,23.0,Chelsea FC,35000000,€35.00m,2025,55,0,3,5,8,4
 339332,Noa Lang,Netherlands,Left Winger,26.0,Galatasaray,22000000,€22.00m,2025,53,0,3,5,8,6
@@ -374,7 +374,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 230921,Mortadha Ben Ouanes,Tunisia,Left Winger,31.0,Kasimpasa,1500000,€1.50m,2025,31,0,2,6,8,2
 472423,Reece James,England,Right-Back,26.0,Chelsea FC,60000000,€60.00m,2025,47,0,2,6,8,4
 361104,Sergiño Dest,United States,Right-Back,25.0,PSV Eindhoven,18000000,€18.00m,2025,40,0,2,6,8,4
-639414,Young-woo Seol,South Korea,Right-Back,27.0,Red Star Belgrade,5000000,€5.00m,2025,58,0,2,6,8,5
+639414,Young-woo Seol,South Korea,Right-Back,27.0,Red Star Belgrade,6500000,€6.50m,2025,58,0,2,6,8,5
 207061,Francis de Vries,New Zealand,Left-Back,31.0,Auckland FC,600000,€600k,2025,35,0,1,7,8,3
 316264,Martin Ødegaard,Norway,Attacking Midfield,27.0,Arsenal FC,65000000,€65.00m,2025,38,0,1,7,8,4
 601883,Matheus Nunes,Portugal,Right-Back,27.0,Manchester City,50000000,€50.00m,2025,59,0,1,7,8,4
@@ -383,7 +383,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 847279,Oumar Diakité,Ivory Coast,Centre-Forward,22.0,Cercle Brugge ,5000000,€5.00m,2025,36,0,7,0,7,4
 457533,Agustín Canobbio,Uruguay,Left Winger,27.0,Fluminense Football Club,8000000,€8.00m,2025,36,0,6,1,7,4
 1063292,Deniz Gül,Turkey,Centre-Forward,21.0,FC Porto,5000000,€5.00m,2025,53,0,6,1,7,4
-994370,Kamogelo Sebelebele,South Africa,Right-Back,23.0,Orlando Pirates,850000,€850k,2025,44,0,6,1,7,5
+994370,Kamogelo Sebelebele,South Africa,Right-Back,23.0,Orlando Pirates,1200000,€1.20m,2025,44,0,6,1,7,5
 357003,Martin Erlić,Croatia,Centre-Back,28.0,FC Midtjylland,4000000,€4.00m,2025,51,0,6,1,7,6
 589646,Mohanad Ali,Iraq,Centre-Forward,25.0,Dibba SCC,1200000,€1.20m,2025,30,0,6,1,7,3
 124410,Rani Khedira,Tunisia,Defensive Midfield,32.0,1.FC Union Berlin,2000000,€2.00m,2025,36,0,6,1,7,2
@@ -398,17 +398,17 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 995642,Ali Ahmed,Canada,Left Midfield,25.0,Norwich City,5000000,€5.00m,2025,24,0,4,3,7,2
 957461,Andrés Gómez,Colombia,Left Winger,23.0,Clube de Regatas Vasco da Gama,11000000,€11.00m,2025,35,0,4,3,7,4
 516716,Bremer,Brazil,Centre-Back,29.0,Juventus FC,35000000,€35.00m,2025,35,0,4,3,7,3
-127048,Cédric Bakambu,DR Congo,Centre-Forward,35.0,Real Betis Balompié,1400000,€1.40m,2025,55,0,4,3,7,3
+127048,Cédric Bakambu,DR Congo,Centre-Forward,35.0,Real Betis Balompié,1200000,€1.20m,2025,55,0,4,3,7,3
 433933,Kevin Felida,Curaçao,Defensive Midfield,26.0,FC Den Bosch,400000,€400k,2025,43,0,4,3,7,3
 900909,Paul Wanner,Austria,Central Midfield,20.0,PSV Eindhoven,22000000,€22.00m,2025,45,0,4,3,7,4
 667287,Yasin Ayari,Sweden,Central Midfield,22.0,Brighton & Hove Albion,35000000,€35.00m,2025,36,0,4,3,7,3
 381950,Alexis Saelemaekers,Belgium,Right Midfield,26.0,AC Milan,20000000,€20.00m,2025,40,0,3,4,7,3
 354482,Amir Murillo,Panama,Right-Back,30.0,Besiktas JK,7000000,€7.00m,2025,46,0,3,4,7,6
-225693,Fabinho,Brazil,Defensive Midfield,32.0,Al-Ittihad Club,13000000,€13.00m,2025,49,0,3,4,7,4
+225693,Fabinho,Brazil,Defensive Midfield,32.0,Al-Ittihad Club,12000000,€12.00m,2025,49,0,3,4,7,4
 292246,Hee-chan Hwang,South Korea,Centre-Forward,30.0,Wolverhampton Wanderers,6000000,€6.00m,2025,38,0,3,4,7,3
 88103,James Rodríguez,Colombia,Attacking Midfield,34.0,Minnesota United FC,1500000,€1.50m,2025,31,0,3,4,7,3
 354145,Jorge Carrascal,Colombia,Attacking Midfield,28.0,CR Flamengo,13000000,€13.00m,2025,44,0,3,4,7,9
-411975,Jules Koundé,France,Right-Back,27.0,FC Barcelona,65000000,€65.00m,2025,52,0,3,4,7,4
+411975,Jules Koundé,France,Right-Back,27.0,FC Barcelona,60000000,€60.00m,2025,52,0,3,4,7,4
 918969,Lamine Camara,Senegal,Central Midfield,22.0,AS Monaco,40000000,€40.00m,2025,37,0,3,4,7,3
 166237,Leandro Paredes,Argentina,Defensive Midfield,31.0,CA Boca Juniors,5000000,€5.00m,2025,22,0,3,4,7,3
 420213,Quinten Timber,Netherlands,Central Midfield,24.0,Olympique Marseille,25000000,€25.00m,2025,43,0,3,4,7,7
@@ -439,28 +439,28 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 388198,Nico Schlotterbeck,Germany,Centre-Back,26.0,Borussia Dortmund,55000000,€55.00m,2025,39,0,5,1,6,3
 964580,Wesley,Brazil,Right-Back,22.0,AS Roma,40000000,€40.00m,2025,44,0,5,1,6,3
 748445,Yassine Titraoui,Algeria,Central Midfield,22.0,Royal Charleroi SC,7000000,€7.00m,2025,43,0,5,1,6,4
-509894,Abdulelah Al-Amri,Saudi Arabia,Centre-Back,29.0,Al-Nassr FC,1000000,€1.00m,2025,49,0,4,2,6,4
+509894,Abdulelah Al-Amri,Saudi Arabia,Centre-Back,29.0,Al-Nassr FC,1400000,€1.40m,2025,49,0,4,2,6,4
 792380,Aleksandar Pavlovic,Germany,Defensive Midfield,22.0,Bayern Munich,90000000,€90.00m,2025,52,0,4,2,6,3
-974374,Anthony Valencia,Ecuador,Right Winger,22.0,Royal Antwerp FC,1000000,€1.00m,2025,35,0,4,2,6,3
+974374,Anthony Valencia,Ecuador,Right Winger,22.0,Royal Antwerp FC,1800000,€1.80m,2025,35,0,4,2,6,3
 579287,Daniel Svensson,Sweden,Left-Back,24.0,Borussia Dortmund,22000000,€22.00m,2025,47,0,4,2,6,3
 500689,Evann Guessand,Ivory Coast,Right Winger,24.0,Crystal Palace,25000000,€25.00m,2025,47,0,4,2,6,5
 413268,Kevin Yakob,Iraq,Central Midfield,25.0,Aarhus GF,850000,€850k,2025,39,0,4,2,6,4
 502722,Luka Sucic,Croatia,Central Midfield,23.0,Real Sociedad,10000000,€10.00m,2025,44,0,4,2,6,2
 678439,Mauricio,Paraguay,Attacking Midfield,24.0,Sociedade Esportiva Palmeiras,15000000,€15.00m,2025,37,0,4,2,6,4
 1252820,Odeh Fakhoury,Jordan,Left Winger,20.0,Pyramids FC,350000,€350k,2025,37,0,4,2,6,6
-524481,Roger Ibañez,Brazil,Centre-Back,27.0,Al-Ahli SFC,17000000,€17.00m,2025,53,0,4,2,6,5
-242267,Saleh Al-Shehri,Saudi Arabia,Centre-Forward,32.0,Al-Ittihad Club,550000,€550k,2025,40,0,4,2,6,4
+524481,Roger Ibañez,Brazil,Centre-Back,27.0,Al-Ahli SFC,18000000,€18.00m,2025,53,0,4,2,6,5
+242267,Saleh Al-Shehri,Saudi Arabia,Centre-Forward,32.0,Al-Ittihad Club,500000,€500k,2025,40,0,4,2,6,4
 658536,Simon Adingra,Ivory Coast,Left Winger,24.0,AS Monaco,22000000,€22.00m,2025,41,0,4,2,6,6
-576028,Thiago Almada,Argentina,Left Winger,25.0,Atlético de Madrid,20000000,€20.00m,2025,54,0,4,2,6,4
+576028,Thiago Almada,Argentina,Left Winger,25.0,Atlético de Madrid,15000000,€15.00m,2025,54,0,4,2,6,4
 589099,Yusuf Abdurisag,Qatar,Left Winger,26.0,Al-Wakrah SC,275000,€275k,2025,35,0,4,2,6,3
 754037,Abbosbek Fayzullaev,Uzbekistan,Right Winger,22.0,Basaksehir FK,7000000,€7.00m,2025,37,0,3,3,6,5
 224884,Abdul Rahman Baba,Ghana,Left-Back,31.0,PAOK Thessaloniki,2000000,€2.00m,2025,55,0,3,3,6,5
 354792,Cristian Roldán,United States,Central Midfield,31.0,Seattle Sounders FC,3500000,€3.50m,2025,17,0,3,3,6,2
-348795,Giovani Lo Celso,Argentina,Attacking Midfield,30.0,Real Betis Balompié,10000000,€10.00m,2025,41,0,3,3,6,3
+348795,Giovani Lo Celso,Argentina,Attacking Midfield,30.0,Real Betis Balompié,8000000,€8.00m,2025,41,0,3,3,6,3
 549006,Gonçalo Inácio,Portugal,Centre-Back,24.0,Sporting CP,40000000,€40.00m,2025,54,0,3,3,6,5
 576314,Jan Paul van Hecke,Netherlands,Centre-Back,25.0,Brighton & Hove Albion,45000000,€45.00m,2025,41,0,3,3,6,3
 706968,Ji-sung Eom,South Korea,Left Winger,24.0,Swansea City,1800000,€1.80m,2025,51,0,3,3,6,3
-623965,João Paulo,Cape Verde,Defensive Midfield,28.0,FCSB,700000,€700k,2025,46,0,3,3,6,5
+623965,João Paulo,Cape Verde,Defensive Midfield,28.0,FCSB,900000,€900k,2025,46,0,3,3,6,5
 912081,Jun-ho Bae,South Korea,Attacking Midfield,22.0,Stoke City,4000000,€4.00m,2025,50,0,3,3,6,3
 333004,Karim Hafez,Egypt,Left-Back,30.0,Pyramids FC,700000,€700k,2025,55,0,3,3,6,8
 126600,Kenny McLean,Scotland,Central Midfield,34.0,Norwich City,400000,€400k,2025,51,0,3,3,6,3
@@ -479,7 +479,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 568693,Pape Matar Sarr,Senegal,Central Midfield,23.0,Tottenham Hotspur,30000000,€30.00m,2025,50,0,2,4,6,5
 228727,Pedro Miguel,Qatar,Centre-Back,35.0,Al-Sadd SC,150000,€150k,2025,46,0,2,4,6,4
 384568,Stjepan Radeljic,Bosnia and Herzegovina,Centre-Back,28.0,HNK Rijeka,2800000,€2.80m,2025,57,0,2,4,6,5
-405398,Takefusa Kubo,Japan,Right Winger,24.0,Real Sociedad,30000000,€30.00m,2025,34,0,2,4,6,2
+405398,Takefusa Kubo,Japan,Right Winger,25.0,Real Sociedad,20000000,€20.00m,2025,34,0,2,4,6,2
 424204,Alphonso Davies,Canada,Left-Back,25.0,Bayern Munich,40000000,€40.00m,2025,23,0,1,5,6,3
 353432,Aubrey Modiba,South Africa,Left-Back,30.0,Mamelodi Sundowns FC,1800000,€1.80m,2025,43,0,1,5,6,5
 493758,David Doudera,Czech Republic,Right Midfield,28.0,SK Slavia Prague,3500000,€3.50m,2025,36,0,1,5,6,4
@@ -491,18 +491,18 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 249303,Dennis Eckert Ayensa,Iran,Centre-Forward,29.0,Standard Liège,2000000,€2.00m,2025,37,0,5,0,5,3
 371149,Evan Ndicka,Ivory Coast,Centre-Back,26.0,AS Roma,35000000,€35.00m,2025,48,0,5,0,5,3
 632349,Jarell Quansah,England,Centre-Back,23.0,Bayer 04 Leverkusen,45000000,€45.00m,2025,47,0,5,0,5,3
-486031,Nico González,Argentina,Left Winger,28.0,Atlético de Madrid,24000000,€24.00m,2025,47,0,5,0,5,4
+486031,Nico González,Argentina,Left Winger,28.0,Atlético de Madrid,22000000,€22.00m,2025,47,0,5,0,5,4
 598791,Tsuyoshi Watanabe,Japan,Centre-Back,29.0,Feyenoord Rotterdam,10000000,€10.00m,2025,39,0,5,0,5,4
 349066,Alexander Isak,Sweden,Centre-Forward,26.0,Liverpool FC,85000000,€85.00m,2025,25,0,4,1,5,3
-877672,Ali Jasim,Iraq,Left Winger,22.0,Al-Najma SC,550000,€550k,2025,38,0,4,1,5,4
+877672,Ali Jasim,Iraq,Left Winger,22.0,Al-Najma SC,500000,€500k,2025,38,0,4,1,5,4
 743384,Chemsdine Talbi,Morocco,Right Winger,21.0,Sunderland AFC,25000000,€25.00m,2025,41,0,4,1,5,3
-419247,Cristian Martínez,Panama,Defensive Midfield,29.0,Ironi Kiryat Shmona,750000,€750k,2025,35,0,4,1,5,3
+419247,Cristian Martínez,Panama,Defensive Midfield,29.0,Ironi Kiryat Shmona,800000,€800k,2025,35,0,4,1,5,3
 486477,Edo Kayembe,DR Congo,Central Midfield,28.0,Watford FC,4000000,€4.00m,2025,48,0,4,1,5,3
 1155723,Gilberto Mora,Mexico,Attacking Midfield,17.0,Club Tijuana,10000000,€10.00m,2025,37,0,4,1,5,3
 402733,Gonzalo Montiel,Argentina,Right-Back,29.0,CA River Plate,4500000,€4.50m,2025,24,0,4,1,5,4
 50200,Kosta Barbarouses,New Zealand,Centre-Forward,36.0,Western Sydney Wanderers,300000,€300k,2025,23,0,4,1,5,1
 225083,N'Golo Kanté,France,Defensive Midfield,35.0,Fenerbahce,4000000,€4.00m,2025,49,0,4,1,5,7
-842420,Nathan-Dylan Saliba,Canada,Central Midfield,22.0,RSC Anderlecht,6000000,€6.00m,2025,50,0,4,1,5,5
+842420,Nathan-Dylan Saliba,Canada,Central Midfield,22.0,RSC Anderlecht,7500000,€7.50m,2025,50,0,4,1,5,5
 888140,Nishan Velupillay,Australia,Left Winger,25.0,Melbourne Victory,650000,€650k,2025,23,0,4,1,5,2
 306166,Nuno Da Costa,Cape Verde,Centre-Forward,35.0,Basaksehir FK,400000,€400k,2025,43,0,4,1,5,3
 438001,Santiago Bueno,Uruguay,Centre-Back,27.0,Wolverhampton Wanderers,10000000,€10.00m,2025,43,0,4,1,5,3
@@ -511,16 +511,16 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 434116,Alexander Prass,Austria,Left Midfield,25.0,TSG 1899 Hoffenheim,9000000,€9.00m,2025,36,0,3,2,5,2
 826103,Alexandr Sojka,Czech Republic,Central Midfield,23.0,FC Viktoria Plzen,2300000,€2.30m,2025,42,0,3,2,5,4
 234803,Andrew Robertson,Scotland,Left-Back,32.0,Liverpool FC,7000000,€7.00m,2025,57,0,3,2,5,5
-735815,Ayman Yahya,Saudi Arabia,Left-Back,25.0,Al-Nassr FC,1400000,€1.40m,2025,46,0,3,2,5,4
+735815,Ayman Yahya,Saudi Arabia,Left-Back,25.0,Al-Nassr FC,1200000,€1.20m,2025,46,0,3,2,5,4
 136834,Aziz Behich,Australia,Left-Back,35.0,Melbourne City FC,250000,€250k,2025,34,0,3,2,5,3
 659459,Carney Chukwuemeka,Austria,Central Midfield,22.0,Borussia Dortmund,20000000,€20.00m,2025,45,0,3,2,5,4
 876631,Habib Diarra,Senegal,Central Midfield,22.0,Sunderland AFC,35000000,€35.00m,2025,31,0,3,2,5,3
-840836,Hélio Varela,Cape Verde,Left Winger,24.0,Maccabi Tel Aviv,1200000,€1.20m,2025,53,0,3,2,5,5
+840836,Hélio Varela,Cape Verde,Left Winger,24.0,Maccabi Tel Aviv,2500000,€2.50m,2025,53,0,3,2,5,5
 1185888,Ibrahim Mbaye,Senegal,Right Winger,18.0,Paris Saint-Germain,30000000,€30.00m,2025,57,0,3,2,5,7
 196357,Jonathan Tah,Germany,Centre-Back,30.0,Bayern Munich,28000000,€28.00m,2025,55,0,3,2,5,4
 746695,Kamaldeen Sulemana,Ghana,Left Winger,24.0,Atalanta BC,17000000,€17.00m,2025,49,0,3,2,5,3
 617019,Matthew Garbett,New Zealand,Central Midfield,24.0,Peterborough United,450000,€450k,2025,39,0,3,2,5,3
-438961,Michael Svoboda,Austria,Centre-Back,27.0,Venezia FC,3000000,€3.00m,2025,37,0,3,2,5,2
+438961,Michael Svoboda,Austria,Centre-Back,27.0,Venezia FC,3500000,€3.50m,2025,37,0,3,2,5,2
 603149,Mohammad Mohebi,Iran,Left Winger,27.0,FC Rostov,2500000,€2.50m,2025,37,0,3,2,5,2
 226524,Morten Thorsby,Norway,Central Midfield,30.0,US Cremonese,2800000,€2.80m,2025,39,0,3,2,5,2
 548254,Nathan Ngoy,Belgium,Centre-Back,22.0,LOSC Lille,25000000,€25.00m,2025,46,0,3,2,5,3
@@ -538,22 +538,22 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 272930,Jamiro Monteiro,Cape Verde,Central Midfield,32.0,PEC Zwolle,650000,€650k,2025,26,0,2,3,5,2
 504153,Joe Scally,United States,Right-Back,23.0,Borussia Mönchengladbach,7000000,€7.00m,2025,37,0,2,3,5,2
 643574,Kaishu Sano,Japan,Defensive Midfield,25.0,1.FSV Mainz 05,40000000,€40.00m,2025,48,0,2,3,5,4
-93128,Kalidou Koulibaly,Senegal,Centre-Back,34.0,Al-Hilal SFC,5000000,€5.00m,2025,40,0,2,3,5,3
+93128,Kalidou Koulibaly,Senegal,Centre-Back,34.0,Al-Hilal SFC,4500000,€4.50m,2025,40,0,2,3,5,3
 27992,Luka Modrić,Croatia,Central Midfield,40.0,AC Milan,3500000,€3.50m,2025,40,0,2,3,5,3
 624690,Manu Koné,France,Central Midfield,25.0,AS Roma,50000000,€50.00m,2025,38,0,2,3,5,3
 589006,Mathieu Choinière,Canada,Central Midfield,27.0,Los Angeles FC,800000,€800k,2025,26,0,2,3,5,3
 415381,Mats Wieffer,Netherlands,Right-Back,26.0,Brighton & Hove Albion,25000000,€25.00m,2025,32,0,2,3,5,3
 429915,Maxim De Cuyper,Belgium,Left-Back,25.0,Brighton & Hove Albion,22000000,€22.00m,2025,40,0,2,3,5,3
-525578,Pathé Ciss,Senegal,Central Midfield,32.0,Rayo Vallecano,2000000,€2.00m,2025,57,0,2,3,5,4
+525578,Pathé Ciss,Senegal,Central Midfield,32.0,Rayo Vallecano,1800000,€1.80m,2025,57,0,2,3,5,4
 255906,Scott McKenna,Scotland,Centre-Back,29.0,GNK Dinamo Zagreb,4000000,€4.00m,2025,49,0,2,3,5,3
 216278,Tomas Holes,Czech Republic,Centre-Back,33.0,SK Slavia Prague,1000000,€1.00m,2025,35,0,2,3,5,4
-548111,Álex Baena,Spain,Left Winger,24.0,Atlético de Madrid,45000000,€45.00m,2025,52,0,2,3,5,4
+548111,Álex Baena,Spain,Left Winger,24.0,Atlético de Madrid,40000000,€40.00m,2025,52,0,2,3,5,4
 216603,İrfan Can Kahveci,Turkey,Right Winger,30.0,Kasimpasa,3000000,€3.00m,2025,43,0,2,3,5,5
 613725,İsmail Yüksek,Turkey,Defensive Midfield,27.0,Fenerbahce,15000000,€15.00m,2025,53,0,2,3,5,5
 465966,Ahmed Fatouh,Egypt,Left-Back,28.0,Zamalek SC,1000000,€1.00m,2025,33,0,1,4,5,4
-672391,Ali Majrashi,Saudi Arabia,Right-Back,26.0,Al-Ahli SFC,1200000,€1.20m,2025,53,0,1,4,5,5
+672391,Ali Majrashi,Saudi Arabia,Right-Back,26.0,Al-Ahli SFC,1400000,€1.40m,2025,53,0,1,4,5,5
 519184,Amar Dedić,Bosnia and Herzegovina,Right-Back,23.0,SL Benfica,16000000,€16.00m,2025,49,0,1,4,5,6
-303766,Amir Al-Ammari,Iraq,Defensive Midfield,28.0,Cracovia,850000,€850k,2025,36,0,1,4,5,2
+303766,Amir Al-Ammari,Iraq,Defensive Midfield,28.0,Cracovia,1000000,€1.00m,2025,36,0,1,4,5,2
 356141,Daichi Kamada,Japan,Attacking Midfield,29.0,Crystal Palace,10000000,€10.00m,2025,46,0,1,4,5,5
 607224,Hannibal,Tunisia,Attacking Midfield,23.0,Burnley FC,15000000,€15.00m,2025,39,0,1,4,5,3
 365394,In-beom Hwang,South Korea,Defensive Midfield,29.0,Feyenoord Rotterdam,7000000,€7.00m,2025,27,0,1,4,5,4
@@ -574,10 +574,10 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 361260,Ozan Kabak,Turkey,Centre-Back,26.0,TSG 1899 Hoffenheim,15000000,€15.00m,2025,30,0,4,0,4,2
 480267,Ronald Araujo,Uruguay,Centre-Back,27.0,FC Barcelona,20000000,€20.00m,2025,49,0,4,0,4,4
 182893,Seko Fofana,Ivory Coast,Central Midfield,31.0,FC Porto,8000000,€8.00m,2025,38,0,4,0,4,5
-443937,Alaa Hejji,Saudi Arabia,Central Midfield,30.0,NEOM SC,150000,€150k,2025,35,0,3,1,4,2
+443937,Alaa Hejji,Saudi Arabia,Central Midfield,30.0,NEOM SC,300000,€300k,2025,35,0,3,1,4,2
 583189,Anthony Elanga,Sweden,Right Winger,24.0,Newcastle United,32000000,€32.00m,2025,53,0,3,1,4,4
-177064,Cecilio Waterman,Panama,Centre-Forward,35.0,Universidad de Concepción,350000,€350k,2025,19,0,3,1,4,2
-936981,Gustavo Puerta,Colombia,Central Midfield,22.0,Racing Santander,5000000,€5.00m,2025,46,0,3,1,4,4
+177064,Cecilio Waterman,Panama,Centre-Forward,35.0,Universidad de Concepción,250000,€250k,2025,19,0,3,1,4,2
+936981,Gustavo Puerta,Colombia,Central Midfield,22.0,Racing Santander,10000000,€10.00m,2025,46,0,3,1,4,4
 677278,Ibrahim Adel,Egypt,Left Winger,25.0,FC Nordsjaelland,2500000,€2.50m,2025,34,0,3,1,4,6
 1142382,Ibrahim Sabra,Jordan,Centre-Forward,20.0,NK Lokomotiva Zagreb,500000,€500k,2025,30,0,3,1,4,3
 613192,Jens Castrop,South Korea,Central Midfield,22.0,Borussia Mönchengladbach,10000000,€10.00m,2025,34,0,3,1,4,2
@@ -589,15 +589,15 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 388165,Yoane Wissa,DR Congo,Centre-Forward,29.0,Newcastle United,25000000,€25.00m,2025,34,0,3,1,4,4
 283473,Yoel Bárcenas,Panama,Right Winger,32.0,Mazatlán FC,650000,€650k,2025,33,0,3,1,4,2
 542380,Amirhossein Hosseinzadeh,Iran,Centre-Forward,25.0,Tractor FC,2200000,€2.20m,2025,37,0,2,2,4,4
-413112,Aurélien Tchouaméni,France,Defensive Midfield,26.0,Real Madrid,75000000,€75.00m,2025,53,0,2,2,4,4
+413112,Aurélien Tchouaméni,France,Defensive Midfield,26.0,Real Madrid,70000000,€70.00m,2025,53,0,2,2,4,4
 492955,Frantzdy Pierrot,Haiti,Centre-Forward,31.0,Caykur Rizespor,1500000,€1.50m,2025,41,0,2,2,4,6
 592735,Gonzalo Plata,Ecuador,Right Winger,25.0,CR Flamengo,9000000,€9.00m,2025,38,0,2,2,4,7
-869509,Moteb Al-Harbi,Saudi Arabia,Left-Back,26.0,Al-Hilal SFC,1200000,€1.20m,2025,45,0,2,2,4,3
+869509,Moteb Al-Harbi,Saudi Arabia,Left-Back,26.0,Al-Hilal SFC,1400000,€1.40m,2025,45,0,2,2,4,3
 245537,Nabil Bentaleb,Algeria,Defensive Midfield,31.0,LOSC Lille,4500000,€4.50m,2025,41,0,2,2,4,3
 901019,Neil El Aynaoui,Morocco,Central Midfield,24.0,AS Roma,23000000,€23.00m,2025,49,0,2,2,4,3
 192635,Nico Elvedi,Switzerland,Centre-Back,29.0,Borussia Mönchengladbach,8000000,€8.00m,2025,37,0,2,2,4,2
 1130514,Samir El Mourabet,Morocco,Central Midfield,20.0,RC Strasbourg Alsace,22000000,€22.00m,2025,53,0,2,2,4,4
-731771,Taha Ali,Sweden,Left Winger,27.0,Malmö FF,1200000,€1.20m,2025,31,0,2,2,4,5
+731771,Taha Ali,Sweden,Left Winger,27.0,Malmö FF,1500000,€1.50m,2025,31,0,2,2,4,5
 679423,Tarik Muharemović,Bosnia and Herzegovina,Centre-Back,23.0,US Sassuolo,25000000,€25.00m,2025,38,0,2,2,4,2
 332705,Tyler Adams,United States,Defensive Midfield,27.0,AFC Bournemouth,25000000,€25.00m,2025,28,0,2,2,4,2
 648779,Wilfried Singo,Ivory Coast,Centre-Back,25.0,Galatasaray,23000000,€23.00m,2025,36,0,2,2,4,4
@@ -617,7 +617,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 708989,Deveron Fonville,Curaçao,Centre-Back,23.0,NEC Nijmegen,1500000,€1.50m,2025,39,0,0,4,4,3
 526466,Elias Saad,Tunisia,Left Winger,26.0,Hannover 96,2000000,€2.00m,2025,33,0,0,4,4,3
 262980,Jefferson Lerma,Colombia,Defensive Midfield,31.0,Crystal Palace,6000000,€6.00m,2025,58,0,0,4,4,5
-262939,Johan Mojica,Colombia,Left-Back,33.0,RCD Mallorca,1800000,€1.80m,2025,41,0,0,4,4,2
+262939,Johan Mojica,Colombia,Left-Back,33.0,RCD Mallorca,1500000,€1.50m,2025,41,0,0,4,4,2
 207006,Joshua Brenet,Curaçao,Right-Back,32.0,Kayserispor,1000000,€1.00m,2025,33,0,0,4,4,3
 578391,Rayan Aït-Nouri,Algeria,Left-Back,24.0,Manchester City,40000000,€40.00m,2025,51,0,0,4,4,4
 406008,Yan Valery,Tunisia,Right-Back,27.0,BSC Young Boys,1500000,€1.50m,2025,50,0,0,4,4,4
@@ -634,7 +634,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 193004,Waldemar Anton,Germany,Centre-Back,29.0,Borussia Dortmund,18000000,€18.00m,2025,44,0,3,0,3,3
 833817,Ahmed Qasem,Iraq,Right Winger,22.0,Nashville SC,3500000,€3.50m,2025,22,0,2,1,3,2
 256019,Alex Rufer,New Zealand,Defensive Midfield,29.0,Wellington Phoenix,600000,€600k,2025,25,0,2,1,3,1
-1059056,Ali Azaizeh,Jordan,Right Winger,22.0,Al-Shabab FC,200000,€200k,2025,17,0,2,1,3,1
+1059056,Ali Azaizeh,Jordan,Right Winger,22.0,Al-Shabab FC,325000,€325k,2025,17,0,2,1,3,1
 744040,Amer Jamous,Jordan,Central Midfield,23.0,Al-Zawraa SC,500000,€500k,2025,43,0,2,1,3,3
 1061282,Assane Diao,Senegal,Left Winger,20.0,Como 1907,30000000,€30.00m,2025,21,0,2,1,3,2
 389253,Auston Trusty,United States,Centre-Back,27.0,Celtic FC,6000000,€6.00m,2025,59,0,2,1,3,6
@@ -642,7 +642,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 399162,Cammy Devlin,Australia,Central Midfield,27.0,Heart of Midlothian FC,2000000,€2.00m,2025,33,0,2,1,3,3
 365108,Dan Ndoye,Switzerland,Right Winger,25.0,Nottingham Forest,32000000,€32.00m,2025,46,0,2,1,3,4
 354763,Derrick Etienne Jr.,Haiti,Left Winger,29.0,Toronto FC,800000,€800k,2025,15,0,2,1,3,2
-687622,Elliot Stroud,Sweden,Left Midfield,23.0,Mjällby AIF,3000000,€3.00m,2025,17,0,2,1,3,2
+687622,Elliot Stroud,Sweden,Left Midfield,23.0,Mjällby AIF,5000000,€5.00m,2025,17,0,2,1,3,2
 298583,Eray Cömert,Switzerland,Centre-Back,28.0,Valencia CF,2500000,€2.50m,2025,38,0,2,1,3,2
 195736,Florian Grillitsch,Austria,Defensive Midfield,30.0,SC Braga,2500000,€2.50m,2025,52,0,2,1,3,6
 743088,Henrik Falchener,Norway,Centre-Back,23.0,Viking FK,6000000,€6.00m,2025,17,0,2,1,3,3
@@ -662,42 +662,42 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 637446,Alistair Johnston,Canada,Right-Back,27.0,Celtic FC,8000000,€8.00m,2025,11,0,1,2,3,6
 450241,Angelo Preciado,Ecuador,Right-Back,28.0,Clube Atlético Mineiro,3500000,€3.50m,2025,60,0,1,2,3,8
 932724,Arya Yousefi,Iran,Right-Back,24.0,Sepahan FC,1500000,€1.50m,2025,34,0,1,2,3,4
-35047,Axel Witsel,Belgium,Defensive Midfield,37.0,Girona FC,1400000,€1.40m,2025,38,0,1,2,3,2
+35047,Axel Witsel,Belgium,Defensive Midfield,37.0,Girona FC,1200000,€1.20m,2025,38,0,1,2,3,2
 617021,Ben Old,New Zealand,Left-Back,23.0,AS Saint-Étienne,1800000,€1.80m,2025,41,0,1,2,3,4
-452483,David Affengruber,Austria,Centre-Back,25.0,Elche CF,9000000,€9.00m,2025,42,0,1,2,3,2
+452483,David Affengruber,Austria,Centre-Back,25.0,Elche CF,20000000,€20.00m,2025,42,0,1,2,3,2
 544149,David Zima,Czech Republic,Centre-Back,25.0,SK Slavia Prague,7000000,€7.00m,2025,37,0,1,2,3,4
 560593,Hicham Boudaoui,Algeria,Central Midfield,26.0,OGC Nice,12000000,€12.00m,2025,47,0,1,2,3,5
 353892,Hiroki Ito,Japan,Centre-Back,27.0,Bayern Munich,18000000,€18.00m,2025,34,0,1,2,3,3
 594273,Jeremy Antonisse,Curaçao,Left Winger,24.0,AE Kifisia,800000,€800k,2025,38,0,1,2,3,3
 598145,Jordy Alcívar,Ecuador,Defensive Midfield,26.0,Independiente del Valle,2000000,€2.00m,2025,23,0,1,2,3,3
-532938,Luis Romo,Mexico,Centre-Back,30.0,Deportivo Guadalajara,3000000,€3.00m,2025,38,0,1,2,3,4
+532938,Luis Romo,Mexico,Centre-Back,31.0,Deportivo Guadalajara,3000000,€3.00m,2025,38,0,1,2,3,4
 583404,Marcus Pedersen,Norway,Right-Back,25.0,Torino FC,3500000,€3.50m,2025,36,0,1,2,3,2
 1066953,Mateo Chávez,Mexico,Left-Back,22.0,AZ Alkmaar,4000000,€4.00m,2025,75,0,1,2,3,5
 530527,Merchas Doski,Iraq,Left-Back,26.0,FC Viktoria Plzen,1700000,€1.70m,2025,52,0,1,2,3,5
 353922,Mert Müldür,Turkey,Right-Back,27.0,Fenerbahce,7000000,€7.00m,2025,54,0,1,2,3,5
 237658,Michel Aebischer,Switzerland,Central Midfield,29.0,Pisa Sporting Club,4000000,€4.00m,2025,39,0,1,2,3,2
 291200,Moussa Niakhaté,Senegal,Centre-Back,30.0,Olympique Lyon,15000000,€15.00m,2025,48,0,1,2,3,3
-509911,Nasser Al-Dawsari,Saudi Arabia,Central Midfield,27.0,Al-Hilal SFC,800000,€800k,2025,42,0,1,2,3,3
+509911,Nasser Al-Dawsari,Saudi Arabia,Central Midfield,27.0,Al-Hilal SFC,900000,€900k,2025,42,0,1,2,3,3
 1045375,Niko Sigur,Canada,Defensive Midfield,22.0,HNK Hajduk Split,4000000,€4.00m,2025,43,0,1,2,3,3
 422051,Nikola Katic,Bosnia and Herzegovina,Centre-Back,29.0,FC Schalke 04,1800000,€1.80m,2025,30,0,1,2,3,2
 734751,Nizar Al-Rashdan,Jordan,Defensive Midfield,27.0,Qatar SC,600000,€600k,2025,29,0,1,2,3,5
 308439,Patrick Berg,Norway,Defensive Midfield,28.0,FK Bodø/Glimt,8000000,€8.00m,2025,30,0,1,2,3,4
 127573,Phillipp Mwene,Austria,Left-Back,32.0,1.FSV Mainz 05,1500000,€1.50m,2025,41,0,1,2,3,4
 659813,Piero Hincapié,Ecuador,Centre-Back,24.0,Arsenal FC,50000000,€50.00m,2025,51,0,1,2,3,6
-913660,Redouane Halhal,Morocco,Centre-Back,23.0,KV Mechelen,3000000,€3.00m,2025,35,0,1,2,3,3
+913660,Redouane Halhal,Morocco,Centre-Back,23.0,KV Mechelen,5000000,€5.00m,2025,35,0,1,2,3,3
 148252,Remo Freuler,Switzerland,Central Midfield,34.0,Bologna FC 1909,3000000,€3.00m,2025,45,0,1,2,3,3
 536520,Ruben Providence,Haiti,Left Winger,24.0,Almere City FC,300000,€300k,2025,47,0,1,2,3,3
 552955,Santiago Gimenez,Mexico,Centre-Forward,25.0,AC Milan,18000000,€18.00m,2025,20,0,1,2,3,2
 504087,Tomás Araújo,Portugal,Centre-Back,24.0,SL Benfica,30000000,€30.00m,2025,49,0,1,2,3,6
 371686,Carlens Arcus,Haiti,Right-Back,29.0,Angers SCO,1800000,€1.80m,2025,31,0,0,3,3,2
-741098,César Yanis,Panama,Right Winger,30.0,CD Cobresal,350000,€350k,2025,20,0,0,3,3,3
+741098,César Yanis,Panama,Right Winger,30.0,CD Cobresal,400000,€400k,2025,20,0,0,3,3,3
 188862,Guillermo Varela,Uruguay,Right-Back,33.0,CR Flamengo,1000000,€1.00m,2025,38,0,0,3,3,7
-620164,Haissem Hassan,Egypt,Right Winger,24.0,Real Oviedo,4000000,€4.00m,2025,39,0,0,3,3,2
+620164,Haissem Hassan,Egypt,Right Winger,24.0,Real Oviedo,3500000,€3.50m,2025,39,0,0,3,3,2
 260807,Jonathan Osorio,Canada,Central Midfield,33.0,Toronto FC,1000000,€1.00m,2025,15,0,0,3,3,2
 281963,Lucas Hernández,France,Left-Back,30.0,Paris Saint-Germain,18000000,€18.00m,2025,56,0,0,3,3,6
 131225,Nicolás Tagliafico,Argentina,Left-Back,33.0,Olympique Lyon,4000000,€4.00m,2025,42,0,0,3,3,3
 294525,Otabek Shukurov,Uzbekistan,Central Midfield,29.0,FC Baniyas,1500000,€1.50m,2025,23,0,0,3,3,2
-265383,Abdoulaye Seck,Senegal,Centre-Back,33.0,Maccabi Haifa,500000,€500k,2025,44,0,2,0,2,4
+265383,Abdoulaye Seck,Senegal,Centre-Back,34.0,Maccabi Haifa,400000,€400k,2025,44,0,2,0,2,4
 1371519,Alexandro Maidana,Paraguay,Left-Back,20.0,CA Talleres,2500000,€2.50m,2025,20,0,2,0,2,5
 485706,Amadou Onana,Belgium,Defensive Midfield,24.0,Aston Villa,45000000,€45.00m,2025,39,0,2,0,2,3
 891998,Antoine Mendy,Senegal,Centre-Back,22.0,OGC Nice,10000000,€10.00m,2025,52,0,2,0,2,5
@@ -713,17 +713,17 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 340303,Hamdy Fathy,Egypt,Defensive Midfield,31.0,Al-Wakrah SC,1800000,€1.80m,2025,34,0,2,0,2,3
 509897,Hassan Tambakti,Saudi Arabia,Centre-Back,27.0,Al-Hilal SFC,1800000,€1.80m,2025,46,0,2,0,2,3
 953150,Hazem Mastouri,Tunisia,Centre-Forward,28.0,Dinamo Makhachkala,900000,€900k,2025,38,0,2,0,2,4
-585325,Hussein Ali,Iraq,Right-Back,24.0,Pogon Szczecin,300000,€300k,2025,29,0,2,0,2,2
+585325,Hussein Ali,Iraq,Right-Back,24.0,Pogon Szczecin,400000,€400k,2025,29,0,2,0,2,2
 357119,Ibrahima Konaté,France,Centre-Back,27.0,Liverpool FC,45000000,€45.00m,2025,57,0,2,0,2,5
 1107265,Ime Okon,South Africa,Centre-Back,22.0,Hannover 96,2000000,€2.00m,2025,29,0,2,0,2,2
 491616,Jackson Porozo,Ecuador,Centre-Back,25.0,Club Tijuana,2500000,€2.50m,2025,38,0,2,0,2,4
-804472,Jayden Adams,South Africa,Central Midfield,25.0,Mamelodi Sundowns FC,1400000,€1.40m,2025,50,0,2,0,2,5
+804472,Jayden Adams,South Africa,Central Midfield,25.0,Mamelodi Sundowns FC,1800000,€1.80m,2025,50,0,2,0,2,5
 330659,Justin Kluivert,Netherlands,Attacking Midfield,27.0,AFC Bournemouth,25000000,€25.00m,2025,22,0,2,0,2,2
 288431,Léo Pereira,Brazil,Centre-Back,30.0,CR Flamengo,12000000,€12.00m,2025,40,0,2,0,2,7
 284730,Manuel Akanji,Switzerland,Centre-Back,30.0,Inter Milan,17000000,€17.00m,2025,55,0,2,0,2,5
 395928,Marco Pašalić,Croatia,Right Winger,25.0,Orlando City SC,6500000,€6.50m,2025,12,0,2,0,2,2
 181767,Marquinhos,Brazil,Centre-Back,32.0,Paris Saint-Germain,28000000,€28.00m,2025,53,0,2,0,2,6
-340879,Merih Demiral,Turkey,Centre-Back,28.0,Al-Ahli SFC,14000000,€14.00m,2025,36,0,2,0,2,5
+340879,Merih Demiral,Turkey,Centre-Back,28.0,Al-Ahli SFC,12000000,€12.00m,2025,36,0,2,0,2,5
 592396,Mohamed Amine Tougai,Algeria,Centre-Back,26.0,Esperance Tunis,1300000,€1.30m,2025,40,0,2,0,2,3
 1016015,Ngal'ayel Mukau,DR Congo,Defensive Midfield,21.0,LOSC Lille,15000000,€15.00m,2025,47,0,2,0,2,3
 225657,Philipp Lienhart,Austria,Centre-Back,29.0,SC Freiburg,10000000,€10.00m,2025,38,0,2,0,2,3
@@ -731,18 +731,18 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 357565,Rodri,Spain,Defensive Midfield,29.0,Manchester City,50000000,€50.00m,2025,37,0,2,0,2,4
 188077,Ryan Christie,Scotland,Central Midfield,31.0,AFC Bournemouth,8000000,€8.00m,2025,30,0,2,0,2,2
 258004,Rúben Dias,Portugal,Centre-Back,29.0,Manchester City,55000000,€55.00m,2025,45,0,2,0,2,4
-287579,Sofyan Amrabat,Morocco,Defensive Midfield,29.0,Real Betis Balompié,12000000,€12.00m,2025,42,0,2,0,2,5
+287579,Sofyan Amrabat,Morocco,Defensive Midfield,29.0,Real Betis Balompié,10000000,€10.00m,2025,42,0,2,0,2,5
 1143849,Tahsin Mohammed Jamshid,Qatar,Left Winger,19.0,Al-Duhail SC,200000,€200k,2025,45,0,2,0,2,5
-1109254,Thabang Matuludi,South Africa,Right-Back,27.0,Polokwane City FC,900000,€900k,2025,27,0,2,0,2,3
+1109254,Thabang Matuludi,South Africa,Right-Back,27.0,Polokwane City FC,1200000,€1.20m,2025,27,0,2,0,2,3
 550978,Wi-je Cho,South Korea,Centre-Back,24.0,Jeonbuk Hyundai Motors,550000,€550k,2025,16,0,2,0,2,2
 531450,Willy Semedo,Cape Verde,Left Winger,32.0,Omonia Nicosia,1000000,€1.00m,2025,48,0,2,0,2,4
 237425,Yasser Ibrahim,Egypt,Centre-Back,33.0,Al Ahly FC,275000,€275k,2025,45,0,2,0,2,6
 289446,Yerry Mina,Colombia,Centre-Back,31.0,Cagliari Calcio,2500000,€2.50m,2025,33,0,2,0,2,2
-261503,Álvaro Fidalgo,Mexico,Central Midfield,29.0,Real Betis Balompié,10000000,€10.00m,2025,45,0,2,0,2,6
-437903,Abdullah Al-Khaibari,Saudi Arabia,Defensive Midfield,29.0,Al-Nassr FC,800000,€800k,2025,47,0,1,1,2,4
+261503,Álvaro Fidalgo,Mexico,Central Midfield,29.0,Real Betis Balompié,6000000,€6.00m,2025,45,0,2,0,2,6
+437903,Abdullah Al-Khaibari,Saudi Arabia,Defensive Midfield,29.0,Al-Nassr FC,750000,€750k,2025,47,0,1,1,2,4
 340990,Alfie Jones,Canada,Centre-Back,28.0,Middlesbrough FC,6000000,€6.00m,2025,24,0,1,1,2,2
 610581,Ali Al-Hamadi,Iraq,Centre-Forward,24.0,Luton Town,1500000,€1.50m,2025,42,0,1,1,2,5
-213268,Alireza Jahanbakhsh,Iran,Right Winger,32.0,FCV Dender EH,600000,€600k,2025,24,0,1,1,2,3
+213268,Alireza Jahanbakhsh,Iran,Right Winger,32.0,FCV Dender EH,500000,€500k,2025,24,0,1,1,2,3
 345095,Almoez Ali,Qatar,Centre-Forward,29.0,Al-Duhail SC,2500000,€2.50m,2025,10,0,1,1,2,4
 349701,Antonee Robinson,United States,Left-Back,28.0,Fulham FC,22000000,€22.00m,2025,32,0,1,1,2,3
 234523,Antonio Sanabria,Paraguay,Centre-Forward,30.0,US Cremonese,1800000,€1.80m,2025,30,0,1,1,2,2
@@ -751,25 +751,25 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 689637,Chadi Riad,Morocco,Centre-Back,22.0,Crystal Palace,15000000,€15.00m,2025,29,0,1,1,2,4
 328609,Derek Cornelius,Canada,Centre-Back,28.0,Olympique Marseille,2500000,€2.50m,2025,16,0,1,1,2,4
 988188,Dominique Simon,Haiti,Defensive Midfield,25.0,FC Tatran Presov,200000,€200k,2025,32,0,1,1,2,4
-466794,Eric García,Spain,Centre-Back,25.0,FC Barcelona,35000000,€35.00m,2025,57,0,1,1,2,4
+466794,Eric García,Spain,Centre-Back,25.0,FC Barcelona,40000000,€40.00m,2025,57,0,1,1,2,4
 362108,Gabriel Gudmundsson,Sweden,Left-Back,27.0,Leeds United,20000000,€20.00m,2025,42,0,1,1,2,3
 338635,Hannes Delcroix,Haiti,Centre-Back,27.0,FC Lugano,2000000,€2.00m,2025,49,0,1,1,2,7
-260859,Hassan Kadesh,Saudi Arabia,Left-Back,33.0,Al-Ittihad Club,300000,€300k,2025,49,0,1,1,2,4
-185175,Jason Geria,Australia,Right-Back,33.0,Albirex Niigata,400000,€400k,2025,19,0,1,1,2,1
+260859,Hassan Kadesh,Saudi Arabia,Left-Back,33.0,Al-Ittihad Club,275000,€275k,2025,49,0,1,1,2,4
+185175,Jason Geria,Australia,Right-Back,33.0,Albirex Niigata,350000,€350k,2025,19,0,1,1,2,1
 344864,Jean-Kévin Duverne,Haiti,Centre-Back,28.0,KAA Gent,2000000,€2.00m,2025,38,0,1,1,2,5
 450050,Jean-Ricner Bellegarde,Haiti,Central Midfield,27.0,Wolverhampton Wanderers,16000000,€16.00m,2025,34,0,1,1,2,3
 413565,Jhon Lucumí,Colombia,Centre-Back,27.0,Bologna FC 1909,22000000,€22.00m,2025,50,0,1,1,2,4
 365377,Jin-gyu Kim,South Korea,Central Midfield,29.0,Jeonbuk Hyundai Motors,1200000,€1.20m,2025,16,0,1,1,2,2
 698415,José Córdoba,Panama,Centre-Back,25.0,Norwich City,5000000,€5.00m,2025,40,0,1,1,2,3
-250845,José María Giménez,Uruguay,Centre-Back,31.0,Atlético de Madrid,12000000,€12.00m,2025,38,0,1,1,2,4
+250845,José María Giménez,Uruguay,Centre-Back,31.0,Atlético de Madrid,9000000,€9.00m,2025,38,0,1,1,2,4
 450806,Khuliso Mudau,South Africa,Right-Back,31.0,Mamelodi Sundowns FC,1200000,€1.20m,2025,37,0,1,1,2,4
 490384,Koni De Winter,Belgium,Centre-Back,23.0,AC Milan,23000000,€23.00m,2025,42,0,1,1,2,3
 575998,Leonardo Balerdi,Argentina,Centre-Back,27.0,Olympique Marseille,18000000,€18.00m,2025,39,0,1,1,2,4
 539798,Luca Jaquez,Switzerland,Centre-Back,23.0,VfB Stuttgart,10000000,€10.00m,2025,34,0,1,1,2,4
-844637,Marc Pubill,Spain,Centre-Back,22.0,Atlético de Madrid,28000000,€28.00m,2025,61,0,1,1,2,4
+844637,Marc Pubill,Spain,Centre-Back,22.0,Atlético de Madrid,35000000,€35.00m,2025,61,0,1,1,2,4
 804885,Martin Expérience,Haiti,Left-Back,27.0,AS Nancy-Lorraine,350000,€350k,2025,38,0,1,1,2,2
 1378320,Mbekezeli Mbokazi,South Africa,Centre-Back,20.0,Chicago Fire FC,3500000,€3.50m,2025,41,0,1,1,2,6
-167850,Memphis Depay,Netherlands,Second Striker,32.0,Sport Club Corinthians Paulista,7000000,€7.00m,2025,22,0,1,1,2,4
+167850,Memphis Depay,Netherlands,Centre-Forward,32.0,Sport Club Corinthians Paulista,7000000,€7.00m,2025,22,0,1,1,2,4
 503482,Min-jae Kim,South Korea,Centre-Back,29.0,Bayern Munich,20000000,€20.00m,2025,52,0,1,1,2,4
 397458,Nicolás de la Cruz,Uruguay,Central Midfield,29.0,CR Flamengo,8000000,€8.00m,2025,35,0,1,1,2,7
 316934,Nikola Moro,Croatia,Defensive Midfield,28.0,Bologna FC 1909,7000000,€7.00m,2025,56,0,1,1,2,4
@@ -778,11 +778,11 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 349599,Pervis Estupiñán,Ecuador,Left-Back,28.0,AC Milan,12000000,€12.00m,2025,39,0,1,1,2,3
 354362,Rodrigo Bentancur,Uruguay,Defensive Midfield,28.0,Tottenham Hotspur,20000000,€20.00m,2025,36,0,1,1,2,4
 203357,Ryan Thomas,New Zealand,Defensive Midfield,31.0,PEC Zwolle,650000,€650k,2025,36,0,1,1,2,2
-307870,Shogo Taniguchi,Japan,Centre-Back,34.0,Sint-Truidense VV,800000,€800k,2025,42,0,1,1,2,3
+307870,Shogo Taniguchi,Japan,Centre-Back,34.0,Sint-Truidense VV,750000,€750k,2025,42,0,1,1,2,3
 213715,Shoja Khalilzadeh,Iran,Centre-Back,37.0,Tractor FC,100000,€100k,2025,37,0,1,1,2,4
 485582,Sontje Hansen,Curaçao,Right Winger,24.0,Middlesbrough FC,3500000,€3.50m,2025,53,0,1,1,2,5
 512913,Stephen Eustaquio,Canada,Central Midfield,29.0,Los Angeles FC,6000000,€6.00m,2025,47,0,1,1,2,6
-735697,Thalente Mbatha,South Africa,Central Midfield,26.0,Orlando Pirates,1600000,€1.60m,2025,44,0,1,1,2,5
+735697,Thalente Mbatha,South Africa,Central Midfield,26.0,Orlando Pirates,2000000,€2.00m,2025,44,0,1,1,2,5
 495666,William Saliba,France,Centre-Back,25.0,Arsenal FC,100000000,€100.00m,2025,55,0,1,1,2,4
 539961,Yazan Al-Arab,Jordan,Centre-Back,30.0,FC Seoul,1000000,€1.00m,2025,24,0,1,1,2,2
 901079,Ziyad Al-Johani,Saudi Arabia,Defensive Midfield,24.0,Al-Ahli SFC,800000,€800k,2025,53,0,1,1,2,5
@@ -791,7 +791,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 195778,Alexander Nübel,Germany,Goalkeeper,29.0,VfB Stuttgart,12000000,€12.00m,2025,52,0,0,2,2,3
 522223,Connor Metcalfe,Australia,Central Midfield,26.0,FC St. Pauli,1500000,€1.50m,2025,29,0,0,2,2,2
 77547,Ehsan Hajsafi,Iran,Left-Back,36.0,Sepahan FC,250000,€250k,2025,34,0,0,2,2,4
-676318,Facundo Pellistri,Uruguay,Right Winger,24.0,Panathinaikos,6000000,€6.00m,2025,23,0,0,2,2,6
+676318,Facundo Pellistri,Uruguay,Right Winger,24.0,Panathinaikos,5000000,€5.00m,2025,23,0,0,2,2,6
 397171,Gideon Mensah,Ghana,Left-Back,27.0,AJ Auxerre,4000000,€4.00m,2025,35,0,0,2,2,2
 393241,Godfried Roemeratoe,Curaçao,Defensive Midfield,26.0,RKC Waalwijk,350000,€350k,2025,45,0,0,2,2,3
 744853,Herman Johansson,Sweden,Right Midfield,28.0,FC Dallas,1800000,€1.80m,2025,16,0,0,2,2,2
@@ -800,7 +800,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 637632,Jacob Shaffelburg,Canada,Left Winger,26.0,Los Angeles FC,2500000,€2.50m,2025,14,0,0,2,2,2
 496268,Joaquín Piquerez,Uruguay,Left-Back,27.0,Sociedade Esportiva Palmeiras,12000000,€12.00m,2025,20,0,0,2,2,2
 348863,Juninho Bacuna,Curaçao,Central Midfield,28.0,FC Volendam,1700000,€1.70m,2025,40,0,0,2,2,5
-1283140,Khulumani Ndamane,South Africa,Centre-Back,22.0,Mamelodi Sundowns FC,800000,€800k,2025,46,0,0,2,2,5
+1283140,Khulumani Ndamane,South Africa,Centre-Back,22.0,Mamelodi Sundowns FC,1200000,€1.20m,2025,46,0,0,2,2,5
 328658,Kristoffer Ajer,Norway,Centre-Back,28.0,Brentford FC,18000000,€18.00m,2025,44,0,0,2,2,3
 490426,Krépin Diatta,Senegal,Right Midfield,27.0,AS Monaco,6000000,€6.00m,2025,41,0,0,2,2,3
 429259,Mark McKenzie,United States,Centre-Back,27.0,FC Toulouse,7000000,€7.00m,2025,37,0,0,2,2,2
@@ -812,7 +812,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 563749,Oğuz Aydın,Turkey,Right Winger,25.0,Fenerbahce,7000000,€7.00m,2025,55,0,0,2,2,5
 1064377,Paul Okon-Engstler,Australia,Defensive Midfield,21.0,Sydney FC,1200000,€1.20m,2025,27,0,0,2,2,2
 120443,Santiago Arias,Colombia,Right-Back,34.0,CA Independiente,1200000,€1.20m,2025,18,0,0,2,2,3
-108390,Thibaut Courtois,Belgium,Goalkeeper,34.0,Real Madrid,18000000,€18.00m,2025,48,0,0,2,2,4
+108390,Thibaut Courtois,Belgium,Goalkeeper,34.0,Real Madrid,15000000,€15.00m,2025,48,0,0,2,2,4
 493725,Umar Eshmurodov,Uzbekistan,Centre-Back,33.0,Nasaf Qarshi,450000,€450k,2025,22,0,0,2,2,3
 609255,Willer Ditta,Colombia,Centre-Back,28.0,CD Cruz Azul,5500000,€5.50m,2025,51,0,0,2,2,6
 548193,Zeno Debast,Belgium,Centre-Back,22.0,Sporting CP,28000000,€28.00m,2025,29,0,0,2,2,4
@@ -821,20 +821,20 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 579294,Aimar Sher,Iraq,Central Midfield,23.0,Sarpsborg 08 FF,1500000,€1.50m,2025,13,0,1,0,1,2
 867137,Alessandro Circati,Australia,Centre-Back,22.0,Parma Calcio 1913,12000000,€12.00m,2025,35,0,1,0,1,2
 388171,Anthony Ralston,Scotland,Right-Back,27.0,Celtic FC,1500000,€1.50m,2025,59,0,1,0,1,6
-86202,Antonio Rüdiger,Germany,Centre-Back,33.0,Real Madrid,9000000,€9.00m,2025,35,0,1,0,1,4
+86202,Antonio Rüdiger,Germany,Centre-Back,33.0,Real Madrid,6000000,€6.00m,2025,35,0,1,0,1,4
 368891,Arthur Theate,Belgium,Centre-Back,26.0,Eintracht Frankfurt,17000000,€17.00m,2025,39,0,1,0,1,3
 342046,Axel Tuanzebe,DR Congo,Centre-Back,28.0,Burnley FC,5000000,€5.00m,2025,23,0,1,0,1,3
 80293,Aïssa Mandi,Algeria,Centre-Back,34.0,LOSC Lille,1000000,€1.00m,2025,48,0,1,0,1,3
 222669,Boualem Khoukhi,Qatar,Centre-Back,35.0,Al-Sadd SC,200000,€200k,2025,46,0,1,0,1,4
-258987,Carl Starfelt,Sweden,Centre-Back,31.0,Celta de Vigo,5000000,€5.00m,2025,51,0,1,0,1,3
+258987,Carl Starfelt,Sweden,Centre-Back,31.0,Celta de Vigo,4500000,€4.50m,2025,51,0,1,0,1,3
 243879,Charles Pickel,DR Congo,Defensive Midfield,29.0,RCD Espanyol Barcelona,2500000,€2.50m,2025,40,0,1,0,1,4
-540315,César Huerta,Mexico,Left Winger,25.0,RSC Anderlecht,5000000,€5.00m,2025,22,0,1,0,1,5
+540315,César Huerta,Mexico,Left Winger,25.0,RSC Anderlecht,3500000,€3.50m,2025,22,0,1,0,1,5
 145707,Danilo,Brazil,Centre-Back,34.0,CR Flamengo,2000000,€2.00m,2025,35,0,1,0,1,7
 241457,Derrick Luckassen,Ghana,Centre-Back,30.0,Pafos FC,1000000,€1.00m,2025,56,0,1,0,1,5
 263268,Dominic Hyam,Scotland,Centre-Back,30.0,Wrexham AFC,2000000,€2.00m,2025,52,0,1,0,1,3
 220793,Douglas Santos,Brazil,Left-Back,32.0,Zenit St. Petersburg,7500000,€7.50m,2025,33,0,1,0,1,2
 345763,Duckens Nazon,Haiti,Centre-Forward,32.0,Esteghlal FC,800000,€800k,2025,31,0,1,0,1,4
-238266,Duje Caleta-Car,Croatia,Centre-Back,29.0,Real Sociedad,3000000,€3.00m,2025,46,0,1,0,1,2
+238266,Duje Caleta-Car,Croatia,Centre-Back,29.0,Real Sociedad,2800000,€2.80m,2025,46,0,1,0,1,2
 369316,Ferdi Kadıoğlu,Turkey,Left-Back,26.0,Brighton & Hove Albion,35000000,€35.00m,2025,43,0,1,0,1,3
 166460,Frans Dhia Putros,Iraq,Centre-Back,32.0,PERSIB Bandung,325000,€325k,2025,43,0,1,0,1,3
 504215,Giovanni Reyna,United States,Attacking Midfield,23.0,Borussia Mönchengladbach,4000000,€4.00m,2025,28,0,1,0,1,2
@@ -843,7 +843,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 560957,Ibrahim Bayesh,Iraq,Attacking Midfield,26.0,Al-Dhafra FC,800000,€800k,2025,27,0,1,0,1,3
 503075,Isak Hien,Sweden,Centre-Back,27.0,Atalanta BC,22000000,€22.00m,2025,47,0,1,0,1,3
 272622,Issa Diop,Morocco,Centre-Back,29.0,Fulham FC,8000000,€8.00m,2025,38,0,1,0,1,3
-620560,Ivan Basic,Bosnia and Herzegovina,Central Midfield,24.0,FC Astana,1200000,€1.20m,2025,18,0,1,0,1,3
+620560,Ivan Basic,Bosnia and Herzegovina,Central Midfield,24.0,FC Astana,1500000,€1.50m,2025,18,0,1,0,1,3
 363223,Jack Hendry,Scotland,Centre-Back,31.0,Al-Ettifaq FC,2500000,€2.50m,2025,34,0,1,0,1,2
 222855,Jesper Karlström,Sweden,Defensive Midfield,30.0,Udinese Calcio,4000000,€4.00m,2025,40,0,1,0,1,2
 403809,Jiovany Ramos,Panama,Centre-Back,29.0,Academia Puerto Cabello,450000,€450k,2025,26,0,1,0,1,3
@@ -853,10 +853,10 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 119031,Kaan Ayhan,Turkey,Defensive Midfield,31.0,Galatasaray,1500000,€1.50m,2025,46,0,1,0,1,4
 691326,Kai Trewin,Australia,Defensive Midfield,25.0,New York City FC,1800000,€1.80m,2025,37,0,1,0,1,4
 222385,Karim Boudiaf,Qatar,Defensive Midfield,35.0,Al-Duhail SC,175000,€175k,2025,45,0,1,0,1,5
-662119,Kelvin Pires,Cape Verde,Centre-Back,25.0,SJK Seinäjoki,300000,€300k,2025,20,0,1,0,1,4
+662119,Kelvin Pires,Cape Verde,Centre-Back,26.0,SJK Seinäjoki,400000,€400k,2025,20,0,1,0,1,4
 544586,Kevin Lenini,Cape Verde,Defensive Midfield,29.0,FC Krasnodar,5000000,€5.00m,2025,44,0,1,0,1,3
 355816,Ko Itakura,Japan,Centre-Back,29.0,Ajax Amsterdam,8000000,€8.00m,2025,35,0,1,0,1,4
-1113451,Kojo Peprah Oppong,Ghana,Centre-Back,21.0,OGC Nice,10000000,€10.00m,2025,50,0,1,0,1,5
+1113451,Kojo Peprah Oppong,Ghana,Centre-Back,22.0,OGC Nice,10000000,€10.00m,2025,50,0,1,0,1,5
 428563,Lewis Ferguson,Scotland,Central Midfield,26.0,Bologna FC 1909,14000000,€14.00m,2025,56,0,1,0,1,4
 469211,Liberato Cacace,New Zealand,Left-Back,25.0,Wrexham AFC,2500000,€2.50m,2025,50,0,1,0,1,3
 646108,Louicius Deedson,Haiti,Right Winger,25.0,FC Dallas,1200000,€1.20m,2025,16,0,1,0,1,2
@@ -880,28 +880,28 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 679709,Steve Kapuadi,DR Congo,Centre-Back,28.0,Widzew Lodz,2500000,€2.50m,2025,51,0,1,0,1,6
 791528,Telmo Arcanjo,Cape Verde,Right Winger,24.0,Vitória Guimarães SC,3000000,€3.00m,2025,39,0,1,0,1,3
 1007720,Tyler Bindon,New Zealand,Centre-Back,21.0,Sheffield United,3500000,€3.50m,2025,46,0,1,0,1,3
-609691,Wilguens Paugain,Haiti,Right-Back,24.0,Zulte Waregem,600000,€600k,2025,32,0,1,0,1,4
-342878,Yassin Fortuné,Haiti,Centre-Forward,27.0,FC Vizela,200000,€200k,2025,35,0,1,0,1,2
+609691,Wilguens Paugain,Haiti,Right-Back,24.0,Zulte Waregem,800000,€800k,2025,32,0,1,0,1,4
+342878,Yassin Fortuné,Haiti,Centre-Forward,27.0,FC Vizela,300000,€300k,2025,35,0,1,0,1,2
 401736,Yaya Sithole,South Africa,Central Midfield,27.0,CD Tondela,600000,€600k,2025,35,0,1,0,1,3
 113915,Abdulaziz Hatim,Qatar,Central Midfield,35.0,Al-Rayyan SC,250000,€250k,2025,37,0,0,1,1,3
 199316,Abdülkerim Bardakcı,Turkey,Centre-Back,31.0,Galatasaray,6500000,€6.50m,2025,52,0,0,1,1,4
 251183,Ahmed Fathi,Qatar,Defensive Midfield,33.0,Al-Arabi SC,250000,€250k,2025,37,0,0,1,1,3
 385918,Aiden O'Neill,Australia,Defensive Midfield,27.0,New York City FC,3000000,€3.00m,2025,13,0,0,1,1,2
 79960,Alex Sandro,Brazil,Left-Back,35.0,CR Flamengo,1000000,€1.00m,2025,38,0,0,1,1,7
-798404,Alidu Seidu,Ghana,Centre-Back,25.0,Stade Rennais FC,6000000,€6.00m,2025,55,0,0,1,1,3
+798404,Alidu Seidu,Ghana,Centre-Back,26.0,Stade Rennais FC,6000000,€6.00m,2025,55,0,0,1,1,3
 323872,Andrés Cubas,Paraguay,Defensive Midfield,30.0,Vancouver Whitecaps FC,4500000,€4.50m,2025,18,0,0,1,1,2
 161671,Aníbal Godoy,Panama,Defensive Midfield,36.0,San Diego FC,100000,€100k,2025,19,0,0,1,1,2
 608172,Ardon Jashari,Switzerland,Defensive Midfield,23.0,AC Milan,25000000,€25.00m,2025,36,0,0,1,1,5
-176553,Aymeric Laporte,Spain,Centre-Back,32.0,Athletic Bilbao,9000000,€9.00m,2025,40,0,0,1,1,5
+176553,Aymeric Laporte,Spain,Centre-Back,32.0,Athletic Bilbao,8000000,€8.00m,2025,40,0,0,1,1,5
 1097139,Ayyoub Bouaddi,Morocco,Central Midfield,18.0,LOSC Lille,50000000,€50.00m,2025,48,0,0,1,1,3
 719673,Ben Gannon-Doak,Scotland,Right Winger,20.0,AFC Bournemouth,15000000,€15.00m,2025,23,0,0,1,1,4
-555209,Bradley Cross,South Africa,Left-Back,25.0,Kaizer Chiefs,650000,€650k,2025,42,0,0,1,1,4
+555209,Bradley Cross,South Africa,Left-Back,25.0,Kaizer Chiefs,1000000,€1.00m,2025,42,0,0,1,1,4
 482204,Callan Elliot,New Zealand,Right-Back,26.0,Auckland FC,450000,€450k,2025,44,0,0,1,1,3
 74113,Camilo Vargas,Colombia,Goalkeeper,37.0,Atlas Guadalajara,450000,€450k,2025,36,0,0,1,1,3
 203348,Chancel Mbemba,DR Congo,Centre-Back,31.0,LOSC Lille,2000000,€2.00m,2025,45,0,0,1,1,3
 676411,Dailon Livramento,Cape Verde,Centre-Forward,25.0,Casa Pia AC,800000,€800k,2025,38,0,0,1,1,5
 332560,Deiver Machado,Colombia,Left-Back,32.0,FC Nantes,1800000,€1.80m,2025,27,0,0,1,1,2
-322065,Dennis Hadzikadunic,Bosnia and Herzegovina,Centre-Back,27.0,UC Sampdoria,1300000,€1.30m,2025,43,0,0,1,1,3
+322065,Dennis Hadzikadunic,Bosnia and Herzegovina,Centre-Back,27.0,UC Sampdoria,1200000,€1.20m,2025,43,0,0,1,1,3
 432852,Deroy Duarte,Cape Verde,Central Midfield,26.0,Ludogorets Razgrad,1800000,€1.80m,2025,61,0,0,1,1,8
 370997,Dominik Kotarski,Croatia,Goalkeeper,26.0,FC Copenhagen,5000000,€5.00m,2025,54,0,0,1,1,6
 450417,Dylan Bronn,Tunisia,Centre-Back,30.0,Servette FC,600000,€600k,2025,31,0,0,1,1,5
@@ -919,8 +919,8 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 345700,Joe Bell,New Zealand,Defensive Midfield,27.0,Viking FK,3500000,€3.50m,2025,17,0,0,1,1,3
 51035,Johny Placide,Haiti,Goalkeeper,38.0,SC Bastia,150000,€150k,2025,32,0,0,1,1,2
 443379,Jorge Gutiérrez,Panama,Left-Back,27.0,Deportivo La Guaira,800000,€800k,2025,25,0,0,1,1,3
-356044,Jorge Sánchez,Mexico,Right-Back,28.0,PAOK Thessaloniki,2200000,€2.20m,2025,43,0,0,1,1,8
-129586,Joris Kayembe,DR Congo,Left-Back,31.0,KRC Genk,2500000,€2.50m,2025,50,0,0,1,1,6
+356044,Jorge Sánchez,Mexico,Right-Back,28.0,PAOK Thessaloniki,2000000,€2.00m,2025,43,0,0,1,1,8
+129586,Joris Kayembe,DR Congo,Left-Back,31.0,KRC Genk,2000000,€2.00m,2025,50,0,0,1,1,6
 252345,Ken Sema,Sweden,Left-Back,32.0,Pafos FC,800000,€800k,2025,50,0,0,1,1,5
 921995,Luc De Fougerolles,Canada,Centre-Back,20.0,FCV Dender EH,1000000,€1.00m,2025,33,0,0,1,1,4
 401086,Mahmoud Al-Mardi,Jordan,Left Winger,32.0,Al-Hussein SC (Irbid),350000,€350k,2025,33,0,0,1,1,5
@@ -930,13 +930,13 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 496706,Montassar Talbi,Tunisia,Centre-Back,28.0,FC Lorient,8000000,€8.00m,2025,35,0,0,1,1,2
 524592,Moon-hwan Kim,South Korea,Right-Back,30.0,Daejeon Hana Citizen,750000,€750k,2025,16,0,0,1,1,2
 164904,Mory Diaw,Senegal,Goalkeeper,32.0,Le Havre AC,900000,€900k,2025,35,0,0,1,1,2
-479683,Nabil Dunga,Egypt,Defensive Midfield,30.0,Al-Najma SC,1200000,€1.20m,2025,41,0,0,1,1,6
-886183,Nawaf Al-Aqidi,Saudi Arabia,Goalkeeper,26.0,Al-Nassr FC,700000,€700k,2025,49,0,0,1,1,4
+479683,Nabil Dunga,Egypt,Defensive Midfield,30.0,Al-Najma SC,1000000,€1.00m,2025,41,0,0,1,1,6
+886183,Nawaf Al-Aqidi,Saudi Arabia,Goalkeeper,26.0,Al-Nassr FC,650000,€650k,2025,49,0,0,1,1,4
 380919,Nihad Mujakic,Bosnia and Herzegovina,Centre-Back,28.0,Gaziantep FK,1200000,€1.20m,2025,36,0,0,1,1,2
 727089,Noah Sadiki,DR Congo,Central Midfield,21.0,Sunderland AFC,35000000,€35.00m,2025,42,0,0,1,1,3
-889435,Obed Vargas,Mexico,Central Midfield,20.0,Atlético de Madrid,8000000,€8.00m,2025,28,0,0,1,1,3
+889435,Obed Vargas,Mexico,Central Midfield,20.0,Atlético de Madrid,10000000,€10.00m,2025,28,0,0,1,1,3
 661207,Oscar Bobb,Norway,Right Winger,22.0,Fulham FC,28000000,€28.00m,2025,41,0,0,1,1,4
-86784,Ricardo Rodríguez,Switzerland,Left-Back,33.0,Real Betis Balompié,1500000,€1.50m,2025,55,0,0,1,1,3
+86784,Ricardo Rodríguez,Switzerland,Left-Back,33.0,Real Betis Balompié,1400000,€1.40m,2025,55,0,0,1,1,3
 632912,Salah Zakaria,Qatar,Goalkeeper,27.0,Al-Duhail SC,400000,€400k,2025,25,0,0,1,1,5
 697155,Saleh Hardani,Iran,Right-Back,27.0,Esteghlal FC,800000,€800k,2025,36,0,0,1,1,4
 1175086,Samukele Kabini,South Africa,Left-Back,22.0,Molde FK,2500000,€2.50m,2025,13,0,0,1,1,2
@@ -946,7 +946,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 344830,Tahith Chong,Curaçao,Attacking Midfield,26.0,Sheffield United,3500000,€3.50m,2025,40,0,0,1,1,4
 331560,Takehiro Tomiyasu,Japan,Right-Back,27.0,Ajax Amsterdam,5000000,€5.00m,2025,17,0,0,1,1,3
 1087789,Tarek Alaa,Egypt,Right-Back,24.0,Zed FC,250000,€250k,2025,59,0,0,1,1,8
-176578,Themba Zwane,South Africa,Attacking Midfield,36.0,Mamelodi Sundowns FC,300000,€300k,2025,33,0,0,1,1,4
+176578,Themba Zwane,South Africa,Attacking Midfield,36.0,Mamelodi Sundowns FC,250000,€250k,2025,33,0,0,1,1,4
 145466,Tim Ream,United States,Centre-Back,38.0,Charlotte FC,150000,€150k,2025,13,0,0,1,1,2
 262226,Timothy Castagne,Belgium,Right-Back,30.0,Fulham FC,8000000,€8.00m,2025,45,0,0,1,1,3
 503981,Tino Livramento,England,Right-Back,23.0,Newcastle United,45000000,€45.00m,2025,26,0,0,1,1,4
@@ -963,14 +963,14 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 882197,Abdallah Nasib,Jordan,Centre-Back,32.0,Al-Zawraa SC,400000,€400k,2025,47,0,0,0,0,3
 584250,Abdelmouhib Chamakh,Tunisia,Goalkeeper,24.0,Club Africain,800000,€800k,2025,31,0,0,0,0,2
 763079,Abdukodir Khusanov,Uzbekistan,Centre-Back,22.0,Manchester City,50000000,€50.00m,2025,50,0,0,0,0,4
-451801,Abdul Mumin,Ghana,Centre-Back,27.0,Rayo Vallecano,4000000,€4.00m,2025,23,0,0,0,0,2
+451801,Abdul Mumin,Ghana,Centre-Back,27.0,Rayo Vallecano,3000000,€3.00m,2025,23,0,0,0,0,2
 570272,Abdulla Abdullaev,Uzbekistan,Defensive Midfield,28.0,Dibba SCC,500000,€500k,2025,30,0,0,0,0,3
 527866,Abduvokhid Nematov,Uzbekistan,Goalkeeper,25.0,Nasaf Qarshi,1500000,€1.50m,2025,22,0,0,0,0,3
 949929,Achref Abada,Algeria,Centre-Back,26.0,USM Alger,1000000,€1.00m,2025,44,0,0,0,0,3
 552057,Adam Hlozek,Czech Republic,Centre-Forward,23.0,TSG 1899 Hoffenheim,10000000,€10.00m,2025,8,0,0,0,0,2
 177956,Ahmed Al-Kassar,Saudi Arabia,Goalkeeper,35.0,Al-Qadsiah FC,175000,€175k,2025,26,0,0,0,0,2
 560952,Ahmed Basil Fadhil,Iraq,Goalkeeper,29.0,Al-Shorta SC,450000,€450k,2025,46,0,0,0,0,2
-238997,Ahmed Reda Tagnaouti,Morocco,Goalkeeper,30.0,AS FAR Rabat,800000,€800k,2025,35,0,0,0,0,3
+238997,Ahmed Reda Tagnaouti,Morocco,Goalkeeper,30.0,AS FAR Rabat,1000000,€1.00m,2025,35,0,0,0,0,3
 949320,Ahmed Yahya,Iraq,Left-Back,30.0,Al-Shorta SC,450000,€450k,2025,45,0,0,0,0,2
 933541,Akam Hashem,Iraq,Centre-Back,27.0,Al-Zawraa SC,700000,€700k,2025,46,0,0,0,0,2
 562022,Akmal Mozgovoy,Uzbekistan,Central Midfield,27.0,Pakhtakor Tashkent,1400000,€1.40m,2025,33,0,0,0,0,6
@@ -978,11 +978,11 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 357117,Alban Lafont,Ivory Coast,Goalkeeper,27.0,Panathinaikos,3000000,€3.00m,2025,54,0,0,0,0,6
 126019,Alberto Quintero,Panama,Right Winger,38.0,CD Plaza Amador,75000,€75k,2025,27,0,0,0,0,3
 985806,Alex Freeman,United States,Right-Back,21.0,Villarreal CF,3500000,€3.50m,2025,18,0,0,0,0,1
-617009,Alex Paulsen,New Zealand,Goalkeeper,23.0,Lechia Gdansk,750000,€750k,2025,33,0,0,0,0,3
+617009,Alex Paulsen,New Zealand,Goalkeeper,23.0,Lechia Gdansk,500000,€500k,2025,33,0,0,0,0,3
 186374,Alexander Schlager,Austria,Goalkeeper,30.0,Red Bull Salzburg,2000000,€2.00m,2025,47,0,0,0,0,4
 838947,Alexandre Pierre,Haiti,Goalkeeper,25.0,FC Sochaux-Montbéliard,700000,€700k,2025,38,0,0,0,0,2
 249360,Ali Alipour,Iran,Centre-Forward,30.0,Persepolis FC,1700000,€1.70m,2025,26,0,0,0,0,2
-264909,Ali Lajami,Saudi Arabia,Centre-Back,30.0,Al-Hilal SFC,800000,€800k,2025,45,0,0,0,0,3
+264909,Ali Lajami,Saudi Arabia,Centre-Back,30.0,Al-Hilal SFC,750000,€750k,2025,45,0,0,0,0,3
 527092,Ali Nemati,Iran,Centre-Back,30.0,Foolad FC,550000,€550k,2025,27,0,0,0,0,2
 664057,Ali Olwan,Jordan,Centre-Forward,26.0,Al-Sailiya SC,800000,€800k,2025,18,0,0,0,0,4
 576265,Ali Yousif,Iraq,Centre-Forward,30.0,Al-Talaba SC,200000,€200k,2025,38,0,0,0,0,2
@@ -1014,11 +1014,11 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 356042,Carlos Acevedo,Mexico,Goalkeeper,30.0,Santos Laguna,2800000,€2.80m,2025,34,0,0,0,0,2
 628806,Carlos Harvey,Panama,Defensive Midfield,26.0,Minnesota United FC,600000,€600k,2025,10,0,0,0,0,3
 765504,Chris Brady,United States,Goalkeeper,22.0,Chicago Fire FC,2500000,€2.50m,2025,16,0,0,0,0,2
-12589,Craig Gordon,Scotland,Goalkeeper,43.0,Heart of Midlothian FC,25000,€25k,2025,23,0,0,0,0,2
+12589,Craig Gordon,Scotland,Goalkeeper,43.0,Heart of Midlothian FC,50000,€50k,2025,23,0,0,0,0,2
 865550,César Samudio,Panama,Goalkeeper,32.0,CD Marathón,250000,€250k,2025,46,0,0,0,0,3
 1080301,Danial Eiri,Iran,Centre-Back,22.0,Malavan Bandar Anzali,1000000,€1.00m,2025,27,0,0,0,0,2
-59016,David Alaba,Austria,Centre-Back,33.0,Real Madrid,3500000,€3.50m,2025,41,0,0,0,0,4
-73396,David Ospina,Colombia,Goalkeeper,37.0,Atlético Nacional,200000,€200k,2025,25,0,0,0,0,3
+59016,David Alaba,Austria,Centre-Back,33.0,Real Madrid,3000000,€3.00m,2025,41,0,0,0,0,4
+73396,David Ospina,Colombia,Goalkeeper,37.0,Atlético Nacional,100000,€100k,2025,25,0,0,0,0,3
 262749,David Raya,Spain,Goalkeeper,30.0,Arsenal FC,30000000,€30.00m,2025,63,0,0,0,0,4
 439750,Dayne St. Clair,Canada,Goalkeeper,29.0,Inter Miami CF,3500000,€3.50m,2025,17,0,0,0,0,2
 258919,Dean Henderson,England,Goalkeeper,29.0,Crystal Palace,28000000,€28.00m,2025,58,0,0,0,0,6
@@ -1027,11 +1027,11 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 205927,Dominik Livakovic,Croatia,Goalkeeper,31.0,GNK Dinamo Zagreb,4000000,€4.00m,2025,50,0,0,0,0,7
 294502,Dostonbek Khamdamov,Uzbekistan,Right Winger,29.0,Pakhtakor Tashkent,900000,€900k,2025,15,0,0,0,0,3
 375472,Duke Lacroix,Haiti,Left-Back,32.0,Colorado Springs Switchbacks FC,125000,€125k,2025,16,0,0,0,0,3
-289432,Dylan Batubinsika,DR Congo,Centre-Back,30.0,AE Larisa,700000,€700k,2025,46,0,0,0,0,5
+289432,Dylan Batubinsika,DR Congo,Centre-Back,30.0,AE Larisa,600000,€600k,2025,46,0,0,0,0,5
 251295,Dzenis Burnic,Bosnia and Herzegovina,Defensive Midfield,28.0,Karlsruher SC,1200000,€1.20m,2025,36,0,0,0,0,2
 238223,Ederson,Brazil,Goalkeeper,32.0,Fenerbahce,10000000,€10.00m,2025,46,0,0,0,0,5
 923177,Edgardo Fariña,Panama,Centre-Back,24.0,FC Pari Nizhniy Novgorod,900000,€900k,2025,23,0,0,0,0,2
-442531,Edouard Mendy,Senegal,Goalkeeper,34.0,Al-Ahli SFC,4500000,€4.50m,2025,53,0,0,0,0,5
+442531,Edouard Mendy,Senegal,Goalkeeper,34.0,Al-Ahli SFC,4000000,€4.00m,2025,53,0,0,0,0,5
 380744,Egil Selvik,Norway,Goalkeeper,28.0,Watford FC,1500000,€1.50m,2025,47,0,0,0,0,3
 310943,Ehsan Haddad,Jordan,Right-Back,32.0,Al-Hussein SC (Irbid),300000,€300k,2025,9,0,0,0,0,2
 104951,El Mahdi Soliman,Egypt,Goalkeeper,38.0,Zamalek SC,150000,€150k,2025,50,0,0,0,0,6
@@ -1049,7 +1049,7 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 393999,Florian Wiegele,Austria,Goalkeeper,25.0,FC Viktoria Plzen,2200000,€2.20m,2025,52,0,0,0,0,5
 170895,Garry Rodrigues,Cape Verde,Right Winger,35.0,Apollon Limassol,300000,€300k,2025,39,0,0,0,0,2
 301722,Gastón Olveira,Paraguay,Goalkeeper,33.0,Olimpia Asunción,500000,€500k,2025,29,0,0,0,0,2
-240752,Gervane Kastaneer,Curaçao,Centre-Forward,29.0,Terengganu FC,175000,€175k,2025,27,0,0,0,0,3
+240752,Gervane Kastaneer,Curaçao,Centre-Forward,29.0,Terengganu FC,225000,€225k,2025,27,0,0,0,0,3
 229604,Gerónimo Rulli,Argentina,Goalkeeper,34.0,Olympique Marseille,6000000,€6.00m,2025,47,0,0,0,0,4
 422850,Ghislain Konan,Ivory Coast,Left-Back,30.0,Gil Vicente FC,3000000,€3.00m,2025,35,0,0,0,0,2
 763349,Gi-hyuk Lee,South Korea,Centre-Back,25.0,Gangwon FC,800000,€800k,2025,25,0,0,0,0,2
@@ -1057,10 +1057,10 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 121385,Grant Hanley,Scotland,Centre-Back,34.0,Hibernian FC,200000,€200k,2025,44,0,0,0,0,5
 257814,Gregor Kobel,Switzerland,Goalkeeper,28.0,Borussia Dortmund,40000000,€40.00m,2025,47,0,0,0,0,3
 29559,Guillermo Ochoa,Mexico,Goalkeeper,40.0,AEL Limassol,250000,€250k,2025,36,0,0,0,0,2
-320440,Gustaf Nilsson,Sweden,Centre-Forward,29.0,Club Brugge KV,2000000,€2.00m,2025,53,0,0,0,0,5
+320440,Gustaf Nilsson,Sweden,Centre-Forward,29.0,Club Brugge KV,1800000,€1.80m,2025,53,0,0,0,0,5
 389399,Gustavo Velázquez,Paraguay,Centre-Back,35.0,Club Cerro Porteño,400000,€400k,2025,28,0,0,0,0,2
 395685,Gédéon Kalulu,DR Congo,Right-Back,28.0,Aris Limassol,1000000,€1.00m,2025,28,0,0,0,0,3
-1259085,Hamza Abdelkarim,Egypt,Centre-Forward,18.0,FC Barcelona U19,1000000,€1.00m,2025,28,0,0,0,0,5
+1259085,Hamza Abdelkarim,Egypt,Centre-Forward,18.0,FC Barcelona U19,1500000,€1.50m,2025,28,0,0,0,0,5
 77127,Hernán Galíndez,Ecuador,Goalkeeper,39.0,CA Huracán,300000,€300k,2025,20,0,0,0,0,3
 556713,Homam Al-Amin,Qatar,Left-Back,26.0,Cultural Leonesa,500000,€500k,2025,49,0,0,0,0,5
 249400,Hossein Kanaani,Iran,Centre-Back,32.0,Persepolis FC,1600000,€1.60m,2025,20,0,0,0,0,2
@@ -1079,22 +1079,22 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 260857,Jamshid Iskanderov,Uzbekistan,Attacking Midfield,32.0,Neftchi Fergana,1000000,€1.00m,2025,15,0,0,0,0,3
 735813,Jassem Gaber,Qatar,Defensive Midfield,24.0,Al-Rayyan SC,500000,€500k,2025,35,0,0,0,0,3
 178614,Jean Michaël Seri,Ivory Coast,Defensive Midfield,34.0,NK Maribor,100000,€100k,2025,21,0,0,0,0,1
-901334,Jehad Thakri,Saudi Arabia,Centre-Back,24.0,Al-Qadsiah FC,900000,€900k,2025,34,0,0,0,0,3
+901334,Jehad Thakri,Saudi Arabia,Centre-Back,24.0,Al-Qadsiah FC,1200000,€1.20m,2025,34,0,0,0,0,3
 557469,Jin-seob Park,South Korea,Defensive Midfield,30.0,Zhejiang FC,1000000,€1.00m,2025,15,0,0,0,0,1
 242089,Jindrich Stanek,Czech Republic,Goalkeeper,30.0,SK Slavia Prague,2000000,€2.00m,2025,33,0,0,0,0,4
-561613,Joan García,Spain,Goalkeeper,25.0,FC Barcelona,40000000,€40.00m,2025,48,0,0,0,0,4
+561613,Joan García,Spain,Goalkeeper,25.0,FC Barcelona,45000000,€45.00m,2025,48,0,0,0,0,4
 441738,Joel Waterman,Canada,Centre-Back,30.0,Chicago Fire FC,2000000,€2.00m,2025,15,0,0,0,0,2
 235767,John Souttar,Scotland,Centre-Back,29.0,Rangers FC,2000000,€2.00m,2025,50,0,0,0,0,6
 186590,John Stones,England,Centre-Back,32.0,Manchester City,12000000,€12.00m,2025,39,0,0,0,0,4
 734676,Jonas Adjetey,Ghana,Centre-Back,22.0,VfL Wolfsburg,6000000,€6.00m,2025,51,0,0,0,0,6
 130164,Jordan Pickford,England,Goalkeeper,32.0,Everton FC,13000000,€13.00m,2025,41,0,0,0,0,3
-576099,Joseph Anang,Ghana,Goalkeeper,25.0,St. Patrick's Athletic,275000,€275k,2025,30,0,0,0,0,3
+576099,Joseph Anang,Ghana,Goalkeeper,25.0,St. Patrick's Athletic,350000,€350k,2025,30,0,0,0,0,3
 371001,Josip Sutalo,Croatia,Centre-Back,26.0,Ajax Amsterdam,12000000,€12.00m,2025,35,0,0,0,0,3
 490369,Josué Duverger,Haiti,Goalkeeper,26.0,FC Cosmos Koblenz,50000,€50k,2025,37,0,0,0,0,2
 249994,José Sá,Portugal,Goalkeeper,33.0,Wolverhampton Wanderers,3500000,€3.50m,2025,41,0,0,0,0,3
 242359,Juan Musso,Argentina,Goalkeeper,32.0,Atlético de Madrid,3000000,€3.00m,2025,61,0,0,0,0,4
 585747,Juan Portilla,Colombia,Central Midfield,27.0,Club Athletico Paranaense,5000000,€5.00m,2025,30,0,0,0,0,3
-328455,Juriën Gaari,Curaçao,Centre-Back,32.0,Abha Club,400000,€400k,2025,35,0,0,0,0,2
+328455,Juriën Gaari,Curaçao,Centre-Back,32.0,Abha Club,350000,€350k,2025,35,0,0,0,0,2
 273000,Júnior Alonso,Paraguay,Centre-Back,33.0,Clube Atlético Mineiro,1500000,€1.50m,2025,33,0,0,0,0,4
 1061046,Keeto Thermoncy,Haiti,Centre-Back,20.0,BSC Young Boys U21,100000,€100k,2025,65,0,0,0,0,3
 415521,Keisuke Osako,Japan,Goalkeeper,26.0,Sanfrecce Hiroshima,2000000,€2.00m,2025,29,0,0,0,0,2
@@ -1103,14 +1103,14 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 1198342,Khalil Ayari,Tunisia,Right Winger,21.0,Paris Saint-Germain Espoirs,1000000,€1.00m,2025,10,0,0,0,0,2
 492558,Khozhiakbar Alizhonov,Uzbekistan,Right-Back,29.0,Pakhtakor Tashkent,1300000,€1.30m,2025,15,0,0,0,0,3
 75890,Kristoffer Nordfeldt,Sweden,Goalkeeper,36.0,AIK,175000,€175k,2025,19,0,0,0,0,3
-538006,Kwasi Sibo,Ghana,Central Midfield,27.0,Real Oviedo,1500000,€1.50m,2025,39,0,0,0,0,2
+538006,Kwasi Sibo,Ghana,Central Midfield,27.0,Real Oviedo,1400000,€1.40m,2025,39,0,0,0,0,2
 254285,Lawrence Ati Zigi,Ghana,Goalkeeper,29.0,FC St. Gallen 1879,1500000,€1.50m,2025,41,0,0,0,0,2
 552467,Leverton Pierre,Haiti,Defensive Midfield,28.0,FC Vizela,200000,€200k,2025,35,0,0,0,0,2
 208772,Liam Kelly,Scotland,Goalkeeper,30.0,Rangers FC,800000,€800k,2025,58,0,0,0,0,6
 164915,Lionel Mpasi-Nzau,DR Congo,Goalkeeper,31.0,Le Havre AC,400000,€400k,2025,35,0,0,0,0,2
 480762,Lisandro Martínez,Argentina,Centre-Back,28.0,Manchester United,40000000,€40.00m,2025,23,0,0,0,0,2
 626764,Livano Comenencia,Curaçao,Right-Back,22.0,FC Zürich,500000,€500k,2025,30,0,0,0,0,2
-484988,Logan Costa,Cape Verde,Centre-Back,25.0,Villarreal CF,18000000,€18.00m,2025,6,0,0,0,0,1
+484988,Logan Costa,Cape Verde,Centre-Back,25.0,Villarreal CF,15000000,€15.00m,2025,6,0,0,0,0,1
 283489,Luca Zidane,Algeria,Goalkeeper,28.0,Granada CF,1000000,€1.00m,2025,40,0,0,0,0,2
 331059,Luis Chávez,Mexico,Defensive Midfield,30.0,Dynamo Moscow,6000000,€6.00m,2025,11,0,0,0,0,2
 76715,Luis Mejía,Panama,Goalkeeper,35.0,Club Nacional,150000,€150k,2025,21,0,0,0,0,4
@@ -1121,14 +1121,14 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 17259,Manuel Neuer,Germany,Goalkeeper,40.0,Bayern Munich,4000000,€4.00m,2025,47,0,0,0,0,4
 476701,Manuel Ugarte,Uruguay,Defensive Midfield,25.0,Manchester United,25000000,€25.00m,2025,39,0,0,0,0,3
 125714,Mark Flekken,Netherlands,Goalkeeper,32.0,Bayer 04 Leverkusen,6000000,€6.00m,2025,34,0,0,0,0,3
-663153,Marko Farji,Iraq,Left Winger,22.0,Venezia FC,1800000,€1.80m,2025,21,0,0,0,0,2
+663153,Marko Farji,Iraq,Left Winger,22.0,Venezia FC,1700000,€1.70m,2025,21,0,0,0,0,2
 495320,Martin Zlomislic,Bosnia and Herzegovina,Goalkeeper,27.0,HNK Rijeka,2000000,€2.00m,2025,57,0,0,0,0,5
 500763,Marvin Keller,Switzerland,Goalkeeper,23.0,BSC Young Boys,6000000,€6.00m,2025,50,0,0,0,0,4
 550829,Matej Kovar,Czech Republic,Goalkeeper,26.0,PSV Eindhoven,8000000,€8.00m,2025,45,0,0,0,0,4
-128969,Mathew Ryan,Australia,Goalkeeper,34.0,Levante UD,2000000,€2.00m,2025,39,0,0,0,0,2
+128969,Mathew Ryan,Australia,Goalkeeper,34.0,Levante UD,1800000,€1.80m,2025,39,0,0,0,0,2
 500309,Matt Freese,United States,Goalkeeper,27.0,New York City FC,2000000,€2.00m,2025,18,0,0,0,0,2
 425306,Matt Turner,United States,Goalkeeper,31.0,New England Revolution,2500000,€2.50m,2025,16,0,0,0,0,2
-680218,Matthieu Epolo,DR Congo,Goalkeeper,21.0,Standard Liège,5000000,€5.00m,2025,35,0,0,0,0,3
+680218,Matthieu Epolo,DR Congo,Goalkeeper,21.0,Standard Liège,8000000,€8.00m,2025,35,0,0,0,0,3
 661269,Matías Galarza,Paraguay,Central Midfield,24.0,Atlanta United FC,3000000,€3.00m,2025,23,0,0,0,0,4
 439072,Matías Viña,Uruguay,Left-Back,28.0,CA River Plate,3500000,€3.50m,2025,28,0,0,0,0,6
 207843,Max Crocombe,New Zealand,Goalkeeper,32.0,Millwall FC,1000000,€1.00m,2025,52,0,0,0,0,4
@@ -1146,16 +1146,16 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 566025,Mohamed Abdelmonem,Egypt,Centre-Back,27.0,OGC Nice,2500000,€2.50m,2025,16,0,0,0,0,3
 1307898,Mohamed Alaa,Egypt,Goalkeeper,27.0,El Gouna FC,1200000,€1.20m,2025,43,0,0,0,0,4
 134573,Mohamed El Shenawy,Egypt,Goalkeeper,37.0,Al Ahly FC,500000,€500k,2025,44,0,0,0,0,6
-911985,Mohamed Koné,Ivory Coast,Goalkeeper,24.0,Royal Charleroi SC,800000,€800k,2025,48,0,0,0,0,5
+911985,Mohamed Koné,Ivory Coast,Goalkeeper,24.0,Royal Charleroi SC,2000000,€2.00m,2025,48,0,0,0,0,5
 895249,Mohammad Abu Hasheesh,Jordan,Left-Back,31.0,Al-Karma,400000,€400k,2025,39,0,0,0,0,2
-658052,Mohammad Abualnadi,Jordan,Centre-Back,25.0,Selangor FC,225000,€225k,2025,51,0,0,0,0,5
+658052,Mohammad Abualnadi,Jordan,Centre-Back,25.0,Selangor FC,350000,€350k,2025,51,0,0,0,0,5
 310801,Mohammad Al-Dawoud,Jordan,Central Midfield,33.0,Al-Wehdat SC,150000,€150k,2025,28,0,0,0,0,1
-262845,Mohammed Al-Owais,Saudi Arabia,Goalkeeper,34.0,Al-Ula FC,300000,€300k,2025,36,0,0,0,0,2
+262845,Mohammed Al-Owais,Saudi Arabia,Goalkeeper,34.0,Al-Ula FC,275000,€275k,2025,36,0,0,0,0,2
 883111,Mohannad Abu Taha,Jordan,Left-Back,23.0,Al-Quwa Al-Jawiya,550000,€550k,2025,38,0,0,0,0,1
 450233,Moisés Ramírez,Ecuador,Goalkeeper,25.0,AE Kifisia,800000,€800k,2025,43,0,0,0,0,3
-1034598,Moutaz Neffati,Tunisia,Right-Back,21.0,IFK Norrköping,900000,€900k,2025,14,0,0,0,0,2
+1034598,Moutaz Neffati,Tunisia,Right-Back,21.0,IFK Norrköping,1200000,€1.20m,2025,14,0,0,0,0,2
 1089202,Moïse Bombito,Canada,Centre-Back,26.0,OGC Nice,7000000,€7.00m,2025,5,0,0,0,0,2
-97925,Munir El Kajoui,Morocco,Goalkeeper,37.0,Renaissance de Berkane,700000,€700k,2025,19,0,0,0,0,4
+97925,Munir El Kajoui,Morocco,Goalkeeper,37.0,Renaissance de Berkane,600000,€600k,2025,19,0,0,0,0,4
 952341,Mustafa Saadoon,Iraq,Right-Back,25.0,Al-Shorta SC,350000,€350k,2025,46,0,0,0,0,2
 398048,Márcio Rosa,Cape Verde,Goalkeeper,29.0,Montana,350000,€350k,2025,34,0,0,0,0,3
 455425,Nando Pijnaker,New Zealand,Centre-Back,27.0,Auckland FC,400000,€400k,2025,23,0,0,0,0,3
@@ -1164,14 +1164,14 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 819566,Nidal Celik,Bosnia and Herzegovina,Centre-Back,19.0,RC Lens,7000000,€7.00m,2025,40,0,0,0,0,2
 248454,Nikola Vasilj,Bosnia and Herzegovina,Goalkeeper,30.0,FC St. Pauli,4500000,€4.50m,2025,38,0,0,0,0,2
 399068,Nkosinathi Sibisi,South Africa,Centre-Back,30.0,Orlando Pirates,1600000,€1.60m,2025,44,0,0,0,0,5
-561485,Noor Al-Rawabdeh,Jordan,Central Midfield,29.0,Selangor FC,450000,€450k,2025,51,0,0,0,0,5
-261837,Noureddin Bani Attiah,Jordan,Goalkeeper,33.0,Al-Faisaly SC,250000,€250k,2025,27,0,0,0,0,1
+561485,Noor Al-Rawabdeh,Jordan,Central Midfield,29.0,Selangor FC,500000,€500k,2025,51,0,0,0,0,5
+261837,Noor Bane Ataya,Jordan,Goalkeeper,33.0,Al-Faisaly SC,250000,€250k,2025,27,0,0,0,0,1
 340456,Noussair Mazraoui,Morocco,Right-Back,28.0,Manchester United,18000000,€18.00m,2025,34,0,0,0,0,2
 288915,Odildzhon Khamrobekov,Uzbekistan,Defensive Midfield,30.0,Tractor FC,1000000,€1.00m,2025,36,0,0,0,0,4
 55089,Oliver Baumann,Germany,Goalkeeper,36.0,TSG 1899 Hoffenheim,2500000,€2.50m,2025,36,0,0,0,0,2
 578292,Omar Rekik,Tunisia,Centre-Back,24.0,NK Maribor,500000,€500k,2025,37,0,0,0,0,3
 643259,Orlando Gill,Paraguay,Goalkeeper,25.0,CA San Lorenzo de Almagro,6000000,€6.00m,2025,24,0,0,0,0,4
-402979,Orlando Mosquera,Panama,Goalkeeper,31.0,Al-Fayha FC,650000,€650k,2025,35,0,0,0,0,2
+402979,Orlando Mosquera,Panama,Goalkeeper,31.0,Al-Fayha FC,700000,€700k,2025,35,0,0,0,0,2
 492556,Oston Urunov,Uzbekistan,Left Winger,25.0,Persepolis FC,2000000,€2.00m,2025,24,0,0,0,0,2
 661455,Oufa Shobeir,Egypt,Goalkeeper,26.0,Al Ahly FC,1200000,€1.20m,2025,45,0,0,0,0,6
 437982,Oussama Benbout,Algeria,Goalkeeper,31.0,USM Alger,850000,€850k,2025,49,0,0,0,0,4
@@ -1191,13 +1191,13 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 107318,Roberto Fernández,Paraguay,Goalkeeper,38.0,Club Cerro Porteño,100000,€100k,2025,28,0,0,0,0,2
 743515,Robin Risser,France,Goalkeeper,21.0,RC Lens,30000000,€30.00m,2025,40,0,0,0,0,2
 646991,Robin Roefs,Netherlands,Goalkeeper,23.0,Sunderland AFC,28000000,€28.00m,2025,38,0,0,0,0,3
-157154,Roderick Miller,Panama,Centre-Back,34.0,Turan-Tovuz IK,200000,€200k,2025,39,0,0,0,0,2
-175577,Ronwen Williams,South Africa,Goalkeeper,34.0,Mamelodi Sundowns FC,900000,€900k,2025,50,0,0,0,0,5
+157154,Roderick Miller,Panama,Centre-Back,34.0,Turan-Tovuz IK,175000,€175k,2025,39,0,0,0,0,2
+175577,Ronwen Williams,South Africa,Goalkeeper,34.0,Mamelodi Sundowns FC,800000,€800k,2025,50,0,0,0,0,5
 401029,Roshon van Eijma,Curaçao,Centre-Back,27.0,RKC Waalwijk,375000,€375k,2025,45,0,0,0,0,3
 234811,Rui Silva,Portugal,Goalkeeper,32.0,Sporting CP,7000000,€7.00m,2025,54,0,0,0,0,5
 288883,Rustam Ashurmatov,Uzbekistan,Centre-Back,29.0,Esteghlal FC,750000,€750k,2025,30,0,0,0,0,3
 295381,Sabri Ben Hessen,Tunisia,Goalkeeper,29.0,Etoile Sportive du Sahel,550000,€550k,2025,36,0,0,0,0,3
-561481,Saed Al-Rosan,Jordan,Centre-Back,29.0,Al-Hussein SC (Irbid),450000,€450k,2025,33,0,0,0,0,2
+561481,Saed Al-Rousan,Jordan,Centre-Back,29.0,Al-Hussein SC (Irbid),450000,€450k,2025,33,0,0,0,0,2
 658807,Saleem Obaid,Jordan,Centre-Back,34.0,Al-Hussein SC (Irbid),100000,€100k,2025,34,0,0,0,0,2
 244940,Salih Özcan,Turkey,Defensive Midfield,28.0,Borussia Dortmund,3500000,€3.50m,2025,46,0,0,0,0,3
 549378,Sander Tangvik,Norway,Goalkeeper,23.0,Hamburger SV,3000000,€3.00m,2025,23,0,0,0,0,3
@@ -1208,13 +1208,13 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 264014,Sergio Rochet,Uruguay,Goalkeeper,33.0,Sport Club Internacional,1800000,€1.80m,2025,25,0,0,0,0,3
 92076,Seung-gyu Kim,South Korea,Goalkeeper,35.0,FC Tokyo,500000,€500k,2025,19,0,0,0,0,1
 132561,Seyed Hossein Hosseini,Iran,Goalkeeper,33.0,Sepahan FC,500000,€500k,2025,34,0,0,0,0,4
-677986,Shararh,Jordan,Right Winger,28.0,Raja Club Athletic,375000,€375k,2025,25,0,0,0,0,3
+677986,Shararh,Jordan,Right Winger,28.0,Raja Club Athletic,700000,€700k,2025,25,0,0,0,0,3
 989068,Sherzod Esanov,Uzbekistan,Central Midfield,23.0,FC Buxoro,450000,€450k,2025,15,0,0,0,0,3
 608537,Sherzod Nasrullaev,Uzbekistan,Left-Back,27.0,Pakhtakor Tashkent,1200000,€1.20m,2025,21,0,0,0,0,4
-453370,Sipho Chaine,South Africa,Goalkeeper,29.0,Orlando Pirates,1400000,€1.40m,2025,43,0,0,0,0,5
+453370,Sipho Chaine,South Africa,Goalkeeper,29.0,Orlando Pirates,1600000,€1.60m,2025,43,0,0,0,0,5
 203517,Steven Moreira,Cape Verde,Right-Back,31.0,Columbus Crew,1500000,€1.50m,2025,18,0,0,0,0,2
 983330,Thapelo Maseko,South Africa,Left Winger,22.0,AEL Limassol,750000,€750k,2025,41,0,0,0,0,6
-230784,Thomas Partey,Ghana,Defensive Midfield,32.0,Villarreal CF,2500000,€2.50m,2025,41,0,0,0,0,3
+230784,Thomas Partey,Ghana,Defensive Midfield,32.0,Villarreal CF,2000000,€2.00m,2025,41,0,0,0,0,3
 280701,Théo Bongonda,DR Congo,Right Winger,30.0,Spartak Moscow,3000000,€3.00m,2025,30,0,0,0,0,2
 541420,Timothy Fayulu,DR Congo,Goalkeeper,26.0,FC Noah Yerevan,800000,€800k,2025,43,0,0,0,0,6
 54381,Tommy Smith,New Zealand,Centre-Back,36.0,Braintree Town,50000,€50k,2025,52,0,0,0,0,3
@@ -1223,13 +1223,13 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 464469,Torbjørn Heggem,Norway,Centre-Back,27.0,Bologna FC 1909,13000000,€13.00m,2025,53,0,0,0,0,6
 390814,Trevor Doornbusch,Curaçao,Goalkeeper,26.0,VVV-Venlo,50000,€50k,2025,38,0,0,0,0,2
 663961,Tyrick Bodak,Curaçao,Goalkeeper,24.0,SC Telstar,25000,€25k,2025,39,0,0,0,0,2
-262396,Unai Simón,Spain,Goalkeeper,28.0,Athletic Bilbao,25000000,€25.00m,2025,52,0,0,0,0,4
+262396,Unai Simón,Spain,Goalkeeper,28.0,Athletic Bilbao,22000000,€22.00m,2025,52,0,0,0,0,4
 311958,Utkir Yusupov,Uzbekistan,Goalkeeper,35.0,Navbahor Namangan,500000,€500k,2025,16,0,0,0,0,3
 292199,Uğurcan Çakır,Turkey,Goalkeeper,30.0,Galatasaray,15000000,€15.00m,2025,49,0,0,0,0,4
 242277,Vozinha,Cape Verde,Goalkeeper,40.0,GD Chaves,50000,€50k,2025,35,0,0,0,0,2
 1017735,Woodensky Pierre,Haiti,Defensive Midfield,21.0,Violette Athletic Club,100000,€100k,2024,10,0,0,0,0,2
-620307,Yannick Semedo,Cape Verde,Central Midfield,30.0,SC Farense,300000,€300k,2025,40,0,0,0,0,3
-207834,Yassine Bounou,Morocco,Goalkeeper,35.0,Al-Hilal SFC,3500000,€3.50m,2025,48,0,0,0,0,3
+620307,Yannick Semedo,Cape Verde,Central Midfield,30.0,SC Farense,250000,€250k,2025,40,0,0,0,0,3
+207834,Yassine Bounou,Morocco,Goalkeeper,35.0,Al-Hilal SFC,3000000,€3.00m,2025,48,0,0,0,0,3
 261850,Yazeed Abulaila,Jordan,Goalkeeper,33.0,Al-Hussein SC (Irbid),300000,€300k,2025,34,0,0,0,0,2
 448632,Yehvann Diouf,Senegal,Goalkeeper,26.0,OGC Nice,7000000,€7.00m,2025,52,0,0,0,0,5
 684307,Youssef Amyn,Iraq,Left Winger,22.0,AEK Larnaca,550000,€550k,2025,36,0,0,0,0,5
@@ -1239,9 +1239,9 @@ player_id,player,country,position,age,club,market_value_eur,market_value_text,cu
 1132850,Zaid Ismail,Iraq,Defensive Midfield,24.0,Al-Talaba SC,500000,€500k,2025,38,0,0,0,0,1
 931147,Zaid Tahseen,Iraq,Centre-Back,25.0,Pakhtakor Tashkent,600000,€600k,2025,15,0,0,0,0,3
 548729,Zeki Amdouni,Switzerland,Centre-Forward,25.0,Burnley FC,7000000,€7.00m,2025,4,0,0,0,0,1
-625142,Zineddine Belaid,Algeria,Centre-Back,27.0,JS Kabylie,1500000,€1.50m,2025,45,0,0,0,0,4
+625142,Zineddine Belaid,Algeria,Centre-Back,27.0,JS Kabylie,1800000,€1.80m,2025,45,0,0,0,0,4
 432298,Zion Suzuki,Japan,Goalkeeper,23.0,Parma Calcio 1913,20000000,€20.00m,2025,25,0,0,0,0,2
 292985,Álvaro Montero,Colombia,Goalkeeper,31.0,CA Vélez Sarsfield,2500000,€2.50m,2025,19,0,0,0,0,3
 121791,Éric Davis,Panama,Left-Back,35.0,CD Plaza Amador,50000,€50k,2025,27,0,0,0,0,3
 602324,Érik Lira,Mexico,Defensive Midfield,26.0,CD Cruz Azul,12000000,€12.00m,2025,51,0,0,0,0,6
-73517,Ørjan Nyland,Norway,Goalkeeper,35.0,Sevilla FC,900000,€900k,2025,39,0,0,0,0,2
+73517,Ørjan Nyland,Norway,Goalkeeper,35.0,Sevilla FC,800000,€800k,2025,39,0,0,0,0,2

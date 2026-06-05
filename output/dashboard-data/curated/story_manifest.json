@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-06-03T19:18:49.197408+00:00",
+  "fetched_at_utc": "2026-06-05T19:34:56.867236+00:00",
   "data": [
     {
       "slug": "world-cup-players-have-grown-taller",
@@ -59,13 +59,13 @@
       "slug": "least-valuable-listed-player-2026",
       "headline": "The value spread inside this field is enormous",
       "metric": "market_value_eur",
-      "summary": "Listed values run from €25k for Craig Gordon of Scotland up to the elite end."
+      "summary": "Listed values run from €25k for Tyrick Bodak of Curaçao up to the elite end."
     },
     {
       "slug": "most-valuable-squad-2026",
       "headline": "France brings the most valuable squad in the field",
       "metric": "squad_market_value_eur",
-      "summary": "Using Transfermarkt squad pages, France leads at €1561.00m in listed player value."
+      "summary": "Using Transfermarkt squad pages, France leads at €1523.00m in listed player value."
     },
     {
       "slug": "top-scorer-current-season-2026",

@@ -59,6 +59,10 @@ class TransfermarktPaths:
         return self.root / "player_performance_2026"
 
     @property
+    def club_pages_dir(self) -> Path:
+        return self.root / "clubs_2026"
+
+    @property
     def fetch_manifest_json(self) -> Path:
         return self.root / "fetch_manifest_2026.json"
 
@@ -137,6 +141,7 @@ def fetch_transfermarkt_raw(raw_dir: Path) -> list[Path]:
     paths.squads_dir.mkdir(parents=True, exist_ok=True)
     paths.coach_achievements_dir.mkdir(parents=True, exist_ok=True)
     paths.player_performance_dir.mkdir(parents=True, exist_ok=True)
+    paths.club_pages_dir.mkdir(parents=True, exist_ok=True)
 
     participants_url = "https://www.transfermarkt.com/weltmeisterschaft/teilnehmer/pokalwettbewerb/FIWC"
     managers_url = "https://www.transfermarkt.com/weltmeisterschaft/trainer/pokalwettbewerb/FIWC"
@@ -181,6 +186,14 @@ def fetch_transfermarkt_raw(raw_dir: Path) -> list[Path]:
     unique_player_ids = sorted(
         {int(player["player_id"]) for player in players if player.get("player_id") is not None}
     )
+    unique_clubs = sorted(
+        {
+            (int(player["club_id"]), player["club_url"])
+            for player in players
+            if player.get("club_id") is not None and player.get("club_url")
+        },
+        key=lambda item: item[0],
+    )
 
     def fetch_performance(player_id: int) -> Path:
         out = paths.player_performance_dir / f"{player_id}.json"
@@ -190,8 +203,20 @@ def fetch_transfermarkt_raw(raw_dir: Path) -> list[Path]:
         out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
         return out
 
+    def fetch_club_page(club_id: int, club_url: str) -> Path:
+        out = paths.club_pages_dir / f"{club_id}.html"
+        if out.exists():
+            return out
+        html = fetch_html(club_url)
+        out.write_text(html, encoding="utf-8")
+        return out
+
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(fetch_performance, player_id) for player_id in unique_player_ids]
+        for future in as_completed(futures):
+            written.append(future.result())
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(fetch_club_page, club_id, club_url) for club_id, club_url in unique_clubs]
         for future in as_completed(futures):
             written.append(future.result())
 
@@ -363,6 +388,27 @@ def parse_achievements_html(html: str) -> list[dict[str, Any]]:
     return achievements
 
 
+def parse_club_profile_html(html: str) -> dict[str, Any]:
+    soup = BeautifulSoup(html, "html.parser")
+    info = soup.find("div", class_="data-header__club-info")
+    if info is None:
+        return {"club_country": None, "competition_name": None}
+    club_country = None
+    competition_name = None
+    for label in info.find_all(["span", "div"], class_=re.compile(r"data-header__label")):
+        text = " ".join(label.get_text(" ", strip=True).split())
+        if "League level" not in text:
+            continue
+        img = label.find("img", class_=re.compile(r"flaggenrahmen"))
+        if img is not None:
+            club_country = img.get("title")
+        link = label.find("a")
+        if link is not None:
+            competition_name = " ".join(link.get_text(" ", strip=True).split()) or None
+        break
+    return {"club_country": club_country, "competition_name": competition_name}
+
+
 def build_player_current_season_stats(players: pd.DataFrame, performance_dir: Path) -> pd.DataFrame:
     rows: list[dict[str, Any]] = []
     if players.empty:
@@ -483,11 +529,21 @@ def build_transfermarkt_enrichment(raw_dir: Path) -> dict[str, pd.DataFrame | li
     players["market_value_eur"] = pd.to_numeric(players["market_value_eur"], errors="coerce")
     players["age"] = pd.to_numeric(players["age"], errors="coerce")
     players["shirt_number"] = pd.to_numeric(players["shirt_number"], errors="coerce")
+    club_profile_rows: list[dict[str, Any]] = []
+    for club_id in sorted(players["club_id"].dropna().astype(int).unique().tolist()):
+        club_file = paths.club_pages_dir / f"{club_id}.html"
+        if not club_file.exists():
+            continue
+        profile = parse_club_profile_html(club_file.read_text(encoding="utf-8"))
+        club_profile_rows.append({"club_id": int(club_id), **profile})
+    club_profiles = pd.DataFrame(club_profile_rows)
+    if not club_profiles.empty:
+        players = players.merge(club_profiles, on="club_id", how="left")
     player_season_stats = build_player_current_season_stats(players, paths.player_performance_dir)
 
     global_clubs = (
         players.dropna(subset=["club"])
-        .groupby(["club", "club_id", "club_url"], as_index=False)
+        .groupby(["club", "club_id", "club_url", "club_country", "competition_name"], as_index=False)
         .agg(
             player_count=("player", "size"),
             represented_countries=("country", "nunique"),
@@ -500,7 +556,7 @@ def build_transfermarkt_enrichment(raw_dir: Path) -> dict[str, pd.DataFrame | li
 
     club_counts = (
         players.dropna(subset=["club"])
-        .groupby(["country", "club", "club_id", "club_url"], as_index=False)
+        .groupby(["country", "club", "club_id", "club_url", "club_country", "competition_name"], as_index=False)
         .agg(player_count=("player", "size"))
     )
     club_counts["country_rank"] = (
@@ -575,6 +631,12 @@ def build_transfermarkt_enrichment(raw_dir: Path) -> dict[str, pd.DataFrame | li
             "label": "Transfermarkt World Cup 2026 detailed squad pages",
             "scope": "current clubs, player ages, player market values, squad value rankings, club representation",
             "url": "https://www.transfermarkt.com/weltmeisterschaft/teilnehmer/pokalwettbewerb/FIWC",
+        },
+        {
+            "key": "transfermarkt_club_profiles_2026",
+            "label": "Transfermarkt club profile pages",
+            "scope": "club-country inference from current club profile headers for 2026 squad clubs",
+            "url": "https://www.transfermarkt.com/manchester-city/startseite/verein/281",
         },
         {
             "key": "transfermarkt_managers_2026",
