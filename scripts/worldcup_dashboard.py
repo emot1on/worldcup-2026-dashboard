@@ -1351,7 +1351,6 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                 <th>Group</th>
                 <th class="numeric">Height</th>
                 <th class="numeric">Age</th>
-                <th class="numeric">Hist.</th>
               </tr>
             </thead>
             <tbody id="country-table-body"></tbody>
@@ -1898,7 +1897,6 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
             <td>${{row.group}}</td>
             <td class="numeric">${{row.average_height_cm.toFixed(2)}} cm</td>
             <td class="numeric">${{row.average_age.toFixed(2)}} years</td>
-            <td class="numeric">${{row.baseline_tournament_year ? row.baseline_tournament_year : "n/a"}}</td>
           </tr>
         `).join("");
         mobileCards.innerHTML = rows.map((row) => `
@@ -1908,7 +1906,6 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
               <div class="mobile-data-item"><strong>Group</strong>${{row.group}}</div>
               <div class="mobile-data-item"><strong>Height</strong>${{row.average_height_cm.toFixed(2)}} cm</div>
               <div class="mobile-data-item"><strong>Age</strong>${{row.average_age.toFixed(2)}} years</div>
-              <div class="mobile-data-item"><strong>History</strong>${{row.baseline_tournament_year ? row.baseline_tournament_year : "n/a"}}</div>
             </div>
           </article>
         `).join("");
