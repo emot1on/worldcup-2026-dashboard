@@ -395,7 +395,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 22px;
-      align-items: end;
+      align-items: start;
       margin-bottom: 28px;
     }}
     .eyebrow {{
@@ -421,24 +421,39 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       background: rgba(255,255,255,0.7);
       border: 1px solid rgba(0,0,0,0.06);
       border-radius: 18px;
-      padding: 18px;
+      padding: 16px;
       color: var(--muted);
     }}
     .source-list {{
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
       gap: 8px;
-      margin-top: 12px;
+      margin-top: 10px;
     }}
     .source-item {{
-      padding: 10px 12px;
-      border-radius: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
       background: rgba(255,255,255,0.72);
       border: 1px solid rgba(0,0,0,0.05);
+      font-size: 0.85rem;
+      line-height: 1.2;
     }}
     .source-item strong {{
       color: var(--text);
-      display: block;
-      margin-bottom: 2px;
+      display: inline;
+      margin-bottom: 0;
+    }}
+    .hero-note-copy {{
+      margin-top: 8px;
+      font-size: 0.95rem;
+      line-height: 1.42;
+    }}
+    .source-kicker {{
+      margin-top: 12px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
     }}
     .byline {{
       margin-top: 12px;
@@ -985,9 +1000,9 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         <p class="byline">A project by emot. <a href="https://joaotome.com" target="_blank" rel="noreferrer">joaotome.com</a></p>
       </div>
       <div class="hero-note">
-        <strong>Data note</strong><br>
-        {bundle["metadata"]["dataset_note"]}<br><br>
-        The historical trend window here focuses on 1990 onward, while country-vs-history cards look back roughly 30 to 40 years when the data exists.
+        <strong>Method note</strong>
+        <div class="hero-note-copy">`2026` is treated as a pre-kickoff dataset row, not completed tournament history. Trend charts focus on `1990` onward, while country history cards reach back roughly `30` to `40` years when the data exists.</div>
+        <div class="source-kicker">Main sources</div>
         <div id="source-list" class="source-list"></div>
       </div>
     </div>
@@ -1430,9 +1445,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     (() => {{
       const sourceList = document.getElementById("source-list");
       sourceList.innerHTML = sourceCatalog.map((source) => `
-        <div class="source-item">
+        <div class="source-item" title="${{source.scope}}">
           <strong>${{source.label}}</strong>
-          <div class="mini">${{source.scope}}</div>
         </div>
       `).join("");
     }})();
