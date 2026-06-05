@@ -218,6 +218,8 @@ def make_group_scatter(bundle: dict) -> go.Figure:
 
 def make_confed_chart(bundle: dict) -> go.Figure:
     confeds = pd.DataFrame(bundle["confederations_2026"]).sort_values("average_height_cm", ascending=False)
+    min_height = float(confeds["average_height_cm"].min()) - 2.0
+    max_height = float(confeds["average_height_cm"].max()) + 2.0
     fig = go.Figure()
     fig.add_trace(
         go.Bar(
@@ -242,14 +244,16 @@ def make_confed_chart(bundle: dict) -> go.Figure:
     )
     fig.update_layout(
         **base_layout(
-            "Confederations do not share the same physical profile",
-            "UEFA sits at the tall end, while other confederations compress differently on age and height.",
+            "Confederation height and age profiles diverge",
+            "UEFA sits at the tall end; age and height do not move in lockstep across confederations.",
             height=420,
             legend=True,
         )
     )
     fig.update_layout(
-        yaxis=dict(title="Height, cm", gridcolor=GRID, tickfont=dict(color=MUTED)),
+        margin=dict(l=58, r=64, t=126, b=56),
+        legend=dict(y=1.06),
+        yaxis=dict(title="Height, cm", gridcolor=GRID, tickfont=dict(color=MUTED), range=[min_height, max_height]),
         yaxis2=dict(
             title="Age, years",
             overlaying="y",
@@ -818,6 +822,47 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     .compare-card h3 {{
       margin: 0 0 8px;
       font-size: 1.2rem;
+    }}
+    .compare-cohort-grid {{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }}
+    .compare-cohort-block {{
+      background: rgba(255,255,255,0.52);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }}
+    .compare-cohort-label {{
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }}
+    .compare-stat {{
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }}
+    .compare-stat strong {{
+      color: var(--text);
+    }}
+    .compare-stat.is-height-lead,
+    .compare-stat.is-height-lead strong {{
+      color: var(--height);
+      font-weight: 700;
+    }}
+    .compare-stat.is-age-lead,
+    .compare-stat.is-age-lead strong {{
+      color: var(--age);
+      font-weight: 700;
+    }}
+    .compare-delta-strong {{
+      font-weight: 700;
+      color: var(--text);
     }}
     .pill-row {{
       display: flex;
@@ -1941,16 +1986,34 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           }}
           const deltaHeight = item.height_delta_cm == null ? "n/a" : `${{item.height_delta_cm > 0 ? "+" : ""}}${{item.height_delta_cm.toFixed(2)}} cm`;
           const deltaAge = item.age_delta_years == null ? "n/a" : `${{item.age_delta_years > 0 ? "+" : ""}}${{item.age_delta_years.toFixed(2)}} years`;
+          const baselineLabel = item.baseline_tournament_year || "Baseline n/a";
+          const baselineHeight = item.baseline_average_height_cm == null ? null : Number(item.baseline_average_height_cm);
+          const baselineAge = item.baseline_average_age == null ? null : Number(item.baseline_average_age);
+          const currentHeightLead = baselineHeight == null || item.average_height_cm >= baselineHeight;
+          const currentAgeLead = baselineAge == null || item.average_age >= baselineAge;
+          const baselineHeightLead = baselineHeight != null && baselineHeight > item.average_height_cm;
+          const baselineAgeLead = baselineAge != null && baselineAge > item.average_age;
+          const baselineHeightText = baselineHeight == null ? "n/a" : `${{baselineHeight.toFixed(2)}} cm`;
+          const baselineAgeText = baselineAge == null ? "n/a" : `${{baselineAge.toFixed(2)}} years`;
           return `
             <div class="compare-card">
               <h3>${{item.country}}</h3>
               <div class="mini">Group: ${{item.group}} • ${{item.confederation}}</div>
-              <div class="mini">Average height: ${{item.average_height_cm.toFixed(2)}} cm</div>
-              <div class="mini">Average age: ${{item.average_age.toFixed(2)}} years</div>
-              <div class="mini">Height rank: #${{item.height_rank}} • Age rank: #${{item.age_rank}}</div>
-              <div class="mini">Baseline: ${{item.baseline_tournament_year || "n/a"}}</div>
-              <div class="mini">Height change: ${{deltaHeight}}</div>
-              <div class="mini">Age change: ${{deltaAge}}</div>
+              <div class="compare-cohort-grid">
+                <div class="compare-cohort-block">
+                  <div class="compare-cohort-label">2026 cohort</div>
+                  <div class="compare-stat ${{currentHeightLead ? "is-height-lead" : ""}}"><strong>Height</strong> ${{item.average_height_cm.toFixed(2)}} cm</div>
+                  <div class="compare-stat ${{currentAgeLead ? "is-age-lead" : ""}}"><strong>Age</strong> ${{item.average_age.toFixed(2)}} years</div>
+                </div>
+                <div class="compare-cohort-block">
+                  <div class="compare-cohort-label">${{baselineLabel}}</div>
+                  <div class="compare-stat ${{baselineHeightLead ? "is-height-lead" : ""}}"><strong>Height</strong> ${{baselineHeightText}}</div>
+                  <div class="compare-stat ${{baselineAgeLead ? "is-age-lead" : ""}}"><strong>Age</strong> ${{baselineAgeText}}</div>
+                </div>
+              </div>
+              <div class="mini" style="margin-top: 10px;">Height rank: #${{item.height_rank}} • Age rank: #${{item.age_rank}}</div>
+              <div class="mini">Height change: <span class="compare-delta-strong">${{deltaHeight}}</span></div>
+              <div class="mini">Age change: <span class="compare-delta-strong">${{deltaAge}}</span></div>
               <div class="pill-row"><button class="pill remove-pill" data-id="${{item.id}}">Remove</button></div>
             </div>
           `;
