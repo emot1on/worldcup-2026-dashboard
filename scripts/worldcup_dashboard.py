@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from urllib.parse import quote
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -23,6 +24,15 @@ ACCENT = "#8b5b47"
 AGE = "#2c7da0"
 HEIGHT = "#cf6d3e"
 CARD = "#efe7db"
+FAVICON_SVG = """
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+  <rect width='64' height='64' rx='14' fill='#1f1b17'/>
+  <rect x='4' y='4' width='56' height='56' rx='11' fill='#8b5b47' opacity='0.18'/>
+  <text x='32' y='30' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#fffdf8'>WC</text>
+  <text x='32' y='48' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#cf6d3e'>26</text>
+</svg>
+""".strip()
+FAVICON_DATA_URL = f"data:image/svg+xml;utf8,{quote(FAVICON_SVG)}"
 
 
 def read_wrapped_json(path: Path) -> dict:
@@ -365,6 +375,8 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>World Cup 2026 dashboard</title>
+  <link rel="icon" href="{FAVICON_DATA_URL}" type="image/svg+xml">
+  <link rel="shortcut icon" href="{FAVICON_DATA_URL}" type="image/svg+xml">
   <style>
     :root {{
       --bg: {BG};
