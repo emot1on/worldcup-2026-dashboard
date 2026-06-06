@@ -2586,6 +2586,11 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         }}
       }}
 
+      function formatUsdEstimateAsEur(value) {{
+        if (value == null || Number.isNaN(Number(value))) return "n/a";
+        return `€${{((Number(value) * eurPerUsd) / 1_000_000).toFixed(2)}}m`;
+      }}
+
       function renderMarketValues() {{
         const rows = marketValuePlayers.slice(0, marketValueLimit);
         marketBody.innerHTML = rows.map((row) => `
