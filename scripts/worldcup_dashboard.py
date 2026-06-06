@@ -2573,6 +2573,19 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
       let attackLimit = 10;
       let clubBenefitsView = "country";
 
+      function safeBind(element, eventName, handler) {{
+        if (!element) return;
+        element.addEventListener(eventName, handler);
+      }}
+
+      function safeRender(label, renderer) {{
+        try {{
+          renderer();
+        }} catch (error) {{
+          console.error(`Value/clubs/coaches renderer failed: ${{label}}`, error);
+        }}
+      }}
+
       function renderMarketValues() {{
         const rows = marketValuePlayers.slice(0, marketValueLimit);
         marketBody.innerHTML = rows.map((row) => `
@@ -2669,14 +2682,11 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
           </tr>
         `).join("");
       }}
-      countrySelect.addEventListener("change", renderCountryClubs);
-      countryClubSearch.addEventListener("input", renderCountryClubs);
+      safeBind(countrySelect, "change", renderCountryClubs);
+      safeBind(countryClubSearch, "input", renderCountryClubs);
       if (clubCountries.includes("Brazil")) {{
         countrySelect.value = "Brazil";
       }}
-      renderCountryClubs();
-      renderClubBenefits();
-      renderMarketValues();
 
       function parseTenureDays(text) {{
         if (!text) return -1;
@@ -2849,61 +2859,65 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         `).join("");
       }}
 
-      squadSearch.addEventListener("input", () => {{
+      safeBind(squadSearch, "input", () => {{
         squadLimit = 8;
         renderSquadValues();
       }});
-      marketMoreButton.addEventListener("click", () => {{
+      safeBind(marketMoreButton, "click", () => {{
         marketValueLimit += 10;
         renderMarketValues();
       }});
-      squadMoreButton.addEventListener("click", () => {{
+      safeBind(squadMoreButton, "click", () => {{
         squadLimit += 10;
         renderSquadValues();
       }});
-      globalClubSearch.addEventListener("input", () => {{
+      safeBind(globalClubSearch, "input", () => {{
         globalClubLimit = 12;
         renderGlobalClubs();
       }});
-      globalClubMoreButton.addEventListener("click", () => {{
+      safeBind(globalClubMoreButton, "click", () => {{
         globalClubLimit += 12;
         renderGlobalClubs();
       }});
-      clubBenefitsSearch.addEventListener("input", () => {{
+      safeBind(clubBenefitsSearch, "input", () => {{
         clubBenefitsLimit = 10;
         renderClubBenefits();
       }});
-      clubBenefitsMoreButton.addEventListener("click", () => {{
+      safeBind(clubBenefitsMoreButton, "click", () => {{
         clubBenefitsLimit += 10;
         renderClubBenefits();
       }});
-      clubBenefitsCountryView.addEventListener("click", () => {{
+      safeBind(clubBenefitsCountryView, "click", () => {{
         clubBenefitsView = "country";
         clubBenefitsLimit = 10;
         renderClubBenefits();
       }});
-      clubBenefitsClubView.addEventListener("click", () => {{
+      safeBind(clubBenefitsClubView, "click", () => {{
         clubBenefitsView = "club";
         clubBenefitsLimit = 10;
         renderClubBenefits();
       }});
-      attackSearch.addEventListener("input", () => {{
+      safeBind(attackSearch, "input", () => {{
         attackLimit = 10;
         renderAttack();
       }});
-      attackViewSelect.addEventListener("change", () => {{
+      safeBind(attackViewSelect, "change", () => {{
         attackLimit = 10;
         renderAttack();
       }});
-      attackMoreButton.addEventListener("click", () => {{
+      safeBind(attackMoreButton, "click", () => {{
         attackLimit += 10;
         renderAttack();
       }});
-      coachViewSelect.addEventListener("change", renderCoachDesk);
-      renderSquadValues();
-      renderGlobalClubs();
-      renderAttack();
-      renderCoachDesk();
+      safeBind(coachViewSelect, "change", renderCoachDesk);
+
+      safeRender("market values", renderMarketValues);
+      safeRender("squad values", renderSquadValues);
+      safeRender("global clubs", renderGlobalClubs);
+      safeRender("club benefits", renderClubBenefits);
+      safeRender("country clubs", renderCountryClubs);
+      safeRender("attack", renderAttack);
+      safeRender("coach desk", renderCoachDesk);
     }})();
 
     (() => {{
