@@ -1512,7 +1512,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
         <div class="eyebrow">World Cup 2026 Dashboard</div>
         <h1>Built for the weeks before kickoff, and ready for the tournament itself.</h1>
         <p class="deck">A World Cup 2026 dashboard designed for fans and journalists: rankings, group comparisons, country comparisons, fast chart reads, and a live-updatable tournament shell. The current editorial focus is on height, age, market value, club representation, and coaches.</p>
-        <p class="byline">A project by emot. <a href="https://joaotome.com" target="_blank" rel="noreferrer">joaotome.com</a></p>
+        <p class="byline">A project by emot <span>(any relevant feedback? reach out <a href="https://joaotome.com" target="_blank" rel="noreferrer">joaotome.com</a>)</span></p>
       </div>
       <div class="hero-note">
         <strong>Method note</strong>
