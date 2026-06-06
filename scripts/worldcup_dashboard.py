@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import html
 import json
 from pathlib import Path
 import unicodedata
@@ -99,6 +100,12 @@ def format_eur_millions_from_usd(value: float | int | None) -> str:
     if value is None:
         return "n/a"
     return f"€{(float(value) * ECB_EUR_PER_USD) / 1_000_000:.2f}m"
+
+
+def escape_html(value: object | None) -> str:
+    if value is None:
+        return ""
+    return html.escape(str(value))
 
 
 COUNTRY_NAME_ALIASES = {
@@ -516,6 +523,72 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
     club_benefits_json = json.dumps(club_benefit_country_rows)
     club_benefits_clubs_json = json.dumps(club_benefit_club_rows)
     coaches_json = json.dumps(bundle.get("coaches_2026", []))
+
+    market_value_rows_html = "".join(
+        f"""
+          <tr>
+            <td>{escape_html(row.get('player'))}<div class="mini">{escape_html(row.get('club') or 'Club n/a')}</div></td>
+            <td>{escape_html(row.get('country'))}</td>
+            <td class="numeric">{escape_html(row.get('market_value_text'))}</td>
+          </tr>
+        """
+        for row in bundle.get("market_value_players_2026", [])[:10]
+    )
+    squad_value_rows_html = "".join(
+        f"""
+          <tr>
+            <td>{escape_html(row.get('country'))}</td>
+            <td class="numeric">{escape_html(row.get('squad_market_value_text'))}</td>
+          </tr>
+        """
+        for row in bundle.get("squad_market_values_2026", [])[:8]
+    )
+    least_value_rows_html = "".join(
+        f"""
+          <tr>
+            <td>{escape_html(row.get('player'))}<div class="mini">{escape_html(row.get('club') or 'Club n/a')}</div></td>
+            <td>{escape_html(row.get('country'))}</td>
+            <td class="numeric">{escape_html(row.get('market_value_text'))}</td>
+          </tr>
+        """
+        for row in bundle.get("least_valuable_players_2026", [])[:8]
+    )
+    global_club_rows_html = "".join(
+        f"""
+          <tr>
+            <td>{escape_html(row.get('club'))}<div class="mini">{escape_html(row.get('club_country') or 'club country n/a')}</div></td>
+            <td class="numeric">{escape_html(row.get('player_count'))}</td>
+            <td class="numeric">{escape_html(row.get('represented_countries'))}</td>
+          </tr>
+        """
+        for row in bundle.get("global_club_representation_2026", [])[:12]
+    )
+    club_benefit_rows_html = "".join(
+        f"""
+          <tr>
+            <td>{escape_html(row.get('club_country'))}<div class="mini">{escape_html(row.get('club_count'))} clubs • {escape_html(row.get('represented_squads'))} squads</div></td>
+            <td class="numeric">{escape_html(row.get('player_count'))}</td>
+            <td class="numeric">{format_eur_millions_from_usd(row.get('estimated_floor_usd'))}</td>
+            <td class="numeric">{format_eur_millions_from_usd(row.get('estimated_ceiling_usd'))}</td>
+          </tr>
+        """
+        for row in club_benefit_country_rows[:10]
+    )
+    brazil_club_rows = [
+        row
+        for row in bundle.get("country_club_representation_2026", [])
+        if row.get("country") == "Brazil"
+    ]
+    brazil_club_rows.sort(key=lambda row: (row.get("country_rank", 999), -(row.get("player_count") or 0), row.get("club") or ""))
+    country_club_rows_html = "".join(
+        f"""
+          <tr>
+            <td>{escape_html(row.get('club'))}<div class="mini">{escape_html(row.get('club_country') or 'club country n/a')}</div></td>
+            <td class="numeric">{escape_html(row.get('player_count'))}</td>
+          </tr>
+        """
+        for row in brazil_club_rows
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -1664,7 +1737,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                 <th class="numeric">Value</th>
               </tr>
             </thead>
-            <tbody id="market-value-body"></tbody>
+            <tbody id="market-value-body">{market_value_rows_html}</tbody>
           </table>
           <div class="inline-tools">
             <button id="market-more-button" class="small-button" type="button">Show more</button>
@@ -1681,7 +1754,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                   <th class="numeric">Squad value</th>
                 </tr>
               </thead>
-              <tbody id="squad-value-body"></tbody>
+              <tbody id="squad-value-body">{squad_value_rows_html}</tbody>
             </table>
             <div class="inline-tools">
               <button id="squad-more-button" class="small-button" type="button">Show more</button>
@@ -1697,7 +1770,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                   <th class="numeric">Value</th>
                 </tr>
               </thead>
-              <tbody id="least-value-body"></tbody>
+              <tbody id="least-value-body">{least_value_rows_html}</tbody>
             </table>
           </div>
         </div>
@@ -1714,7 +1787,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                 <th class="numeric">Teams</th>
               </tr>
             </thead>
-            <tbody id="global-club-body"></tbody>
+            <tbody id="global-club-body">{global_club_rows_html}</tbody>
           </table>
           <div class="inline-tools">
             <button id="global-club-more-button" class="small-button" type="button">Show more</button>
@@ -1738,7 +1811,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                   <th class="numeric">Ceiling</th>
                 </tr>
               </thead>
-              <tbody id="club-benefits-body"></tbody>
+              <tbody id="club-benefits-body">{club_benefit_rows_html}</tbody>
             </table>
             <div class="inline-tools">
               <button id="club-benefits-more-button" class="small-button" type="button">Show more</button>
@@ -1758,7 +1831,7 @@ def build_html(bundle: dict, charts: list[str], live_snapshot: dict) -> str:
                   <th class="numeric">Players</th>
                 </tr>
               </thead>
-              <tbody id="country-club-body"></tbody>
+              <tbody id="country-club-body">{country_club_rows_html}</tbody>
             </table>
           </div>
         </div>
